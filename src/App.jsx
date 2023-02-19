@@ -1,11 +1,16 @@
-import { useState } from 'react'
-import './App.css'
+import { useEffect, useState, createContext } from "react";
+import { Routes, Route } from "react-router-dom";
+import "./App.css";
+import Home from "./home";
 
 function App() {
-
   return (
-    <div></div>
-  )
+    <div>
+      <Routes>
+        <Route path="/" element={<Home />} />
+      </Routes>
+    </div>
+  );
 }
 
-export default App
+export default App;
