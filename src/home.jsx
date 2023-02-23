@@ -2,7 +2,7 @@ import React, { Suspense } from "react";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls, PerspectiveCamera } from "@react-three/drei";
 import Floor from "./Floor";
-import Cube from "./HomeButtons/HomeButton1";
+import Plane from "./HomeButtons/HomeButton1"
 
 function ManShow() {
   return (
@@ -41,7 +41,7 @@ function Home() {
     <Suspense fallback={null}>
       <Canvas shadows>
         <ManShow />
-        <Cube
+        <Plane
           position={[-1.2, 1, 2]}
           onClick={() => window.History.push("/page2")}
         />

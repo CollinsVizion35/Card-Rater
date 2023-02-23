@@ -12,6 +12,8 @@ export default ({ time, ...props }) => {
 //   useFrame(() => (mesh.current.rotation.x = mesh.current.rotation.y += 0.01));
 
   return (
+    <>
+    <ambientLight />
     <mesh
       {...props}
       ref={mesh}
@@ -20,11 +22,15 @@ export default ({ time, ...props }) => {
       castShadow receiveShadow
     >
         
-      <planeGeometry attach="geometry" args={[1, 1, 1]} />
+      <planeGeometry attach="geometry" args={[3, .5, 1]}/>
       <meshStandardMaterial
         attach="material"
-        color={hovered ? "hotpink" : "orange"}
+        color={
+            // hovered ? 
+            // "hotpink" 
+            // : 
+            "orange"}
       />
-    </mesh>
+    </mesh></>
   );
 };
