@@ -2,15 +2,21 @@ import React, { Suspense } from "react";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls, PerspectiveCamera } from "@react-three/drei";
 import Floor from "./Floor";
-import Plane from "./HomeButtons/HomeButton1"
+import Plane from "./HomeButtons/HomeButton1";
+import Plane2 from "./HomeButtons/HomeButton2";
+import Plane3 from "./HomeButtons/HomeButton3";
+import { Link, useNavigate } from 'react-router-dom';
+import { Player } from "./Player";
 
 function ManShow() {
+
   return (
     <>
       <OrbitControls target={[0, 0.35, 0]} maxPolarAngle={1.45} />
       <PerspectiveCamera makeDefault fov={50} position={[3, 2, 5]} />
 
       <color args={[0, 0, 0.001]} attach="background" />
+      <Player/>
       <spotLight
         color={[1, 0.25, 0.7]}
         intensity={1.5}
@@ -37,13 +43,28 @@ function ManShow() {
 }
 
 function Home() {
+  const navigate = useNavigate();
+
+    
+
+    const handleEditBtn = () => {
+        navigate('/');
+    }
   return (
     <Suspense fallback={null}>
       <Canvas shadows>
         <ManShow />
         <Plane
-          position={[-1.2, 1, 2]}
-          onClick={() => window.History.push("/page2")}
+          position={[-1.2, .5, 2]}
+          onClick={() => {handleEditBtn()}}
+        />
+        <Plane2
+          position={[-1.2, 1.2, 2]}
+          onClick={() => {handleEditBtn()}}
+        />
+        <Plane3
+          position={[-1.2, 1.9, 2]}
+          onClick={() => {handleEditBtn()}}
         />
       </Canvas>
     </Suspense>

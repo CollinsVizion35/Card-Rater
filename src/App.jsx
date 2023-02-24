@@ -9,9 +9,9 @@ function App() {
   return (
     <div>
       <Routes>
-      <Route path="/" exact component={Start} />
-        <Route path="/home" component={<Home />} />
-        <Route path="/page2" component={<HomeButton2/>} />
+      <Route path="/" element={<Start/>} />
+        <Route path="/page1" element={<Home />} />
+        <Route path="/page2" element={<HomeButton2/>} />
       </Routes>
     </div>
   );

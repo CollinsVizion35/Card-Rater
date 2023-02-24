@@ -1,6 +1,7 @@
 import React, { useRef, useState } from "react";
 import { useFrame } from "@react-three/fiber";
 import usePromise from "react-promise-suspense";
+import { Text } from "@react-three/drei";
 export default ({ time, ...props }) => {
   // This reference will give us direct access to the mesh
   const mesh = useRef();
@@ -13,23 +14,25 @@ export default ({ time, ...props }) => {
 
   return (
     <>
-    <ambientLight />
+    
+    <ambientLight intensity={0.1} />
     <mesh
       {...props}
       ref={mesh}
       onPointerOver={e => setHover(true)}
       onPointerOut={e => setHover(false)}
       castShadow receiveShadow
-    >
+    ><Text 
+    scale = {[.25,.25,.25]}
+    color="black"
+    anchorX="center"
+    anchorY="middle"
+    >OthErs </Text>
         
       <planeGeometry attach="geometry" args={[3, .5, 1]}/>
       <meshStandardMaterial
         attach="material"
-        color={
-            // hovered ? 
-            // "hotpink" 
-            // : 
-            "orange"}
+        color={[0.14, 0.5, 1]}
       />
     </mesh></>
   );
