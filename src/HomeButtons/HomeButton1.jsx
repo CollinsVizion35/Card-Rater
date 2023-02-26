@@ -24,7 +24,7 @@ export default ({ time, ...props }) => {
       castShadow receiveShadow
     ><Text 
     scale = {[.25,.25,.25]}
-    color="black"
+    color="white"
     anchorX="center"
     anchorY="middle"
     >OthErs </Text>
@@ -32,7 +32,7 @@ export default ({ time, ...props }) => {
       <planeGeometry attach="geometry" args={[3, .5, 1]}/>
       <meshStandardMaterial
         attach="material"
-        color={[0.14, 0.5, 1]}
+        color={[0.1, 0.1, .6]}
       />
     </mesh></>
   );
