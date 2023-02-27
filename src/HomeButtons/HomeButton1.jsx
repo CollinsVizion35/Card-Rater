@@ -1,7 +1,7 @@
 import React, { useRef, useState } from "react";
 import { useFrame } from "@react-three/fiber";
 import usePromise from "react-promise-suspense";
-import { Text } from "@react-three/drei";
+import { Text, Html } from "@react-three/drei";
 export default ({ time, ...props }) => {
   // This reference will give us direct access to the mesh
   const mesh = useRef();
@@ -22,12 +22,12 @@ export default ({ time, ...props }) => {
       onPointerOver={e => setHover(true)}
       onPointerOut={e => setHover(false)}
       castShadow receiveShadow
-    ><Text 
-    scale = {[.25,.25,.25]}
-    color="white"
-    anchorX="center"
-    anchorY="middle"
-    >OthErs </Text>
+    ><Html 
+    // scale = {[.25,.25,.25]}
+    // color="white"
+    // anchorX="center"
+    // anchorY="middle"
+    ><div>OthErs</div> </Html>
         
       <planeGeometry attach="geometry" args={[3, .5, 1]}/>
       <meshStandardMaterial
