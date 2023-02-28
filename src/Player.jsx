@@ -5,6 +5,7 @@ import { Mesh } from 'three';
 
 
 export function Player() {
+  // gltf from sketchFab
   const gltf = useLoader (
     GLTFLoader,
     "models/messi1/scene.gltf"

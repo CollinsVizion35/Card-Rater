@@ -1,16 +1,26 @@
 import React, { useRef, useState } from "react";
 import { useFrame } from "@react-three/fiber";
 import usePromise from "react-promise-suspense";
-import { Text, Html } from "@react-three/drei";
+import { Text } from "@react-three/drei";
 export default ({ time, ...props }) => {
   // This reference will give us direct access to the mesh
   const mesh = useRef();
   usePromise(ms => new Promise(res => setTimeout(res, ms)), [time]);
   // Set up state for the hovered and active state
+  
+  const boxRef = useRef();
   const [hovered, setHover] = useState(false);
 
   // Rotate mesh every frame, this is outside of React without overhead
 //   useFrame(() => (mesh.current.rotation.x = mesh.current.rotation.y += 0.01));
+useFrame(() => {
+  if (hovered) {
+    boxRef.current.scale.set(1.2, 1.2, 1.2)
+  } else {
+    boxRef.current.scale.set(1, 1, 1)
+  }
+});
+
 
   return (
     <>
@@ -18,16 +28,17 @@ export default ({ time, ...props }) => {
     <ambientLight intensity={0.1} />
     <mesh
       {...props}
-      ref={mesh}
+      ref={boxRef}
       onPointerOver={e => setHover(true)}
       onPointerOut={e => setHover(false)}
       castShadow receiveShadow
-    ><Html 
-    // scale = {[.25,.25,.25]}
-    // color="white"
-    // anchorX="center"
-    // anchorY="middle"
-    ><div>OthErs</div> </Html>
+    ><Text 
+    scale = {[.25,.25,.25]}
+    color="white"
+    anchorX="center"
+    anchorY="middle"
+     font="/public/Inter-Regular.woff"
+    >OthErs </Text>
         
       <planeGeometry attach="geometry" args={[3, .5, 1]}/>
       <meshStandardMaterial
