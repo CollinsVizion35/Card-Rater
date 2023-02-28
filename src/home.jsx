@@ -7,6 +7,8 @@ import Plane2 from "./HomeButtons/HomeButton2";
 import Plane3 from "./HomeButtons/HomeButton3";
 import { Link, useNavigate } from 'react-router-dom';
 import { Player } from "./Player";
+import { Ball } from "./ball";
+import { Glitch } from "./glitch";
 
 function ManShow() {
 
@@ -15,6 +17,8 @@ function ManShow() {
       <OrbitControls target={[0, 0.35, 0]} maxPolarAngle={1.45} />
       <PerspectiveCamera makeDefault fov={50} position={[3, 2, 5]} />
       <Player/>
+      <Ball/>
+      <Glitch/>
 
       <color args={[0, 0, 0.001]} attach="background" />
       <spotLight
@@ -22,7 +26,7 @@ function ManShow() {
         intensity={1.5}
         angle={0.6}
         penumbra={0.5}
-        position={[10, 10, 0]}
+        position={[5, 5, -5]}
         castShadow
         shadow-bias={-0.0001}
       />
@@ -32,7 +36,7 @@ function ManShow() {
         intensity={5}
         angle={0.6}
         penumbra={0.5}
-        position={[-10, 10, 0]}
+        position={[-5, 5, -5]}
         castShadow
         shadow-bias={-0.0001}
       />

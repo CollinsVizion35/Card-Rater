@@ -7,17 +7,28 @@ export default ({ time, ...props }) => {
   const mesh = useRef();
   usePromise(ms => new Promise(res => setTimeout(res, ms)), [time]);
   // Set up state for the hovered and active state
+  
+  const boxRef = useRef();
   const [hovered, setHover] = useState(false);
 
   // Rotate mesh every frame, this is outside of React without overhead
 //   useFrame(() => (mesh.current.rotation.x = mesh.current.rotation.y += 0.01));
+useFrame(() => {
+  if (hovered) {
+    boxRef.current.scale.set(1.2, 1.2, 1.2)
+  } else {
+    boxRef.current.scale.set(1, 1, 1)
+  }
+});
+
 
   return (
     <>
+    
     <ambientLight intensity={0.1} />
     <mesh
       {...props}
-      ref={mesh}
+      ref={boxRef}
       onPointerOver={e => setHover(true)}
       onPointerOut={e => setHover(false)}
       castShadow receiveShadow
@@ -26,6 +37,7 @@ export default ({ time, ...props }) => {
     color="white"
     anchorX="center"
     anchorY="middle"
+     font="/public/Inter-Regular.woff"
     >CrEatE card ratEr </Text>
         
       <planeGeometry attach="geometry" args={[3, .5, 1]}/>
