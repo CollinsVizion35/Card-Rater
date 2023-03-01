@@ -54,6 +54,12 @@ function Home() {
     const handleEditBtn = () => {
         navigate('/');
     }
+    const handleEditBtn2 = () => {
+        navigate('/');
+    }
+    const handleEditBtn3 = () => {
+        navigate('/footballRater');
+    }
   return (
     <Suspense fallback={null}>
       <Canvas shadows>
@@ -64,11 +70,11 @@ function Home() {
         />
         <Plane2
           position={[-1.2, 1.2, 2]}
-          onClick={() => {handleEditBtn()}}
+          onClick={() => {handleEditBtn2()}}
         />
         <Plane3
           position={[-1.2, 1.9, 2]}
-          onClick={() => {handleEditBtn()}}
+          onClick={() => {handleEditBtn3()}}
         />
       </Canvas>
     </Suspense>

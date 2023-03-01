@@ -33,7 +33,7 @@ body {
   margin: 0;
   /* padding: 2rem; */
   /* text-align: center; */
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 h1 {
@@ -58,6 +58,43 @@ button:hover {
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
+}
+
+.major-Bg {
+  background-image: url("../public/imgs/futuFootball1.avif");
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+  background-attachment: fixed;
+  /* overflow: scroll; */
+}
+
+.inner {
+  margin: 0 auto;
+	border-bottom: 30px solid white;
+	border-left: 70px solid transparent;
+	border-right: 70px solid transparent;
+	height: 0;
+	width: 700px;
+  position: relative;
+  top:70px;
+}
+
+.rounder {
+ border-top-left-radius: 20px;
+ border-bottom-right-radius: 20px;
+ height: 4rem;
+ width: 90%;
+}
+
+.carder {
+  background-image: url(../public/imgs/carder.png.png);
+  background-repeat: no-repeat;
+  background-position-x: right;
+    background-position: top;
+    margin-top: 3rem;
+    width: 100%;
+    z-index: 99999999999999999;
 }
 
 @media (prefers-color-scheme: light) {
