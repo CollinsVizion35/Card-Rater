@@ -61,10 +61,9 @@ button:focus-visible {
 }
 
 .major-Bg {
-  background-image: url("../public/imgs/futuFootball1.avif");
+  background-image: url("../imgs/futuFootball1.avif");
   background-repeat: no-repeat;
-  background-size: cover;
-  min-height: 100vh;
+  background-size:cover;
   background-attachment: fixed;
   /* overflow: scroll; */
 }
@@ -87,14 +86,21 @@ button:focus-visible {
  width: 90%;
 }
 
-.carder {
-  background-image: url(../public/imgs/carder.png.png);
+.carder2 {
+  background-image: url("../imgs/futuFootball1.avif");
+    background-repeat: no-repeat;
+    /* background-position-x: center;
+    background-position: inherit; */
+    height: 50vh;
+    background-attachment: fixed;
+}
+
+.carder-sm {
+  background-image: url("/imgs/carder.png.png");
   background-repeat: no-repeat;
-  background-position-x: right;
-    background-position: top;
-    margin-top: 3rem;
-    width: 100%;
-    z-index: 99999999999999999;
+  
+  background-position: center;
+  background-size: contain;
 }
 
 @media (prefers-color-scheme: light) {
@@ -107,5 +113,18 @@ button:focus-visible {
   }
   button {
     background-color: #f9f9f9;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .carder {
+    background-image: url("/imgs/carder.png.png");
+      background-repeat: no-repeat;
+      background-position-x: center;
+      background-position: inherit;
+      margin-top: 3rem;
+      width: 100%;
+      z-index: 99999999999999999;
+      height: 100%;
   }
 }
