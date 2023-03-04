@@ -11,7 +11,7 @@ import {
   ButtonNext,
 } from "pure-react-carousel";
 import "pure-react-carousel/dist/react-carousel.es.css";
-import { AiOutlineLeft, AiOutlineRight } from 'react-icons/ai/index';
+import { AiOutlineLeft, AiOutlineRight } from "react-icons/ai/index";
 
 import { AppPass } from "../contexts/AppContext";
 import { Link } from "react-router-dom";
@@ -45,6 +45,17 @@ function Rater() {
   const save2Ref = useRef();
   const confirmedRef = useRef();
   const unconfirmedRef = useRef();
+  const nationRef = useRef();
+  const skillSetRef = useRef();
+  const clubNationRef = useRef();
+  const bundesligaRef = useRef();
+  const laLigaRef = useRef();
+  const ligue1Ref = useRef();
+  const eplRef = useRef();
+  const serieARef = useRef();
+  const rotwRef = useRef();
+  const teamsRef = useRef();
+  teamsRef;
 
   const data = {
     name: name,
@@ -99,14 +110,94 @@ function Rater() {
     save2Ref.current.style.display = "none";
   };
 
+  const handleEditBtn1st = () => {
+    nationRef.current.style.display = "none";
+    clubNationRef.current.style.display = "block";
+  };
+
+  const handleEditBtnBund = () => {
+    clubNationRef.current.style.display = "none";
+    teamsRef.current.style.display = "block";
+    bundesligaRef.current.style.display = "block";
+    laLigaRef.current.style.display = "none";
+    ligue1Ref.current.style.display = "none";
+    eplRef.current.style.display = "none";
+    serieARef.current.style.display = "none";
+    rotwRef.current.style.display = "none";
+  };
+
+  const handleEditBtnLaLiga = () => {
+    clubNationRef.current.style.display = "none";
+    teamsRef.current.style.display = "block";
+    bundesligaRef.current.style.display = "none";
+    laLigaRef.current.style.display = "block";
+    ligue1Ref.current.style.display = "none";
+    eplRef.current.style.display = "none";
+    serieARef.current.style.display = "none";
+    rotwRef.current.style.display = "none";
+  };
+
+  const handleEditBtnLig1 = () => {
+    clubNationRef.current.style.display = "none";
+    teamsRef.current.style.display = "block";
+    bundesligaRef.current.style.display = "none";
+    laLigaRef.current.style.display = "none";
+    ligue1Ref.current.style.display = "block";
+    eplRef.current.style.display = "none";
+    serieARef.current.style.display = "none";
+    rotwRef.current.style.display = "none";
+  };
+
+  const handleEditBtnEpl = () => {
+    clubNationRef.current.style.display = "none";
+    teamsRef.current.style.display = "block";
+    bundesligaRef.current.style.display = "none";
+    laLigaRef.current.style.display = "none";
+    ligue1Ref.current.style.display = "none";
+    eplRef.current.style.display = "block";
+    serieARef.current.style.display = "none";
+    rotwRef.current.style.display = "none";
+  };
+
+  const handleEditBtnSerA = () => {
+    clubNationRef.current.style.display = "none";
+    teamsRef.current.style.display = "block";
+    bundesligaRef.current.style.display = "none";
+    laLigaRef.current.style.display = "none";
+    ligue1Ref.current.style.display = "none";
+    eplRef.current.style.display = "none";
+    serieARef.current.style.display = "block";
+    rotwRef.current.style.display = "none";
+  };
+
+  const handleEditBtnRotw = () => {
+    clubNationRef.current.style.display = "none";
+    teamsRef.current.style.display = "block";
+    bundesligaRef.current.style.display = "none";
+    laLigaRef.current.style.display = "none";
+    ligue1Ref.current.style.display = "none";
+    eplRef.current.style.display = "none";
+    serieARef.current.style.display = "none";
+    rotwRef.current.style.display = "block";
+  };
+
   useEffect(() => {
     save2Ref.current.style.display = "none";
   }, []);
 
+  const audio = new Audio("./mixkit-soccer-ball-quick-kick-2108.wav");
+
+  const playBallAudio = () => {
+    audio.play();
+  };
+
   return (
     <>
       {/* main */}
-      <div className="major-Bg h-[100vh] w-screen text-white font-extrabold text-center">
+      <div
+        ref={nationRef}
+        className="major-Bg nation h-[100vh] w-screen text-white font-extrabold text-center"
+      >
         <div className=" text-7xl">Select Nation</div>
 
         <div className="h-[50vh] lg:pt-[10vh] pt-[5vh]">
@@ -120,17 +211,25 @@ function Rater() {
               <Slide index={0}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
+                    onClick={() => {
+                      handleEditBtn1st();
+                    }}
                     className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/11/flag-of-afghanistan-01.png"
                     alt="afghanistan"
                   />
-                  <p className="legend text-3xl pt-6 cursor-default">Afghanistan</p>
+                  <p className="legend text-3xl pt-6 cursor-default">
+                    Afghanistan
+                  </p>
                 </div>
               </Slide>
               <Slide index={1}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                  className="h-[200px] w-[300px] cursor-pointer"
+                    onClick={() => {
+                      handleEditBtn1st();
+                    }}
+                    className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/12/Albania-01-1.png"
                     alt="Albania"
                   />
@@ -140,7 +239,10 @@ function Rater() {
               <Slide index={2}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                  className="h-[200px] w-[300px] cursor-pointer"
+                    onClick={() => {
+                      handleEditBtn1st();
+                    }}
+                    className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/11/Flag-of-Algeria-01.png"
                     alt="Algeria"
                   />
@@ -150,7 +252,10 @@ function Rater() {
               <Slide index={3}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                  className="h-[200px] w-[300px] cursor-pointer"
+                    onClick={() => {
+                      handleEditBtn1st();
+                    }}
+                    className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/12/Andorra-01-1.png"
                     alt="Andorra"
                   />
@@ -160,7 +265,10 @@ function Rater() {
               <Slide index={4}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                  className="h-[200px] w-[300px] cursor-pointer"
+                    onClick={() => {
+                      handleEditBtn1st();
+                    }}
+                    className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/11/flag-of-angola-01.png"
                     alt="Angola"
                   />
@@ -170,27 +278,40 @@ function Rater() {
               <Slide index={5}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                  className="h-[200px] w-[300px] cursor-pointer"
+                    onClick={() => {
+                      handleEditBtn1st();
+                    }}
+                    className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/12/Antigua-and-Barbuda-01-1.png"
                     alt="Antigua and Barbuda"
                   />
-                  <p className="legend text-3xl pt-6 cursor-default">Antigua and Barbuda</p>
+                  <p className="legend text-3xl pt-6 cursor-default">
+                    Antigua and Barbuda
+                  </p>
                 </div>
               </Slide>
               <Slide index={6}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                  className="h-[200px] w-[300px] cursor-pointer"
+                    onClick={() => {
+                      handleEditBtn1st();
+                    }}
+                    className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/11/flag-of-Argentina-01.png"
                     alt="Argentina"
                   />
-                  <p className="legend text-3xl pt-6 cursor-default">Argentina</p>
+                  <p className="legend text-3xl pt-6 cursor-default">
+                    Argentina
+                  </p>
                 </div>
               </Slide>
               <Slide index={7}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                  className="h-[200px] w-[300px] cursor-pointer"
+                    onClick={() => {
+                      handleEditBtn1st();
+                    }}
+                    className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/11/flag-of-Armenia-01-2.png"
                     alt="Armenia"
                   />
@@ -200,17 +321,25 @@ function Rater() {
               <Slide index={8}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                  className="h-[200px] w-[300px] cursor-pointer"
+                    onClick={() => {
+                      handleEditBtn1st();
+                    }}
+                    className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/11/flag-of-Australia-01.png"
                     alt="Australia"
                   />
-                  <p className="legend text-3xl pt-6 cursor-default">Australia</p>
+                  <p className="legend text-3xl pt-6 cursor-default">
+                    Australia
+                  </p>
                 </div>
               </Slide>
               <Slide index={9}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                  className="h-[200px] w-[300px] cursor-pointer"
+                    onClick={() => {
+                      handleEditBtn1st();
+                    }}
+                    className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/11/Flag-of-Austria-01-1.png"
                     alt="Austria"
                   />
@@ -220,17 +349,25 @@ function Rater() {
               <Slide index={10}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                  className="h-[200px] w-[300px] cursor-pointer"
+                    onClick={() => {
+                      handleEditBtn1st();
+                    }}
+                    className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/11/Flag-of-Azerbaijani-01-1.png"
                     alt="Azerbaijan"
                   />
-                  <p className="legend text-3xl pt-6 cursor-default">Azerbaijan</p>
+                  <p className="legend text-3xl pt-6 cursor-default">
+                    Azerbaijan
+                  </p>
                 </div>
               </Slide>
               <Slide index={11}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                  className="h-[200px] w-[300px] cursor-pointer"
+                    onClick={() => {
+                      handleEditBtn1st();
+                    }}
+                    className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/11/Flag-of-Bahamas-01-1.png"
                     alt="Bahamas"
                   />
@@ -240,7 +377,10 @@ function Rater() {
               <Slide index={12}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                  className="h-[200px] w-[300px] cursor-pointer"
+                    onClick={() => {
+                      handleEditBtn1st();
+                    }}
+                    className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/11/Flag-of-Bahrain-01-1.png"
                     alt="Bahrain"
                   />
@@ -250,27 +390,40 @@ function Rater() {
               <Slide index={13}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                  className="h-[200px] w-[300px] cursor-pointer"
+                    onClick={() => {
+                      handleEditBtn1st();
+                    }}
+                    className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/11/Flag-of-Bangladesh-01-1.png"
                     alt="Bangladesh"
                   />
-                  <p className="legend text-3xl pt-6 cursor-default">Bangladesh</p>
+                  <p className="legend text-3xl pt-6 cursor-default">
+                    Bangladesh
+                  </p>
                 </div>
               </Slide>
               <Slide index={14}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                  className="h-[200px] w-[300px] cursor-pointer"
+                    onClick={() => {
+                      handleEditBtn1st();
+                    }}
+                    className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/11/flag-of-Barbados-01-1.png"
                     alt="Barbados"
                   />
-                  <p className="legend text-3xl pt-6 cursor-default">Barbados</p>
+                  <p className="legend text-3xl pt-6 cursor-default">
+                    Barbados
+                  </p>
                 </div>
               </Slide>
               <Slide index={15}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                  className="h-[200px] w-[300px] cursor-pointer"
+                    onClick={() => {
+                      handleEditBtn1st();
+                    }}
+                    className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/11/Flag-of-Belarus-01-1.png"
                     alt="Belarus"
                   />
@@ -280,7 +433,10 @@ function Rater() {
               <Slide index={16}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                  className="h-[200px] w-[300px] cursor-pointer"
+                    onClick={() => {
+                      handleEditBtn1st();
+                    }}
+                    className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/11/Flag-of-Belgian-01-1.png"
                     alt="Belgium"
                   />
@@ -290,7 +446,10 @@ function Rater() {
               <Slide index={17}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                  className="h-[200px] w-[300px] cursor-pointer"
+                    onClick={() => {
+                      handleEditBtn1st();
+                    }}
+                    className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/11/Flag-of-Belize-01-2.png"
                     alt="Belize"
                   />
@@ -300,7 +459,10 @@ function Rater() {
               <Slide index={18}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                  className="h-[200px] w-[300px] cursor-pointer"
+                    onClick={() => {
+                      handleEditBtn1st();
+                    }}
+                    className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/11/Flag-of-Benin-01-1.png"
                     alt="Benin"
                   />
@@ -310,7 +472,10 @@ function Rater() {
               <Slide index={19}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                  className="h-[200px] w-[300px] cursor-pointer"
+                    onClick={() => {
+                      handleEditBtn1st();
+                    }}
+                    className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/11/Flag-of-Bhutan-01-1.png"
                     alt="Bhutan"
                   />
@@ -320,7 +485,10 @@ function Rater() {
               <Slide index={20}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                  className="h-[200px] w-[300px] cursor-pointer"
+                    onClick={() => {
+                      handleEditBtn1st();
+                    }}
+                    className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/11/Flag-of-Bolivian-01-1.png"
                     alt="Bolivia"
                   />
@@ -330,27 +498,41 @@ function Rater() {
               <Slide index={21}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                  className="h-[200px] w-[300px] cursor-pointer"
+                    onClick={() => {
+                      handleEditBtn1st();
+                    }}
+                    className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/11/Flag-of-Bosnia-and-Herzegovina-01-1.png"
                     alt="	Bosnia and Herzegovina"
                   />
-                  <p className="legend text-3xl pt-6 cursor-default">	Bosnia and Herzegovina</p>
+                  <p className="legend text-3xl pt-6 cursor-default">
+                    {" "}
+                    Bosnia and Herzegovina
+                  </p>
                 </div>
               </Slide>
               <Slide index={22}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                  className="h-[200px] w-[300px] cursor-pointer"
+                    onClick={() => {
+                      handleEditBtn1st();
+                    }}
+                    className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/11/Flag-of-Botswana-01-6.png"
                     alt="Botswana"
                   />
-                  <p className="legend text-3xl pt-6 cursor-default">Botswana</p>
+                  <p className="legend text-3xl pt-6 cursor-default">
+                    Botswana
+                  </p>
                 </div>
               </Slide>
               <Slide index={23}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                  className="h-[200px] w-[300px] cursor-pointer"
+                    onClick={() => {
+                      handleEditBtn1st();
+                    }}
+                    className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/11/Flag-of-Brazil-01-1.png"
                     alt="Brazil"
                   />
@@ -360,7 +542,10 @@ function Rater() {
               <Slide index={24}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                  className="h-[200px] w-[300px] cursor-pointer"
+                    onClick={() => {
+                      handleEditBtn1st();
+                    }}
+                    className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/11/Flag-of-Brunei-01-1.png"
                     alt="Brunei"
                   />
@@ -370,27 +555,40 @@ function Rater() {
               <Slide index={25}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                  className="h-[200px] w-[300px] cursor-pointer"
+                    onClick={() => {
+                      handleEditBtn1st();
+                    }}
+                    className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/11/Flag-of-Bulgaria-01.png"
                     alt="Bulgaria"
                   />
-                  <p className="legend text-3xl pt-6 cursor-default">Bulgaria</p>
+                  <p className="legend text-3xl pt-6 cursor-default">
+                    Bulgaria
+                  </p>
                 </div>
               </Slide>
               <Slide index={26}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                  className="h-[200px] w-[300px] cursor-pointer"
+                    onClick={() => {
+                      handleEditBtn1st();
+                    }}
+                    className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/11/Flag-of-Burkina-Faso-01-1.png"
                     alt="Burkina Faso"
                   />
-                  <p className="legend text-3xl pt-6 cursor-default">Burkina Faso</p>
+                  <p className="legend text-3xl pt-6 cursor-default">
+                    Burkina Faso
+                  </p>
                 </div>
               </Slide>
               <Slide index={27}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                  className="h-[200px] w-[300px] cursor-pointer"
+                    onClick={() => {
+                      handleEditBtn1st();
+                    }}
+                    className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/11/Flag-of-Burundi-01-1.png"
                     alt="Burundi"
                   />
@@ -400,47 +598,70 @@ function Rater() {
               <Slide index={28}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                  className="h-[200px] w-[300px] cursor-pointer"
+                    onClick={() => {
+                      handleEditBtn1st();
+                    }}
+                    className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/12/cote-divoire-01-1.png"
                     alt="Côte d’Ivoire"
                   />
-                  <p className="legend text-3xl pt-6 cursor-default">Côte d’Ivoire</p>
+                  <p className="legend text-3xl pt-6 cursor-default">
+                    Côte d’Ivoire
+                  </p>
                 </div>
               </Slide>
               <Slide index={29}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                  className="h-[200px] w-[300px] cursor-pointer"
+                    onClick={() => {
+                      handleEditBtn1st();
+                    }}
+                    className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/11/Flag-of-Cape-Verde-01-1.png"
                     alt="Cape Verde"
                   />
-                  <p className="legend text-3xl pt-6 cursor-default">Cape Verde</p>
+                  <p className="legend text-3xl pt-6 cursor-default">
+                    Cape Verde
+                  </p>
                 </div>
               </Slide>
               <Slide index={30}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                  className="h-[200px] w-[300px] cursor-pointer"
+                    onClick={() => {
+                      handleEditBtn1st();
+                    }}
+                    className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/11/Flag-of-cambodia-01-1.png"
                     alt="Cambodia"
                   />
-                  <p className="legend text-3xl pt-6 cursor-default">Cambodia</p>
+                  <p className="legend text-3xl pt-6 cursor-default">
+                    Cambodia
+                  </p>
                 </div>
               </Slide>
               <Slide index={31}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                  className="h-[200px] w-[300px] cursor-pointer"
+                    onClick={() => {
+                      handleEditBtn1st();
+                    }}
+                    className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/11/Flag-of-Cameroonian-01-3.png"
                     alt="Cameroon"
                   />
-                  <p className="legend text-3xl pt-6 cursor-default">Cameroon</p>
+                  <p className="legend text-3xl pt-6 cursor-default">
+                    Cameroon
+                  </p>
                 </div>
               </Slide>
               <Slide index={32}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                  className="h-[200px] w-[300px] cursor-pointer"
+                    onClick={() => {
+                      handleEditBtn1st();
+                    }}
+                    className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/11/Flag-of-Canada-01-1.png"
                     alt="Canada"
                   />
@@ -450,17 +671,25 @@ function Rater() {
               <Slide index={33}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                  className="h-[200px] w-[300px] cursor-pointer"
+                    onClick={() => {
+                      handleEditBtn1st();
+                    }}
+                    className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/11/Flag-of-central-Africa-01-1.png"
                     alt="Central African Republic"
                   />
-                  <p className="legend text-3xl pt-6 cursor-default">Central African Republic</p>
+                  <p className="legend text-3xl pt-6 cursor-default">
+                    Central African Republic
+                  </p>
                 </div>
               </Slide>
               <Slide index={34}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                  className="h-[200px] w-[300px] cursor-pointer"
+                    onClick={() => {
+                      handleEditBtn1st();
+                    }}
+                    className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/11/Flag-of-Chad-01-1.png"
                     alt="Chad"
                   />
@@ -470,7 +699,10 @@ function Rater() {
               <Slide index={35}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                  className="h-[200px] w-[300px] cursor-pointer"
+                    onClick={() => {
+                      handleEditBtn1st();
+                    }}
+                    className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/11/Flaf-of-CHILEAN-01-1.png"
                     alt="Chile"
                   />
@@ -480,7 +712,10 @@ function Rater() {
               <Slide index={36}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                  className="h-[200px] w-[300px] cursor-pointer"
+                    onClick={() => {
+                      handleEditBtn1st();
+                    }}
+                    className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/11/Flag-of-China-01-1.png"
                     alt="China"
                   />
@@ -490,17 +725,25 @@ function Rater() {
               <Slide index={37}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                  className="h-[200px] w-[300px] cursor-pointer"
+                    onClick={() => {
+                      handleEditBtn1st();
+                    }}
+                    className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/11/Flag-of-Colombia-01-1.png"
                     alt="Colombia"
                   />
-                  <p className="legend text-3xl pt-6 cursor-default">Colombia</p>
+                  <p className="legend text-3xl pt-6 cursor-default">
+                    Colombia
+                  </p>
                 </div>
               </Slide>
               <Slide index={38}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                  className="h-[200px] w-[300px] cursor-pointer"
+                    onClick={() => {
+                      handleEditBtn1st();
+                    }}
+                    className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/11/Flag-of-Comoros-01-1.png"
                     alt="Comoros"
                   />
@@ -510,27 +753,40 @@ function Rater() {
               <Slide index={39}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                  className="h-[200px] w-[300px] cursor-pointer"
+                    onClick={() => {
+                      handleEditBtn1st();
+                    }}
+                    className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/11/Flag-of-congo-brazzaville-01-1.png"
                     alt="Congo-Brazzaville"
                   />
-                  <p className="legend text-3xl pt-6 cursor-default">Congo-Brazzaville</p>
+                  <p className="legend text-3xl pt-6 cursor-default">
+                    Congo-Brazzaville
+                  </p>
                 </div>
               </Slide>
               <Slide index={40}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                  className="h-[200px] w-[300px] cursor-pointer"
+                    onClick={() => {
+                      handleEditBtn1st();
+                    }}
+                    className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/11/Flag-of-Costa-Rica-01-1.png"
                     alt="Costa Rica"
                   />
-                  <p className="legend text-3xl pt-6 cursor-default">Costa Rica</p>
+                  <p className="legend text-3xl pt-6 cursor-default">
+                    Costa Rica
+                  </p>
                 </div>
               </Slide>
               <Slide index={41}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                  className="h-[200px] w-[300px] cursor-pointer"
+                    onClick={() => {
+                      handleEditBtn1st();
+                    }}
+                    className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/11/Flag-of-Croatia-01-1.png"
                     alt="Croatia"
                   />
@@ -540,7 +796,10 @@ function Rater() {
               <Slide index={42}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                  className="h-[200px] w-[300px] cursor-pointer"
+                    onClick={() => {
+                      handleEditBtn1st();
+                    }}
+                    className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/11/Flag-of-Cuba-01-1.png"
                     alt="Cuba"
                   />
@@ -550,7 +809,10 @@ function Rater() {
               <Slide index={43}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                  className="h-[200px] w-[300px] cursor-pointer"
+                    onClick={() => {
+                      handleEditBtn1st();
+                    }}
+                    className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/11/Flag-of-Cyprus-01-1.png"
                     alt="Cyprus"
                   />
@@ -560,7 +822,10 @@ function Rater() {
               <Slide index={44}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                  className="h-[200px] w-[300px] cursor-pointer"
+                    onClick={() => {
+                      handleEditBtn1st();
+                    }}
+                    className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/11/Flag-of-Czech-01-1.png"
                     alt="Czechia"
                   />
@@ -570,17 +835,25 @@ function Rater() {
               <Slide index={45}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                  className="h-[200px] w-[300px] cursor-pointer"
+                    onClick={() => {
+                      handleEditBtn1st();
+                    }}
+                    className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/11/Flag-of-Congo-01-1.png"
                     alt="Democratic Republic of the Congo"
                   />
-                  <p className="legend text-3xl pt-6 cursor-default">Democratic Republic of the Congo</p>
+                  <p className="legend text-3xl pt-6 cursor-default">
+                    Democratic Republic of the Congo
+                  </p>
                 </div>
               </Slide>
               <Slide index={45}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                  className="h-[200px] w-[300px] cursor-pointer"
+                    onClick={() => {
+                      handleEditBtn1st();
+                    }}
+                    className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/11/Flag-of-Denmark-01-1.png"
                     alt="Denmark"
                   />
@@ -590,37 +863,55 @@ function Rater() {
               <Slide index={47}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                  className="h-[200px] w-[300px] cursor-pointer"
+                    onClick={() => {
+                      handleEditBtn1st();
+                    }}
+                    className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/11/Flag-of-Djibouti-01-1.png"
                     alt="Djibouti"
                   />
-                  <p className="legend text-3xl pt-6 cursor-default">Djibouti</p>
+                  <p className="legend text-3xl pt-6 cursor-default">
+                    Djibouti
+                  </p>
                 </div>
               </Slide>
               <Slide index={48}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                  className="h-[200px] w-[300px] cursor-pointer"
+                    onClick={() => {
+                      handleEditBtn1st();
+                    }}
+                    className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/11/Flag-of-Dominica-01.png"
                     alt="Dominica"
                   />
-                  <p className="legend text-3xl pt-6 cursor-default">Dominica</p>
+                  <p className="legend text-3xl pt-6 cursor-default">
+                    Dominica
+                  </p>
                 </div>
               </Slide>
               <Slide index={49}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                  className="h-[200px] w-[300px] cursor-pointer"
+                    onClick={() => {
+                      handleEditBtn1st();
+                    }}
+                    className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/11/Flag-of-Dominican-01-1.png"
                     alt="Dominican Republic"
                   />
-                  <p className="legend text-3xl pt-6 cursor-default">Dominican Republic</p>
+                  <p className="legend text-3xl pt-6 cursor-default">
+                    Dominican Republic
+                  </p>
                 </div>
               </Slide>
               <Slide index={50}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                  className="h-[200px] w-[300px] cursor-pointer"
+                    onClick={() => {
+                      handleEditBtn1st();
+                    }}
+                    className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/11/Flag-of-Ecuador-01-1.png"
                     alt="Ecuador"
                   />
@@ -630,7 +921,10 @@ function Rater() {
               <Slide index={51}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                  className="h-[200px] w-[300px] cursor-pointer"
+                    onClick={() => {
+                      handleEditBtn1st();
+                    }}
+                    className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/11/Flag-of-Egypt-01-1.png"
                     alt="Egypt"
                   />
@@ -640,17 +934,25 @@ function Rater() {
               <Slide index={52}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                  className="h-[200px] w-[300px] cursor-pointer"
+                    onClick={() => {
+                      handleEditBtn1st();
+                    }}
+                    className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/11/Flag-of-El-Salvador-01-1.png"
                     alt="El Salvador"
                   />
-                  <p className="legend text-3xl pt-6 cursor-default">El Salvador</p>
+                  <p className="legend text-3xl pt-6 cursor-default">
+                    El Salvador
+                  </p>
                 </div>
               </Slide>
               <Slide index={53}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                  className="h-[200px] w-[300px] cursor-pointer"
+                    onClick={() => {
+                      handleEditBtn1st();
+                    }}
+                    className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2022/01/England-01-1.png"
                     alt="England"
                   />
@@ -660,17 +962,25 @@ function Rater() {
               <Slide index={54}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                  className="h-[200px] w-[300px] cursor-pointer"
+                    onClick={() => {
+                      handleEditBtn1st();
+                    }}
+                    className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/11/Flag-of-Equatorial-Guinea-01.png"
                     alt="Equatorial Guinea"
                   />
-                  <p className="legend text-3xl pt-6 cursor-default">Equatorial Guinea</p>
+                  <p className="legend text-3xl pt-6 cursor-default">
+                    Equatorial Guinea
+                  </p>
                 </div>
               </Slide>
               <Slide index={55}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                  className="h-[200px] w-[300px] cursor-pointer"
+                    onClick={() => {
+                      handleEditBtn1st();
+                    }}
+                    className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/11/Flag-of-Eritrea-01-1.png"
                     alt="Eritrea"
                   />
@@ -680,7 +990,10 @@ function Rater() {
               <Slide index={56}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                  className="h-[200px] w-[300px] cursor-pointer"
+                    onClick={() => {
+                      handleEditBtn1st();
+                    }}
+                    className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/11/Flag-of-Estonia-01-1.png"
                     alt="Estonia"
                   />
@@ -690,27 +1003,40 @@ function Rater() {
               <Slide index={57}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                  className="h-[200px] w-[300px] cursor-pointer"
+                    onClick={() => {
+                      handleEditBtn1st();
+                    }}
+                    className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/12/Eswatini-01-1.png"
                     alt="Eswatini "
                   />
-                  <p className="legend text-3xl pt-6 cursor-default">Eswatini </p>
+                  <p className="legend text-3xl pt-6 cursor-default">
+                    Eswatini{" "}
+                  </p>
                 </div>
               </Slide>
               <Slide index={58}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                  className="h-[200px] w-[300px] cursor-pointer"
+                    onClick={() => {
+                      handleEditBtn1st();
+                    }}
+                    className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/11/Flag-of-Ethiopia-01.png"
                     alt="Ethiopia"
                   />
-                  <p className="legend text-3xl pt-6 cursor-default">Ethiopia</p>
+                  <p className="legend text-3xl pt-6 cursor-default">
+                    Ethiopia
+                  </p>
                 </div>
               </Slide>
               <Slide index={59}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                  className="h-[200px] w-[300px] cursor-pointer"
+                    onClick={() => {
+                      handleEditBtn1st();
+                    }}
+                    className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/11/Flag-of-Fiji-01.png"
                     alt="Fiji"
                   />
@@ -720,7 +1046,10 @@ function Rater() {
               <Slide index={60}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                  className="h-[200px] w-[300px] cursor-pointer"
+                    onClick={() => {
+                      handleEditBtn1st();
+                    }}
+                    className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/11/Flag-of-Finland-01-1.png"
                     alt="Finland"
                   />
@@ -730,7 +1059,10 @@ function Rater() {
               <Slide index={61}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                  className="h-[200px] w-[300px] cursor-pointer"
+                    onClick={() => {
+                      handleEditBtn1st();
+                    }}
+                    className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/11/Flag-of-France-01-1.png"
                     alt="France"
                   />
@@ -740,7 +1072,10 @@ function Rater() {
               <Slide index={62}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                  className="h-[200px] w-[300px] cursor-pointer"
+                    onClick={() => {
+                      handleEditBtn1st();
+                    }}
+                    className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/11/Flag-of-Gabon-01-1.png"
                     alt="Gabon"
                   />
@@ -750,7 +1085,10 @@ function Rater() {
               <Slide index={63}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                  className="h-[200px] w-[300px] cursor-pointer"
+                    onClick={() => {
+                      handleEditBtn1st();
+                    }}
+                    className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/11/Flag-of-Gambia-01.png"
                     alt="Gambia"
                   />
@@ -760,7 +1098,10 @@ function Rater() {
               <Slide index={64}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                  className="h-[200px] w-[300px] cursor-pointer"
+                    onClick={() => {
+                      handleEditBtn1st();
+                    }}
+                    className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/11/Flag-of-Georgia-01-1.png"
                     alt="Georgia"
                   />
@@ -770,7 +1111,10 @@ function Rater() {
               <Slide index={65}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                  className="h-[200px] w-[300px] cursor-pointer"
+                    onClick={() => {
+                      handleEditBtn1st();
+                    }}
+                    className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/11/Flag-of-Germany-01-1.png"
                     alt="Germany"
                   />
@@ -780,7 +1124,10 @@ function Rater() {
               <Slide index={66}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                  className="h-[200px] w-[300px] cursor-pointer"
+                    onClick={() => {
+                      handleEditBtn1st();
+                    }}
+                    className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/11/Flag-of-Ghana-01-1.png"
                     alt="Ghana"
                   />
@@ -790,7 +1137,10 @@ function Rater() {
               <Slide index={67}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                  className="h-[200px] w-[300px] cursor-pointer"
+                    onClick={() => {
+                      handleEditBtn1st();
+                    }}
+                    className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/11/Flag-of-Greece-01-1.png"
                     alt="Greece"
                   />
@@ -800,7 +1150,10 @@ function Rater() {
               <Slide index={68}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                  className="h-[200px] w-[300px] cursor-pointer"
+                    onClick={() => {
+                      handleEditBtn1st();
+                    }}
+                    className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/11/Flag-of-Grenada-01-1.png"
                     alt="Grenada"
                   />
@@ -810,17 +1163,25 @@ function Rater() {
               <Slide index={69}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                  className="h-[200px] w-[300px] cursor-pointer"
+                    onClick={() => {
+                      handleEditBtn1st();
+                    }}
+                    className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/11/Flag-of-Guatemala-01-1.png"
                     alt="Guatemala"
                   />
-                  <p className="legend text-3xl pt-6 cursor-default">Guatemala</p>
+                  <p className="legend text-3xl pt-6 cursor-default">
+                    Guatemala
+                  </p>
                 </div>
               </Slide>
               <Slide index={70}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                  className="h-[200px] w-[300px] cursor-pointer"
+                    onClick={() => {
+                      handleEditBtn1st();
+                    }}
+                    className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/11/Flag-of-Guinean-01-1.png"
                     alt="Guinea"
                   />
@@ -830,17 +1191,25 @@ function Rater() {
               <Slide index={71}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                  className="h-[200px] w-[300px] cursor-pointer"
+                    onClick={() => {
+                      handleEditBtn1st();
+                    }}
+                    className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/11/Flag-of-Guinea-Bissau-01-2.png"
                     alt="Guinea-Bissau"
                   />
-                  <p className="legend text-3xl pt-6 cursor-default">Guinea-Bissau</p>
+                  <p className="legend text-3xl pt-6 cursor-default">
+                    Guinea-Bissau
+                  </p>
                 </div>
               </Slide>
               <Slide index={72}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                  className="h-[200px] w-[300px] cursor-pointer"
+                    onClick={() => {
+                      handleEditBtn1st();
+                    }}
+                    className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/11/Flag-of-Guyana-01-1.png"
                     alt="Guyana"
                   />
@@ -850,7 +1219,10 @@ function Rater() {
               <Slide index={73}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                  className="h-[200px] w-[300px] cursor-pointer"
+                    onClick={() => {
+                      handleEditBtn1st();
+                    }}
+                    className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/11/Flag-of-Haiti-01-1.png"
                     alt="Haiti"
                   />
@@ -860,17 +1232,25 @@ function Rater() {
               <Slide index={74}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                  className="h-[200px] w-[300px] cursor-pointer"
+                    onClick={() => {
+                      handleEditBtn1st();
+                    }}
+                    className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/11/Flag-of-Honduras-01-1.png"
                     alt="Honduras"
                   />
-                  <p className="legend text-3xl pt-6 cursor-default">Honduras</p>
+                  <p className="legend text-3xl pt-6 cursor-default">
+                    Honduras
+                  </p>
                 </div>
               </Slide>
               <Slide index={75}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                  className="h-[200px] w-[300px] cursor-pointer"
+                    onClick={() => {
+                      handleEditBtn1st();
+                    }}
+                    className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/11/Flag-of-Hungary-01-1.png"
                     alt="Hungary"
                   />
@@ -880,7 +1260,10 @@ function Rater() {
               <Slide index={76}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                  className="h-[200px] w-[300px] cursor-pointer"
+                    onClick={() => {
+                      handleEditBtn1st();
+                    }}
+                    className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/11/Flag-of-iceland-01-1.png"
                     alt="Iceland"
                   />
@@ -890,7 +1273,10 @@ function Rater() {
               <Slide index={77}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                  className="h-[200px] w-[300px] cursor-pointer"
+                    onClick={() => {
+                      handleEditBtn1st();
+                    }}
+                    className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/11/Flag-of-India-01-1.png"
                     alt="India"
                   />
@@ -900,17 +1286,25 @@ function Rater() {
               <Slide index={78}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                  className="h-[200px] w-[300px] cursor-pointer"
+                    onClick={() => {
+                      handleEditBtn1st();
+                    }}
+                    className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/12/Flag-of-Indonesia-01-1.png"
                     alt="Indonesia"
                   />
-                  <p className="legend text-3xl pt-6 cursor-default">Indonesia</p>
+                  <p className="legend text-3xl pt-6 cursor-default">
+                    Indonesia
+                  </p>
                 </div>
               </Slide>
               <Slide index={79}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                  className="h-[200px] w-[300px] cursor-pointer"
+                    onClick={() => {
+                      handleEditBtn1st();
+                    }}
+                    className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/12/Flag-of-Iran-01-1.png"
                     alt="Iran"
                   />
@@ -920,7 +1314,10 @@ function Rater() {
               <Slide index={80}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                  className="h-[200px] w-[300px] cursor-pointer"
+                    onClick={() => {
+                      handleEditBtn1st();
+                    }}
+                    className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/12/Flag-of-iraq-01-1.png"
                     alt="Iraq"
                   />
@@ -930,7 +1327,10 @@ function Rater() {
               <Slide index={81}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                  className="h-[200px] w-[300px] cursor-pointer"
+                    onClick={() => {
+                      handleEditBtn1st();
+                    }}
+                    className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/12/Flag-of-Ireland-01-1.png"
                     alt="Ireland"
                   />
@@ -940,7 +1340,10 @@ function Rater() {
               <Slide index={82}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                  className="h-[200px] w-[300px] cursor-pointer"
+                    onClick={() => {
+                      handleEditBtn1st();
+                    }}
+                    className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/12/Flag-of-israel-01-1.png"
                     alt="Israel"
                   />
@@ -950,7 +1353,10 @@ function Rater() {
               <Slide index={83}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                  className="h-[200px] w-[300px] cursor-pointer"
+                    onClick={() => {
+                      handleEditBtn1st();
+                    }}
+                    className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/12/Flag-of-Italy-01-1.png"
                     alt="Italy"
                   />
@@ -960,7 +1366,10 @@ function Rater() {
               <Slide index={84}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                  className="h-[200px] w-[300px] cursor-pointer"
+                    onClick={() => {
+                      handleEditBtn1st();
+                    }}
+                    className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/12/Flag-of-Jamaica-01-1.png"
                     alt="Jamaica"
                   />
@@ -970,7 +1379,10 @@ function Rater() {
               <Slide index={85}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                  className="h-[200px] w-[300px] cursor-pointer"
+                    onClick={() => {
+                      handleEditBtn1st();
+                    }}
+                    className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/12/Flag-of-japan-01-1.png"
                     alt="Japan"
                   />
@@ -980,7 +1392,10 @@ function Rater() {
               <Slide index={86}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                  className="h-[200px] w-[300px] cursor-pointer"
+                    onClick={() => {
+                      handleEditBtn1st();
+                    }}
+                    className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/12/Flag-of-Jordan-01-1.png"
                     alt="Jordan"
                   />
@@ -990,17 +1405,25 @@ function Rater() {
               <Slide index={87}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                  className="h-[200px] w-[300px] cursor-pointer"
+                    onClick={() => {
+                      handleEditBtn1st();
+                    }}
+                    className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/12/Flag-of-kazakhstan-01-1.png"
                     alt="Kazakhstan"
                   />
-                  <p className="legend text-3xl pt-6 cursor-default">Kazakhstan</p>
+                  <p className="legend text-3xl pt-6 cursor-default">
+                    Kazakhstan
+                  </p>
                 </div>
               </Slide>
               <Slide index={88}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                  className="h-[200px] w-[300px] cursor-pointer"
+                    onClick={() => {
+                      handleEditBtn1st();
+                    }}
+                    className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/12/Flag-of-kenya-01-1.png"
                     alt="Kenya"
                   />
@@ -1010,17 +1433,25 @@ function Rater() {
               <Slide index={89}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                  className="h-[200px] w-[300px] cursor-pointer"
+                    onClick={() => {
+                      handleEditBtn1st();
+                    }}
+                    className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/12/Flag-of-kiribati-01-1.png"
                     alt="Kiribati"
                   />
-                  <p className="legend text-3xl pt-6 cursor-default">Kiribati</p>
+                  <p className="legend text-3xl pt-6 cursor-default">
+                    Kiribati
+                  </p>
                 </div>
               </Slide>
               <Slide index={90}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                  className="h-[200px] w-[300px] cursor-pointer"
+                    onClick={() => {
+                      handleEditBtn1st();
+                    }}
+                    className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/12/Flag-ofA-kuwait-01-1.png"
                     alt="Kuwait"
                   />
@@ -1030,17 +1461,25 @@ function Rater() {
               <Slide index={91}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                  className="h-[200px] w-[300px] cursor-pointer"
+                    onClick={() => {
+                      handleEditBtn1st();
+                    }}
+                    className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/12/Flag-of-kyrgyzstan-01-1.png"
                     alt="Kyrgyzstan"
                   />
-                  <p className="legend text-3xl pt-6 cursor-default">Kyrgyzstan</p>
+                  <p className="legend text-3xl pt-6 cursor-default">
+                    Kyrgyzstan
+                  </p>
                 </div>
               </Slide>
               <Slide index={92}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                  className="h-[200px] w-[300px] cursor-pointer"
+                    onClick={() => {
+                      handleEditBtn1st();
+                    }}
+                    className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/12/Flag-of-Laos-01-1.png"
                     alt="Laos"
                   />
@@ -1050,7 +1489,10 @@ function Rater() {
               <Slide index={93}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                  className="h-[200px] w-[300px] cursor-pointer"
+                    onClick={() => {
+                      handleEditBtn1st();
+                    }}
+                    className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/12/Flag-of-latvia-01-1.png"
                     alt="Latvia"
                   />
@@ -1060,7 +1502,10 @@ function Rater() {
               <Slide index={94}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                  className="h-[200px] w-[300px] cursor-pointer"
+                    onClick={() => {
+                      handleEditBtn1st();
+                    }}
+                    className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/12/Flag-of-latvia-01-1.png"
                     alt="Lebanon"
                   />
@@ -1070,7 +1515,10 @@ function Rater() {
               <Slide index={95}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                  className="h-[200px] w-[300px] cursor-pointer"
+                    onClick={() => {
+                      handleEditBtn1st();
+                    }}
+                    className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/12/Flag-of-Lesotho-01-1.png"
                     alt="Lesotho"
                   />
@@ -1080,7 +1528,10 @@ function Rater() {
               <Slide index={96}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                  className="h-[200px] w-[300px] cursor-pointer"
+                    onClick={() => {
+                      handleEditBtn1st();
+                    }}
+                    className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/12/Flag-of-Liberia-01-1.png"
                     alt="Liberia"
                   />
@@ -1090,7 +1541,10 @@ function Rater() {
               <Slide index={97}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                  className="h-[200px] w-[300px] cursor-pointer"
+                    onClick={() => {
+                      handleEditBtn1st();
+                    }}
+                    className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/12/Flag-of-Libya-01-1.png"
                     alt="Libya"
                   />
@@ -1100,47 +1554,70 @@ function Rater() {
               <Slide index={98}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                  className="h-[200px] w-[300px] cursor-pointer"
+                    onClick={() => {
+                      handleEditBtn1st();
+                    }}
+                    className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/12/Flag-of-Liechtenstein-01-1.png"
                     alt="Liechtenstein"
                   />
-                  <p className="legend text-3xl pt-6 cursor-default">Liechtenstein</p>
+                  <p className="legend text-3xl pt-6 cursor-default">
+                    Liechtenstein
+                  </p>
                 </div>
               </Slide>
               <Slide index={99}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                  className="h-[200px] w-[300px] cursor-pointer"
+                    onClick={() => {
+                      handleEditBtn1st();
+                    }}
+                    className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/12/Flag-of-Lithuania-01-1.png"
                     alt="Lithuania"
                   />
-                  <p className="legend text-3xl pt-6 cursor-default">Lithuania</p>
+                  <p className="legend text-3xl pt-6 cursor-default">
+                    Lithuania
+                  </p>
                 </div>
               </Slide>
               <Slide index={100}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                  className="h-[200px] w-[300px] cursor-pointer"
+                    onClick={() => {
+                      handleEditBtn1st();
+                    }}
+                    className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/12/luxembourg-01-1.png"
                     alt="Luxembourg"
                   />
-                  <p className="legend text-3xl pt-6 cursor-default">Luxembourg</p>
+                  <p className="legend text-3xl pt-6 cursor-default">
+                    Luxembourg
+                  </p>
                 </div>
               </Slide>
               <Slide index={101}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                  className="h-[200px] w-[300px] cursor-pointer"
+                    onClick={() => {
+                      handleEditBtn1st();
+                    }}
+                    className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/12/Madagascar-01-1.png"
                     alt="Madagascar"
                   />
-                  <p className="legend text-3xl pt-6 cursor-default">Madagascar</p>
+                  <p className="legend text-3xl pt-6 cursor-default">
+                    Madagascar
+                  </p>
                 </div>
               </Slide>
               <Slide index={102}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                  className="h-[200px] w-[300px] cursor-pointer"
+                    onClick={() => {
+                      handleEditBtn1st();
+                    }}
+                    className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/12/Malawia-01-1.png"
                     alt="Malawi"
                   />
@@ -1150,27 +1627,40 @@ function Rater() {
               <Slide index={103}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                  className="h-[200px] w-[300px] cursor-pointer"
+                    onClick={() => {
+                      handleEditBtn1st();
+                    }}
+                    className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/12/Malaysia-01-1.png"
                     alt="Malaysia"
                   />
-                  <p className="legend text-3xl pt-6 cursor-default">Malaysia</p>
+                  <p className="legend text-3xl pt-6 cursor-default">
+                    Malaysia
+                  </p>
                 </div>
               </Slide>
               <Slide index={104}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                  className="h-[200px] w-[300px] cursor-pointer"
+                    onClick={() => {
+                      handleEditBtn1st();
+                    }}
+                    className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/12/Maldives-01-1.png"
                     alt="Maldives"
                   />
-                  <p className="legend text-3xl pt-6 cursor-default">Maldives</p>
+                  <p className="legend text-3xl pt-6 cursor-default">
+                    Maldives
+                  </p>
                 </div>
               </Slide>
               <Slide index={105}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                  className="h-[200px] w-[300px] cursor-pointer"
+                    onClick={() => {
+                      handleEditBtn1st();
+                    }}
+                    className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/12/Mali-01-1.png"
                     alt="Mali"
                   />
@@ -1180,7 +1670,10 @@ function Rater() {
               <Slide index={106}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                  className="h-[200px] w-[300px] cursor-pointer"
+                    onClick={() => {
+                      handleEditBtn1st();
+                    }}
+                    className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/12/Malta-01-1.png"
                     alt="Malta"
                   />
@@ -1190,36 +1683,54 @@ function Rater() {
               <Slide index={107}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                  className="h-[200px] w-[300px] cursor-pointer"
+                    onClick={() => {
+                      handleEditBtn1st();
+                    }}
+                    className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/12/Marshall-Islands-01-1.png"
                     alt="Marshall Islands"
                   />
-                  <p className="legend text-3xl pt-6 cursor-default">Marshall Islands</p>
+                  <p className="legend text-3xl pt-6 cursor-default">
+                    Marshall Islands
+                  </p>
                 </div>
               </Slide>
               <Slide index={108}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                  className="h-[200px] w-[300px] cursor-pointer"
+                    onClick={() => {
+                      handleEditBtn1st();
+                    }}
+                    className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/12/Mauritania-01-1.png"
                     alt="Mauritania"
                   />
-                  <p className="legend text-3xl pt-6 cursor-default">Mauritania</p>
+                  <p className="legend text-3xl pt-6 cursor-default">
+                    Mauritania
+                  </p>
                 </div>
               </Slide>
               <Slide index={109}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                  className="h-[200px] w-[300px] cursor-pointer"
+                    onClick={() => {
+                      handleEditBtn1st();
+                    }}
+                    className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/12/Mauritius-01-1.png"
                     alt="Mauritius"
                   />
-                  <p className="legend text-3xl pt-6 cursor-default">Mauritius</p>
+                  <p className="legend text-3xl pt-6 cursor-default">
+                    Mauritius
+                  </p>
                 </div>
               </Slide>
               <Slide index={110}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
+                    onClick={() => {
+                      handleEditBtn1st();
+                    }}
                     className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/12/Mexico-01-1.png"
                     alt="Mexico"
@@ -1230,17 +1741,25 @@ function Rater() {
               <Slide index={111}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                  className="h-[200px] w-[300px] cursor-pointer"
+                    onClick={() => {
+                      handleEditBtn1st();
+                    }}
+                    className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/12/micronesia-01-1.png"
                     alt="Micronesia"
                   />
-                  <p className="legend text-3xl pt-6 cursor-default">Micronesia</p>
+                  <p className="legend text-3xl pt-6 cursor-default">
+                    Micronesia
+                  </p>
                 </div>
               </Slide>
               <Slide index={112}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                  className="h-[200px] w-[300px] cursor-pointer"
+                    onClick={() => {
+                      handleEditBtn1st();
+                    }}
+                    className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/12/Moldova-01-1.png"
                     alt="Moldova"
                   />
@@ -1250,7 +1769,10 @@ function Rater() {
               <Slide index={113}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                  className="h-[200px] w-[300px] cursor-pointer"
+                    onClick={() => {
+                      handleEditBtn1st();
+                    }}
+                    className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/12/Monaco-01-1.png"
                     alt="Monaco"
                   />
@@ -1260,27 +1782,40 @@ function Rater() {
               <Slide index={114}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                  className="h-[200px] w-[300px] cursor-pointer"
+                    onClick={() => {
+                      handleEditBtn1st();
+                    }}
+                    className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/12/mongolia-01-1.png"
                     alt="Mongolia"
                   />
-                  <p className="legend text-3xl pt-6 cursor-default">Mongolia</p>
+                  <p className="legend text-3xl pt-6 cursor-default">
+                    Mongolia
+                  </p>
                 </div>
               </Slide>
               <Slide index={115}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                  className="h-[200px] w-[300px] cursor-pointer"
+                    onClick={() => {
+                      handleEditBtn1st();
+                    }}
+                    className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/12/Montenegro-01-1.png"
                     alt="Montenegro"
                   />
-                  <p className="legend text-3xl pt-6 cursor-default">Montenegro</p>
+                  <p className="legend text-3xl pt-6 cursor-default">
+                    Montenegro
+                  </p>
                 </div>
               </Slide>
               <Slide index={116}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                  className="h-[200px] w-[300px] cursor-pointer"
+                    onClick={() => {
+                      handleEditBtn1st();
+                    }}
+                    className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/12/Morocco-01-1.png"
                     alt="Morocco"
                   />
@@ -1290,27 +1825,40 @@ function Rater() {
               <Slide index={117}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                  className="h-[200px] w-[300px] cursor-pointer"
+                    onClick={() => {
+                      handleEditBtn1st();
+                    }}
+                    className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/12/Mozambique-Mozambique-01-1.png"
                     alt="Mozambique"
                   />
-                  <p className="legend text-3xl pt-6 cursor-default">Mozambique</p>
+                  <p className="legend text-3xl pt-6 cursor-default">
+                    Mozambique
+                  </p>
                 </div>
               </Slide>
               <Slide index={118}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                  className="h-[200px] w-[300px] cursor-pointer"
+                    onClick={() => {
+                      handleEditBtn1st();
+                    }}
+                    className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/12/Myanmar-01-1.png"
                     alt="Myanmar "
                   />
-                  <p className="legend text-3xl pt-6 cursor-default">Myanmar </p>
+                  <p className="legend text-3xl pt-6 cursor-default">
+                    Myanmar{" "}
+                  </p>
                 </div>
               </Slide>
               <Slide index={119}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                  className="h-[200px] w-[300px] cursor-pointer"
+                    onClick={() => {
+                      handleEditBtn1st();
+                    }}
+                    className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/12/Namibia-01-1.png"
                     alt="Namibia"
                   />
@@ -1320,7 +1868,10 @@ function Rater() {
               <Slide index={120}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                  className="h-[200px] w-[300px] cursor-pointer"
+                    onClick={() => {
+                      handleEditBtn1st();
+                    }}
+                    className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/12/nepal-01-1.png"
                     alt="Nepal"
                   />
@@ -1330,27 +1881,40 @@ function Rater() {
               <Slide index={121}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                  className="h-[200px] w-[300px] cursor-pointer"
+                    onClick={() => {
+                      handleEditBtn1st();
+                    }}
+                    className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/12/Netherlands-01-1.png"
                     alt="Netherlands"
                   />
-                  <p className="legend text-3xl pt-6 cursor-default">Netherlands</p>
+                  <p className="legend text-3xl pt-6 cursor-default">
+                    Netherlands
+                  </p>
                 </div>
               </Slide>
               <Slide index={122}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                  className="h-[200px] w-[300px] cursor-pointer"
+                    onClick={() => {
+                      handleEditBtn1st();
+                    }}
+                    className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/12/New-Zealand-01-1.png"
                     alt="New Zealand"
                   />
-                  <p className="legend text-3xl pt-6 cursor-default">New Zealand</p>
+                  <p className="legend text-3xl pt-6 cursor-default">
+                    New Zealand
+                  </p>
                 </div>
               </Slide>
               <Slide index={123}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                  className="h-[200px] w-[300px] cursor-pointer"
+                    onClick={() => {
+                      handleEditBtn1st();
+                    }}
+                    className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/12/nauru-01-1.png"
                     alt="Nauru"
                   />
@@ -1360,17 +1924,25 @@ function Rater() {
               <Slide index={124}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                  className="h-[200px] w-[300px] cursor-pointer"
+                    onClick={() => {
+                      handleEditBtn1st();
+                    }}
+                    className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/12/Nicaragua-01-1.png"
                     alt="Nicaragua"
                   />
-                  <p className="legend text-3xl pt-6 cursor-default">Nicaragua</p>
+                  <p className="legend text-3xl pt-6 cursor-default">
+                    Nicaragua
+                  </p>
                 </div>
               </Slide>
               <Slide index={125}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                  className="h-[200px] w-[300px] cursor-pointer"
+                    onClick={() => {
+                      handleEditBtn1st();
+                    }}
+                    className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/12/Niger-01-1.png"
                     alt="Niger"
                   />
@@ -1380,7 +1952,10 @@ function Rater() {
               <Slide index={126}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                  className="h-[200px] w-[300px] cursor-pointer"
+                    onClick={() => {
+                      handleEditBtn1st();
+                    }}
+                    className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/12/Nigeria-01-1.png"
                     alt="Nigeria"
                   />
@@ -1390,27 +1965,40 @@ function Rater() {
               <Slide index={127}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                  className="h-[200px] w-[300px] cursor-pointer"
+                    onClick={() => {
+                      handleEditBtn1st();
+                    }}
+                    className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/12/north-korea-01-1.png"
                     alt="North Korea"
                   />
-                  <p className="legend text-3xl pt-6 cursor-default">North Korea</p>
+                  <p className="legend text-3xl pt-6 cursor-default">
+                    North Korea
+                  </p>
                 </div>
               </Slide>
               <Slide index={128}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                  className="h-[200px] w-[300px] cursor-pointer"
+                    onClick={() => {
+                      handleEditBtn1st();
+                    }}
+                    className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/12/macedonia-01-1.png"
                     alt="North Macedonia"
                   />
-                  <p className="legend text-3xl pt-6 cursor-default">North Macedonia</p>
+                  <p className="legend text-3xl pt-6 cursor-default">
+                    North Macedonia
+                  </p>
                 </div>
               </Slide>
               <Slide index={129}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                  className="h-[200px] w-[300px] cursor-pointer"
+                    onClick={() => {
+                      handleEditBtn1st();
+                    }}
+                    className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/12/Norway-01-1.png"
                     alt="Norway"
                   />
@@ -1420,7 +2008,10 @@ function Rater() {
               <Slide index={130}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                  className="h-[200px] w-[300px] cursor-pointer"
+                    onClick={() => {
+                      handleEditBtn1st();
+                    }}
+                    className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/12/Oman-01-1.png"
                     alt="Oman"
                   />
@@ -1430,17 +2021,25 @@ function Rater() {
               <Slide index={131}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                  className="h-[200px] w-[300px] cursor-pointer"
+                    onClick={() => {
+                      handleEditBtn1st();
+                    }}
+                    className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/12/Flag-of-Pakistan-01-1.png"
                     alt="Pakistan"
                   />
-                  <p className="legend text-3xl pt-6 cursor-default">Pakistan</p>
+                  <p className="legend text-3xl pt-6 cursor-default">
+                    Pakistan
+                  </p>
                 </div>
               </Slide>
               <Slide index={132}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                  className="h-[200px] w-[300px] cursor-pointer"
+                    onClick={() => {
+                      handleEditBtn1st();
+                    }}
+                    className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/12/Palau-01-1.png"
                     alt="Palau"
                   />
@@ -1450,17 +2049,25 @@ function Rater() {
               <Slide index={133}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                  className="h-[200px] w-[300px] cursor-pointer"
+                    onClick={() => {
+                      handleEditBtn1st();
+                    }}
+                    className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/12/Palestine-01-1.png"
                     alt="Palestine"
                   />
-                  <p className="legend text-3xl pt-6 cursor-default">Palestine</p>
+                  <p className="legend text-3xl pt-6 cursor-default">
+                    Palestine
+                  </p>
                 </div>
               </Slide>
               <Slide index={134}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                  className="h-[200px] w-[300px] cursor-pointer"
+                    onClick={() => {
+                      handleEditBtn1st();
+                    }}
+                    className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/12/Panama-01-1.png"
                     alt="Panama"
                   />
@@ -1470,27 +2077,40 @@ function Rater() {
               <Slide index={135}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                  className="h-[200px] w-[300px] cursor-pointer"
+                    onClick={() => {
+                      handleEditBtn1st();
+                    }}
+                    className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/12/papua-new-guinea-01-1.png"
                     alt="Papua New Guinea"
                   />
-                  <p className="legend text-3xl pt-6 cursor-default">Papua New Guinea</p>
+                  <p className="legend text-3xl pt-6 cursor-default">
+                    Papua New Guinea
+                  </p>
                 </div>
               </Slide>
               <Slide index={136}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                  className="h-[200px] w-[300px] cursor-pointer"
+                    onClick={() => {
+                      handleEditBtn1st();
+                    }}
+                    className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/12/paraguay-01-1.png"
                     alt="Paraguay"
                   />
-                  <p className="legend text-3xl pt-6 cursor-default">Paraguay</p>
+                  <p className="legend text-3xl pt-6 cursor-default">
+                    Paraguay
+                  </p>
                 </div>
               </Slide>
               <Slide index={137}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                  className="h-[200px] w-[300px] cursor-pointer"
+                    onClick={() => {
+                      handleEditBtn1st();
+                    }}
+                    className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/12/peru-01-3.png"
                     alt="Peru"
                   />
@@ -1500,17 +2120,25 @@ function Rater() {
               <Slide index={138}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                  className="h-[200px] w-[300px] cursor-pointer"
+                    onClick={() => {
+                      handleEditBtn1st();
+                    }}
+                    className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/12/philippines-01-1.png"
                     alt="Philippines"
                   />
-                  <p className="legend text-3xl pt-6 cursor-default">Philippines</p>
+                  <p className="legend text-3xl pt-6 cursor-default">
+                    Philippines
+                  </p>
                 </div>
               </Slide>
               <Slide index={139}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                  className="h-[200px] w-[300px] cursor-pointer"
+                    onClick={() => {
+                      handleEditBtn1st();
+                    }}
+                    className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/12/Poland-01-2.png"
                     alt="Poland"
                   />
@@ -1520,17 +2148,25 @@ function Rater() {
               <Slide index={140}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                  className="h-[200px] w-[300px] cursor-pointer"
+                    onClick={() => {
+                      handleEditBtn1st();
+                    }}
+                    className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/12/portugal-01-1.png"
                     alt="Portugal"
                   />
-                  <p className="legend text-3xl pt-6 cursor-default">Portugal</p>
+                  <p className="legend text-3xl pt-6 cursor-default">
+                    Portugal
+                  </p>
                 </div>
               </Slide>
               <Slide index={141}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                  className="h-[200px] w-[300px] cursor-pointer"
+                    onClick={() => {
+                      handleEditBtn1st();
+                    }}
+                    className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/12/qatar-01-2.png"
                     alt="Qatar"
                   />
@@ -1540,7 +2176,10 @@ function Rater() {
               <Slide index={142}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                  className="h-[200px] w-[300px] cursor-pointer"
+                    onClick={() => {
+                      handleEditBtn1st();
+                    }}
+                    className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/12/romania-01-2.png"
                     alt="Romania"
                   />
@@ -1550,7 +2189,10 @@ function Rater() {
               <Slide index={143}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                  className="h-[200px] w-[300px] cursor-pointer"
+                    onClick={() => {
+                      handleEditBtn1st();
+                    }}
+                    className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/12/Russia-01-1.png"
                     alt="Russia"
                   />
@@ -1560,7 +2202,10 @@ function Rater() {
               <Slide index={144}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                  className="h-[200px] w-[300px] cursor-pointer"
+                    onClick={() => {
+                      handleEditBtn1st();
+                    }}
+                    className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/12/Rwanda-01-1.png"
                     alt="Rwanda"
                   />
@@ -1570,37 +2215,55 @@ function Rater() {
               <Slide index={145}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                  className="h-[200px] w-[300px] cursor-pointer"
+                    onClick={() => {
+                      handleEditBtn1st();
+                    }}
+                    className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/12/Saint-Kitts-and-Nevis-01-1.png"
                     alt="Saint Kitts and Nevis"
                   />
-                  <p className="legend text-3xl pt-6 cursor-default">Saint Kitts and Nevis</p>
+                  <p className="legend text-3xl pt-6 cursor-default">
+                    Saint Kitts and Nevis
+                  </p>
                 </div>
               </Slide>
               <Slide index={146}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                  className="h-[200px] w-[300px] cursor-pointer"
+                    onClick={() => {
+                      handleEditBtn1st();
+                    }}
+                    className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/12/Saint-Lucia-01-1.png"
                     alt="Saint Lucia"
                   />
-                  <p className="legend text-3xl pt-6 cursor-default">Saint Lucia</p>
+                  <p className="legend text-3xl pt-6 cursor-default">
+                    Saint Lucia
+                  </p>
                 </div>
               </Slide>
               <Slide index={147}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                  className="h-[200px] w-[300px] cursor-pointer"
+                    onClick={() => {
+                      handleEditBtn1st();
+                    }}
+                    className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/12/Saint-Vincent-01-2.png"
                     alt="Saint Vincent and the Grenadines"
                   />
-                  <p className="legend text-3xl pt-6 cursor-default">Saint Vincent and the Grenadines</p>
+                  <p className="legend text-3xl pt-6 cursor-default">
+                    Saint Vincent and the Grenadines
+                  </p>
                 </div>
               </Slide>
               <Slide index={148}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                  className="h-[200px] w-[300px] cursor-pointer"
+                    onClick={() => {
+                      handleEditBtn1st();
+                    }}
+                    className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/12/Samoa-01-1.png"
                     alt="Samoa"
                   />
@@ -1610,47 +2273,70 @@ function Rater() {
               <Slide index={149}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                  className="h-[200px] w-[300px] cursor-pointer"
+                    onClick={() => {
+                      handleEditBtn1st();
+                    }}
+                    className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/12/San-Marino-01-1.png"
                     alt="San Marino"
                   />
-                  <p className="legend text-3xl pt-6 cursor-default">San Marino</p>
+                  <p className="legend text-3xl pt-6 cursor-default">
+                    San Marino
+                  </p>
                 </div>
               </Slide>
               <Slide index={150}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                  className="h-[200px] w-[300px] cursor-pointer"
+                    onClick={() => {
+                      handleEditBtn1st();
+                    }}
+                    className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/12/Sao-Tome-01-1.png"
                     alt="São Tomé and Principe"
                   />
-                  <p className="legend text-3xl pt-6 cursor-default">São Tomé and Principe</p>
+                  <p className="legend text-3xl pt-6 cursor-default">
+                    São Tomé and Principe
+                  </p>
                 </div>
               </Slide>
               <Slide index={151}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                  className="h-[200px] w-[300px] cursor-pointer"
+                    onClick={() => {
+                      handleEditBtn1st();
+                    }}
+                    className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/12/Saudi-Arabia-01-1.png"
                     alt="Saudi Arabia"
                   />
-                  <p className="legend text-3xl pt-6 cursor-default">Saudi Arabia</p>
+                  <p className="legend text-3xl pt-6 cursor-default">
+                    Saudi Arabia
+                  </p>
                 </div>
               </Slide>
               <Slide index={152}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                  className="h-[200px] w-[300px] cursor-pointer"
+                    onClick={() => {
+                      handleEditBtn1st();
+                    }}
+                    className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2022/01/Scotland-01-1.png"
                     alt="Scotland"
                   />
-                  <p className="legend text-3xl pt-6 cursor-default">Scotland</p>
+                  <p className="legend text-3xl pt-6 cursor-default">
+                    Scotland
+                  </p>
                 </div>
               </Slide>
               <Slide index={153}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                  className="h-[200px] w-[300px] cursor-pointer"
+                    onClick={() => {
+                      handleEditBtn1st();
+                    }}
+                    className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/12/Senegal-01-1.png"
                     alt="Senegal"
                   />
@@ -1660,7 +2346,10 @@ function Rater() {
               <Slide index={154}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                  className="h-[200px] w-[300px] cursor-pointer"
+                    onClick={() => {
+                      handleEditBtn1st();
+                    }}
+                    className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/12/Serbia-01-1.png"
                     alt="Serbia"
                   />
@@ -1670,67 +2359,100 @@ function Rater() {
               <Slide index={155}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                  className="h-[200px] w-[300px] cursor-pointer"
+                    onClick={() => {
+                      handleEditBtn1st();
+                    }}
+                    className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/12/Seychelles-01-4.png"
                     alt="Seychelles"
                   />
-                  <p className="legend text-3xl pt-6 cursor-default">Seychelles</p>
+                  <p className="legend text-3xl pt-6 cursor-default">
+                    Seychelles
+                  </p>
                 </div>
               </Slide>
               <Slide index={156}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                  className="h-[200px] w-[300px] cursor-pointer"
+                    onClick={() => {
+                      handleEditBtn1st();
+                    }}
+                    className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/12/Sierra-Leone-01-1.png"
                     alt="Sierra Leone"
                   />
-                  <p className="legend text-3xl pt-6 cursor-default">Sierra Leone</p>
+                  <p className="legend text-3xl pt-6 cursor-default">
+                    Sierra Leone
+                  </p>
                 </div>
               </Slide>
               <Slide index={157}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                  className="h-[200px] w-[300px] cursor-pointer"
+                    onClick={() => {
+                      handleEditBtn1st();
+                    }}
+                    className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/12/Singapore-01-1.png"
                     alt="Singapore"
                   />
-                  <p className="legend text-3xl pt-6 cursor-default">Singapore</p>
+                  <p className="legend text-3xl pt-6 cursor-default">
+                    Singapore
+                  </p>
                 </div>
               </Slide>
               <Slide index={158}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                  className="h-[200px] w-[300px] cursor-pointer"
+                    onClick={() => {
+                      handleEditBtn1st();
+                    }}
+                    className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/12/fSlovakia-01-1.png"
                     alt="Slovakia"
                   />
-                  <p className="legend text-3xl pt-6 cursor-default">Slovakia</p>
+                  <p className="legend text-3xl pt-6 cursor-default">
+                    Slovakia
+                  </p>
                 </div>
               </Slide>
               <Slide index={159}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                  className="h-[200px] w-[300px] cursor-pointer"
+                    onClick={() => {
+                      handleEditBtn1st();
+                    }}
+                    className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/12/Slovenia-01-1.png"
                     alt="Slovenia"
                   />
-                  <p className="legend text-3xl pt-6 cursor-default">Slovenia</p>
+                  <p className="legend text-3xl pt-6 cursor-default">
+                    Slovenia
+                  </p>
                 </div>
               </Slide>
               <Slide index={160}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                  className="h-[200px] w-[300px] cursor-pointer"
+                    onClick={() => {
+                      handleEditBtn1st();
+                    }}
+                    className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/12/Solomon-Islands-01-1.png"
                     alt="Solomon Islands"
                   />
-                  <p className="legend text-3xl pt-6 cursor-default">Solomon Islands</p>
+                  <p className="legend text-3xl pt-6 cursor-default">
+                    Solomon Islands
+                  </p>
                 </div>
               </Slide>
               <Slide index={161}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                  className="h-[200px] w-[300px] cursor-pointer"
+                    onClick={() => {
+                      handleEditBtn1st();
+                    }}
+                    className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/12/Somalia-01-1.png"
                     alt="Somalia"
                   />
@@ -1740,37 +2462,55 @@ function Rater() {
               <Slide index={162}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                  className="h-[200px] w-[300px] cursor-pointer"
+                    onClick={() => {
+                      handleEditBtn1st();
+                    }}
+                    className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/12/South-Africa-01-1.png"
                     alt="South Africa"
                   />
-                  <p className="legend text-3xl pt-6 cursor-default">South Africa</p>
+                  <p className="legend text-3xl pt-6 cursor-default">
+                    South Africa
+                  </p>
                 </div>
               </Slide>
               <Slide index={163}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                  className="h-[200px] w-[300px] cursor-pointer"
+                    onClick={() => {
+                      handleEditBtn1st();
+                    }}
+                    className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/12/South-Korea-01-1.png"
                     alt="South Korea"
                   />
-                  <p className="legend text-3xl pt-6 cursor-default">South Korea</p>
+                  <p className="legend text-3xl pt-6 cursor-default">
+                    South Korea
+                  </p>
                 </div>
               </Slide>
               <Slide index={164}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                  className="h-[200px] w-[300px] cursor-pointer"
+                    onClick={() => {
+                      handleEditBtn1st();
+                    }}
+                    className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/12/South-Sudan-01-1.png"
                     alt="South Sudan"
                   />
-                  <p className="legend text-3xl pt-6 cursor-default">South Sudan</p>
+                  <p className="legend text-3xl pt-6 cursor-default">
+                    South Sudan
+                  </p>
                 </div>
               </Slide>
               <Slide index={165}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                  className="h-[200px] w-[300px] cursor-pointer"
+                    onClick={() => {
+                      handleEditBtn1st();
+                    }}
+                    className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/12/Flag-of-Spain-01-1.png"
                     alt="Spain"
                   />
@@ -1780,17 +2520,25 @@ function Rater() {
               <Slide index={166}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                  className="h-[200px] w-[300px] cursor-pointer"
+                    onClick={() => {
+                      handleEditBtn1st();
+                    }}
+                    className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/12/Sri-Lankan-01-1.png"
                     alt="Sri Lanka"
                   />
-                  <p className="legend text-3xl pt-6 cursor-default">Sri Lanka</p>
+                  <p className="legend text-3xl pt-6 cursor-default">
+                    Sri Lanka
+                  </p>
                 </div>
               </Slide>
               <Slide index={167}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                  className="h-[200px] w-[300px] cursor-pointer"
+                    onClick={() => {
+                      handleEditBtn1st();
+                    }}
+                    className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/12/Sudan-01-2.png"
                     alt="Sudan"
                   />
@@ -1800,17 +2548,25 @@ function Rater() {
               <Slide index={168}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                  className="h-[200px] w-[300px] cursor-pointer"
+                    onClick={() => {
+                      handleEditBtn1st();
+                    }}
+                    className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/12/Suriname-01-6.png"
                     alt="Suriname"
                   />
-                  <p className="legend text-3xl pt-6 cursor-default">Suriname</p>
+                  <p className="legend text-3xl pt-6 cursor-default">
+                    Suriname
+                  </p>
                 </div>
               </Slide>
               <Slide index={169}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                  className="h-[200px] w-[300px] cursor-pointer"
+                    onClick={() => {
+                      handleEditBtn1st();
+                    }}
+                    className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/12/Swedish-01-2.png"
                     alt="Sweden"
                   />
@@ -1820,17 +2576,25 @@ function Rater() {
               <Slide index={170}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                  className="h-[200px] w-[300px] cursor-pointer"
+                    onClick={() => {
+                      handleEditBtn1st();
+                    }}
+                    className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/12/Swaziland-01-1.png"
                     alt="Switzerland"
                   />
-                  <p className="legend text-3xl pt-6 cursor-default">Switzerland</p>
+                  <p className="legend text-3xl pt-6 cursor-default">
+                    Switzerland
+                  </p>
                 </div>
               </Slide>
               <Slide index={171}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                  className="h-[200px] w-[300px] cursor-pointer"
+                    onClick={() => {
+                      handleEditBtn1st();
+                    }}
+                    className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/12/Syria-01-1.png"
                     alt="Syria"
                   />
@@ -1840,47 +2604,70 @@ function Rater() {
               <Slide index={172}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                  className="h-[200px] w-[300px] cursor-pointer"
+                    onClick={() => {
+                      handleEditBtn1st();
+                    }}
+                    className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/12/Tajikistan-01-1.png"
                     alt="Tajikistan"
                   />
-                  <p className="legend text-3xl pt-6 cursor-default">Tajikistan</p>
+                  <p className="legend text-3xl pt-6 cursor-default">
+                    Tajikistan
+                  </p>
                 </div>
               </Slide>
               <Slide index={173}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                  className="h-[200px] w-[300px] cursor-pointer"
+                    onClick={() => {
+                      handleEditBtn1st();
+                    }}
+                    className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/12/Tanzania-01-1.png"
                     alt="Tanzania"
                   />
-                  <p className="legend text-3xl pt-6 cursor-default">Tanzania</p>
+                  <p className="legend text-3xl pt-6 cursor-default">
+                    Tanzania
+                  </p>
                 </div>
               </Slide>
               <Slide index={174}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                  className="h-[200px] w-[300px] cursor-pointer"
+                    onClick={() => {
+                      handleEditBtn1st();
+                    }}
+                    className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/12/thailand-01-1.png"
                     alt="Thailand"
                   />
-                  <p className="legend text-3xl pt-6 cursor-default">Thailand</p>
+                  <p className="legend text-3xl pt-6 cursor-default">
+                    Thailand
+                  </p>
                 </div>
               </Slide>
               <Slide index={175}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                  className="h-[200px] w-[300px] cursor-pointer"
+                    onClick={() => {
+                      handleEditBtn1st();
+                    }}
+                    className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/12/Timor-Leste-01-1.png"
                     alt="Timor-Leste"
                   />
-                  <p className="legend text-3xl pt-6 cursor-default">Timor-Leste</p>
+                  <p className="legend text-3xl pt-6 cursor-default">
+                    Timor-Leste
+                  </p>
                 </div>
               </Slide>
               <Slide index={176}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                  className="h-[200px] w-[300px] cursor-pointer"
+                    onClick={() => {
+                      handleEditBtn1st();
+                    }}
+                    className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/12/Togo-01-1.png"
                     alt="Togo"
                   />
@@ -1890,7 +2677,10 @@ function Rater() {
               <Slide index={177}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                  className="h-[200px] w-[300px] cursor-pointer"
+                    onClick={() => {
+                      handleEditBtn1st();
+                    }}
+                    className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/12/Tonga-01-1.png"
                     alt="Tonga"
                   />
@@ -1900,17 +2690,25 @@ function Rater() {
               <Slide index={178}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                  className="h-[200px] w-[300px] cursor-pointer"
+                    onClick={() => {
+                      handleEditBtn1st();
+                    }}
+                    className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/12/Trinidad-01-1.png"
                     alt="Trinidad and Tobago"
                   />
-                  <p className="legend text-3xl pt-6 cursor-default">Trinidad and Tobago</p>
+                  <p className="legend text-3xl pt-6 cursor-default">
+                    Trinidad and Tobago
+                  </p>
                 </div>
               </Slide>
               <Slide index={179}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                  className="h-[200px] w-[300px] cursor-pointer"
+                    onClick={() => {
+                      handleEditBtn1st();
+                    }}
+                    className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/12/Tunisia-01-1.png"
                     alt="Tunisia"
                   />
@@ -1920,7 +2718,10 @@ function Rater() {
               <Slide index={180}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                  className="h-[200px] w-[300px] cursor-pointer"
+                    onClick={() => {
+                      handleEditBtn1st();
+                    }}
+                    className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/12/Turkey-01-4.png"
                     alt="Turkey"
                   />
@@ -1930,17 +2731,25 @@ function Rater() {
               <Slide index={181}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                  className="h-[200px] w-[300px] cursor-pointer"
+                    onClick={() => {
+                      handleEditBtn1st();
+                    }}
+                    className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/12/Turkmenistan-01-1.png"
                     alt="Turkmenistan"
                   />
-                  <p className="legend text-3xl pt-6 cursor-default">Turkmenistan</p>
+                  <p className="legend text-3xl pt-6 cursor-default">
+                    Turkmenistan
+                  </p>
                 </div>
               </Slide>
               <Slide index={182}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                  className="h-[200px] w-[300px] cursor-pointer"
+                    onClick={() => {
+                      handleEditBtn1st();
+                    }}
+                    className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/12/Tuvalu-01-3.png"
                     alt="Tuvalu"
                   />
@@ -1950,7 +2759,10 @@ function Rater() {
               <Slide index={183}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                  className="h-[200px] w-[300px] cursor-pointer"
+                    onClick={() => {
+                      handleEditBtn1st();
+                    }}
+                    className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/12/Uganda-01-1.png"
                     alt="Uganda"
                   />
@@ -1960,7 +2772,10 @@ function Rater() {
               <Slide index={184}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                  className="h-[200px] w-[300px] cursor-pointer"
+                    onClick={() => {
+                      handleEditBtn1st();
+                    }}
+                    className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/12/Ukraine-01-1.png"
                     alt="Ukraine"
                   />
@@ -1970,27 +2785,40 @@ function Rater() {
               <Slide index={185}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                  className="h-[200px] w-[300px] cursor-pointer"
+                    onClick={() => {
+                      handleEditBtn1st();
+                    }}
+                    className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/12/United-Arab-Emirates-01-1.png"
                     alt="United Arab Emirates"
                   />
-                  <p className="legend text-3xl pt-6 cursor-default">United Arab Emirates</p>
+                  <p className="legend text-3xl pt-6 cursor-default">
+                    United Arab Emirates
+                  </p>
                 </div>
               </Slide>
               <Slide index={186}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                  className="h-[200px] w-[300px] cursor-pointer"
+                    onClick={() => {
+                      handleEditBtn1st();
+                    }}
+                    className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/12/America-01-1.png"
                     alt="United States of America"
                   />
-                  <p className="legend text-3xl pt-6 cursor-default">United States of America</p>
+                  <p className="legend text-3xl pt-6 cursor-default">
+                    United States of America
+                  </p>
                 </div>
               </Slide>
               <Slide index={187}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                  className="h-[200px] w-[300px] cursor-pointer"
+                    onClick={() => {
+                      handleEditBtn1st();
+                    }}
+                    className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/12/Uruguay-01-1.png"
                     alt="Uruguay"
                   />
@@ -2000,17 +2828,25 @@ function Rater() {
               <Slide index={188}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                  className="h-[200px] w-[300px] cursor-pointer"
+                    onClick={() => {
+                      handleEditBtn1st();
+                    }}
+                    className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/12/Uzbekistan-01-1.png"
                     alt="Uzbekistan"
                   />
-                  <p className="legend text-3xl pt-6 cursor-default">Uzbekistan</p>
+                  <p className="legend text-3xl pt-6 cursor-default">
+                    Uzbekistan
+                  </p>
                 </div>
               </Slide>
               <Slide index={189}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                  className="h-[200px] w-[300px] cursor-pointer"
+                    onClick={() => {
+                      handleEditBtn1st();
+                    }}
+                    className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/12/Vanuatu-01-1.png"
                     alt="Vanuatu"
                   />
@@ -2020,7 +2856,10 @@ function Rater() {
               <Slide index={190}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                  className="h-[200px] w-[300px] cursor-pointer"
+                    onClick={() => {
+                      handleEditBtn1st();
+                    }}
+                    className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/12/Vatican-01-1.png"
                     alt="Vatican"
                   />
@@ -2030,17 +2869,25 @@ function Rater() {
               <Slide index={191}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                  className="h-[200px] w-[300px] cursor-pointer"
+                    onClick={() => {
+                      handleEditBtn1st();
+                    }}
+                    className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/12/Venezuela-01-1.png"
                     alt="Venezuela"
                   />
-                  <p className="legend text-3xl pt-6 cursor-default">Venezuela</p>
+                  <p className="legend text-3xl pt-6 cursor-default">
+                    Venezuela
+                  </p>
                 </div>
               </Slide>
               <Slide index={192}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                  className="h-[200px] w-[300px] cursor-pointer"
+                    onClick={() => {
+                      handleEditBtn1st();
+                    }}
+                    className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/12/Vietnam-01-1.png"
                     alt="Vietnam"
                   />
@@ -2050,17 +2897,23 @@ function Rater() {
               <Slide index={193}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                  className="h-[200px] w-[300px] cursor-pointer"
+                    onClick={() => {
+                      handleEditBtn1st();
+                    }}
+                    className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2022/01/Welsh-01-1.png"
-                    alt="boy"
+                    alt="Wales"
                   />
-                  <p className="legend text-3xl pt-6 cursor-default">boy</p>
+                  <p className="legend text-3xl pt-6 cursor-default">Wales</p>
                 </div>
               </Slide>
               <Slide index={194}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                  className="h-[200px] w-[300px] cursor-pointer"
+                    onClick={() => {
+                      handleEditBtn1st();
+                    }}
+                    className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/12/Yemen-01-1.png"
                     alt="Yemen"
                   />
@@ -2070,7 +2923,10 @@ function Rater() {
               <Slide index={195}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                  className="h-[200px] w-[300px] cursor-pointer"
+                    onClick={() => {
+                      handleEditBtn1st();
+                    }}
+                    className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/12/zambia-01-1.png"
                     alt="Zambia"
                   />
@@ -2080,21 +2936,1988 @@ function Rater() {
               <Slide index={196}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                  className="h-[200px] w-[300px] cursor-pointer"
+                    onClick={() => {
+                      handleEditBtn1st();
+                    }}
+                    className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/12/Zimbabwe-01.png"
                     alt="Zimbabwe	"
                   />
-                  <p className="legend text-3xl pt-6 cursor-default">Zimbabwe	</p>
+                  <p className="legend text-3xl pt-6 cursor-default">
+                    Zimbabwe{" "}
+                  </p>
                 </div>
               </Slide>
             </Slider>
-            <ButtonBack><AiOutlineLeft/></ButtonBack>
-            <ButtonNext><AiOutlineRight/></ButtonNext>
+            <ButtonBack
+              onClick={() => {
+                playBallAudio();
+              }}
+              className=" hover:scale-150 absolute top-50 left-10"
+            >
+              <AiOutlineLeft className="text-2xl" />
+            </ButtonBack>
+            <ButtonNext
+              onClick={() => {
+                playBallAudio();
+              }}
+              className=" hover:scale-150 absolute top-50 right-10"
+            >
+              <AiOutlineRight className="text-2xl" />
+            </ButtonNext>
           </CarouselProvider>
         </div>
       </div>
+
+      <div
+        ref={clubNationRef}
+        className="major-Bg clubNation h-[100vh] w-screen text-white font-extrabold text-center hidden"
+      >
+        <div className=" text-7xl">Select Team's Nation</div>
+
+        <div className="h-[50vh] lg:pt-[10vh] pt-[5vh]">
+          <CarouselProvider
+            naturalSlideWidth={100}
+            naturalSlideHeight={70}
+            totalSlides={6}
+            // isIntrinsicHeight={true}
+          >
+            <Slider className="max-h-[50vh]">
+              <Slide index={0}>
+                <div className="flex flex-col items-center content-center justify-center">
+                  <img
+                    onClick={() => {
+                      handleEditBtnBund();
+                    }}
+                    className="h-[200px] w-[300px] cursor-pointer"
+                    src="https://seekflag.com/app/uploads/2021/11/Flag-of-Germany-01-1.png"
+                    alt="Bundesliga"
+                  />
+                  <p className="legend text-3xl pt-6 cursor-default">
+                    Bundesliga
+                  </p>
+                </div>
+              </Slide>
+              <Slide index={1}>
+                <div className="flex flex-col items-center content-center justify-center">
+                  <img
+                    onClick={() => {
+                      handleEditBtnLaLiga();
+                    }}
+                    className="h-[200px] w-[300px] cursor-pointer"
+                    src="https://seekflag.com/app/uploads/2021/12/Flag-of-Spain-01-1.png"
+                    alt="La Liga"
+                  />
+                  <p className="legend text-3xl pt-6 cursor-default">La Liga</p>
+                </div>
+              </Slide>
+              <Slide index={2}>
+                <div className="flex flex-col items-center content-center justify-center">
+                  <img
+                    onClick={() => {
+                      handleEditBtnLig1();
+                    }}
+                    className="h-[200px] w-[300px] cursor-pointer"
+                    src="https://seekflag.com/app/uploads/2021/11/Flag-of-France-01-1.png"
+                    alt="Ligue 1"
+                  />
+                  <p className="legend text-3xl pt-6 cursor-default">Ligue 1</p>
+                </div>
+              </Slide>
+              <Slide index={3}>
+                <div className="flex flex-col items-center content-center justify-center">
+                  <img
+                    onClick={() => {
+                      handleEditBtnEpl();
+                    }}
+                    className="h-[200px] w-[300px] cursor-pointer"
+                    src="https://seekflag.com/app/uploads/2022/01/England-01-1.png"
+                    alt="Premier league"
+                  />
+                  <p className="legend text-3xl pt-6 cursor-default">
+                    Premier league
+                  </p>
+                </div>
+              </Slide>
+              <Slide index={4}>
+                <div className="flex flex-col items-center content-center justify-center">
+                  <img
+                    onClick={() => {
+                      handleEditBtnSerA();
+                    }}
+                    className="h-[200px] w-[300px] cursor-pointer"
+                    src="https://seekflag.com/app/uploads/2021/12/Flag-of-Italy-01-1.png"
+                    alt="Serie A"
+                  />
+                  <p className="legend text-3xl pt-6 cursor-default">Serie A</p>
+                </div>
+              </Slide>
+              <Slide index={5}>
+                <div className="flex flex-col items-center content-center justify-center">
+                  <img
+                    onClick={() => {
+                      handleEditBtnRotw();
+                    }}
+                    className="h-[200px] w-[300px] cursor-pointer"
+                    src="https://upload.wikimedia.org/wikipedia/commons/d/d2/Earth_Flag.png?20110207142854"
+                    alt="Rest of the World"
+                  />
+                  <p className="legend text-3xl pt-6 cursor-default">
+                    Rest of the World
+                  </p>
+                </div>
+              </Slide>
+            </Slider>
+            <ButtonBack
+              onClick={() => {
+                playBallAudio();
+              }}
+              className=" hover:scale-150 absolute top-50 left-10"
+            >
+              <AiOutlineLeft className="text-2xl" />
+            </ButtonBack>
+            <ButtonNext
+              onClick={() => {
+                playBallAudio();
+              }}
+              className=" hover:scale-150 absolute top-50 right-10"
+            >
+              <AiOutlineRight className="text-2xl" />
+            </ButtonNext>
+          </CarouselProvider>
+        </div>
+      </div>
+
+      <div
+        ref={teamsRef}
+        className="major-Bg clubNation h-[100vh] w-screen text-white font-extrabold text-center hidden"
+      >
+        <div className="flex flex-col">
+          <div className=" text-7xl">Select Team</div>
+
+          <div
+            ref={bundesligaRef}
+            className="h-[50vh] lg:pt-[10vh] pt-[5vh] hidden"
+          >
+            <CarouselProvider
+              naturalSlideWidth={100}
+              naturalSlideHeight={70}
+              totalSlides={18}
+              // isIntrinsicHeight={true}
+            >
+              <Slider className="max-h-[50vh]">
+                <Slide index={0}>
+                  <div className="flex flex-col items-center content-center justify-center">
+                    <img
+                      onClick={() => {
+                        handleEditBtn1st();
+                      }}
+                      className="h-[200px] w-[300px] cursor-pointer"
+                      src="https://assets.stickpng.com/thumbs/584d85a1367b6a13e54477c3.png"
+                      alt="FC Augsburg"
+                    />
+                    <p className="legend text-3xl pt-6 cursor-default">
+                      FC Augsburg
+                    </p>
+                  </div>
+                </Slide>
+                <Slide index={1}>
+                  <div className="flex flex-col items-center content-center justify-center">
+                    <img
+                      onClick={() => {
+                        handleEditBtn1st();
+                      }}
+                      className="h-[200px] w-[300px] cursor-pointer"
+                      src="https://assets.stickpng.com/thumbs/5bcf581f7aaafa0575d85005.png"
+                      alt="Hertha BSC"
+                    />
+                    <p className="legend text-3xl pt-6 cursor-default">
+                      Hertha BSC
+                    </p>
+                  </div>
+                </Slide>
+                <Slide index={2}>
+                  <div className="flex flex-col items-center content-center justify-center">
+                    <img
+                      onClick={() => {
+                        handleEditBtn1st();
+                      }}
+                      className="h-[200px] w-[300px] cursor-pointer"
+                      src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Escudo_Union_Berlin.png/800px-Escudo_Union_Berlin.png?20220820181203"
+                      alt="Union Berlin"
+                    />
+                    <p className="legend text-3xl pt-6 cursor-default">
+                      Union Berlin
+                    </p>
+                  </div>
+                </Slide>
+                <Slide index={3}>
+                  <div className="flex flex-col items-center content-center justify-center">
+                    <img
+                      onClick={() => {
+                        handleEditBtn1st();
+                      }}
+                      className="h-[200px] w-[300px] cursor-pointer"
+                      src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/VfL_Bochum_logo.svg/170px-VfL_Bochum_logo.svg.png?20210423031837"
+                      alt="VfL Bochum"
+                    />
+                    <p className="legend text-3xl pt-6 cursor-default">
+                      VfL Bochum
+                    </p>
+                  </div>
+                </Slide>
+                <Slide index={4}>
+                  <div className="flex flex-col items-center content-center justify-center">
+                    <img
+                      onClick={() => {
+                        handleEditBtn1st();
+                      }}
+                      className="h-[200px] w-[300px] cursor-pointer"
+                      src="https://assets.stickpng.com/thumbs/584d85c9367b6a13e54477c8.png"
+                      alt="Werder Bremen"
+                    />
+                    <p className="legend text-3xl pt-6 cursor-default">
+                      Werder Bremen
+                    </p>
+                  </div>
+                </Slide>
+                <Slide index={5}>
+                  <div className="flex flex-col items-center content-center justify-center">
+                    <img
+                      onClick={() => {
+                        handleEditBtn1st();
+                      }}
+                      className="h-[200px] w-[300px] cursor-pointer"
+                      src="https://assets.stickpng.com/thumbs/584d8678367b6a13e54477d3.png"
+                      alt="Borussia Dortmund"
+                    />
+                    <p className="legend text-3xl pt-6 cursor-default">
+                      Borussia Dortmund
+                    </p>
+                  </div>
+                </Slide>
+                <Slide index={6}>
+                  <div className="flex flex-col items-center content-center justify-center">
+                    <img
+                      onClick={() => {
+                        handleEditBtn1st();
+                      }}
+                      className="h-[200px] w-[300px] cursor-pointer"
+                      src="https://assets.stickpng.com/thumbs/584d865b367b6a13e54477d2.png"
+                      alt="Eintracht Frankfurt"
+                    />
+                    <p className="legend text-3xl pt-6 cursor-default">
+                      Eintracht Frankfurt
+                    </p>
+                  </div>
+                </Slide>
+                <Slide index={7}>
+                  <div className="flex flex-col items-center content-center justify-center">
+                    <img
+                      onClick={() => {
+                        handleEditBtn1st();
+                      }}
+                      className="h-[200px] w-[300px] cursor-pointer"
+                      src="https://assets.stickpng.com/thumbs/584d8630367b6a13e54477cd.png"
+                      alt="SC Freiburg"
+                    />
+                    <p className="legend text-3xl pt-6 cursor-default">
+                      SC Freiburg
+                    </p>
+                  </div>
+                </Slide>
+                <Slide index={8}>
+                  <div className="flex flex-col items-center content-center justify-center">
+                    <img
+                      onClick={() => {
+                        handleEditBtn1st();
+                      }}
+                      className="h-[200px] w-[300px] cursor-pointer"
+                      src="https://assets.stickpng.com/thumbs/584d85b2367b6a13e54477c5.png"
+                      alt="1899 Hoffenheim"
+                    />
+                    <p className="legend text-3xl pt-6 cursor-default">
+                      1899 Hoffenheim
+                    </p>
+                  </div>
+                </Slide>
+                <Slide index={9}>
+                  <div className="flex flex-col items-center content-center justify-center">
+                    <img
+                      onClick={() => {
+                        handleEditBtn1st();
+                      }}
+                      className="h-[200px] w-[300px] cursor-pointer"
+                      src="https://logodownload.org/wp-content/uploads/2019/12/1-fc-koln-logo-0.png"
+                      alt="1. FC Köln"
+                    />
+                    <p className="legend text-3xl pt-6 cursor-default">
+                      1. FC Köln
+                    </p>
+                  </div>
+                </Slide>
+                <Slide index={10}>
+                  <div className="flex flex-col items-center content-center justify-center">
+                    <img
+                      onClick={() => {
+                        handleEditBtn1st();
+                      }}
+                      className="h-[200px] w-[300px] cursor-pointer"
+                      src="https://assets.stickpng.com/thumbs/5bcf58277aaafa0575d85006.png"
+                      alt="RB Leipzig"
+                    />
+                    <p className="legend text-3xl pt-6 cursor-default">
+                      RB Leipzig
+                    </p>
+                  </div>
+                </Slide>
+                <Slide index={11}>
+                  <div className="flex flex-col items-center content-center justify-center">
+                    <img
+                      onClick={() => {
+                        handleEditBtn1st();
+                      }}
+                      className="h-[200px] w-[300px] cursor-pointer"
+                      src="https://assets.stickpng.com/thumbs/584d8651367b6a13e54477d1.png"
+                      alt="Bayer Leverkusen"
+                    />
+                    <p className="legend text-3xl pt-6 cursor-default">
+                      Bayer Leverkusen
+                    </p>
+                  </div>
+                </Slide>
+                <Slide index={12}>
+                  <div className="flex flex-col items-center content-center justify-center">
+                    <img
+                      onClick={() => {
+                        handleEditBtn1st();
+                      }}
+                      className="h-[200px] w-[300px] cursor-pointer"
+                      src="https://assets.stickpng.com/thumbs/584d8640367b6a13e54477cf.png"
+                      alt="Mainz 05"
+                    />
+                    <p className="legend text-3xl pt-6 cursor-default">
+                      Mainz 05
+                    </p>
+                  </div>
+                </Slide>
+                <Slide index={13}>
+                  <div className="flex flex-col items-center content-center justify-center">
+                    <img
+                      onClick={() => {
+                        handleEditBtn1st();
+                      }}
+                      className="h-[200px] w-[300px] cursor-pointer"
+                      src="https://assets.stickpng.com/thumbs/584d85e4367b6a13e54477cb.png"
+                      alt="Borussia Mönchengladbach"
+                    />
+                    <p className="legend text-3xl pt-6 cursor-default">
+                      Borussia Mönchengladbach
+                    </p>
+                  </div>
+                </Slide>
+                <Slide index={14}>
+                  <div className="flex flex-col items-center content-center justify-center">
+                    <img
+                      onClick={() => {
+                        handleEditBtn1st();
+                      }}
+                      className="h-[200px] w-[300px] cursor-pointer"
+                      src="https://assets.stickpng.com/thumbs/584d8683367b6a13e54477d4.png"
+                      alt="Bayern Munich"
+                    />
+                    <p className="legend text-3xl pt-6 cursor-default">
+                      Bayern Munich
+                    </p>
+                  </div>
+                </Slide>
+                <Slide index={15}>
+                  <div className="flex flex-col items-center content-center justify-center">
+                    <img
+                      onClick={() => {
+                        handleEditBtn1st();
+                      }}
+                      className="h-[200px] w-[300px] cursor-pointer"
+                      src="https://assets.stickpng.com/thumbs/584d8649367b6a13e54477d0.png"
+                      alt="Schalke 04"
+                    />
+                    <p className="legend text-3xl pt-6 cursor-default">
+                      Schalke 04
+                    </p>
+                  </div>
+                </Slide>
+                <Slide index={16}>
+                  <div className="flex flex-col items-center content-center justify-center">
+                    <img
+                      onClick={() => {
+                        handleEditBtn1st();
+                      }}
+                      className="h-[200px] w-[300px] cursor-pointer"
+                      src="https://assets.stickpng.com/thumbs/5b4e2e48c051e602a568ce04.png"
+                      alt="VfB Stuttgart"
+                    />
+                    <p className="legend text-3xl pt-6 cursor-default">
+                      VfB Stuttgart
+                    </p>
+                  </div>
+                </Slide>
+                <Slide index={17}>
+                  <div className="flex flex-col items-center content-center justify-center">
+                    <img
+                      onClick={() => {
+                        handleEditBtn1st();
+                      }}
+                      className="h-[200px] w-[300px] cursor-pointer"
+                      src="https://assets.stickpng.com/thumbs/584d8596367b6a13e54477c2.png"
+                      alt="VfL Wolfsburg"
+                    />
+                    <p className="legend text-3xl pt-6 cursor-default">
+                      VfL Wolfsburg
+                    </p>
+                  </div>
+                </Slide>
+              </Slider>
+              <ButtonBack
+                onClick={() => {
+                  playBallAudio();
+                }}
+                className=" hover:scale-150 absolute top-50 left-10"
+              >
+                <AiOutlineLeft className="text-2xl" />
+              </ButtonBack>
+              <ButtonNext
+                onClick={() => {
+                  playBallAudio();
+                }}
+                className=" hover:scale-150 absolute top-50 right-10"
+              >
+                <AiOutlineRight className="text-2xl" />
+              </ButtonNext>
+            </CarouselProvider>
+          </div>
+
+          <div
+            ref={laLigaRef}
+            className="h-[50vh] lg:pt-[10vh] pt-[5vh] hidden"
+          >
+            <CarouselProvider
+              naturalSlideWidth={100}
+              naturalSlideHeight={70}
+              totalSlides={20}
+              // isIntrinsicHeight={true}
+            >
+              <Slider className="max-h-[50vh]">
+                <Slide index={0}>
+                  <div className="flex flex-col items-center content-center justify-center">
+                    <img
+                      onClick={() => {
+                        handleEditBtn1st();
+                      }}
+                      className="h-[200px] w-[300px] cursor-pointer"
+                      src="https://assets.stickpng.com/thumbs/584ad245b519ea740933a8b3.png"
+                      alt="Almería"
+                    />
+                    <p className="legend text-3xl pt-6 cursor-default">
+                      Almería
+                    </p>
+                  </div>
+                </Slide>
+                <Slide index={1}>
+                  <div className="flex flex-col items-center content-center justify-center">
+                    <img
+                      onClick={() => {
+                        handleEditBtn1st();
+                      }}
+                      className="h-[200px] w-[300px] cursor-pointer"
+                      src="https://assets.stickpng.com/thumbs/584ad135b519ea740933a896.png"
+                      alt="Athletic Bilbao"
+                    />
+                    <p className="legend text-3xl pt-6 cursor-default">
+                      Athletic Bilbao
+                    </p>
+                  </div>
+                </Slide>
+                <Slide index={2}>
+                  <div className="flex flex-col items-center content-center justify-center">
+                    <img
+                      onClick={() => {
+                        handleEditBtn1st();
+                      }}
+                      className="h-[200px] w-[300px] cursor-pointer"
+                      src="https://assets.stickpng.com/thumbs/584a9b63b080d7616d29877a.png"
+                      alt="Atlético Madrid"
+                    />
+                    <p className="legend text-3xl pt-6 cursor-default">
+                      Atlético Madrid
+                    </p>
+                  </div>
+                </Slide>
+                <Slide index={3}>
+                  <div className="flex flex-col items-center content-center justify-center">
+                    <img
+                      onClick={() => {
+                        handleEditBtn1st();
+                      }}
+                      className="h-[200px] w-[300px] cursor-pointer"
+                      src="https://assets.stickpng.com/thumbs/584a9b3bb080d7616d298777.png"
+                      alt="Barcelona"
+                    />
+                    <p className="legend text-3xl pt-6 cursor-default">
+                      Barcelona
+                    </p>
+                  </div>
+                </Slide>
+                <Slide index={4}>
+                  <div className="flex flex-col items-center content-center justify-center">
+                    <img
+                      onClick={() => {
+                        handleEditBtn1st();
+                      }}
+                      className="h-[200px] w-[300px] cursor-pointer"
+                      src="https://assets.stickpng.com/thumbs/584ad7abb519ea740933a953.png"
+                      alt="Cádiz"
+                    />
+                    <p className="legend text-3xl pt-6 cursor-default">Cádiz</p>
+                  </div>
+                </Slide>
+                <Slide index={5}>
+                  <div className="flex flex-col items-center content-center justify-center">
+                    <img
+                      onClick={() => {
+                        handleEditBtn1st();
+                      }}
+                      className="h-[200px] w-[300px] cursor-pointer"
+                      src="https://assets.stickpng.com/thumbs/584ad3c4b519ea740933a8df.png"
+                      alt="Celta Vigo"
+                    />
+                    <p className="legend text-3xl pt-6 cursor-default">
+                      Celta Vigo
+                    </p>
+                  </div>
+                </Slide>
+                <Slide index={6}>
+                  <div className="flex flex-col items-center content-center justify-center">
+                    <img
+                      onClick={() => {
+                        handleEditBtn1st();
+                      }}
+                      className="h-[200px] w-[300px] cursor-pointer"
+                      src="https://assets.stickpng.com/thumbs/584ad4e5b519ea740933a901.png"
+                      alt="Elche"
+                    />
+                    <p className="legend text-3xl pt-6 cursor-default">Elche</p>
+                  </div>
+                </Slide>
+                <Slide index={7}>
+                  <div className="flex flex-col items-center content-center justify-center">
+                    <img
+                      onClick={() => {
+                        handleEditBtn1st();
+                      }}
+                      className="h-[200px] w-[300px] cursor-pointer"
+                      src="https://assets.stickpng.com/thumbs/584ad3b5b519ea740933a8dd.png"
+                      alt="Espanyol"
+                    />
+                    <p className="legend text-3xl pt-6 cursor-default">
+                      Espanyol
+                    </p>
+                  </div>
+                </Slide>
+                <Slide index={8}>
+                  <div className="flex flex-col items-center content-center justify-center">
+                    <img
+                      onClick={() => {
+                        handleEditBtn1st();
+                      }}
+                      className="h-[200px] w-[300px] cursor-pointer"
+                      src="https://assets.stickpng.com/thumbs/584ad4b1b519ea740933a8fc.png"
+                      alt="Getafe"
+                    />
+                    <p className="legend text-3xl pt-6 cursor-default">
+                      Getafe
+                    </p>
+                  </div>
+                </Slide>
+                <Slide index={9}>
+                  <div className="flex flex-col items-center content-center justify-center">
+                    <img
+                      onClick={() => {
+                        handleEditBtn1st();
+                      }}
+                      className="h-[200px] w-[300px] cursor-pointer"
+                      src="https://assets.stickpng.com/thumbs/584ad4b8b519ea740933a8fd.png"
+                      alt="Girona"
+                    />
+                    <p className="legend text-3xl pt-6 cursor-default">
+                      Girona
+                    </p>
+                  </div>
+                </Slide>
+                <Slide index={10}>
+                  <div className="flex flex-col items-center content-center justify-center">
+                    <img
+                      onClick={() => {
+                        handleEditBtn1st();
+                      }}
+                      className="h-[200px] w-[300px] cursor-pointer"
+                      src="https://assets.stickpng.com/thumbs/584ad3aeb519ea740933a8dc.png"
+                      alt="Mallorca"
+                    />
+                    <p className="legend text-3xl pt-6 cursor-default">
+                      Mallorca
+                    </p>
+                  </div>
+                </Slide>
+                <Slide index={11}>
+                  <div className="flex flex-col items-center content-center justify-center">
+                    <img
+                      onClick={() => {
+                        handleEditBtn1st();
+                      }}
+                      className="h-[200px] w-[300px] cursor-pointer"
+                      src="https://assets.stickpng.com/thumbs/584ad403b519ea740933a8e7.png"
+                      alt="Osasuna"
+                    />
+                    <p className="legend text-3xl pt-6 cursor-default">
+                      Osasuna
+                    </p>
+                  </div>
+                </Slide>
+                <Slide index={12}>
+                  <div className="flex flex-col items-center content-center justify-center">
+                    <img
+                      onClick={() => {
+                        handleEditBtn1st();
+                      }}
+                      className="h-[200px] w-[300px] cursor-pointer"
+                      src="https://upload.wikimedia.org/wikipedia/en/thumb/1/17/Rayo_Vallecano_logo.png/180px-Rayo_Vallecano_logo.png"
+                      alt="Rayo Vallecano"
+                    />
+                    <p className="legend text-3xl pt-6 cursor-default">
+                      Rayo Vallecano
+                    </p>
+                  </div>
+                </Slide>
+                <Slide index={13}>
+                  <div className="flex flex-col items-center content-center justify-center">
+                    <img
+                      onClick={() => {
+                        handleEditBtn1st();
+                      }}
+                      className="h-[200px] w-[300px] cursor-pointer"
+                      src="https://assets.stickpng.com/thumbs/584ad396b519ea740933a8d9.png"
+                      alt="Real Betis"
+                    />
+                    <p className="legend text-3xl pt-6 cursor-default">
+                      Real Betis
+                    </p>
+                  </div>
+                </Slide>
+                <Slide index={14}>
+                  <div className="flex flex-col items-center content-center justify-center">
+                    <img
+                      onClick={() => {
+                        handleEditBtn1st();
+                      }}
+                      className="h-[200px] w-[300px] cursor-pointer"
+                      src="https://assets.stickpng.com/thumbs/584a9b47b080d7616d298778.png"
+                      alt="Real Madrid"
+                    />
+                    <p className="legend text-3xl pt-6 cursor-default">
+                      Real Madrid
+                    </p>
+                  </div>
+                </Slide>
+                <Slide index={15}>
+                  <div className="flex flex-col items-center content-center justify-center">
+                    <img
+                      onClick={() => {
+                        handleEditBtn1st();
+                      }}
+                      className="h-[200px] w-[300px] cursor-pointer"
+                      src="https://assets.stickpng.com/thumbs/584ad36ab519ea740933a8d3.png"
+                      alt="Real Sociedad"
+                    />
+                    <p className="legend text-3xl pt-6 cursor-default">
+                      Real Sociedad
+                    </p>
+                  </div>
+                </Slide>
+                <Slide index={16}>
+                  <div className="flex flex-col items-center content-center justify-center">
+                    <img
+                      onClick={() => {
+                        handleEditBtn1st();
+                      }}
+                      className="h-[200px] w-[300px] cursor-pointer"
+                      src="https://assets.stickpng.com/thumbs/584ad291b519ea740933a8ba.png"
+                      alt="Sevilla"
+                    />
+                    <p className="legend text-3xl pt-6 cursor-default">
+                      Sevilla
+                    </p>
+                  </div>
+                </Slide>
+                <Slide index={17}>
+                  <div className="flex flex-col items-center content-center justify-center">
+                    <img
+                      onClick={() => {
+                        handleEditBtn1st();
+                      }}
+                      className="h-[200px] w-[300px] cursor-pointer"
+                      src="https://assets.stickpng.com/thumbs/584ad186b519ea740933a89e.png"
+                      alt="Valencia"
+                    />
+                    <p className="legend text-3xl pt-6 cursor-default">
+                      Valencia
+                    </p>
+                  </div>
+                </Slide>
+                <Slide index={18}>
+                  <div className="flex flex-col items-center content-center justify-center">
+                    <img
+                      onClick={() => {
+                        handleEditBtn1st();
+                      }}
+                      className="h-[200px] w-[300px] cursor-pointer"
+                      src="https://assets.stickpng.com/thumbs/584ad354b519ea740933a8d1.png"
+                      alt="Valladolid"
+                    />
+                    <p className="legend text-3xl pt-6 cursor-default">
+                      Valladolid
+                    </p>
+                  </div>
+                </Slide>
+                <Slide index={19}>
+                  <div className="flex flex-col items-center content-center justify-center">
+                    <img
+                      onClick={() => {
+                        handleEditBtn1st();
+                      }}
+                      className="h-[200px] w-[300px] cursor-pointer"
+                      src="https://assets.stickpng.com/thumbs/584a9b57b080d7616d298779.png"
+                      alt="Villarreal"
+                    />
+                    <p className="legend text-3xl pt-6 cursor-default">
+                      Villarreal
+                    </p>
+                  </div>
+                </Slide>
+              </Slider>
+              <ButtonBack
+                onClick={() => {
+                  playBallAudio();
+                }}
+                className=" hover:scale-150 absolute top-50 left-10"
+              >
+                <AiOutlineLeft className="text-2xl" />
+              </ButtonBack>
+              <ButtonNext
+                onClick={() => {
+                  playBallAudio();
+                }}
+                className=" hover:scale-150 absolute top-50 right-10"
+              >
+                <AiOutlineRight className="text-2xl" />
+              </ButtonNext>
+            </CarouselProvider>
+          </div>
+
+          <div
+            ref={ligue1Ref}
+            className="h-[50vh] lg:pt-[10vh] pt-[5vh] hidden"
+          >
+            <CarouselProvider
+              naturalSlideWidth={100}
+              naturalSlideHeight={70}
+              totalSlides={20}
+              // isIntrinsicHeight={true}
+            >
+              <Slider className="max-h-[50vh]">
+                <Slide index={0}>
+                  <div className="flex flex-col items-center content-center justify-center">
+                    <img
+                      onClick={() => {
+                        handleEditBtn1st();
+                      }}
+                      className="h-[200px] w-[300px] cursor-pointer"
+                      src="https://assets.stickpng.com/thumbs/580b57fcd9996e24bc43c4cc.png"
+                      alt="Ajaccio"
+                    />
+                    <p className="legend text-3xl pt-6 cursor-default">
+                      Ajaccio
+                    </p>
+                  </div>
+                </Slide>
+                <Slide index={1}>
+                  <div className="flex flex-col items-center content-center justify-center">
+                    <img
+                      onClick={() => {
+                        handleEditBtn1st();
+                      }}
+                      className="h-[200px] w-[300px] cursor-pointer"
+                      src="https://en.logodownload.org/wp-content/uploads/2019/09/angers-sco-logo-41.png"
+                      alt="Angers"
+                    />
+                    <p className="legend text-3xl pt-6 cursor-default">
+                      Angers
+                    </p>
+                  </div>
+                </Slide>
+                <Slide index={2}>
+                  <div className="flex flex-col items-center content-center justify-center">
+                    <img
+                      onClick={() => {
+                        handleEditBtn1st();
+                      }}
+                      className="h-[200px] w-[300px] cursor-pointer"
+                      src="https://assets.stickpng.com/thumbs/580b57fcd9996e24bc43c4c7.png"
+                      alt="Auxerre"
+                    />
+                    <p className="legend text-3xl pt-6 cursor-default">
+                      Auxerre
+                    </p>
+                  </div>
+                </Slide>
+                <Slide index={3}>
+                  <div className="flex flex-col items-center content-center justify-center">
+                    <img
+                      onClick={() => {
+                        handleEditBtn1st();
+                      }}
+                      className="h-[200px] w-[300px] cursor-pointer"
+                      src="https://en.logodownload.org/wp-content/uploads/2019/09/stade-brestois-29-logo-41.png"
+                      alt="Brest"
+                    />
+                    <p className="legend text-3xl pt-6 cursor-default">Brest</p>
+                  </div>
+                </Slide>
+                <Slide index={4}>
+                  <div className="flex flex-col items-center content-center justify-center">
+                    <img
+                      onClick={() => {
+                        handleEditBtn1st();
+                      }}
+                      className="h-[200px] w-[300px] cursor-pointer"
+                      src="https://upload.wikimedia.org/wikipedia/en/thumb/5/52/Clermont_Foot_logo.svg/140px-Clermont_Foot_logo.svg.png"
+                      alt="Clermont Foot"
+                    />
+                    <p className="legend text-3xl pt-6 cursor-default">
+                      Clermont Foot
+                    </p>
+                  </div>
+                </Slide>
+                <Slide index={5}>
+                  <div className="flex flex-col items-center content-center justify-center">
+                    <img
+                      onClick={() => {
+                        handleEditBtn1st();
+                      }}
+                      className="h-[200px] w-[300px] cursor-pointer"
+                      src="https://upload.wikimedia.org/wikipedia/en/thumb/c/cc/RC_Lens_logo.svg/135px-RC_Lens_logo.svg.png"
+                      alt="RC Lens"
+                    />
+                    <p className="legend text-3xl pt-6 cursor-default">
+                      RC Lens
+                    </p>
+                  </div>
+                </Slide>
+                <Slide index={6}>
+                  <div className="flex flex-col items-center content-center justify-center">
+                    <img
+                      onClick={() => {
+                        handleEditBtn1st();
+                      }}
+                      className="h-[200px] w-[300px] cursor-pointer"
+                      src="https://upload.wikimedia.org/wikipedia/en/thumb/3/3f/Lille_OSC_2018_logo.svg/170px-Lille_OSC_2018_logo.svg.png"
+                      alt="Lille OSC"
+                    />
+                    <p className="legend text-3xl pt-6 cursor-default">
+                      Lille OSC
+                    </p>
+                  </div>
+                </Slide>
+                <Slide index={7}>
+                  <div className="flex flex-col items-center content-center justify-center">
+                    <img
+                      onClick={() => {
+                        handleEditBtn1st();
+                      }}
+                      className="h-[200px] w-[300px] cursor-pointer"
+                      src="https://upload.wikimedia.org/wikipedia/en/thumb/4/4c/FC_Lorient_logo.svg/130px-FC_Lorient_logo.svg.png"
+                      alt="Lorient"
+                    />
+                    <p className="legend text-3xl pt-6 cursor-default">
+                      Lorient
+                    </p>
+                  </div>
+                </Slide>
+                <Slide index={8}>
+                  <div className="flex flex-col items-center content-center justify-center">
+                    <img
+                      onClick={() => {
+                        handleEditBtn1st();
+                      }}
+                      className="h-[200px] w-[300px] cursor-pointer"
+                      src="https://upload.wikimedia.org/wikipedia/en/1/12/Logo_Olympique_Lyonnais_2022.png"
+                      alt="Olympique Lyonnais"
+                    />
+                    <p className="legend text-3xl pt-6 cursor-default">
+                      Olympique Lyonnais
+                    </p>
+                  </div>
+                </Slide>
+                <Slide index={9}>
+                  <div className="flex flex-col items-center content-center justify-center">
+                    <img
+                      onClick={() => {
+                        handleEditBtn1st();
+                      }}
+                      className="h-[200px] w-[300px] cursor-pointer"
+                      src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/Olympique_Marseille_logo.svg/170px-Olympique_Marseille_logo.svg.png"
+                      alt="Olympique de Marseille "
+                    />
+                    <p className="legend text-3xl pt-6 cursor-default">
+                      Olympique de Marseille
+                    </p>
+                  </div>
+                </Slide>
+                <Slide index={10}>
+                  <div className="flex flex-col items-center content-center justify-center">
+                    <img
+                      onClick={() => {
+                        handleEditBtn1st();
+                      }}
+                      className="h-[200px] w-[300px] cursor-pointer"
+                      src="https://upload.wikimedia.org/wikipedia/en/thumb/c/cf/LogoASMonacoFC2021.svg/120px-LogoASMonacoFC2021.svg.png"
+                      alt="AS Monaco FC"
+                    />
+                    <p className="legend text-3xl pt-6 cursor-default">
+                      AS Monaco FC
+                    </p>
+                  </div>
+                </Slide>
+                <Slide index={11}>
+                  <div className="flex flex-col items-center content-center justify-center">
+                    <img
+                      onClick={() => {
+                        handleEditBtn1st();
+                      }}
+                      className="h-[200px] w-[300px] cursor-pointer"
+                      src="https://upload.wikimedia.org/wikipedia/en/thumb/a/a8/Montpellier_HSC_logo.svg/170px-Montpellier_HSC_logo.svg.png"
+                      alt="Montpellier HSC"
+                    />
+                    <p className="legend text-3xl pt-6 cursor-default">
+                      Montpellier HSC
+                    </p>
+                  </div>
+                </Slide>
+                <Slide index={12}>
+                  <div className="flex flex-col items-center content-center justify-center">
+                    <img
+                      onClick={() => {
+                        handleEditBtn1st();
+                      }}
+                      className="h-[200px] w-[300px] cursor-pointer"
+                      src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Logo_FC_Nantes_%28avec_fond%29_-_2019.svg/140px-Logo_FC_Nantes_%28avec_fond%29_-_2019.svg.png"
+                      alt="FC Nantes"
+                    />
+                    <p className="legend text-3xl pt-6 cursor-default">
+                      FC Nantes
+                    </p>
+                  </div>
+                </Slide>
+                <Slide index={13}>
+                  <div className="flex flex-col items-center content-center justify-center">
+                    <img
+                      onClick={() => {
+                        handleEditBtn1st();
+                      }}
+                      className="h-[200px] w-[300px] cursor-pointer"
+                      src="https://upload.wikimedia.org/wikipedia/en/thumb/2/2e/OGC_Nice_logo.svg/150px-OGC_Nice_logo.svg.png"
+                      alt="OGC Nice"
+                    />
+                    <p className="legend text-3xl pt-6 cursor-default">
+                      OGC Nice
+                    </p>
+                  </div>
+                </Slide>
+                <Slide index={14}>
+                  <div className="flex flex-col items-center content-center justify-center">
+                    <img
+                      onClick={() => {
+                        handleEditBtn1st();
+                      }}
+                      className="h-[200px] w-[300px] cursor-pointer"
+                      src="https://upload.wikimedia.org/wikipedia/en/thumb/a/a7/Paris_Saint-Germain_F.C..svg/180px-Paris_Saint-Germain_F.C..svg.png"
+                      alt="Paris Saint-Germain F.C."
+                    />
+                    <p className="legend text-3xl pt-6 cursor-default">
+                      Paris Saint-Germain F.C.
+                    </p>
+                  </div>
+                </Slide>
+                <Slide index={15}>
+                  <div className="flex flex-col items-center content-center justify-center">
+                    <img
+                      onClick={() => {
+                        handleEditBtn1st();
+                      }}
+                      className="h-[200px] w-[300px] cursor-pointer"
+                      src="https://upload.wikimedia.org/wikipedia/en/thumb/1/19/Stade_de_Reims_logo.svg/100px-Stade_de_Reims_logo.svg.png"
+                      alt="Stade de Reims"
+                    />
+                    <p className="legend text-3xl pt-6 cursor-default">
+                      Stade de Reims
+                    </p>
+                  </div>
+                </Slide>
+                <Slide index={16}>
+                  <div className="flex flex-col items-center content-center justify-center">
+                    <img
+                      onClick={() => {
+                        handleEditBtn1st();
+                      }}
+                      className="h-[200px] w-[300px] cursor-pointer"
+                      src="https://upload.wikimedia.org/wikipedia/en/thumb/9/9e/Stade_Rennais_FC.svg/170px-Stade_Rennais_FC.svg.png"
+                      alt="Stade Rennais F.C."
+                    />
+                    <p className="legend text-3xl pt-6 cursor-default">
+                      Stade Rennais F.C.
+                    </p>
+                  </div>
+                </Slide>
+                <Slide index={17}>
+                  <div className="flex flex-col items-center content-center justify-center">
+                    <img
+                      onClick={() => {
+                        handleEditBtn1st();
+                      }}
+                      className="h-[200px] w-[300px] cursor-pointer"
+                      src="https://upload.wikimedia.org/wikipedia/en/thumb/8/80/Racing_Club_de_Strasbourg_logo.svg/170px-Racing_Club_de_Strasbourg_logo.svg.png"
+                      alt="RC Strasbourg"
+                    />
+                    <p className="legend text-3xl pt-6 cursor-default">
+                      RC Strasbourg
+                    </p>
+                  </div>
+                </Slide>
+                <Slide index={18}>
+                  <div className="flex flex-col items-center content-center justify-center">
+                    <img
+                      onClick={() => {
+                        handleEditBtn1st();
+                      }}
+                      className="h-[200px] w-[300px] cursor-pointer"
+                      src="https://upload.wikimedia.org/wikipedia/en/thumb/6/63/Toulouse_FC_2018_logo.svg/170px-Toulouse_FC_2018_logo.svg.png"
+                      alt="Toulouse FC"
+                    />
+                    <p className="legend text-3xl pt-6 cursor-default">
+                      Toulouse FC
+                    </p>
+                  </div>
+                </Slide>
+                <Slide index={19}>
+                  <div className="flex flex-col items-center content-center justify-center">
+                    <img
+                      onClick={() => {
+                        handleEditBtn1st();
+                      }}
+                      className="h-[200px] w-[300px] cursor-pointer"
+                      src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/ES_Troyes_AC.svg/140px-ES_Troyes_AC.svg.png"
+                      alt="Troyes"
+                    />
+                    <p className="legend text-3xl pt-6 cursor-default">
+                      Troyes
+                    </p>
+                  </div>
+                </Slide>
+              </Slider>
+              <ButtonBack
+                onClick={() => {
+                  playBallAudio();
+                }}
+                className=" hover:scale-150 absolute top-50 left-10"
+              >
+                <AiOutlineLeft className="text-2xl" />
+              </ButtonBack>
+              <ButtonNext
+                onClick={() => {
+                  playBallAudio();
+                }}
+                className=" hover:scale-150 absolute top-50 right-10"
+              >
+                <AiOutlineRight className="text-2xl" />
+              </ButtonNext>
+            </CarouselProvider>
+          </div>
+
+          <div ref={eplRef} className="h-[50vh] lg:pt-[10vh] pt-[5vh] hidden">
+            <CarouselProvider
+              naturalSlideWidth={100}
+              naturalSlideHeight={70}
+              totalSlides={20}
+              // isIntrinsicHeight={true}
+            >
+              <Slider className="max-h-[50vh]">
+                <Slide index={0}>
+                  <div className="flex flex-col items-center content-center justify-center">
+                    <img
+                      onClick={() => {
+                        handleEditBtn1st();
+                      }}
+                      className="h-[200px] w-[300px] cursor-pointer"
+                      src="https://upload.wikimedia.org/wikipedia/en/thumb/5/53/Arsenal_FC.svg/170px-Arsenal_FC.svg.png"
+                      alt="Arsenal"
+                    />
+                    <p className="legend text-3xl pt-6 cursor-default">
+                      Arsenal
+                    </p>
+                  </div>
+                </Slide>
+                <Slide index={1}>
+                  <div className="flex flex-col items-center content-center justify-center">
+                    <img
+                      onClick={() => {
+                        handleEditBtn1st();
+                      }}
+                      className="h-[200px] w-[300px] cursor-pointer"
+                      src="https://upload.wikimedia.org/wikipedia/en/thumb/f/f9/Aston_Villa_FC_crest_%282016%29.svg/140px-Aston_Villa_FC_crest_%282016%29.svg.png"
+                      alt="Aston Villa"
+                    />
+                    <p className="legend text-3xl pt-6 cursor-default">
+                      Aston Villa
+                    </p>
+                  </div>
+                </Slide>
+                <Slide index={2}>
+                  <div className="flex flex-col items-center content-center justify-center">
+                    <img
+                      onClick={() => {
+                        handleEditBtn1st();
+                      }}
+                      className="h-[200px] w-[300px] cursor-pointer"
+                      src="https://upload.wikimedia.org/wikipedia/en/thumb/e/e5/AFC_Bournemouth_%282013%29.svg/150px-AFC_Bournemouth_%282013%29.svg.png"
+                      alt="AFC Bournemouth"
+                    />
+                    <p className="legend text-3xl pt-6 cursor-default">
+                      AFC Bournemouth
+                    </p>
+                  </div>
+                </Slide>
+                <Slide index={3}>
+                  <div className="flex flex-col items-center content-center justify-center">
+                    <img
+                      onClick={() => {
+                        handleEditBtn1st();
+                      }}
+                      className="h-[200px] w-[300px] cursor-pointer"
+                      src="https://upload.wikimedia.org/wikipedia/en/thumb/2/2a/Brentford_FC_crest.svg/180px-Brentford_FC_crest.svg.png"
+                      alt="Brentford"
+                    />
+                    <p className="legend text-3xl pt-6 cursor-default">
+                      Brentford
+                    </p>
+                  </div>
+                </Slide>
+                <Slide index={4}>
+                  <div className="flex flex-col items-center content-center justify-center">
+                    <img
+                      onClick={() => {
+                        handleEditBtn1st();
+                      }}
+                      className="h-[200px] w-[300px] cursor-pointer"
+                      src="https://upload.wikimedia.org/wikipedia/en/thumb/f/fd/Brighton_%26_Hove_Albion_logo.svg/195px-Brighton_%26_Hove_Albion_logo.svg.png"
+                      alt="Brighton & Hove Albion"
+                    />
+                    <p className="legend text-3xl pt-6 cursor-default">
+                      Brighton & Hove Albion
+                    </p>
+                  </div>
+                </Slide>
+                <Slide index={5}>
+                  <div className="flex flex-col items-center content-center justify-center">
+                    <img
+                      onClick={() => {
+                        handleEditBtn1st();
+                      }}
+                      className="h-[200px] w-[300px] cursor-pointer"
+                      src="https://upload.wikimedia.org/wikipedia/en/thumb/c/cc/Chelsea_FC.svg/180px-Chelsea_FC.svg.png"
+                      alt="Chelsea"
+                    />
+                    <p className="legend text-3xl pt-6 cursor-default">
+                      Chelsea
+                    </p>
+                  </div>
+                </Slide>
+                <Slide index={6}>
+                  <div className="flex flex-col items-center content-center justify-center">
+                    <img
+                      onClick={() => {
+                        handleEditBtn1st();
+                      }}
+                      className="h-[200px] w-[300px] cursor-pointer"
+                      src="https://upload.wikimedia.org/wikipedia/en/thumb/a/a2/Crystal_Palace_FC_logo_%282022%29.svg/170px-Crystal_Palace_FC_logo_%282022%29.svg.png"
+                      alt="Crystal Palace"
+                    />
+                    <p className="legend text-3xl pt-6 cursor-default">
+                      Crystal Palace
+                    </p>
+                  </div>
+                </Slide>
+                <Slide index={7}>
+                  <div className="flex flex-col items-center content-center justify-center">
+                    <img
+                      onClick={() => {
+                        handleEditBtn1st();
+                      }}
+                      className="h-[200px] w-[300px] cursor-pointer"
+                      src="https://upload.wikimedia.org/wikipedia/en/thumb/7/7c/Everton_FC_logo.svg/195px-Everton_FC_logo.svg.png"
+                      alt="Everton"
+                    />
+                    <p className="legend text-3xl pt-6 cursor-default">
+                      Everton
+                    </p>
+                  </div>
+                </Slide>
+                <Slide index={8}>
+                  <div className="flex flex-col items-center content-center justify-center">
+                    <img
+                      onClick={() => {
+                        handleEditBtn1st();
+                      }}
+                      className="h-[200px] w-[300px] cursor-pointer"
+                      src="https://upload.wikimedia.org/wikipedia/en/thumb/e/eb/Fulham_FC_%28shield%29.svg/146px-Fulham_FC_%28shield%29.svg.png"
+                      alt="Fulham"
+                    />
+                    <p className="legend text-3xl pt-6 cursor-default">
+                      Fulham
+                    </p>
+                  </div>
+                </Slide>
+                <Slide index={9}>
+                  <div className="flex flex-col items-center content-center justify-center">
+                    <img
+                      onClick={() => {
+                        handleEditBtn1st();
+                      }}
+                      className="h-[200px] w-[300px] cursor-pointer"
+                      src="https://upload.wikimedia.org/wikipedia/en/thumb/5/54/Leeds_United_F.C._logo.svg/160px-Leeds_United_F.C._logo.svg.png"
+                      alt="Leeds United "
+                    />
+                    <p className="legend text-3xl pt-6 cursor-default">
+                      Leeds United
+                    </p>
+                  </div>
+                </Slide>
+                <Slide index={10}>
+                  <div className="flex flex-col items-center content-center justify-center">
+                    <img
+                      onClick={() => {
+                        handleEditBtn1st();
+                      }}
+                      className="h-[200px] w-[300px] cursor-pointer"
+                      src="https://upload.wikimedia.org/wikipedia/en/thumb/2/2d/Leicester_City_crest.svg/180px-Leicester_City_crest.svg.png"
+                      alt="Leicester City"
+                    />
+                    <p className="legend text-3xl pt-6 cursor-default">
+                      Leicester City
+                    </p>
+                  </div>
+                </Slide>
+                <Slide index={11}>
+                  <div className="flex flex-col items-center content-center justify-center">
+                    <img
+                      onClick={() => {
+                        handleEditBtn1st();
+                      }}
+                      className="h-[200px] w-[300px] cursor-pointer"
+                      src="https://upload.wikimedia.org/wikipedia/en/thumb/0/0c/Liverpool_FC.svg/180px-Liverpool_FC.svg.png"
+                      alt="Liverpool"
+                    />
+                    <p className="legend text-3xl pt-6 cursor-default">
+                      Liverpool
+                    </p>
+                  </div>
+                </Slide>
+                <Slide index={12}>
+                  <div className="flex flex-col items-center content-center justify-center">
+                    <img
+                      onClick={() => {
+                        handleEditBtn1st();
+                      }}
+                      className="h-[200px] w-[300px] cursor-pointer"
+                      src="https://upload.wikimedia.org/wikipedia/en/thumb/e/eb/Manchester_City_FC_badge.svg/180px-Manchester_City_FC_badge.svg.png"
+                      alt="Manchester City"
+                    />
+                    <p className="legend text-3xl pt-6 cursor-default">
+                      Manchester City
+                    </p>
+                  </div>
+                </Slide>
+                <Slide index={13}>
+                  <div className="flex flex-col items-center content-center justify-center">
+                    <img
+                      onClick={() => {
+                        handleEditBtn1st();
+                      }}
+                      className="h-[200px] w-[300px] cursor-pointer"
+                      src="https://upload.wikimedia.org/wikipedia/en/thumb/7/7a/Manchester_United_FC_crest.svg/190px-Manchester_United_FC_crest.svg.png"
+                      alt="Manchester United"
+                    />
+                    <p className="legend text-3xl pt-6 cursor-default">
+                      Manchester United
+                    </p>
+                  </div>
+                </Slide>
+                <Slide index={14}>
+                  <div className="flex flex-col items-center content-center justify-center">
+                    <img
+                      onClick={() => {
+                        handleEditBtn1st();
+                      }}
+                      className="h-[200px] w-[300px] cursor-pointer"
+                      src="https://upload.wikimedia.org/wikipedia/en/thumb/5/56/Newcastle_United_Logo.svg/200px-Newcastle_United_Logo.svg.png"
+                      alt="Newcastle United"
+                    />
+                    <p className="legend text-3xl pt-6 cursor-default">
+                      Newcastle United
+                    </p>
+                  </div>
+                </Slide>
+                <Slide index={15}>
+                  <div className="flex flex-col items-center content-center justify-center">
+                    <img
+                      onClick={() => {
+                        handleEditBtn1st();
+                      }}
+                      className="h-[200px] w-[300px] cursor-pointer"
+                      src="https://upload.wikimedia.org/wikipedia/en/thumb/e/e5/Nottingham_Forest_F.C._logo.svg/110px-Nottingham_Forest_F.C._logo.svg.png"
+                      alt="Nottingham Forest"
+                    />
+                    <p className="legend text-3xl pt-6 cursor-default">
+                      Nottingham Forest
+                    </p>
+                  </div>
+                </Slide>
+                <Slide index={16}>
+                  <div className="flex flex-col items-center content-center justify-center">
+                    <img
+                      onClick={() => {
+                        handleEditBtn1st();
+                      }}
+                      className="h-[200px] w-[300px] cursor-pointer"
+                      src="https://upload.wikimedia.org/wikipedia/en/thumb/c/c9/FC_Southampton.svg/180px-FC_Southampton.svg.png"
+                      alt="Southampton"
+                    />
+                    <p className="legend text-3xl pt-6 cursor-default">
+                      Southampton
+                    </p>
+                  </div>
+                </Slide>
+                <Slide index={17}>
+                  <div className="flex flex-col items-center content-center justify-center">
+                    <img
+                      onClick={() => {
+                        handleEditBtn1st();
+                      }}
+                      className="h-[200px] w-[300px] cursor-pointer"
+                      src="https://upload.wikimedia.org/wikipedia/en/thumb/b/b4/Tottenham_Hotspur.svg/120px-Tottenham_Hotspur.svg.png"
+                      alt="Tottenham Hotspur"
+                    />
+                    <p className="legend text-3xl pt-6 cursor-default">
+                      Tottenham Hotspur
+                    </p>
+                  </div>
+                </Slide>
+                <Slide index={18}>
+                  <div className="flex flex-col items-center content-center justify-center">
+                    <img
+                      onClick={() => {
+                        handleEditBtn1st();
+                      }}
+                      className="h-[200px] w-[300px] cursor-pointer"
+                      src="https://upload.wikimedia.org/wikipedia/en/thumb/c/c2/West_Ham_United_FC_logo.svg/165px-West_Ham_United_FC_logo.svg.png"
+                      alt="West Ham United"
+                    />
+                    <p className="legend text-3xl pt-6 cursor-default">
+                      West Ham United
+                    </p>
+                  </div>
+                </Slide>
+                <Slide index={19}>
+                  <div className="flex flex-col items-center content-center justify-center">
+                    <img
+                      onClick={() => {
+                        handleEditBtn1st();
+                      }}
+                      className="h-[200px] w-[300px] cursor-pointer"
+                      src="https://upload.wikimedia.org/wikipedia/en/thumb/f/fc/Wolverhampton_Wanderers.svg/190px-Wolverhampton_Wanderers.svg.png"
+                      alt="Wolverhampton Wanderers"
+                    />
+                    <p className="legend text-3xl pt-6 cursor-default">
+                      Wolverhampton Wanderers
+                    </p>
+                  </div>
+                </Slide>
+              </Slider>
+              <ButtonBack
+                onClick={() => {
+                  playBallAudio();
+                }}
+                className=" hover:scale-150 absolute top-50 left-10"
+              >
+                <AiOutlineLeft className="text-2xl" />
+              </ButtonBack>
+              <ButtonNext
+                onClick={() => {
+                  playBallAudio();
+                }}
+                className=" hover:scale-150 absolute top-50 right-10"
+              >
+                <AiOutlineRight className="text-2xl" />
+              </ButtonNext>
+            </CarouselProvider>
+          </div>
+
+          <div
+            ref={serieARef}
+            className="h-[50vh] lg:pt-[10vh] pt-[5vh] hidden"
+          >
+            <CarouselProvider
+              naturalSlideWidth={100}
+              naturalSlideHeight={70}
+              totalSlides={20}
+              // isIntrinsicHeight={true}
+            >
+              <Slider className="max-h-[50vh]">
+                <Slide index={0}>
+                  <div className="flex flex-col items-center content-center justify-center">
+                    <img
+                      onClick={() => {
+                        handleEditBtn1st();
+                      }}
+                      className="h-[200px] w-[300px] cursor-pointer"
+                      src="https://upload.wikimedia.org/wikipedia/en/thumb/6/66/AtalantaBC.svg/130px-AtalantaBC.svg.png"
+                      alt="Atalanta"
+                    />
+                    <p className="legend text-3xl pt-6 cursor-default">
+                      Atalanta
+                    </p>
+                  </div>
+                </Slide>
+                <Slide index={1}>
+                  <div className="flex flex-col items-center content-center justify-center">
+                    <img
+                      onClick={() => {
+                        handleEditBtn1st();
+                      }}
+                      className="h-[200px] w-[300px] cursor-pointer"
+                      src="https://upload.wikimedia.org/wikipedia/en/thumb/5/5b/Bologna_F.C._1909_logo.svg/130px-Bologna_F.C._1909_logo.svg.png"
+                      alt="Bologna"
+                    />
+                    <p className="legend text-3xl pt-6 cursor-default">
+                      Bologna
+                    </p>
+                  </div>
+                </Slide>
+                <Slide index={2}>
+                  <div className="flex flex-col items-center content-center justify-center">
+                    <img
+                      onClick={() => {
+                        handleEditBtn1st();
+                      }}
+                      className="h-[200px] w-[300px] cursor-pointer"
+                      src="https://upload.wikimedia.org/wikipedia/en/thumb/e/e1/US_Cremonese_logo.svg/190px-US_Cremonese_logo.svg.png"
+                      alt="Cremonese"
+                    />
+                    <p className="legend text-3xl pt-6 cursor-default">
+                      Cremonese
+                    </p>
+                  </div>
+                </Slide>
+                <Slide index={3}>
+                  <div className="flex flex-col items-center content-center justify-center">
+                    <img
+                      onClick={() => {
+                        handleEditBtn1st();
+                      }}
+                      className="h-[200px] w-[300px] cursor-pointer"
+                      src="https://upload.wikimedia.org/wikipedia/en/thumb/e/e9/Empoli_F.C._logo_%282021%29.png/150px-Empoli_F.C._logo_%282021%29.png"
+                      alt="Empoli"
+                    />
+                    <p className="legend text-3xl pt-6 cursor-default">
+                      Empoli
+                    </p>
+                  </div>
+                </Slide>
+                <Slide index={4}>
+                  <div className="flex flex-col items-center content-center justify-center">
+                    <img
+                      onClick={() => {
+                        handleEditBtn1st();
+                      }}
+                      className="h-[200px] w-[300px] cursor-pointer"
+                      src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/2022_ACF_Fiorentina_logo.svg/200px-2022_ACF_Fiorentina_logo.svg.png"
+                      alt="Fiorentina"
+                    />
+                    <p className="legend text-3xl pt-6 cursor-default">
+                      Fiorentina
+                    </p>
+                  </div>
+                </Slide>
+                <Slide index={5}>
+                  <div className="flex flex-col items-center content-center justify-center">
+                    <img
+                      onClick={() => {
+                        handleEditBtn1st();
+                      }}
+                      className="h-[200px] w-[300px] cursor-pointer"
+                      src="https://upload.wikimedia.org/wikipedia/en/thumb/9/92/Hellas_Verona_FC_logo_%282020%29.svg/170px-Hellas_Verona_FC_logo_%282020%29.svg.png"
+                      alt="Hellas Verona"
+                    />
+                    <p className="legend text-3xl pt-6 cursor-default">
+                      Hellas Verona
+                    </p>
+                  </div>
+                </Slide>
+                <Slide index={6}>
+                  <div className="flex flex-col items-center content-center justify-center">
+                    <img
+                      onClick={() => {
+                        handleEditBtn1st();
+                      }}
+                      className="h-[200px] w-[300px] cursor-pointer"
+                      src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/FC_Internazionale_Milano_2021.svg/180px-FC_Internazionale_Milano_2021.svg.png"
+                      alt="Inter Milan"
+                    />
+                    <p className="legend text-3xl pt-6 cursor-default">
+                      Inter Milan
+                    </p>
+                  </div>
+                </Slide>
+                <Slide index={7}>
+                  <div className="flex flex-col items-center content-center justify-center">
+                    <img
+                      onClick={() => {
+                        handleEditBtn1st();
+                      }}
+                      className="h-[200px] w-[300px] cursor-pointer"
+                      src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Juventus_FC_2017_icon_%28black%29.svg/110px-Juventus_FC_2017_icon_%28black%29.svg.png"
+                      alt="Juventus"
+                    />
+                    <p className="legend text-3xl pt-6 cursor-default">
+                      Juventus
+                    </p>
+                  </div>
+                </Slide>
+                <Slide index={8}>
+                  <div className="flex flex-col items-center content-center justify-center">
+                    <img
+                      onClick={() => {
+                        handleEditBtn1st();
+                      }}
+                      className="h-[200px] w-[300px] cursor-pointer"
+                      src="https://upload.wikimedia.org/wikipedia/en/thumb/c/ce/S.S._Lazio_badge.svg/220px-S.S._Lazio_badge.svg.png"
+                      alt="Lazio"
+                    />
+                    <p className="legend text-3xl pt-6 cursor-default">Lazio</p>
+                  </div>
+                </Slide>
+                <Slide index={9}>
+                  <div className="flex flex-col items-center content-center justify-center">
+                    <img
+                      onClick={() => {
+                        handleEditBtn1st();
+                      }}
+                      className="h-[200px] w-[300px] cursor-pointer"
+                      src="https://upload.wikimedia.org/wikipedia/en/thumb/8/85/Us_lecce.svg/150px-Us_lecce.svg.png"
+                      alt="Lecce"
+                    />
+                    <p className="legend text-3xl pt-6 cursor-default">Lecce</p>
+                  </div>
+                </Slide>
+                <Slide index={10}>
+                  <div className="flex flex-col items-center content-center justify-center">
+                    <img
+                      onClick={() => {
+                        handleEditBtn1st();
+                      }}
+                      className="h-[200px] w-[300px] cursor-pointer"
+                      src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Logo_of_AC_Milan.svg/130px-Logo_of_AC_Milan.svg.png"
+                      alt="A.C. Milan"
+                    />
+                    <p className="legend text-3xl pt-6 cursor-default">
+                      A.C. Milan
+                    </p>
+                  </div>
+                </Slide>
+                <Slide index={11}>
+                  <div className="flex flex-col items-center content-center justify-center">
+                    <img
+                      onClick={() => {
+                        handleEditBtn1st();
+                      }}
+                      className="h-[200px] w-[300px] cursor-pointer"
+                      src="https://upload.wikimedia.org/wikipedia/en/thumb/1/1c/A.C._Monza_logo_%282019%29.svg/150px-A.C._Monza_logo_%282019%29.svg.png"
+                      alt="A.C. Monza"
+                    />
+                    <p className="legend text-3xl pt-6 cursor-default"></p>
+                  </div>
+                </Slide>
+                <Slide index={12}>
+                  <div className="flex flex-col items-center content-center justify-center">
+                    <img
+                      onClick={() => {
+                        handleEditBtn1st();
+                      }}
+                      className="h-[200px] w-[300px] cursor-pointer"
+                      src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/SSC_Neapel.svg/170px-SSC_Neapel.svg.png"
+                      alt="S.S.C. Napoli"
+                    />
+                    <p className="legend text-3xl pt-6 cursor-default">
+                      S.S.C. Napoli
+                    </p>
+                  </div>
+                </Slide>
+                <Slide index={13}>
+                  <div className="flex flex-col items-center content-center justify-center">
+                    <img
+                      onClick={() => {
+                        handleEditBtn1st();
+                      }}
+                      className="h-[200px] w-[300px] cursor-pointer"
+                      src="https://upload.wikimedia.org/wikipedia/en/thumb/f/f7/AS_Roma_logo_%282017%29.svg/155px-AS_Roma_logo_%282017%29.svg.png"
+                      alt="A.S. Roma"
+                    />
+                    <p className="legend text-3xl pt-6 cursor-default">
+                      A.S. Roma
+                    </p>
+                  </div>
+                </Slide>
+                <Slide index={14}>
+                  <div className="flex flex-col items-center content-center justify-center">
+                    <img
+                      onClick={() => {
+                        handleEditBtn1st();
+                      }}
+                      className="h-[200px] w-[300px] cursor-pointer"
+                      src="https://upload.wikimedia.org/wikipedia/en/thumb/8/85/US_Salernitana_1919_logo.svg/170px-US_Salernitana_1919_logo.svg.png"
+                      alt="U.S. Salernitana 1919"
+                    />
+                    <p className="legend text-3xl pt-6 cursor-default">
+                      U.S. Salernitana 1919
+                    </p>
+                  </div>
+                </Slide>
+                <Slide index={15}>
+                  <div className="flex flex-col items-center content-center justify-center">
+                    <img
+                      onClick={() => {
+                        handleEditBtn1st();
+                      }}
+                      className="h-[200px] w-[300px] cursor-pointer"
+                      src="https://upload.wikimedia.org/wikipedia/en/thumb/d/d2/U.C._Sampdoria_logo.svg/140px-U.C._Sampdoria_logo.svg.png"
+                      alt="U.C. Sampdoria"
+                    />
+                    <p className="legend text-3xl pt-6 cursor-default">
+                      U.C. Sampdoria
+                    </p>
+                  </div>
+                </Slide>
+                <Slide index={16}>
+                  <div className="flex flex-col items-center content-center justify-center">
+                    <img
+                      onClick={() => {
+                        handleEditBtn1st();
+                      }}
+                      className="h-[200px] w-[300px] cursor-pointer"
+                      src="https://upload.wikimedia.org/wikipedia/en/thumb/1/1c/US_Sassuolo_Calcio_logo.svg/170px-US_Sassuolo_Calcio_logo.svg.png"
+                      alt="U.S. Sassuolo Calcio"
+                    />
+                    <p className="legend text-3xl pt-6 cursor-default">
+                      U.S. Sassuolo Calcio
+                    </p>
+                  </div>
+                </Slide>
+                <Slide index={17}>
+                  <div className="flex flex-col items-center content-center justify-center">
+                    <img
+                      onClick={() => {
+                        handleEditBtn1st();
+                      }}
+                      className="h-[200px] w-[300px] cursor-pointer"
+                      src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Spezia_Calcio.svg/180px-Spezia_Calcio.svg.png"
+                      alt="Spezia Calcio"
+                    />
+                    <p className="legend text-3xl pt-6 cursor-default">
+                      Spezia Calcio
+                    </p>
+                  </div>
+                </Slide>
+                <Slide index={18}>
+                  <div className="flex flex-col items-center content-center justify-center">
+                    <img
+                      onClick={() => {
+                        handleEditBtn1st();
+                      }}
+                      className="h-[200px] w-[300px] cursor-pointer"
+                      src="https://upload.wikimedia.org/wikipedia/en/thumb/2/2e/Torino_FC_Logo.svg/150px-Torino_FC_Logo.svg.png"
+                      alt="Torino F.C."
+                    />
+                    <p className="legend text-3xl pt-6 cursor-default">
+                      Torino F.C.
+                    </p>
+                  </div>
+                </Slide>
+                <Slide index={19}>
+                  <div className="flex flex-col items-center content-center justify-center">
+                    <img
+                      onClick={() => {
+                        handleEditBtn1st();
+                      }}
+                      className="h-[200px] w-[300px] cursor-pointer"
+                      src="https://upload.wikimedia.org/wikipedia/en/thumb/c/ce/Udinese_Calcio_logo.svg/180px-Udinese_Calcio_logo.svg.png"
+                      alt="Udinese Calcio"
+                    />
+                    <p className="legend text-3xl pt-6 cursor-default">
+                      Udinese Calcio
+                    </p>
+                  </div>
+                </Slide>
+              </Slider>
+              <ButtonBack
+                onClick={() => {
+                  playBallAudio();
+                }}
+                className=" hover:scale-150 absolute top-50 left-10"
+              >
+                <AiOutlineLeft className="text-2xl" />
+              </ButtonBack>
+              <ButtonNext
+                onClick={() => {
+                  playBallAudio();
+                }}
+                className=" hover:scale-150 absolute top-50 right-10"
+              >
+                <AiOutlineRight className="text-2xl" />
+              </ButtonNext>
+            </CarouselProvider>
+          </div>
+
+          <div ref={rotwRef} className="h-[50vh] lg:pt-[10vh] pt-[5vh] hidden">
+            <CarouselProvider
+              naturalSlideWidth={100}
+              naturalSlideHeight={70}
+              totalSlides={12}
+              // isIntrinsicHeight={true}
+            >
+              <Slider className="max-h-[50vh]">
+                <Slide index={0}>
+                  <div className="flex flex-col items-center content-center justify-center">
+                    <img
+                      onClick={() => {
+                        handleEditBtn1st();
+                      }}
+                      className="h-[200px] w-[300px] cursor-pointer"
+                      src="https://upload.wikimedia.org/wikipedia/en/thumb/9/9d/Logo_Al-Nassr.png/180px-Logo_Al-Nassr.png"
+                      alt="Al Nassr"
+                    />
+                    <p className="legend text-3xl pt-6 cursor-default">
+                      Al Nassr
+                    </p>
+                  </div>
+                </Slide>
+                <Slide index={1}>
+                  <div className="flex flex-col items-center content-center justify-center">
+                    <img
+                      onClick={() => {
+                        handleEditBtn1st();
+                      }}
+                      className="h-[200px] w-[300px] cursor-pointer"
+                      src="https://upload.wikimedia.org/wikipedia/en/thumb/3/35/Celtic_FC.svg/180px-Celtic_FC.svg.png"
+                      alt="Celtic F.C."
+                    />
+                    <p className="legend text-3xl pt-6 cursor-default">
+                      Celtic F.C.
+                    </p>
+                  </div>
+                </Slide>
+                <Slide index={2}>
+                  <div className="flex flex-col items-center content-center justify-center">
+                    <img
+                      onClick={() => {
+                        handleEditBtn1st();
+                      }}
+                      className="h-[200px] w-[300px] cursor-pointer"
+                      src="https://upload.wikimedia.org/wikipedia/en/thumb/4/43/Rangers_FC.svg/180px-Rangers_FC.svg.png"
+                      alt="Rangers F.C."
+                    />
+                    <p className="legend text-3xl pt-6 cursor-default">
+                      Rangers F.C.
+                    </p>
+                  </div>
+                </Slide>
+                <Slide index={3}>
+                  <div className="flex flex-col items-center content-center justify-center">
+                    <img
+                      onClick={() => {
+                        handleEditBtn1st();
+                      }}
+                      className="h-[200px] w-[300px] cursor-pointer"
+                      src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/BesiktasJK-Logo.svg/180px-BesiktasJK-Logo.svg.png"
+                      alt="Beşiktaş J.K."
+                    />
+                    <p className="legend text-3xl pt-6 cursor-default">
+                      Beşiktaş J.K.
+                    </p>
+                  </div>
+                </Slide>
+                <Slide index={4}>
+                  <div className="flex flex-col items-center content-center justify-center">
+                    <img
+                      onClick={() => {
+                        handleEditBtn1st();
+                      }}
+                      className="h-[200px] w-[300px] cursor-pointer"
+                      src="https://upload.wikimedia.org/wikipedia/en/thumb/d/dd/Enyimba_International_F.C._logo.png/180px-Enyimba_International_F.C._logo.png"
+                      alt="Enyimba F.C."
+                    />
+                    <p className="legend text-3xl pt-6 cursor-default">
+                      Enyimba F.C.
+                    </p>
+                  </div>
+                </Slide>
+                <Slide index={5}>
+                  <div className="flex flex-col items-center content-center justify-center">
+                    <img
+                      onClick={() => {
+                        handleEditBtn1st();
+                      }}
+                      className="h-[200px] w-[300px] cursor-pointer"
+                      src="https://upload.wikimedia.org/wikipedia/en/thumb/8/8c/Al_Ahly_SC_logo.png/170px-Al_Ahly_SC_logo.png"
+                      alt="Al Ahly SC"
+                    />
+                    <p className="legend text-3xl pt-6 cursor-default">
+                      Al Ahly SC
+                    </p>
+                  </div>
+                </Slide>
+                <Slide index={6}>
+                  <div className="flex flex-col items-center content-center justify-center">
+                    <img
+                      onClick={() => {
+                        handleEditBtn1st();
+                      }}
+                      className="h-[200px] w-[300px] cursor-pointer"
+                      src="https://upload.wikimedia.org/wikipedia/en/thumb/5/55/The_logo_of_Mamelodi_Sundowns_F.C.png/220px-The_logo_of_Mamelodi_Sundowns_F.C.png"
+                      alt="Mamelodi Sundowns F.C."
+                    />
+                    <p className="legend text-3xl pt-6 cursor-default">
+                      Mamelodi Sundowns F.C.
+                    </p>
+                  </div>
+                </Slide>
+                <Slide index={7}>
+                  <div className="flex flex-col items-center content-center justify-center">
+                    <img
+                      onClick={() => {
+                        handleEditBtn1st();
+                      }}
+                      className="h-[200px] w-[300px] cursor-pointer"
+                      src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/Escudo_del_C_A_River_Plate.svg/130px-Escudo_del_C_A_River_Plate.svg.png"
+                      alt="Club Atlético River Plate"
+                    />
+                    <p className="legend text-3xl pt-6 cursor-default">
+                      Club Atlético River Plate
+                    </p>
+                  </div>
+                </Slide>
+                <Slide index={8}>
+                  <div className="flex flex-col items-center content-center justify-center">
+                    <img
+                      onClick={() => {
+                        handleEditBtn1st();
+                      }}
+                      className="h-[200px] w-[300px] cursor-pointer"
+                      src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Boca_Juniors_logo18.svg/150px-Boca_Juniors_logo18.svg.png"
+                      alt="Boca Juniors"
+                    />
+                    <p className="legend text-3xl pt-6 cursor-default">
+                      Boca Juniors
+                    </p>
+                  </div>
+                </Slide>
+                <Slide index={9}>
+                  <div className="flex flex-col items-center content-center justify-center">
+                    <img
+                      onClick={() => {
+                        handleEditBtn1st();
+                      }}
+                      className="h-[200px] w-[300px] cursor-pointer"
+                      src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Flamengo_braz_logo.svg/150px-Flamengo_braz_logo.svg.png"
+                      alt="Flamengo"
+                    />
+                    <p className="legend text-3xl pt-6 cursor-default">
+                      Flamengo
+                    </p>
+                  </div>
+                </Slide>
+                <Slide index={10}>
+                  <div className="flex flex-col items-center content-center justify-center">
+                    <img
+                      onClick={() => {
+                        handleEditBtn1st();
+                      }}
+                      className="h-[200px] w-[300px] cursor-pointer"
+                      src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Los_Angeles_Galaxy_logo.svg/180px-Los_Angeles_Galaxy_logo.svg.png"
+                      alt="LA Galaxy"
+                    />
+                    <p className="legend text-3xl pt-6 cursor-default">
+                      LA Galaxy
+                    </p>
+                  </div>
+                </Slide>
+                <Slide index={11}>
+                  <div className="flex flex-col items-center content-center justify-center">
+                    <img
+                      onClick={() => {
+                        handleEditBtn1st();
+                      }}
+                      className="h-[200px] w-[300px] cursor-pointer"
+                      src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Palmeiras_logo.svg/190px-Palmeiras_logo.svg.png"
+                      alt="Palmeiras"
+                    />
+                    <p className="legend text-3xl pt-6 cursor-default">
+                      Palmeiras
+                    </p>
+                  </div>
+                </Slide>
+              </Slider>
+              <ButtonBack
+                onClick={() => {
+                  playBallAudio();
+                }}
+                className=" hover:scale-150 absolute top-50 left-10"
+              >
+                <AiOutlineLeft className="text-2xl" />
+              </ButtonBack>
+              <ButtonNext
+                onClick={() => {
+                  playBallAudio();
+                }}
+                className=" hover:scale-150 absolute top-50 right-10"
+              >
+                <AiOutlineRight className="text-2xl" />
+              </ButtonNext>
+            </CarouselProvider>
+          </div>
+        </div>
+      </div>
+
       {/*  lg:flex lg:flex-row flex-col  */}
       <div
+        ref={skillSetRef}
         className="major-Bg text-center
       
        overflow-visible hidden"
