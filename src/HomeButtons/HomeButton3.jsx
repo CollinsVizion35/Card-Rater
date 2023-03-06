@@ -37,7 +37,7 @@ useFrame(() => {
     color="white"
     anchorX="center"
     anchorY="middle"
-     font="/public/Inter-Regular.woff"
+     font="/Inter-Regular.woff"
     >CrEatE card ratEr </Text>
         
       <planeGeometry attach="geometry" args={[3, .5, 1]}/>

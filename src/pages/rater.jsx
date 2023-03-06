@@ -12,9 +12,10 @@ import {
 } from "pure-react-carousel";
 import "pure-react-carousel/dist/react-carousel.es.css";
 import { AiOutlineLeft, AiOutlineRight } from "react-icons/ai/index";
+import defaultImg from "./imgs/default-icon.png";
 
 import { AppPass } from "../contexts/AppContext";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { updateProfile } from "firebase/auth";
 import CardImg from "./imgs/carder.png.png";
 import countryImg from "./imgs/Flag-Argentina.webp";
@@ -37,10 +38,16 @@ function Rater() {
   useEffect(() => {
     document.title = "VCR - Create your Idea Footballing Rater";
   }, []);
-  //   const {
-  //     name,
-  //     setName
-  //   } = AppPass();
+
+  const navigate = useNavigate();
+
+  // const {
+  //   // name,
+  //   // setName,
+  //   // url,
+  //   setUrl,
+  //   uploader,
+  // } = AppPass();
 
   const save2Ref = useRef();
   const confirmedRef = useRef();
@@ -55,10 +62,28 @@ function Rater() {
   const serieARef = useRef();
   const rotwRef = useRef();
   const teamsRef = useRef();
+  const imagesRef = useRef();
+
   teamsRef;
 
   const data = {
     name: name,
+  };
+
+  const [photoURL, setPhotoURL] = useState(defaultImg);
+
+  // storing and getting image from local storage
+  const [image, setImage] = useState(null);
+
+  const handleImageChange = (e) => {
+    const file = e.target.files[0];
+    const reader = new FileReader();
+    reader.readAsDataURL(file);
+    reader.onload = () => {
+      const base64Image = reader.result;
+      localStorage.setItem("image", base64Image);
+      setImage(base64Image);
+    };
   };
 
   useEffect(() => {
@@ -108,6 +133,32 @@ function Rater() {
 
   const handleEditBtn3 = () => {
     save2Ref.current.style.display = "none";
+  };
+
+  const handleBack2HomeBtn = () => {
+    navigate("/home");
+  };
+  const handleBack2NationBtn = () => {
+    nationRef.current.style.display = "block";
+    clubNationRef.current.style.display = "none";
+  };
+  const handleBack2NationTeamBtn = () => {
+    clubNationRef.current.style.display = "block";
+    teamsRef.current.style.display = "none";
+  };
+  const handleBack2TeamBtn = () => {
+    teamsRef.current.style.display = "block";
+    imagesRef.current.style.display = "none";
+    bundesligaRef.current.style.display = "block";
+    laLigaRef.current.style.display = "none";
+    ligue1Ref.current.style.display = "none";
+    eplRef.current.style.display = "none";
+    serieARef.current.style.display = "none";
+    rotwRef.current.style.display = "none";
+  };
+  const handleBack2ImgBtn = () => {
+    imagesRef.current.style.display = "block";
+    skillSetRef.current.style.display = "none";
   };
 
   const handleEditBtn1st = () => {
@@ -181,6 +232,21 @@ function Rater() {
     rotwRef.current.style.display = "block";
   };
 
+  const handleEditBtnteams = () => {
+    teamsRef.current.style.display = "none";
+    imagesRef.current.style.display = "block";
+  };
+
+  const openRemoveBg = () => {
+    alert("Redirecting to another page, Remove.bg");
+    window.open("https://www.remove.bg/upload");
+  };
+
+  const handleSkillSetBtn = () => {
+    imagesRef.current.style.display = "none";
+    skillSetRef.current.style.display = "flex";
+  };
+
   useEffect(() => {
     save2Ref.current.style.display = "none";
   }, []);
@@ -194,16 +260,18 @@ function Rater() {
   return (
     <>
       {/* main */}
+
+      {/* select Nation */}
       <div
         ref={nationRef}
         className="major-Bg nation h-[100vh] w-screen text-white font-extrabold text-center"
       >
-        <div className=" text-7xl">Select Nation</div>
+        <div className=" lg:text-7xl text-4xl">Select Nation</div>
 
         <div className="h-[50vh] lg:pt-[10vh] pt-[5vh]">
           <CarouselProvider
             naturalSlideWidth={100}
-            naturalSlideHeight={70}
+            naturalSlideHeight={90}
             totalSlides={200}
             // isIntrinsicHeight={true}
           >
@@ -2966,19 +3034,27 @@ function Rater() {
               <AiOutlineRight className="text-2xl" />
             </ButtonNext>
           </CarouselProvider>
+
+          <button
+            className=" w-max h-[4rem] bg-[#01112B] rounded-tl-[20px] rounded-br-[20px] mx-auto text-base border-[3px] border-[#34FEF8] text-[#34FEF8] mb-2 mt-20 p-3 pl-4 pt-0"
+            onClick={handleBack2HomeBtn}
+          >
+            Back
+          </button>
         </div>
       </div>
 
+      {/* select club's nation */}
       <div
         ref={clubNationRef}
         className="major-Bg clubNation h-[100vh] w-screen text-white font-extrabold text-center hidden"
       >
-        <div className=" text-7xl">Select Team's Nation</div>
+        <div className=" lg:text-7xl text-4xl">Select Team's Nation</div>
 
         <div className="h-[50vh] lg:pt-[10vh] pt-[5vh]">
           <CarouselProvider
             naturalSlideWidth={100}
-            naturalSlideHeight={70}
+            naturalSlideHeight={90}
             totalSlides={6}
             // isIntrinsicHeight={true}
           >
@@ -3085,15 +3161,23 @@ function Rater() {
               <AiOutlineRight className="text-2xl" />
             </ButtonNext>
           </CarouselProvider>
+
+          <button
+            className=" w-max h-[4rem] bg-[#01112B] rounded-tl-[20px] rounded-br-[20px] mx-auto text-base border-[3px] border-[#34FEF8] text-[#34FEF8] mb-2 mt-20 p-3 pl-4 pt-0"
+            onClick={handleBack2NationBtn}
+          >
+            Back
+          </button>
         </div>
       </div>
 
+      {/* select team */}
       <div
         ref={teamsRef}
         className="major-Bg clubNation h-[100vh] w-screen text-white font-extrabold text-center hidden"
       >
         <div className="flex flex-col">
-          <div className=" text-7xl">Select Team</div>
+          <div className=" lg:text-7xl text-4xl">Select Team</div>
 
           <div
             ref={bundesligaRef}
@@ -3101,7 +3185,7 @@ function Rater() {
           >
             <CarouselProvider
               naturalSlideWidth={100}
-              naturalSlideHeight={70}
+              naturalSlideHeight={90}
               totalSlides={18}
               // isIntrinsicHeight={true}
             >
@@ -3110,10 +3194,10 @@ function Rater() {
                   <div className="flex flex-col items-center content-center justify-center">
                     <img
                       onClick={() => {
-                        handleEditBtn1st();
+                        handleEditBtnteams();
                       }}
                       className="h-[200px] w-[300px] cursor-pointer"
-                      src="https://assets.stickpng.com/thumbs/584d85a1367b6a13e54477c3.png"
+                      src="https://upload.wikimedia.org/wikipedia/en/thumb/c/c5/FC_Augsburg_logo.svg/140px-FC_Augsburg_logo.svg.png"
                       alt="FC Augsburg"
                     />
                     <p className="legend text-3xl pt-6 cursor-default">
@@ -3125,10 +3209,10 @@ function Rater() {
                   <div className="flex flex-col items-center content-center justify-center">
                     <img
                       onClick={() => {
-                        handleEditBtn1st();
+                        handleEditBtnteams();
                       }}
                       className="h-[200px] w-[300px] cursor-pointer"
-                      src="https://assets.stickpng.com/thumbs/5bcf581f7aaafa0575d85005.png"
+                      src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/Hertha_BSC_Logo_2012.svg/190px-Hertha_BSC_Logo_2012.svg.png"
                       alt="Hertha BSC"
                     />
                     <p className="legend text-3xl pt-6 cursor-default">
@@ -3140,10 +3224,10 @@ function Rater() {
                   <div className="flex flex-col items-center content-center justify-center">
                     <img
                       onClick={() => {
-                        handleEditBtn1st();
+                        handleEditBtnteams();
                       }}
                       className="h-[200px] w-[300px] cursor-pointer"
-                      src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Escudo_Union_Berlin.png/800px-Escudo_Union_Berlin.png?20220820181203"
+                      src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/1._FC_Union_Berlin_Logo.svg/220px-1._FC_Union_Berlin_Logo.svg.png"
                       alt="Union Berlin"
                     />
                     <p className="legend text-3xl pt-6 cursor-default">
@@ -3155,10 +3239,10 @@ function Rater() {
                   <div className="flex flex-col items-center content-center justify-center">
                     <img
                       onClick={() => {
-                        handleEditBtn1st();
+                        handleEditBtnteams();
                       }}
                       className="h-[200px] w-[300px] cursor-pointer"
-                      src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/VfL_Bochum_logo.svg/170px-VfL_Bochum_logo.svg.png?20210423031837"
+                      src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/VfL_Bochum_logo.svg/170px-VfL_Bochum_logo.svg.png"
                       alt="VfL Bochum"
                     />
                     <p className="legend text-3xl pt-6 cursor-default">
@@ -3170,10 +3254,10 @@ function Rater() {
                   <div className="flex flex-col items-center content-center justify-center">
                     <img
                       onClick={() => {
-                        handleEditBtn1st();
+                        handleEditBtnteams();
                       }}
                       className="h-[200px] w-[300px] cursor-pointer"
-                      src="https://assets.stickpng.com/thumbs/584d85c9367b6a13e54477c8.png"
+                      src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/SV-Werder-Bremen-Logo.svg/150px-SV-Werder-Bremen-Logo.svg.png"
                       alt="Werder Bremen"
                     />
                     <p className="legend text-3xl pt-6 cursor-default">
@@ -3185,10 +3269,10 @@ function Rater() {
                   <div className="flex flex-col items-center content-center justify-center">
                     <img
                       onClick={() => {
-                        handleEditBtn1st();
+                        handleEditBtnteams();
                       }}
                       className="h-[200px] w-[300px] cursor-pointer"
-                      src="https://assets.stickpng.com/thumbs/584d8678367b6a13e54477d3.png"
+                      src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Borussia_Dortmund_logo.svg/185px-Borussia_Dortmund_logo.svg.png"
                       alt="Borussia Dortmund"
                     />
                     <p className="legend text-3xl pt-6 cursor-default">
@@ -3200,10 +3284,10 @@ function Rater() {
                   <div className="flex flex-col items-center content-center justify-center">
                     <img
                       onClick={() => {
-                        handleEditBtn1st();
+                        handleEditBtnteams();
                       }}
                       className="h-[200px] w-[300px] cursor-pointer"
-                      src="https://assets.stickpng.com/thumbs/584d865b367b6a13e54477d2.png"
+                      src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/Eintracht_Frankfurt_Logo.svg/180px-Eintracht_Frankfurt_Logo.svg.png"
                       alt="Eintracht Frankfurt"
                     />
                     <p className="legend text-3xl pt-6 cursor-default">
@@ -3215,10 +3299,10 @@ function Rater() {
                   <div className="flex flex-col items-center content-center justify-center">
                     <img
                       onClick={() => {
-                        handleEditBtn1st();
+                        handleEditBtnteams();
                       }}
                       className="h-[200px] w-[300px] cursor-pointer"
-                      src="https://assets.stickpng.com/thumbs/584d8630367b6a13e54477cd.png"
+                      src="https://upload.wikimedia.org/wikipedia/en/thumb/6/6d/SC_Freiburg_logo.svg/150px-SC_Freiburg_logo.svg.png"
                       alt="SC Freiburg"
                     />
                     <p className="legend text-3xl pt-6 cursor-default">
@@ -3230,10 +3314,10 @@ function Rater() {
                   <div className="flex flex-col items-center content-center justify-center">
                     <img
                       onClick={() => {
-                        handleEditBtn1st();
+                        handleEditBtnteams();
                       }}
                       className="h-[200px] w-[300px] cursor-pointer"
-                      src="https://assets.stickpng.com/thumbs/584d85b2367b6a13e54477c5.png"
+                      src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Logo_TSG_Hoffenheim.svg/160px-Logo_TSG_Hoffenheim.svg.png"
                       alt="1899 Hoffenheim"
                     />
                     <p className="legend text-3xl pt-6 cursor-default">
@@ -3245,10 +3329,10 @@ function Rater() {
                   <div className="flex flex-col items-center content-center justify-center">
                     <img
                       onClick={() => {
-                        handleEditBtn1st();
+                        handleEditBtnteams();
                       }}
                       className="h-[200px] w-[300px] cursor-pointer"
-                      src="https://logodownload.org/wp-content/uploads/2019/12/1-fc-koln-logo-0.png"
+                      src="https://upload.wikimedia.org/wikipedia/en/thumb/5/53/FC_Cologne_logo.svg/180px-FC_Cologne_logo.svg.png"
                       alt="1. FC Köln"
                     />
                     <p className="legend text-3xl pt-6 cursor-default">
@@ -3260,10 +3344,10 @@ function Rater() {
                   <div className="flex flex-col items-center content-center justify-center">
                     <img
                       onClick={() => {
-                        handleEditBtn1st();
+                        handleEditBtnteams();
                       }}
                       className="h-[200px] w-[300px] cursor-pointer"
-                      src="https://assets.stickpng.com/thumbs/5bcf58277aaafa0575d85006.png"
+                      src="https://upload.wikimedia.org/wikipedia/en/thumb/0/04/RB_Leipzig_2014_logo.svg/280px-RB_Leipzig_2014_logo.svg.png"
                       alt="RB Leipzig"
                     />
                     <p className="legend text-3xl pt-6 cursor-default">
@@ -3275,10 +3359,10 @@ function Rater() {
                   <div className="flex flex-col items-center content-center justify-center">
                     <img
                       onClick={() => {
-                        handleEditBtn1st();
+                        handleEditBtnteams();
                       }}
                       className="h-[200px] w-[300px] cursor-pointer"
-                      src="https://assets.stickpng.com/thumbs/584d8651367b6a13e54477d1.png"
+                      src="https://upload.wikimedia.org/wikipedia/en/thumb/5/59/Bayer_04_Leverkusen_logo.svg/220px-Bayer_04_Leverkusen_logo.svg.png"
                       alt="Bayer Leverkusen"
                     />
                     <p className="legend text-3xl pt-6 cursor-default">
@@ -3290,10 +3374,10 @@ function Rater() {
                   <div className="flex flex-col items-center content-center justify-center">
                     <img
                       onClick={() => {
-                        handleEditBtn1st();
+                        handleEditBtnteams();
                       }}
                       className="h-[200px] w-[300px] cursor-pointer"
-                      src="https://assets.stickpng.com/thumbs/584d8640367b6a13e54477cf.png"
+                      src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Logo_Mainz_05.svg/190px-Logo_Mainz_05.svg.png"
                       alt="Mainz 05"
                     />
                     <p className="legend text-3xl pt-6 cursor-default">
@@ -3305,10 +3389,10 @@ function Rater() {
                   <div className="flex flex-col items-center content-center justify-center">
                     <img
                       onClick={() => {
-                        handleEditBtn1st();
+                        handleEditBtnteams();
                       }}
                       className="h-[200px] w-[300px] cursor-pointer"
-                      src="https://assets.stickpng.com/thumbs/584d85e4367b6a13e54477cb.png"
+                      src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/Borussia_M%C3%B6nchengladbach_logo.svg/140px-Borussia_M%C3%B6nchengladbach_logo.svg.png"
                       alt="Borussia Mönchengladbach"
                     />
                     <p className="legend text-3xl pt-6 cursor-default">
@@ -3320,10 +3404,10 @@ function Rater() {
                   <div className="flex flex-col items-center content-center justify-center">
                     <img
                       onClick={() => {
-                        handleEditBtn1st();
+                        handleEditBtnteams();
                       }}
                       className="h-[200px] w-[300px] cursor-pointer"
-                      src="https://assets.stickpng.com/thumbs/584d8683367b6a13e54477d4.png"
+                      src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/FC_Bayern_M%C3%BCnchen_logo_%282017%29.svg/180px-FC_Bayern_M%C3%BCnchen_logo_%282017%29.svg.png"
                       alt="Bayern Munich"
                     />
                     <p className="legend text-3xl pt-6 cursor-default">
@@ -3335,10 +3419,10 @@ function Rater() {
                   <div className="flex flex-col items-center content-center justify-center">
                     <img
                       onClick={() => {
-                        handleEditBtn1st();
+                        handleEditBtnteams();
                       }}
                       className="h-[200px] w-[300px] cursor-pointer"
-                      src="https://assets.stickpng.com/thumbs/584d8649367b6a13e54477d0.png"
+                      src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/FC_Schalke_04_Logo.svg/180px-FC_Schalke_04_Logo.svg.png"
                       alt="Schalke 04"
                     />
                     <p className="legend text-3xl pt-6 cursor-default">
@@ -3350,10 +3434,10 @@ function Rater() {
                   <div className="flex flex-col items-center content-center justify-center">
                     <img
                       onClick={() => {
-                        handleEditBtn1st();
+                        handleEditBtnteams();
                       }}
                       className="h-[200px] w-[300px] cursor-pointer"
-                      src="https://assets.stickpng.com/thumbs/5b4e2e48c051e602a568ce04.png"
+                      src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/VfB_Stuttgart_1893_Logo.svg/180px-VfB_Stuttgart_1893_Logo.svg.png"
                       alt="VfB Stuttgart"
                     />
                     <p className="legend text-3xl pt-6 cursor-default">
@@ -3365,10 +3449,10 @@ function Rater() {
                   <div className="flex flex-col items-center content-center justify-center">
                     <img
                       onClick={() => {
-                        handleEditBtn1st();
+                        handleEditBtnteams();
                       }}
                       className="h-[200px] w-[300px] cursor-pointer"
-                      src="https://assets.stickpng.com/thumbs/584d8596367b6a13e54477c2.png"
+                      src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/VfL_Wolfsburg_Logo.svg/190px-VfL_Wolfsburg_Logo.svg.png"
                       alt="VfL Wolfsburg"
                     />
                     <p className="legend text-3xl pt-6 cursor-default">
@@ -3394,6 +3478,13 @@ function Rater() {
                 <AiOutlineRight className="text-2xl" />
               </ButtonNext>
             </CarouselProvider>
+
+            <button
+              className=" w-max h-[4rem] bg-[#01112B] rounded-tl-[20px] rounded-br-[20px] mx-auto text-base border-[3px] border-[#34FEF8] text-[#34FEF8] mb-2 mt-20 p-3 pl-4 pt-0"
+              onClick={handleBack2NationTeamBtn}
+            >
+              Back
+            </button>
           </div>
 
           <div
@@ -3402,7 +3493,7 @@ function Rater() {
           >
             <CarouselProvider
               naturalSlideWidth={100}
-              naturalSlideHeight={70}
+              naturalSlideHeight={90}
               totalSlides={20}
               // isIntrinsicHeight={true}
             >
@@ -3411,10 +3502,10 @@ function Rater() {
                   <div className="flex flex-col items-center content-center justify-center">
                     <img
                       onClick={() => {
-                        handleEditBtn1st();
+                        handleEditBtnteams();
                       }}
                       className="h-[200px] w-[300px] cursor-pointer"
-                      src="https://assets.stickpng.com/thumbs/584ad245b519ea740933a8b3.png"
+                      src="https://upload.wikimedia.org/wikipedia/en/thumb/1/13/UD_Almer%C3%ADa_logo.png/140px-UD_Almer%C3%ADa_logo.png"
                       alt="Almería"
                     />
                     <p className="legend text-3xl pt-6 cursor-default">
@@ -3426,10 +3517,10 @@ function Rater() {
                   <div className="flex flex-col items-center content-center justify-center">
                     <img
                       onClick={() => {
-                        handleEditBtn1st();
+                        handleEditBtnteams();
                       }}
                       className="h-[200px] w-[300px] cursor-pointer"
-                      src="https://assets.stickpng.com/thumbs/584ad135b519ea740933a896.png"
+                      src="https://upload.wikimedia.org/wikipedia/en/thumb/9/98/Club_Athletic_Bilbao_logo.svg/150px-Club_Athletic_Bilbao_logo.svg.png"
                       alt="Athletic Bilbao"
                     />
                     <p className="legend text-3xl pt-6 cursor-default">
@@ -3441,10 +3532,10 @@ function Rater() {
                   <div className="flex flex-col items-center content-center justify-center">
                     <img
                       onClick={() => {
-                        handleEditBtn1st();
+                        handleEditBtnteams();
                       }}
                       className="h-[200px] w-[300px] cursor-pointer"
-                      src="https://assets.stickpng.com/thumbs/584a9b63b080d7616d29877a.png"
+                      src="https://upload.wikimedia.org/wikipedia/en/thumb/f/f4/Atletico_Madrid_2017_logo.svg/150px-Atletico_Madrid_2017_logo.svg.png"
                       alt="Atlético Madrid"
                     />
                     <p className="legend text-3xl pt-6 cursor-default">
@@ -3456,10 +3547,10 @@ function Rater() {
                   <div className="flex flex-col items-center content-center justify-center">
                     <img
                       onClick={() => {
-                        handleEditBtn1st();
+                        handleEditBtnteams();
                       }}
                       className="h-[200px] w-[300px] cursor-pointer"
-                      src="https://assets.stickpng.com/thumbs/584a9b3bb080d7616d298777.png"
+                      src="https://upload.wikimedia.org/wikipedia/en/thumb/4/47/FC_Barcelona_%28crest%29.svg/190px-FC_Barcelona_%28crest%29.svg.png"
                       alt="Barcelona"
                     />
                     <p className="legend text-3xl pt-6 cursor-default">
@@ -3471,10 +3562,10 @@ function Rater() {
                   <div className="flex flex-col items-center content-center justify-center">
                     <img
                       onClick={() => {
-                        handleEditBtn1st();
+                        handleEditBtnteams();
                       }}
                       className="h-[200px] w-[300px] cursor-pointer"
-                      src="https://assets.stickpng.com/thumbs/584ad7abb519ea740933a953.png"
+                      src="https://upload.wikimedia.org/wikipedia/en/thumb/5/58/C%C3%A1diz_CF_logo.svg/120px-C%C3%A1diz_CF_logo.svg.png"
                       alt="Cádiz"
                     />
                     <p className="legend text-3xl pt-6 cursor-default">Cádiz</p>
@@ -3484,10 +3575,10 @@ function Rater() {
                   <div className="flex flex-col items-center content-center justify-center">
                     <img
                       onClick={() => {
-                        handleEditBtn1st();
+                        handleEditBtnteams();
                       }}
                       className="h-[200px] w-[300px] cursor-pointer"
-                      src="https://assets.stickpng.com/thumbs/584ad3c4b519ea740933a8df.png"
+                      src="https://upload.wikimedia.org/wikipedia/en/thumb/1/12/RC_Celta_de_Vigo_logo.svg/110px-RC_Celta_de_Vigo_logo.svg.png"
                       alt="Celta Vigo"
                     />
                     <p className="legend text-3xl pt-6 cursor-default">
@@ -3499,10 +3590,10 @@ function Rater() {
                   <div className="flex flex-col items-center content-center justify-center">
                     <img
                       onClick={() => {
-                        handleEditBtn1st();
+                        handleEditBtnteams();
                       }}
                       className="h-[200px] w-[300px] cursor-pointer"
-                      src="https://assets.stickpng.com/thumbs/584ad4e5b519ea740933a901.png"
+                      src="https://upload.wikimedia.org/wikipedia/en/thumb/a/a7/Elche_CF_logo.svg/150px-Elche_CF_logo.svg.png"
                       alt="Elche"
                     />
                     <p className="legend text-3xl pt-6 cursor-default">Elche</p>
@@ -3512,10 +3603,10 @@ function Rater() {
                   <div className="flex flex-col items-center content-center justify-center">
                     <img
                       onClick={() => {
-                        handleEditBtn1st();
+                        handleEditBtnteams();
                       }}
                       className="h-[200px] w-[300px] cursor-pointer"
-                      src="https://assets.stickpng.com/thumbs/584ad3b5b519ea740933a8dd.png"
+                      src="https://upload.wikimedia.org/wikipedia/en/thumb/d/d6/Rcd_espanyol_logo.svg/140px-Rcd_espanyol_logo.svg.png"
                       alt="Espanyol"
                     />
                     <p className="legend text-3xl pt-6 cursor-default">
@@ -3527,10 +3618,10 @@ function Rater() {
                   <div className="flex flex-col items-center content-center justify-center">
                     <img
                       onClick={() => {
-                        handleEditBtn1st();
+                        handleEditBtnteams();
                       }}
                       className="h-[200px] w-[300px] cursor-pointer"
-                      src="https://assets.stickpng.com/thumbs/584ad4b1b519ea740933a8fc.png"
+                      src="https://upload.wikimedia.org/wikipedia/en/thumb/4/46/Getafe_logo.svg/170px-Getafe_logo.svg.png"
                       alt="Getafe"
                     />
                     <p className="legend text-3xl pt-6 cursor-default">
@@ -3542,10 +3633,10 @@ function Rater() {
                   <div className="flex flex-col items-center content-center justify-center">
                     <img
                       onClick={() => {
-                        handleEditBtn1st();
+                        handleEditBtnteams();
                       }}
                       className="h-[200px] w-[300px] cursor-pointer"
-                      src="https://assets.stickpng.com/thumbs/584ad4b8b519ea740933a8fd.png"
+                      src="https://upload.wikimedia.org/wikipedia/en/thumb/7/7a/Girona_FC_new_logo.png/190px-Girona_FC_new_logo.png"
                       alt="Girona"
                     />
                     <p className="legend text-3xl pt-6 cursor-default">
@@ -3557,10 +3648,10 @@ function Rater() {
                   <div className="flex flex-col items-center content-center justify-center">
                     <img
                       onClick={() => {
-                        handleEditBtn1st();
+                        handleEditBtnteams();
                       }}
                       className="h-[200px] w-[300px] cursor-pointer"
-                      src="https://assets.stickpng.com/thumbs/584ad3aeb519ea740933a8dc.png"
+                      src="https://upload.wikimedia.org/wikipedia/en/thumb/e/e0/Rcd_mallorca.svg/150px-Rcd_mallorca.svg.png"
                       alt="Mallorca"
                     />
                     <p className="legend text-3xl pt-6 cursor-default">
@@ -3572,10 +3663,10 @@ function Rater() {
                   <div className="flex flex-col items-center content-center justify-center">
                     <img
                       onClick={() => {
-                        handleEditBtn1st();
+                        handleEditBtnteams();
                       }}
                       className="h-[200px] w-[300px] cursor-pointer"
-                      src="https://assets.stickpng.com/thumbs/584ad403b519ea740933a8e7.png"
+                      src="https://upload.wikimedia.org/wikipedia/en/thumb/d/db/Osasuna_logo.svg/150px-Osasuna_logo.svg.png"
                       alt="Osasuna"
                     />
                     <p className="legend text-3xl pt-6 cursor-default">
@@ -3587,7 +3678,7 @@ function Rater() {
                   <div className="flex flex-col items-center content-center justify-center">
                     <img
                       onClick={() => {
-                        handleEditBtn1st();
+                        handleEditBtnteams();
                       }}
                       className="h-[200px] w-[300px] cursor-pointer"
                       src="https://upload.wikimedia.org/wikipedia/en/thumb/1/17/Rayo_Vallecano_logo.png/180px-Rayo_Vallecano_logo.png"
@@ -3602,10 +3693,10 @@ function Rater() {
                   <div className="flex flex-col items-center content-center justify-center">
                     <img
                       onClick={() => {
-                        handleEditBtn1st();
+                        handleEditBtnteams();
                       }}
                       className="h-[200px] w-[300px] cursor-pointer"
-                      src="https://assets.stickpng.com/thumbs/584ad396b519ea740933a8d9.png"
+                      src="https://upload.wikimedia.org/wikipedia/en/thumb/1/13/Real_betis_logo.svg/200px-Real_betis_logo.svg.png"
                       alt="Real Betis"
                     />
                     <p className="legend text-3xl pt-6 cursor-default">
@@ -3617,10 +3708,10 @@ function Rater() {
                   <div className="flex flex-col items-center content-center justify-center">
                     <img
                       onClick={() => {
-                        handleEditBtn1st();
+                        handleEditBtnteams();
                       }}
                       className="h-[200px] w-[300px] cursor-pointer"
-                      src="https://assets.stickpng.com/thumbs/584a9b47b080d7616d298778.png"
+                      src="https://upload.wikimedia.org/wikipedia/en/thumb/5/56/Real_Madrid_CF.svg/150px-Real_Madrid_CF.svg.png"
                       alt="Real Madrid"
                     />
                     <p className="legend text-3xl pt-6 cursor-default">
@@ -3632,10 +3723,10 @@ function Rater() {
                   <div className="flex flex-col items-center content-center justify-center">
                     <img
                       onClick={() => {
-                        handleEditBtn1st();
+                        handleEditBtnteams();
                       }}
                       className="h-[200px] w-[300px] cursor-pointer"
-                      src="https://assets.stickpng.com/thumbs/584ad36ab519ea740933a8d3.png"
+                      src="https://upload.wikimedia.org/wikipedia/en/thumb/f/f1/Real_Sociedad_logo.svg/170px-Real_Sociedad_logo.svg.png"
                       alt="Real Sociedad"
                     />
                     <p className="legend text-3xl pt-6 cursor-default">
@@ -3647,10 +3738,10 @@ function Rater() {
                   <div className="flex flex-col items-center content-center justify-center">
                     <img
                       onClick={() => {
-                        handleEditBtn1st();
+                        handleEditBtnteams();
                       }}
                       className="h-[200px] w-[300px] cursor-pointer"
-                      src="https://assets.stickpng.com/thumbs/584ad291b519ea740933a8ba.png"
+                      src="https://upload.wikimedia.org/wikipedia/en/thumb/3/3b/Sevilla_FC_logo.svg/150px-Sevilla_FC_logo.svg.png"
                       alt="Sevilla"
                     />
                     <p className="legend text-3xl pt-6 cursor-default">
@@ -3662,10 +3753,10 @@ function Rater() {
                   <div className="flex flex-col items-center content-center justify-center">
                     <img
                       onClick={() => {
-                        handleEditBtn1st();
+                        handleEditBtnteams();
                       }}
                       className="h-[200px] w-[300px] cursor-pointer"
-                      src="https://assets.stickpng.com/thumbs/584ad186b519ea740933a89e.png"
+                      src="https://upload.wikimedia.org/wikipedia/en/thumb/c/ce/Valenciacf.svg/160px-Valenciacf.svg.png"
                       alt="Valencia"
                     />
                     <p className="legend text-3xl pt-6 cursor-default">
@@ -3677,10 +3768,10 @@ function Rater() {
                   <div className="flex flex-col items-center content-center justify-center">
                     <img
                       onClick={() => {
-                        handleEditBtn1st();
+                        handleEditBtnteams();
                       }}
                       className="h-[200px] w-[300px] cursor-pointer"
-                      src="https://assets.stickpng.com/thumbs/584ad354b519ea740933a8d1.png"
+                      src="https://upload.wikimedia.org/wikipedia/en/thumb/c/c5/Shield_of_Real_Valladolid.png/150px-Shield_of_Real_Valladolid.png"
                       alt="Valladolid"
                     />
                     <p className="legend text-3xl pt-6 cursor-default">
@@ -3692,10 +3783,10 @@ function Rater() {
                   <div className="flex flex-col items-center content-center justify-center">
                     <img
                       onClick={() => {
-                        handleEditBtn1st();
+                        handleEditBtnteams();
                       }}
                       className="h-[200px] w-[300px] cursor-pointer"
-                      src="https://assets.stickpng.com/thumbs/584a9b57b080d7616d298779.png"
+                      src="https://upload.wikimedia.org/wikipedia/en/thumb/b/b9/Villarreal_CF_logo-en.svg/160px-Villarreal_CF_logo-en.svg.png"
                       alt="Villarreal"
                     />
                     <p className="legend text-3xl pt-6 cursor-default">
@@ -3721,6 +3812,13 @@ function Rater() {
                 <AiOutlineRight className="text-2xl" />
               </ButtonNext>
             </CarouselProvider>
+
+            <button
+              className=" w-max h-[4rem] bg-[#01112B] rounded-tl-[20px] rounded-br-[20px] mx-auto text-base border-[3px] border-[#34FEF8] text-[#34FEF8] mb-2 mt-20 p-3 pl-4 pt-0"
+              onClick={handleBack2NationTeamBtn}
+            >
+              Back
+            </button>
           </div>
 
           <div
@@ -3729,7 +3827,7 @@ function Rater() {
           >
             <CarouselProvider
               naturalSlideWidth={100}
-              naturalSlideHeight={70}
+              naturalSlideHeight={90}
               totalSlides={20}
               // isIntrinsicHeight={true}
             >
@@ -3738,10 +3836,10 @@ function Rater() {
                   <div className="flex flex-col items-center content-center justify-center">
                     <img
                       onClick={() => {
-                        handleEditBtn1st();
+                        handleEditBtnteams();
                       }}
                       className="h-[200px] w-[300px] cursor-pointer"
-                      src="https://assets.stickpng.com/thumbs/580b57fcd9996e24bc43c4cc.png"
+                      src="https://upload.wikimedia.org/wikipedia/en/thumb/1/1f/AC_Ajaccio_logo.svg/130px-AC_Ajaccio_logo.svg.png"
                       alt="Ajaccio"
                     />
                     <p className="legend text-3xl pt-6 cursor-default">
@@ -3753,10 +3851,10 @@ function Rater() {
                   <div className="flex flex-col items-center content-center justify-center">
                     <img
                       onClick={() => {
-                        handleEditBtn1st();
+                        handleEditBtnteams();
                       }}
                       className="h-[200px] w-[300px] cursor-pointer"
-                      src="https://en.logodownload.org/wp-content/uploads/2019/09/angers-sco-logo-41.png"
+                      src="https://upload.wikimedia.org/wikipedia/en/thumb/6/6c/Angers_SCO.png/150px-Angers_SCO.png"
                       alt="Angers"
                     />
                     <p className="legend text-3xl pt-6 cursor-default">
@@ -3768,10 +3866,10 @@ function Rater() {
                   <div className="flex flex-col items-center content-center justify-center">
                     <img
                       onClick={() => {
-                        handleEditBtn1st();
+                        handleEditBtnteams();
                       }}
                       className="h-[200px] w-[300px] cursor-pointer"
-                      src="https://assets.stickpng.com/thumbs/580b57fcd9996e24bc43c4c7.png"
+                      src="https://upload.wikimedia.org/wikipedia/en/thumb/5/51/AJAuxerreLogo.svg/140px-AJAuxerreLogo.svg.png"
                       alt="Auxerre"
                     />
                     <p className="legend text-3xl pt-6 cursor-default">
@@ -3783,10 +3881,10 @@ function Rater() {
                   <div className="flex flex-col items-center content-center justify-center">
                     <img
                       onClick={() => {
-                        handleEditBtn1st();
+                        handleEditBtnteams();
                       }}
                       className="h-[200px] w-[300px] cursor-pointer"
-                      src="https://en.logodownload.org/wp-content/uploads/2019/09/stade-brestois-29-logo-41.png"
+                      src="https://upload.wikimedia.org/wikipedia/en/thumb/0/05/Stade_Brestois_29_logo.svg/150px-Stade_Brestois_29_logo.svg.png"
                       alt="Brest"
                     />
                     <p className="legend text-3xl pt-6 cursor-default">Brest</p>
@@ -3796,7 +3894,7 @@ function Rater() {
                   <div className="flex flex-col items-center content-center justify-center">
                     <img
                       onClick={() => {
-                        handleEditBtn1st();
+                        handleEditBtnteams();
                       }}
                       className="h-[200px] w-[300px] cursor-pointer"
                       src="https://upload.wikimedia.org/wikipedia/en/thumb/5/52/Clermont_Foot_logo.svg/140px-Clermont_Foot_logo.svg.png"
@@ -3811,7 +3909,7 @@ function Rater() {
                   <div className="flex flex-col items-center content-center justify-center">
                     <img
                       onClick={() => {
-                        handleEditBtn1st();
+                        handleEditBtnteams();
                       }}
                       className="h-[200px] w-[300px] cursor-pointer"
                       src="https://upload.wikimedia.org/wikipedia/en/thumb/c/cc/RC_Lens_logo.svg/135px-RC_Lens_logo.svg.png"
@@ -3826,7 +3924,7 @@ function Rater() {
                   <div className="flex flex-col items-center content-center justify-center">
                     <img
                       onClick={() => {
-                        handleEditBtn1st();
+                        handleEditBtnteams();
                       }}
                       className="h-[200px] w-[300px] cursor-pointer"
                       src="https://upload.wikimedia.org/wikipedia/en/thumb/3/3f/Lille_OSC_2018_logo.svg/170px-Lille_OSC_2018_logo.svg.png"
@@ -3841,7 +3939,7 @@ function Rater() {
                   <div className="flex flex-col items-center content-center justify-center">
                     <img
                       onClick={() => {
-                        handleEditBtn1st();
+                        handleEditBtnteams();
                       }}
                       className="h-[200px] w-[300px] cursor-pointer"
                       src="https://upload.wikimedia.org/wikipedia/en/thumb/4/4c/FC_Lorient_logo.svg/130px-FC_Lorient_logo.svg.png"
@@ -3856,7 +3954,7 @@ function Rater() {
                   <div className="flex flex-col items-center content-center justify-center">
                     <img
                       onClick={() => {
-                        handleEditBtn1st();
+                        handleEditBtnteams();
                       }}
                       className="h-[200px] w-[300px] cursor-pointer"
                       src="https://upload.wikimedia.org/wikipedia/en/1/12/Logo_Olympique_Lyonnais_2022.png"
@@ -3871,7 +3969,7 @@ function Rater() {
                   <div className="flex flex-col items-center content-center justify-center">
                     <img
                       onClick={() => {
-                        handleEditBtn1st();
+                        handleEditBtnteams();
                       }}
                       className="h-[200px] w-[300px] cursor-pointer"
                       src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/Olympique_Marseille_logo.svg/170px-Olympique_Marseille_logo.svg.png"
@@ -3886,7 +3984,7 @@ function Rater() {
                   <div className="flex flex-col items-center content-center justify-center">
                     <img
                       onClick={() => {
-                        handleEditBtn1st();
+                        handleEditBtnteams();
                       }}
                       className="h-[200px] w-[300px] cursor-pointer"
                       src="https://upload.wikimedia.org/wikipedia/en/thumb/c/cf/LogoASMonacoFC2021.svg/120px-LogoASMonacoFC2021.svg.png"
@@ -3901,7 +3999,7 @@ function Rater() {
                   <div className="flex flex-col items-center content-center justify-center">
                     <img
                       onClick={() => {
-                        handleEditBtn1st();
+                        handleEditBtnteams();
                       }}
                       className="h-[200px] w-[300px] cursor-pointer"
                       src="https://upload.wikimedia.org/wikipedia/en/thumb/a/a8/Montpellier_HSC_logo.svg/170px-Montpellier_HSC_logo.svg.png"
@@ -3916,7 +4014,7 @@ function Rater() {
                   <div className="flex flex-col items-center content-center justify-center">
                     <img
                       onClick={() => {
-                        handleEditBtn1st();
+                        handleEditBtnteams();
                       }}
                       className="h-[200px] w-[300px] cursor-pointer"
                       src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Logo_FC_Nantes_%28avec_fond%29_-_2019.svg/140px-Logo_FC_Nantes_%28avec_fond%29_-_2019.svg.png"
@@ -3931,7 +4029,7 @@ function Rater() {
                   <div className="flex flex-col items-center content-center justify-center">
                     <img
                       onClick={() => {
-                        handleEditBtn1st();
+                        handleEditBtnteams();
                       }}
                       className="h-[200px] w-[300px] cursor-pointer"
                       src="https://upload.wikimedia.org/wikipedia/en/thumb/2/2e/OGC_Nice_logo.svg/150px-OGC_Nice_logo.svg.png"
@@ -3946,7 +4044,7 @@ function Rater() {
                   <div className="flex flex-col items-center content-center justify-center">
                     <img
                       onClick={() => {
-                        handleEditBtn1st();
+                        handleEditBtnteams();
                       }}
                       className="h-[200px] w-[300px] cursor-pointer"
                       src="https://upload.wikimedia.org/wikipedia/en/thumb/a/a7/Paris_Saint-Germain_F.C..svg/180px-Paris_Saint-Germain_F.C..svg.png"
@@ -3961,7 +4059,7 @@ function Rater() {
                   <div className="flex flex-col items-center content-center justify-center">
                     <img
                       onClick={() => {
-                        handleEditBtn1st();
+                        handleEditBtnteams();
                       }}
                       className="h-[200px] w-[300px] cursor-pointer"
                       src="https://upload.wikimedia.org/wikipedia/en/thumb/1/19/Stade_de_Reims_logo.svg/100px-Stade_de_Reims_logo.svg.png"
@@ -3976,7 +4074,7 @@ function Rater() {
                   <div className="flex flex-col items-center content-center justify-center">
                     <img
                       onClick={() => {
-                        handleEditBtn1st();
+                        handleEditBtnteams();
                       }}
                       className="h-[200px] w-[300px] cursor-pointer"
                       src="https://upload.wikimedia.org/wikipedia/en/thumb/9/9e/Stade_Rennais_FC.svg/170px-Stade_Rennais_FC.svg.png"
@@ -3991,7 +4089,7 @@ function Rater() {
                   <div className="flex flex-col items-center content-center justify-center">
                     <img
                       onClick={() => {
-                        handleEditBtn1st();
+                        handleEditBtnteams();
                       }}
                       className="h-[200px] w-[300px] cursor-pointer"
                       src="https://upload.wikimedia.org/wikipedia/en/thumb/8/80/Racing_Club_de_Strasbourg_logo.svg/170px-Racing_Club_de_Strasbourg_logo.svg.png"
@@ -4006,7 +4104,7 @@ function Rater() {
                   <div className="flex flex-col items-center content-center justify-center">
                     <img
                       onClick={() => {
-                        handleEditBtn1st();
+                        handleEditBtnteams();
                       }}
                       className="h-[200px] w-[300px] cursor-pointer"
                       src="https://upload.wikimedia.org/wikipedia/en/thumb/6/63/Toulouse_FC_2018_logo.svg/170px-Toulouse_FC_2018_logo.svg.png"
@@ -4021,7 +4119,7 @@ function Rater() {
                   <div className="flex flex-col items-center content-center justify-center">
                     <img
                       onClick={() => {
-                        handleEditBtn1st();
+                        handleEditBtnteams();
                       }}
                       className="h-[200px] w-[300px] cursor-pointer"
                       src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/ES_Troyes_AC.svg/140px-ES_Troyes_AC.svg.png"
@@ -4050,12 +4148,19 @@ function Rater() {
                 <AiOutlineRight className="text-2xl" />
               </ButtonNext>
             </CarouselProvider>
+
+            <button
+              className=" w-max h-[4rem] bg-[#01112B] rounded-tl-[20px] rounded-br-[20px] mx-auto text-base border-[3px] border-[#34FEF8] text-[#34FEF8] mb-2 mt-20 p-3 pl-4 pt-0"
+              onClick={handleBack2NationTeamBtn}
+            >
+              Back
+            </button>
           </div>
 
           <div ref={eplRef} className="h-[50vh] lg:pt-[10vh] pt-[5vh] hidden">
             <CarouselProvider
               naturalSlideWidth={100}
-              naturalSlideHeight={70}
+              naturalSlideHeight={90}
               totalSlides={20}
               // isIntrinsicHeight={true}
             >
@@ -4064,7 +4169,7 @@ function Rater() {
                   <div className="flex flex-col items-center content-center justify-center">
                     <img
                       onClick={() => {
-                        handleEditBtn1st();
+                        handleEditBtnteams();
                       }}
                       className="h-[200px] w-[300px] cursor-pointer"
                       src="https://upload.wikimedia.org/wikipedia/en/thumb/5/53/Arsenal_FC.svg/170px-Arsenal_FC.svg.png"
@@ -4079,7 +4184,7 @@ function Rater() {
                   <div className="flex flex-col items-center content-center justify-center">
                     <img
                       onClick={() => {
-                        handleEditBtn1st();
+                        handleEditBtnteams();
                       }}
                       className="h-[200px] w-[300px] cursor-pointer"
                       src="https://upload.wikimedia.org/wikipedia/en/thumb/f/f9/Aston_Villa_FC_crest_%282016%29.svg/140px-Aston_Villa_FC_crest_%282016%29.svg.png"
@@ -4094,7 +4199,7 @@ function Rater() {
                   <div className="flex flex-col items-center content-center justify-center">
                     <img
                       onClick={() => {
-                        handleEditBtn1st();
+                        handleEditBtnteams();
                       }}
                       className="h-[200px] w-[300px] cursor-pointer"
                       src="https://upload.wikimedia.org/wikipedia/en/thumb/e/e5/AFC_Bournemouth_%282013%29.svg/150px-AFC_Bournemouth_%282013%29.svg.png"
@@ -4109,7 +4214,7 @@ function Rater() {
                   <div className="flex flex-col items-center content-center justify-center">
                     <img
                       onClick={() => {
-                        handleEditBtn1st();
+                        handleEditBtnteams();
                       }}
                       className="h-[200px] w-[300px] cursor-pointer"
                       src="https://upload.wikimedia.org/wikipedia/en/thumb/2/2a/Brentford_FC_crest.svg/180px-Brentford_FC_crest.svg.png"
@@ -4124,7 +4229,7 @@ function Rater() {
                   <div className="flex flex-col items-center content-center justify-center">
                     <img
                       onClick={() => {
-                        handleEditBtn1st();
+                        handleEditBtnteams();
                       }}
                       className="h-[200px] w-[300px] cursor-pointer"
                       src="https://upload.wikimedia.org/wikipedia/en/thumb/f/fd/Brighton_%26_Hove_Albion_logo.svg/195px-Brighton_%26_Hove_Albion_logo.svg.png"
@@ -4139,7 +4244,7 @@ function Rater() {
                   <div className="flex flex-col items-center content-center justify-center">
                     <img
                       onClick={() => {
-                        handleEditBtn1st();
+                        handleEditBtnteams();
                       }}
                       className="h-[200px] w-[300px] cursor-pointer"
                       src="https://upload.wikimedia.org/wikipedia/en/thumb/c/cc/Chelsea_FC.svg/180px-Chelsea_FC.svg.png"
@@ -4154,7 +4259,7 @@ function Rater() {
                   <div className="flex flex-col items-center content-center justify-center">
                     <img
                       onClick={() => {
-                        handleEditBtn1st();
+                        handleEditBtnteams();
                       }}
                       className="h-[200px] w-[300px] cursor-pointer"
                       src="https://upload.wikimedia.org/wikipedia/en/thumb/a/a2/Crystal_Palace_FC_logo_%282022%29.svg/170px-Crystal_Palace_FC_logo_%282022%29.svg.png"
@@ -4169,7 +4274,7 @@ function Rater() {
                   <div className="flex flex-col items-center content-center justify-center">
                     <img
                       onClick={() => {
-                        handleEditBtn1st();
+                        handleEditBtnteams();
                       }}
                       className="h-[200px] w-[300px] cursor-pointer"
                       src="https://upload.wikimedia.org/wikipedia/en/thumb/7/7c/Everton_FC_logo.svg/195px-Everton_FC_logo.svg.png"
@@ -4184,7 +4289,7 @@ function Rater() {
                   <div className="flex flex-col items-center content-center justify-center">
                     <img
                       onClick={() => {
-                        handleEditBtn1st();
+                        handleEditBtnteams();
                       }}
                       className="h-[200px] w-[300px] cursor-pointer"
                       src="https://upload.wikimedia.org/wikipedia/en/thumb/e/eb/Fulham_FC_%28shield%29.svg/146px-Fulham_FC_%28shield%29.svg.png"
@@ -4199,7 +4304,7 @@ function Rater() {
                   <div className="flex flex-col items-center content-center justify-center">
                     <img
                       onClick={() => {
-                        handleEditBtn1st();
+                        handleEditBtnteams();
                       }}
                       className="h-[200px] w-[300px] cursor-pointer"
                       src="https://upload.wikimedia.org/wikipedia/en/thumb/5/54/Leeds_United_F.C._logo.svg/160px-Leeds_United_F.C._logo.svg.png"
@@ -4214,7 +4319,7 @@ function Rater() {
                   <div className="flex flex-col items-center content-center justify-center">
                     <img
                       onClick={() => {
-                        handleEditBtn1st();
+                        handleEditBtnteams();
                       }}
                       className="h-[200px] w-[300px] cursor-pointer"
                       src="https://upload.wikimedia.org/wikipedia/en/thumb/2/2d/Leicester_City_crest.svg/180px-Leicester_City_crest.svg.png"
@@ -4229,7 +4334,7 @@ function Rater() {
                   <div className="flex flex-col items-center content-center justify-center">
                     <img
                       onClick={() => {
-                        handleEditBtn1st();
+                        handleEditBtnteams();
                       }}
                       className="h-[200px] w-[300px] cursor-pointer"
                       src="https://upload.wikimedia.org/wikipedia/en/thumb/0/0c/Liverpool_FC.svg/180px-Liverpool_FC.svg.png"
@@ -4244,7 +4349,7 @@ function Rater() {
                   <div className="flex flex-col items-center content-center justify-center">
                     <img
                       onClick={() => {
-                        handleEditBtn1st();
+                        handleEditBtnteams();
                       }}
                       className="h-[200px] w-[300px] cursor-pointer"
                       src="https://upload.wikimedia.org/wikipedia/en/thumb/e/eb/Manchester_City_FC_badge.svg/180px-Manchester_City_FC_badge.svg.png"
@@ -4259,7 +4364,7 @@ function Rater() {
                   <div className="flex flex-col items-center content-center justify-center">
                     <img
                       onClick={() => {
-                        handleEditBtn1st();
+                        handleEditBtnteams();
                       }}
                       className="h-[200px] w-[300px] cursor-pointer"
                       src="https://upload.wikimedia.org/wikipedia/en/thumb/7/7a/Manchester_United_FC_crest.svg/190px-Manchester_United_FC_crest.svg.png"
@@ -4274,7 +4379,7 @@ function Rater() {
                   <div className="flex flex-col items-center content-center justify-center">
                     <img
                       onClick={() => {
-                        handleEditBtn1st();
+                        handleEditBtnteams();
                       }}
                       className="h-[200px] w-[300px] cursor-pointer"
                       src="https://upload.wikimedia.org/wikipedia/en/thumb/5/56/Newcastle_United_Logo.svg/200px-Newcastle_United_Logo.svg.png"
@@ -4289,7 +4394,7 @@ function Rater() {
                   <div className="flex flex-col items-center content-center justify-center">
                     <img
                       onClick={() => {
-                        handleEditBtn1st();
+                        handleEditBtnteams();
                       }}
                       className="h-[200px] w-[300px] cursor-pointer"
                       src="https://upload.wikimedia.org/wikipedia/en/thumb/e/e5/Nottingham_Forest_F.C._logo.svg/110px-Nottingham_Forest_F.C._logo.svg.png"
@@ -4304,7 +4409,7 @@ function Rater() {
                   <div className="flex flex-col items-center content-center justify-center">
                     <img
                       onClick={() => {
-                        handleEditBtn1st();
+                        handleEditBtnteams();
                       }}
                       className="h-[200px] w-[300px] cursor-pointer"
                       src="https://upload.wikimedia.org/wikipedia/en/thumb/c/c9/FC_Southampton.svg/180px-FC_Southampton.svg.png"
@@ -4319,7 +4424,7 @@ function Rater() {
                   <div className="flex flex-col items-center content-center justify-center">
                     <img
                       onClick={() => {
-                        handleEditBtn1st();
+                        handleEditBtnteams();
                       }}
                       className="h-[200px] w-[300px] cursor-pointer"
                       src="https://upload.wikimedia.org/wikipedia/en/thumb/b/b4/Tottenham_Hotspur.svg/120px-Tottenham_Hotspur.svg.png"
@@ -4334,7 +4439,7 @@ function Rater() {
                   <div className="flex flex-col items-center content-center justify-center">
                     <img
                       onClick={() => {
-                        handleEditBtn1st();
+                        handleEditBtnteams();
                       }}
                       className="h-[200px] w-[300px] cursor-pointer"
                       src="https://upload.wikimedia.org/wikipedia/en/thumb/c/c2/West_Ham_United_FC_logo.svg/165px-West_Ham_United_FC_logo.svg.png"
@@ -4349,7 +4454,7 @@ function Rater() {
                   <div className="flex flex-col items-center content-center justify-center">
                     <img
                       onClick={() => {
-                        handleEditBtn1st();
+                        handleEditBtnteams();
                       }}
                       className="h-[200px] w-[300px] cursor-pointer"
                       src="https://upload.wikimedia.org/wikipedia/en/thumb/f/fc/Wolverhampton_Wanderers.svg/190px-Wolverhampton_Wanderers.svg.png"
@@ -4378,6 +4483,13 @@ function Rater() {
                 <AiOutlineRight className="text-2xl" />
               </ButtonNext>
             </CarouselProvider>
+
+            <button
+              className=" w-max h-[4rem] bg-[#01112B] rounded-tl-[20px] rounded-br-[20px] mx-auto text-base border-[3px] border-[#34FEF8] text-[#34FEF8] mb-2 mt-20 p-3 pl-4 pt-0"
+              onClick={handleBack2NationTeamBtn}
+            >
+              Back
+            </button>
           </div>
 
           <div
@@ -4386,7 +4498,7 @@ function Rater() {
           >
             <CarouselProvider
               naturalSlideWidth={100}
-              naturalSlideHeight={70}
+              naturalSlideHeight={90}
               totalSlides={20}
               // isIntrinsicHeight={true}
             >
@@ -4395,7 +4507,7 @@ function Rater() {
                   <div className="flex flex-col items-center content-center justify-center">
                     <img
                       onClick={() => {
-                        handleEditBtn1st();
+                        handleEditBtnteams();
                       }}
                       className="h-[200px] w-[300px] cursor-pointer"
                       src="https://upload.wikimedia.org/wikipedia/en/thumb/6/66/AtalantaBC.svg/130px-AtalantaBC.svg.png"
@@ -4410,7 +4522,7 @@ function Rater() {
                   <div className="flex flex-col items-center content-center justify-center">
                     <img
                       onClick={() => {
-                        handleEditBtn1st();
+                        handleEditBtnteams();
                       }}
                       className="h-[200px] w-[300px] cursor-pointer"
                       src="https://upload.wikimedia.org/wikipedia/en/thumb/5/5b/Bologna_F.C._1909_logo.svg/130px-Bologna_F.C._1909_logo.svg.png"
@@ -4425,7 +4537,7 @@ function Rater() {
                   <div className="flex flex-col items-center content-center justify-center">
                     <img
                       onClick={() => {
-                        handleEditBtn1st();
+                        handleEditBtnteams();
                       }}
                       className="h-[200px] w-[300px] cursor-pointer"
                       src="https://upload.wikimedia.org/wikipedia/en/thumb/e/e1/US_Cremonese_logo.svg/190px-US_Cremonese_logo.svg.png"
@@ -4440,7 +4552,7 @@ function Rater() {
                   <div className="flex flex-col items-center content-center justify-center">
                     <img
                       onClick={() => {
-                        handleEditBtn1st();
+                        handleEditBtnteams();
                       }}
                       className="h-[200px] w-[300px] cursor-pointer"
                       src="https://upload.wikimedia.org/wikipedia/en/thumb/e/e9/Empoli_F.C._logo_%282021%29.png/150px-Empoli_F.C._logo_%282021%29.png"
@@ -4455,7 +4567,7 @@ function Rater() {
                   <div className="flex flex-col items-center content-center justify-center">
                     <img
                       onClick={() => {
-                        handleEditBtn1st();
+                        handleEditBtnteams();
                       }}
                       className="h-[200px] w-[300px] cursor-pointer"
                       src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/2022_ACF_Fiorentina_logo.svg/200px-2022_ACF_Fiorentina_logo.svg.png"
@@ -4470,7 +4582,7 @@ function Rater() {
                   <div className="flex flex-col items-center content-center justify-center">
                     <img
                       onClick={() => {
-                        handleEditBtn1st();
+                        handleEditBtnteams();
                       }}
                       className="h-[200px] w-[300px] cursor-pointer"
                       src="https://upload.wikimedia.org/wikipedia/en/thumb/9/92/Hellas_Verona_FC_logo_%282020%29.svg/170px-Hellas_Verona_FC_logo_%282020%29.svg.png"
@@ -4485,7 +4597,7 @@ function Rater() {
                   <div className="flex flex-col items-center content-center justify-center">
                     <img
                       onClick={() => {
-                        handleEditBtn1st();
+                        handleEditBtnteams();
                       }}
                       className="h-[200px] w-[300px] cursor-pointer"
                       src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/FC_Internazionale_Milano_2021.svg/180px-FC_Internazionale_Milano_2021.svg.png"
@@ -4500,7 +4612,7 @@ function Rater() {
                   <div className="flex flex-col items-center content-center justify-center">
                     <img
                       onClick={() => {
-                        handleEditBtn1st();
+                        handleEditBtnteams();
                       }}
                       className="h-[200px] w-[300px] cursor-pointer"
                       src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Juventus_FC_2017_icon_%28black%29.svg/110px-Juventus_FC_2017_icon_%28black%29.svg.png"
@@ -4515,7 +4627,7 @@ function Rater() {
                   <div className="flex flex-col items-center content-center justify-center">
                     <img
                       onClick={() => {
-                        handleEditBtn1st();
+                        handleEditBtnteams();
                       }}
                       className="h-[200px] w-[300px] cursor-pointer"
                       src="https://upload.wikimedia.org/wikipedia/en/thumb/c/ce/S.S._Lazio_badge.svg/220px-S.S._Lazio_badge.svg.png"
@@ -4528,7 +4640,7 @@ function Rater() {
                   <div className="flex flex-col items-center content-center justify-center">
                     <img
                       onClick={() => {
-                        handleEditBtn1st();
+                        handleEditBtnteams();
                       }}
                       className="h-[200px] w-[300px] cursor-pointer"
                       src="https://upload.wikimedia.org/wikipedia/en/thumb/8/85/Us_lecce.svg/150px-Us_lecce.svg.png"
@@ -4541,7 +4653,7 @@ function Rater() {
                   <div className="flex flex-col items-center content-center justify-center">
                     <img
                       onClick={() => {
-                        handleEditBtn1st();
+                        handleEditBtnteams();
                       }}
                       className="h-[200px] w-[300px] cursor-pointer"
                       src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Logo_of_AC_Milan.svg/130px-Logo_of_AC_Milan.svg.png"
@@ -4556,7 +4668,7 @@ function Rater() {
                   <div className="flex flex-col items-center content-center justify-center">
                     <img
                       onClick={() => {
-                        handleEditBtn1st();
+                        handleEditBtnteams();
                       }}
                       className="h-[200px] w-[300px] cursor-pointer"
                       src="https://upload.wikimedia.org/wikipedia/en/thumb/1/1c/A.C._Monza_logo_%282019%29.svg/150px-A.C._Monza_logo_%282019%29.svg.png"
@@ -4569,7 +4681,7 @@ function Rater() {
                   <div className="flex flex-col items-center content-center justify-center">
                     <img
                       onClick={() => {
-                        handleEditBtn1st();
+                        handleEditBtnteams();
                       }}
                       className="h-[200px] w-[300px] cursor-pointer"
                       src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/SSC_Neapel.svg/170px-SSC_Neapel.svg.png"
@@ -4584,7 +4696,7 @@ function Rater() {
                   <div className="flex flex-col items-center content-center justify-center">
                     <img
                       onClick={() => {
-                        handleEditBtn1st();
+                        handleEditBtnteams();
                       }}
                       className="h-[200px] w-[300px] cursor-pointer"
                       src="https://upload.wikimedia.org/wikipedia/en/thumb/f/f7/AS_Roma_logo_%282017%29.svg/155px-AS_Roma_logo_%282017%29.svg.png"
@@ -4599,7 +4711,7 @@ function Rater() {
                   <div className="flex flex-col items-center content-center justify-center">
                     <img
                       onClick={() => {
-                        handleEditBtn1st();
+                        handleEditBtnteams();
                       }}
                       className="h-[200px] w-[300px] cursor-pointer"
                       src="https://upload.wikimedia.org/wikipedia/en/thumb/8/85/US_Salernitana_1919_logo.svg/170px-US_Salernitana_1919_logo.svg.png"
@@ -4614,7 +4726,7 @@ function Rater() {
                   <div className="flex flex-col items-center content-center justify-center">
                     <img
                       onClick={() => {
-                        handleEditBtn1st();
+                        handleEditBtnteams();
                       }}
                       className="h-[200px] w-[300px] cursor-pointer"
                       src="https://upload.wikimedia.org/wikipedia/en/thumb/d/d2/U.C._Sampdoria_logo.svg/140px-U.C._Sampdoria_logo.svg.png"
@@ -4629,7 +4741,7 @@ function Rater() {
                   <div className="flex flex-col items-center content-center justify-center">
                     <img
                       onClick={() => {
-                        handleEditBtn1st();
+                        handleEditBtnteams();
                       }}
                       className="h-[200px] w-[300px] cursor-pointer"
                       src="https://upload.wikimedia.org/wikipedia/en/thumb/1/1c/US_Sassuolo_Calcio_logo.svg/170px-US_Sassuolo_Calcio_logo.svg.png"
@@ -4644,7 +4756,7 @@ function Rater() {
                   <div className="flex flex-col items-center content-center justify-center">
                     <img
                       onClick={() => {
-                        handleEditBtn1st();
+                        handleEditBtnteams();
                       }}
                       className="h-[200px] w-[300px] cursor-pointer"
                       src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Spezia_Calcio.svg/180px-Spezia_Calcio.svg.png"
@@ -4659,7 +4771,7 @@ function Rater() {
                   <div className="flex flex-col items-center content-center justify-center">
                     <img
                       onClick={() => {
-                        handleEditBtn1st();
+                        handleEditBtnteams();
                       }}
                       className="h-[200px] w-[300px] cursor-pointer"
                       src="https://upload.wikimedia.org/wikipedia/en/thumb/2/2e/Torino_FC_Logo.svg/150px-Torino_FC_Logo.svg.png"
@@ -4674,7 +4786,7 @@ function Rater() {
                   <div className="flex flex-col items-center content-center justify-center">
                     <img
                       onClick={() => {
-                        handleEditBtn1st();
+                        handleEditBtnteams();
                       }}
                       className="h-[200px] w-[300px] cursor-pointer"
                       src="https://upload.wikimedia.org/wikipedia/en/thumb/c/ce/Udinese_Calcio_logo.svg/180px-Udinese_Calcio_logo.svg.png"
@@ -4703,12 +4815,19 @@ function Rater() {
                 <AiOutlineRight className="text-2xl" />
               </ButtonNext>
             </CarouselProvider>
+
+            <button
+              className=" w-max h-[4rem] bg-[#01112B] rounded-tl-[20px] rounded-br-[20px] mx-auto text-base border-[3px] border-[#34FEF8] text-[#34FEF8] mb-2 mt-20 p-3 pl-4 pt-0"
+              onClick={handleBack2NationTeamBtn}
+            >
+              Back
+            </button>
           </div>
 
           <div ref={rotwRef} className="h-[50vh] lg:pt-[10vh] pt-[5vh] hidden">
             <CarouselProvider
               naturalSlideWidth={100}
-              naturalSlideHeight={70}
+              naturalSlideHeight={90}
               totalSlides={12}
               // isIntrinsicHeight={true}
             >
@@ -4717,7 +4836,7 @@ function Rater() {
                   <div className="flex flex-col items-center content-center justify-center">
                     <img
                       onClick={() => {
-                        handleEditBtn1st();
+                        handleEditBtnteams();
                       }}
                       className="h-[200px] w-[300px] cursor-pointer"
                       src="https://upload.wikimedia.org/wikipedia/en/thumb/9/9d/Logo_Al-Nassr.png/180px-Logo_Al-Nassr.png"
@@ -4732,7 +4851,7 @@ function Rater() {
                   <div className="flex flex-col items-center content-center justify-center">
                     <img
                       onClick={() => {
-                        handleEditBtn1st();
+                        handleEditBtnteams();
                       }}
                       className="h-[200px] w-[300px] cursor-pointer"
                       src="https://upload.wikimedia.org/wikipedia/en/thumb/3/35/Celtic_FC.svg/180px-Celtic_FC.svg.png"
@@ -4747,7 +4866,7 @@ function Rater() {
                   <div className="flex flex-col items-center content-center justify-center">
                     <img
                       onClick={() => {
-                        handleEditBtn1st();
+                        handleEditBtnteams();
                       }}
                       className="h-[200px] w-[300px] cursor-pointer"
                       src="https://upload.wikimedia.org/wikipedia/en/thumb/4/43/Rangers_FC.svg/180px-Rangers_FC.svg.png"
@@ -4762,7 +4881,7 @@ function Rater() {
                   <div className="flex flex-col items-center content-center justify-center">
                     <img
                       onClick={() => {
-                        handleEditBtn1st();
+                        handleEditBtnteams();
                       }}
                       className="h-[200px] w-[300px] cursor-pointer"
                       src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/BesiktasJK-Logo.svg/180px-BesiktasJK-Logo.svg.png"
@@ -4777,7 +4896,7 @@ function Rater() {
                   <div className="flex flex-col items-center content-center justify-center">
                     <img
                       onClick={() => {
-                        handleEditBtn1st();
+                        handleEditBtnteams();
                       }}
                       className="h-[200px] w-[300px] cursor-pointer"
                       src="https://upload.wikimedia.org/wikipedia/en/thumb/d/dd/Enyimba_International_F.C._logo.png/180px-Enyimba_International_F.C._logo.png"
@@ -4792,7 +4911,7 @@ function Rater() {
                   <div className="flex flex-col items-center content-center justify-center">
                     <img
                       onClick={() => {
-                        handleEditBtn1st();
+                        handleEditBtnteams();
                       }}
                       className="h-[200px] w-[300px] cursor-pointer"
                       src="https://upload.wikimedia.org/wikipedia/en/thumb/8/8c/Al_Ahly_SC_logo.png/170px-Al_Ahly_SC_logo.png"
@@ -4807,7 +4926,7 @@ function Rater() {
                   <div className="flex flex-col items-center content-center justify-center">
                     <img
                       onClick={() => {
-                        handleEditBtn1st();
+                        handleEditBtnteams();
                       }}
                       className="h-[200px] w-[300px] cursor-pointer"
                       src="https://upload.wikimedia.org/wikipedia/en/thumb/5/55/The_logo_of_Mamelodi_Sundowns_F.C.png/220px-The_logo_of_Mamelodi_Sundowns_F.C.png"
@@ -4822,7 +4941,7 @@ function Rater() {
                   <div className="flex flex-col items-center content-center justify-center">
                     <img
                       onClick={() => {
-                        handleEditBtn1st();
+                        handleEditBtnteams();
                       }}
                       className="h-[200px] w-[300px] cursor-pointer"
                       src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/Escudo_del_C_A_River_Plate.svg/130px-Escudo_del_C_A_River_Plate.svg.png"
@@ -4837,7 +4956,7 @@ function Rater() {
                   <div className="flex flex-col items-center content-center justify-center">
                     <img
                       onClick={() => {
-                        handleEditBtn1st();
+                        handleEditBtnteams();
                       }}
                       className="h-[200px] w-[300px] cursor-pointer"
                       src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Boca_Juniors_logo18.svg/150px-Boca_Juniors_logo18.svg.png"
@@ -4852,7 +4971,7 @@ function Rater() {
                   <div className="flex flex-col items-center content-center justify-center">
                     <img
                       onClick={() => {
-                        handleEditBtn1st();
+                        handleEditBtnteams();
                       }}
                       className="h-[200px] w-[300px] cursor-pointer"
                       src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Flamengo_braz_logo.svg/150px-Flamengo_braz_logo.svg.png"
@@ -4867,7 +4986,7 @@ function Rater() {
                   <div className="flex flex-col items-center content-center justify-center">
                     <img
                       onClick={() => {
-                        handleEditBtn1st();
+                        handleEditBtnteams();
                       }}
                       className="h-[200px] w-[300px] cursor-pointer"
                       src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Los_Angeles_Galaxy_logo.svg/180px-Los_Angeles_Galaxy_logo.svg.png"
@@ -4882,7 +5001,7 @@ function Rater() {
                   <div className="flex flex-col items-center content-center justify-center">
                     <img
                       onClick={() => {
-                        handleEditBtn1st();
+                        handleEditBtnteams();
                       }}
                       className="h-[200px] w-[300px] cursor-pointer"
                       src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Palmeiras_logo.svg/190px-Palmeiras_logo.svg.png"
@@ -4911,7 +5030,83 @@ function Rater() {
                 <AiOutlineRight className="text-2xl" />
               </ButtonNext>
             </CarouselProvider>
+
+            <button
+              className=" w-max h-[4rem] bg-[#01112B] rounded-tl-[20px] rounded-br-[20px] mx-auto text-base border-[3px] border-[#34FEF8] text-[#34FEF8] mb-2 mt-20 p-3 pl-4 pt-0"
+              onClick={handleBack2NationTeamBtn}
+            >
+              Back
+            </button>
           </div>
+        </div>
+      </div>
+
+      {/* select image */}
+      <div
+        ref={imagesRef}
+        className="major-Bg clubNation h-[100vh] w-screen text-white font-extrabold text-center hidden"
+      >
+        <div className="flex flex-col content-center justify-center w-screen">
+          <div className=" lg:text-7xl text-3xl mb-10">
+            Remove Image/Potrait background
+          </div>
+          <button
+            onClick={() => {
+              openRemoveBg();
+            }}
+            className=" w-max lg:h-[6rem] bg-[#01112B] rounded-tl-[20px] rounded-br-[20px] mx-auto text-base border-[5px] border-[#34FEF8] text-[#34FEF8] mb-2 lg:mt-16 p-3 pl-4 pt-0"
+          >
+            <div className="lg:text-4xl text-2xl">Remove Background</div>
+            <div className="text-[0.8em]">Powered by remove.bg</div>
+          </button>
+        </div>
+        <div className="relative flex flex-col justify-center items-center mb-4 mt-10">
+          <div className=" lg:text-7xl text-3xl lg:mb-16">Add Potrait to Card</div>
+
+          <div className="flex lg:flex-row flex-col">
+            <div className="rounded-[50%] h-36 mx-auto  lg:mb-10 w-36 border flex justify-center items-center bg-white">
+              {image && (
+                <img
+                  className="h-36 w-36 rounded-[50%]"
+                  // src={photoURL}
+                  src={image}
+                  alt="Avatar"
+                />
+              )}
+            </div>
+
+            <div className="flex flex-row lg:ml-32 mr-auto">
+              <button
+                className=" w-max h-[4rem] bg-[#01112B] mr-6 rounded-tl-[20px] rounded-br-[20px] mx-auto text-base border-[3px] border-[#34FEF8] text-[#34FEF8] mb-2 mt-20 p-3 pl-4 pt-0"
+                onClick={handleSkillSetBtn}
+              >
+                Next
+              </button>
+
+              <button
+                className=" w-max h-[4rem] bg-[#01112B] rounded-tl-[20px] rounded-br-[20px] mx-auto text-base border-[3px] border-[#34FEF8] text-[#34FEF8] mb-2 mt-20 p-3 pl-4 pt-0"
+                onClick={handleBack2TeamBtn}
+              >
+                Back
+              </button>
+            </div>
+          </div>
+          <input
+            type="file"
+            onChange={handleImageChange}
+            id="select-img"
+            hidden
+          />
+          {/* {Object.keys(user).length > 0 ? */}
+          <label
+            htmlFor="select-img"
+            className="cursor-pointer rounded-[50%] w-6 h-6 text-center bg-white absolute lg:bottom-10 lg:left-[42%] left-[63%] text-sm text-[#6B6B6B]"
+          >
+            +
+          </label>
+          {/* : */}
+          {/* <label htmlFor='select-img' className='cursor-pointer'>Add Portrait to Card</label> */}
+          {/* } */}
         </div>
       </div>
 
@@ -4920,7 +5115,7 @@ function Rater() {
         ref={skillSetRef}
         className="major-Bg text-center
       
-       overflow-visible hidden"
+       overflow-visible hidden lg:flex-row flex-col"
       >
         <div className="relative carder2 lg:hidden">
           <div className="carder-sm fixed lg:hidden h-[50vh] w-[100vw]">
@@ -4943,7 +5138,7 @@ function Rater() {
                   className="w-[17px] h-[17px] top-[23.2vh] sticky z-[99999999999]"
                 />
                 <img
-                  src={playerImg}
+                  src={image}
                   alt="player"
                   className="w-[110px] h-[100px] bottom-[0vh] pl-[2em] static"
                 />
@@ -5989,6 +6184,13 @@ function Rater() {
             </h3>
             <h5 className="text-[#EF8E87]">Fill up all empty credentials</h5>
           </div>
+
+          <button
+            className=" w-max h-[4rem] bg-[#01112B] rounded-tl-[20px] rounded-br-[20px] mx-auto text-base border-[3px] border-[#34FEF8] text-[#34FEF8] mb-2 mt-20 p-3 pl-4 pt-0"
+            onClick={handleBack2ImgBtn}
+          >
+            Back
+          </button>
         </div>
 
         <div className="relative hidden lg:block lg:w-[50vw] lg:h-[100%]">
