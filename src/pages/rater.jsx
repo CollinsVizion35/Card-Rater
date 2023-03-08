@@ -239,7 +239,7 @@ function Rater() {
   const handleEditBtn1st = (e) => {
     nationRef.current.style.display = "none";
     clubNationRef.current.style.display = "block";
-    console.log(e.target.src)
+    // console.log(e.target.src)
   };
 
   const handleEditBtnBund = () => {
@@ -357,8 +357,7 @@ function Rater() {
                   <img
                     onClick={(e) => {
                       handleEditBtn1st();
-                      
-    console.log(e.target.src)
+                      setNation(e.target.src);
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/11/flag-of-afghanistan-01.png"
@@ -374,6 +373,7 @@ function Rater() {
                   <img
                     onClick={(e) => {
                       handleEditBtn1st();
+                      setNation(e.target.src);
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/12/Albania-01-1.png"
@@ -387,6 +387,7 @@ function Rater() {
                   <img
                     onClick={(e) => {
                       handleEditBtn1st();
+                      setNation(e.target.src);
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/11/Flag-of-Algeria-01.png"
@@ -400,6 +401,7 @@ function Rater() {
                   <img
                     onClick={(e) => {
                       handleEditBtn1st();
+                      setNation(e.target.src);
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/12/Andorra-01-1.png"
@@ -413,6 +415,7 @@ function Rater() {
                   <img
                     onClick={(e) => {
                       handleEditBtn1st();
+                      setNation(e.target.src);
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/11/flag-of-angola-01.png"
@@ -426,6 +429,7 @@ function Rater() {
                   <img
                     onClick={(e) => {
                       handleEditBtn1st();
+                      setNation(e.target.src);
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/12/Antigua-and-Barbuda-01-1.png"
@@ -441,6 +445,7 @@ function Rater() {
                   <img
                     onClick={(e) => {
                       handleEditBtn1st();
+                      setNation(e.target.src);
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/11/flag-of-Argentina-01.png"
@@ -456,6 +461,7 @@ function Rater() {
                   <img
                     onClick={(e) => {
                       handleEditBtn1st();
+                      setNation(e.target.src);
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/11/flag-of-Armenia-01-2.png"
@@ -469,6 +475,7 @@ function Rater() {
                   <img
                     onClick={(e) => {
                       handleEditBtn1st();
+                      setNation(e.target.src);
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/11/flag-of-Australia-01.png"
@@ -484,6 +491,7 @@ function Rater() {
                   <img
                     onClick={(e) => {
                       handleEditBtn1st();
+                      setNation(e.target.src);
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/11/Flag-of-Austria-01-1.png"
@@ -497,6 +505,7 @@ function Rater() {
                   <img
                     onClick={(e) => {
                       handleEditBtn1st();
+                      setNation(e.target.src);
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/11/Flag-of-Azerbaijani-01-1.png"
@@ -512,6 +521,7 @@ function Rater() {
                   <img
                     onClick={(e) => {
                       handleEditBtn1st();
+                      setNation(e.target.src);
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/11/Flag-of-Bahamas-01-1.png"
@@ -525,6 +535,7 @@ function Rater() {
                   <img
                     onClick={(e) => {
                       handleEditBtn1st();
+                      setNation(e.target.src);
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/11/Flag-of-Bahrain-01-1.png"
@@ -538,6 +549,7 @@ function Rater() {
                   <img
                     onClick={(e) => {
                       handleEditBtn1st();
+                      setNation(e.target.src);
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/11/Flag-of-Bangladesh-01-1.png"
@@ -553,6 +565,7 @@ function Rater() {
                   <img
                     onClick={(e) => {
                       handleEditBtn1st();
+                      setNation(e.target.src);
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/11/flag-of-Barbados-01-1.png"
@@ -568,6 +581,7 @@ function Rater() {
                   <img
                     onClick={(e) => {
                       handleEditBtn1st();
+                      setNation(e.target.src);
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/11/Flag-of-Belarus-01-1.png"
@@ -581,6 +595,7 @@ function Rater() {
                   <img
                     onClick={(e) => {
                       handleEditBtn1st();
+                      setNation(e.target.src);
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/11/Flag-of-Belgian-01-1.png"
@@ -594,6 +609,7 @@ function Rater() {
                   <img
                     onClick={(e) => {
                       handleEditBtn1st();
+                      setNation(e.target.src);
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/11/Flag-of-Belize-01-2.png"
@@ -607,6 +623,7 @@ function Rater() {
                   <img
                     onClick={(e) => {
                       handleEditBtn1st();
+                      setNation(e.target.src);
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/11/Flag-of-Benin-01-1.png"
@@ -620,6 +637,7 @@ function Rater() {
                   <img
                     onClick={(e) => {
                       handleEditBtn1st();
+                      setNation(e.target.src);
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/11/Flag-of-Bhutan-01-1.png"
@@ -633,6 +651,7 @@ function Rater() {
                   <img
                     onClick={(e) => {
                       handleEditBtn1st();
+                      setNation(e.target.src);
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/11/Flag-of-Bolivian-01-1.png"
@@ -646,6 +665,7 @@ function Rater() {
                   <img
                     onClick={(e) => {
                       handleEditBtn1st();
+                      setNation(e.target.src);
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/11/Flag-of-Bosnia-and-Herzegovina-01-1.png"
@@ -662,6 +682,7 @@ function Rater() {
                   <img
                     onClick={(e) => {
                       handleEditBtn1st();
+                      setNation(e.target.src);
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/11/Flag-of-Botswana-01-6.png"
@@ -677,6 +698,7 @@ function Rater() {
                   <img
                     onClick={(e) => {
                       handleEditBtn1st();
+                      setNation(e.target.src);
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/11/Flag-of-Brazil-01-1.png"
@@ -690,6 +712,7 @@ function Rater() {
                   <img
                     onClick={(e) => {
                       handleEditBtn1st();
+                      setNation(e.target.src);
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/11/Flag-of-Brunei-01-1.png"
@@ -703,6 +726,7 @@ function Rater() {
                   <img
                     onClick={(e) => {
                       handleEditBtn1st();
+                      setNation(e.target.src);
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/11/Flag-of-Bulgaria-01.png"
@@ -718,6 +742,7 @@ function Rater() {
                   <img
                     onClick={(e) => {
                       handleEditBtn1st();
+                      setNation(e.target.src);
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/11/Flag-of-Burkina-Faso-01-1.png"
@@ -733,6 +758,7 @@ function Rater() {
                   <img
                     onClick={(e) => {
                       handleEditBtn1st();
+                      setNation(e.target.src);
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/11/Flag-of-Burundi-01-1.png"
@@ -746,6 +772,7 @@ function Rater() {
                   <img
                     onClick={(e) => {
                       handleEditBtn1st();
+                      setNation(e.target.src);
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/12/cote-divoire-01-1.png"
@@ -761,6 +788,7 @@ function Rater() {
                   <img
                     onClick={(e) => {
                       handleEditBtn1st();
+                      setNation(e.target.src);
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/11/Flag-of-Cape-Verde-01-1.png"
@@ -776,6 +804,7 @@ function Rater() {
                   <img
                     onClick={(e) => {
                       handleEditBtn1st();
+                      setNation(e.target.src);
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/11/Flag-of-cambodia-01-1.png"
@@ -791,6 +820,7 @@ function Rater() {
                   <img
                     onClick={(e) => {
                       handleEditBtn1st();
+                      setNation(e.target.src);
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/11/Flag-of-Cameroonian-01-3.png"
@@ -806,6 +836,7 @@ function Rater() {
                   <img
                     onClick={(e) => {
                       handleEditBtn1st();
+                      setNation(e.target.src);
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/11/Flag-of-Canada-01-1.png"
@@ -819,6 +850,7 @@ function Rater() {
                   <img
                     onClick={(e) => {
                       handleEditBtn1st();
+                      setNation(e.target.src);
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/11/Flag-of-central-Africa-01-1.png"
@@ -834,6 +866,7 @@ function Rater() {
                   <img
                     onClick={(e) => {
                       handleEditBtn1st();
+                      setNation(e.target.src);
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/11/Flag-of-Chad-01-1.png"
@@ -847,6 +880,7 @@ function Rater() {
                   <img
                     onClick={(e) => {
                       handleEditBtn1st();
+                      setNation(e.target.src);
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/11/Flaf-of-CHILEAN-01-1.png"
@@ -860,6 +894,7 @@ function Rater() {
                   <img
                     onClick={(e) => {
                       handleEditBtn1st();
+                      setNation(e.target.src);
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/11/Flag-of-China-01-1.png"
@@ -873,6 +908,7 @@ function Rater() {
                   <img
                     onClick={(e) => {
                       handleEditBtn1st();
+                      setNation(e.target.src);
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/11/Flag-of-Colombia-01-1.png"
@@ -888,6 +924,7 @@ function Rater() {
                   <img
                     onClick={(e) => {
                       handleEditBtn1st();
+                      setNation(e.target.src);
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/11/Flag-of-Comoros-01-1.png"
@@ -901,6 +938,7 @@ function Rater() {
                   <img
                     onClick={(e) => {
                       handleEditBtn1st();
+                      setNation(e.target.src);
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/11/Flag-of-congo-brazzaville-01-1.png"
@@ -916,6 +954,7 @@ function Rater() {
                   <img
                     onClick={(e) => {
                       handleEditBtn1st();
+                      setNation(e.target.src);
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/11/Flag-of-Costa-Rica-01-1.png"
@@ -931,6 +970,7 @@ function Rater() {
                   <img
                     onClick={(e) => {
                       handleEditBtn1st();
+                      setNation(e.target.src);
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/11/Flag-of-Croatia-01-1.png"
@@ -944,6 +984,7 @@ function Rater() {
                   <img
                     onClick={(e) => {
                       handleEditBtn1st();
+                      setNation(e.target.src);
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/11/Flag-of-Cuba-01-1.png"
@@ -957,6 +998,7 @@ function Rater() {
                   <img
                     onClick={(e) => {
                       handleEditBtn1st();
+                      setNation(e.target.src);
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/11/Flag-of-Cyprus-01-1.png"
@@ -970,6 +1012,7 @@ function Rater() {
                   <img
                     onClick={(e) => {
                       handleEditBtn1st();
+                      setNation(e.target.src);
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/11/Flag-of-Czech-01-1.png"
@@ -983,6 +1026,7 @@ function Rater() {
                   <img
                     onClick={(e) => {
                       handleEditBtn1st();
+                      setNation(e.target.src);
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/11/Flag-of-Congo-01-1.png"
@@ -998,6 +1042,7 @@ function Rater() {
                   <img
                     onClick={(e) => {
                       handleEditBtn1st();
+                      setNation(e.target.src);
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/11/Flag-of-Denmark-01-1.png"
@@ -1011,6 +1056,7 @@ function Rater() {
                   <img
                     onClick={(e) => {
                       handleEditBtn1st();
+                      setNation(e.target.src);
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/11/Flag-of-Djibouti-01-1.png"
@@ -1026,6 +1072,7 @@ function Rater() {
                   <img
                     onClick={(e) => {
                       handleEditBtn1st();
+                      setNation(e.target.src);
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/11/Flag-of-Dominica-01.png"
@@ -1041,6 +1088,7 @@ function Rater() {
                   <img
                     onClick={(e) => {
                       handleEditBtn1st();
+                      setNation(e.target.src);
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/11/Flag-of-Dominican-01-1.png"
@@ -1056,6 +1104,7 @@ function Rater() {
                   <img
                     onClick={(e) => {
                       handleEditBtn1st();
+                      setNation(e.target.src);
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/11/Flag-of-Ecuador-01-1.png"
@@ -1069,6 +1118,7 @@ function Rater() {
                   <img
                     onClick={(e) => {
                       handleEditBtn1st();
+                      setNation(e.target.src);
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/11/Flag-of-Egypt-01-1.png"
@@ -1082,6 +1132,7 @@ function Rater() {
                   <img
                     onClick={(e) => {
                       handleEditBtn1st();
+                      setNation(e.target.src);
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/11/Flag-of-El-Salvador-01-1.png"
@@ -1097,6 +1148,7 @@ function Rater() {
                   <img
                     onClick={(e) => {
                       handleEditBtn1st();
+                      setNation(e.target.src);
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2022/01/England-01-1.png"
@@ -1110,6 +1162,7 @@ function Rater() {
                   <img
                     onClick={(e) => {
                       handleEditBtn1st();
+                      setNation(e.target.src);
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/11/Flag-of-Equatorial-Guinea-01.png"
@@ -1125,6 +1178,7 @@ function Rater() {
                   <img
                     onClick={(e) => {
                       handleEditBtn1st();
+                      setNation(e.target.src);
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/11/Flag-of-Eritrea-01-1.png"
@@ -1138,6 +1192,7 @@ function Rater() {
                   <img
                     onClick={(e) => {
                       handleEditBtn1st();
+                      setNation(e.target.src);
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/11/Flag-of-Estonia-01-1.png"
@@ -1151,6 +1206,7 @@ function Rater() {
                   <img
                     onClick={(e) => {
                       handleEditBtn1st();
+                      setNation(e.target.src);
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/12/Eswatini-01-1.png"
@@ -1166,6 +1222,7 @@ function Rater() {
                   <img
                     onClick={(e) => {
                       handleEditBtn1st();
+                      setNation(e.target.src);
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/11/Flag-of-Ethiopia-01.png"
@@ -1181,6 +1238,7 @@ function Rater() {
                   <img
                     onClick={(e) => {
                       handleEditBtn1st();
+                      setNation(e.target.src);
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/11/Flag-of-Fiji-01.png"
@@ -1194,6 +1252,7 @@ function Rater() {
                   <img
                     onClick={(e) => {
                       handleEditBtn1st();
+                      setNation(e.target.src);
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/11/Flag-of-Finland-01-1.png"
@@ -1207,6 +1266,7 @@ function Rater() {
                   <img
                     onClick={(e) => {
                       handleEditBtn1st();
+                      setNation(e.target.src);
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/11/Flag-of-France-01-1.png"
@@ -1220,6 +1280,7 @@ function Rater() {
                   <img
                     onClick={(e) => {
                       handleEditBtn1st();
+                      setNation(e.target.src);
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/11/Flag-of-Gabon-01-1.png"
@@ -1233,6 +1294,7 @@ function Rater() {
                   <img
                     onClick={(e) => {
                       handleEditBtn1st();
+                      setNation(e.target.src);
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/11/Flag-of-Gambia-01.png"
@@ -1246,6 +1308,7 @@ function Rater() {
                   <img
                     onClick={(e) => {
                       handleEditBtn1st();
+                      setNation(e.target.src);
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/11/Flag-of-Georgia-01-1.png"
@@ -1259,6 +1322,7 @@ function Rater() {
                   <img
                     onClick={(e) => {
                       handleEditBtn1st();
+                      setNation(e.target.src);
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/11/Flag-of-Germany-01-1.png"
@@ -1272,6 +1336,7 @@ function Rater() {
                   <img
                     onClick={(e) => {
                       handleEditBtn1st();
+                      setNation(e.target.src);
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/11/Flag-of-Ghana-01-1.png"
@@ -1285,6 +1350,7 @@ function Rater() {
                   <img
                     onClick={(e) => {
                       handleEditBtn1st();
+                      setNation(e.target.src);
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/11/Flag-of-Greece-01-1.png"
@@ -1298,6 +1364,7 @@ function Rater() {
                   <img
                     onClick={(e) => {
                       handleEditBtn1st();
+                      setNation(e.target.src);
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/11/Flag-of-Grenada-01-1.png"
@@ -1311,6 +1378,7 @@ function Rater() {
                   <img
                     onClick={(e) => {
                       handleEditBtn1st();
+                      setNation(e.target.src);
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/11/Flag-of-Guatemala-01-1.png"
@@ -1326,6 +1394,7 @@ function Rater() {
                   <img
                     onClick={(e) => {
                       handleEditBtn1st();
+                      setNation(e.target.src);
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/11/Flag-of-Guinean-01-1.png"
@@ -1339,6 +1408,7 @@ function Rater() {
                   <img
                     onClick={(e) => {
                       handleEditBtn1st();
+                      setNation(e.target.src);
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/11/Flag-of-Guinea-Bissau-01-2.png"
@@ -1354,6 +1424,7 @@ function Rater() {
                   <img
                     onClick={(e) => {
                       handleEditBtn1st();
+                      setNation(e.target.src);
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/11/Flag-of-Guyana-01-1.png"
@@ -1367,6 +1438,7 @@ function Rater() {
                   <img
                     onClick={(e) => {
                       handleEditBtn1st();
+                      setNation(e.target.src);
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/11/Flag-of-Haiti-01-1.png"
@@ -1380,6 +1452,7 @@ function Rater() {
                   <img
                     onClick={(e) => {
                       handleEditBtn1st();
+                      setNation(e.target.src);
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/11/Flag-of-Honduras-01-1.png"
@@ -1395,6 +1468,7 @@ function Rater() {
                   <img
                     onClick={(e) => {
                       handleEditBtn1st();
+                      setNation(e.target.src);
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/11/Flag-of-Hungary-01-1.png"
@@ -1408,6 +1482,7 @@ function Rater() {
                   <img
                     onClick={(e) => {
                       handleEditBtn1st();
+                      setNation(e.target.src);
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/11/Flag-of-iceland-01-1.png"
@@ -1421,6 +1496,7 @@ function Rater() {
                   <img
                     onClick={(e) => {
                       handleEditBtn1st();
+                      setNation(e.target.src);
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/11/Flag-of-India-01-1.png"
@@ -1434,6 +1510,7 @@ function Rater() {
                   <img
                     onClick={(e) => {
                       handleEditBtn1st();
+                      setNation(e.target.src);
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/12/Flag-of-Indonesia-01-1.png"
@@ -1449,6 +1526,7 @@ function Rater() {
                   <img
                     onClick={(e) => {
                       handleEditBtn1st();
+                      setNation(e.target.src);
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/12/Flag-of-Iran-01-1.png"
@@ -1462,6 +1540,7 @@ function Rater() {
                   <img
                     onClick={(e) => {
                       handleEditBtn1st();
+                      setNation(e.target.src);
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/12/Flag-of-iraq-01-1.png"
@@ -1475,6 +1554,7 @@ function Rater() {
                   <img
                     onClick={(e) => {
                       handleEditBtn1st();
+                      setNation(e.target.src);
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/12/Flag-of-Ireland-01-1.png"
@@ -1488,6 +1568,7 @@ function Rater() {
                   <img
                     onClick={(e) => {
                       handleEditBtn1st();
+                      setNation(e.target.src);
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/12/Flag-of-israel-01-1.png"
@@ -1501,6 +1582,7 @@ function Rater() {
                   <img
                     onClick={(e) => {
                       handleEditBtn1st();
+                      setNation(e.target.src);
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/12/Flag-of-Italy-01-1.png"
@@ -1514,6 +1596,7 @@ function Rater() {
                   <img
                     onClick={(e) => {
                       handleEditBtn1st();
+                      setNation(e.target.src);
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/12/Flag-of-Jamaica-01-1.png"
@@ -1527,6 +1610,7 @@ function Rater() {
                   <img
                     onClick={(e) => {
                       handleEditBtn1st();
+                      setNation(e.target.src);
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/12/Flag-of-japan-01-1.png"
@@ -1540,6 +1624,7 @@ function Rater() {
                   <img
                     onClick={(e) => {
                       handleEditBtn1st();
+                      setNation(e.target.src);
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/12/Flag-of-Jordan-01-1.png"
@@ -1553,6 +1638,7 @@ function Rater() {
                   <img
                     onClick={(e) => {
                       handleEditBtn1st();
+                      setNation(e.target.src);
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/12/Flag-of-kazakhstan-01-1.png"
@@ -1568,6 +1654,7 @@ function Rater() {
                   <img
                     onClick={(e) => {
                       handleEditBtn1st();
+                      setNation(e.target.src);
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/12/Flag-of-kenya-01-1.png"
@@ -1581,6 +1668,7 @@ function Rater() {
                   <img
                     onClick={(e) => {
                       handleEditBtn1st();
+                      setNation(e.target.src);
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/12/Flag-of-kiribati-01-1.png"
@@ -1596,6 +1684,7 @@ function Rater() {
                   <img
                     onClick={(e) => {
                       handleEditBtn1st();
+                      setNation(e.target.src);
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/12/Flag-ofA-kuwait-01-1.png"
@@ -1609,6 +1698,7 @@ function Rater() {
                   <img
                     onClick={(e) => {
                       handleEditBtn1st();
+                      setNation(e.target.src);
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/12/Flag-of-kyrgyzstan-01-1.png"
@@ -1624,6 +1714,7 @@ function Rater() {
                   <img
                     onClick={(e) => {
                       handleEditBtn1st();
+                      setNation(e.target.src);
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/12/Flag-of-Laos-01-1.png"
@@ -1637,6 +1728,7 @@ function Rater() {
                   <img
                     onClick={(e) => {
                       handleEditBtn1st();
+                      setNation(e.target.src);
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/12/Flag-of-latvia-01-1.png"
@@ -1650,6 +1742,7 @@ function Rater() {
                   <img
                     onClick={(e) => {
                       handleEditBtn1st();
+                      setNation(e.target.src);
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/12/Flag-of-latvia-01-1.png"
@@ -1663,6 +1756,7 @@ function Rater() {
                   <img
                     onClick={(e) => {
                       handleEditBtn1st();
+                      setNation(e.target.src);
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/12/Flag-of-Lesotho-01-1.png"
@@ -1676,6 +1770,7 @@ function Rater() {
                   <img
                     onClick={(e) => {
                       handleEditBtn1st();
+                      setNation(e.target.src);
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/12/Flag-of-Liberia-01-1.png"
@@ -1689,6 +1784,7 @@ function Rater() {
                   <img
                     onClick={(e) => {
                       handleEditBtn1st();
+                      setNation(e.target.src);
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/12/Flag-of-Libya-01-1.png"
@@ -1702,6 +1798,7 @@ function Rater() {
                   <img
                     onClick={(e) => {
                       handleEditBtn1st();
+                      setNation(e.target.src);
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/12/Flag-of-Liechtenstein-01-1.png"
@@ -1717,6 +1814,7 @@ function Rater() {
                   <img
                     onClick={(e) => {
                       handleEditBtn1st();
+                      setNation(e.target.src);
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/12/Flag-of-Lithuania-01-1.png"
@@ -1732,6 +1830,7 @@ function Rater() {
                   <img
                     onClick={(e) => {
                       handleEditBtn1st();
+                      setNation(e.target.src);
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/12/luxembourg-01-1.png"
@@ -1747,6 +1846,7 @@ function Rater() {
                   <img
                     onClick={(e) => {
                       handleEditBtn1st();
+                      setNation(e.target.src);
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/12/Madagascar-01-1.png"
@@ -1762,6 +1862,7 @@ function Rater() {
                   <img
                     onClick={(e) => {
                       handleEditBtn1st();
+                      setNation(e.target.src);
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/12/Malawia-01-1.png"
@@ -1775,6 +1876,7 @@ function Rater() {
                   <img
                     onClick={(e) => {
                       handleEditBtn1st();
+                      setNation(e.target.src);
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/12/Malaysia-01-1.png"
@@ -1790,6 +1892,7 @@ function Rater() {
                   <img
                     onClick={(e) => {
                       handleEditBtn1st();
+                      setNation(e.target.src);
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/12/Maldives-01-1.png"
@@ -1805,6 +1908,7 @@ function Rater() {
                   <img
                     onClick={(e) => {
                       handleEditBtn1st();
+                      setNation(e.target.src);
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/12/Mali-01-1.png"
@@ -1818,6 +1922,7 @@ function Rater() {
                   <img
                     onClick={(e) => {
                       handleEditBtn1st();
+                      setNation(e.target.src);
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/12/Malta-01-1.png"
@@ -1831,6 +1936,7 @@ function Rater() {
                   <img
                     onClick={(e) => {
                       handleEditBtn1st();
+                      setNation(e.target.src);
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/12/Marshall-Islands-01-1.png"
@@ -1846,6 +1952,7 @@ function Rater() {
                   <img
                     onClick={(e) => {
                       handleEditBtn1st();
+                      setNation(e.target.src);
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/12/Mauritania-01-1.png"
@@ -1861,6 +1968,7 @@ function Rater() {
                   <img
                     onClick={(e) => {
                       handleEditBtn1st();
+                      setNation(e.target.src);
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/12/Mauritius-01-1.png"
@@ -1876,6 +1984,7 @@ function Rater() {
                   <img
                     onClick={(e) => {
                       handleEditBtn1st();
+                      setNation(e.target.src);
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/12/Mexico-01-1.png"
@@ -1889,6 +1998,7 @@ function Rater() {
                   <img
                     onClick={(e) => {
                       handleEditBtn1st();
+                      setNation(e.target.src);
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/12/micronesia-01-1.png"
@@ -1904,6 +2014,7 @@ function Rater() {
                   <img
                     onClick={(e) => {
                       handleEditBtn1st();
+                      setNation(e.target.src);
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/12/Moldova-01-1.png"
@@ -1917,6 +2028,7 @@ function Rater() {
                   <img
                     onClick={(e) => {
                       handleEditBtn1st();
+                      setNation(e.target.src);
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/12/Monaco-01-1.png"
@@ -1930,6 +2042,7 @@ function Rater() {
                   <img
                     onClick={(e) => {
                       handleEditBtn1st();
+                      setNation(e.target.src);
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/12/mongolia-01-1.png"
@@ -1945,6 +2058,7 @@ function Rater() {
                   <img
                     onClick={(e) => {
                       handleEditBtn1st();
+                      setNation(e.target.src);
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/12/Montenegro-01-1.png"
@@ -1960,6 +2074,7 @@ function Rater() {
                   <img
                     onClick={(e) => {
                       handleEditBtn1st();
+                      setNation(e.target.src);
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/12/Morocco-01-1.png"
@@ -1973,6 +2088,7 @@ function Rater() {
                   <img
                     onClick={(e) => {
                       handleEditBtn1st();
+                      setNation(e.target.src);
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/12/Mozambique-Mozambique-01-1.png"
@@ -1988,6 +2104,7 @@ function Rater() {
                   <img
                     onClick={(e) => {
                       handleEditBtn1st();
+                      setNation(e.target.src);
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/12/Myanmar-01-1.png"
@@ -2003,6 +2120,7 @@ function Rater() {
                   <img
                     onClick={(e) => {
                       handleEditBtn1st();
+                      setNation(e.target.src);
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/12/Namibia-01-1.png"
@@ -2016,6 +2134,7 @@ function Rater() {
                   <img
                     onClick={(e) => {
                       handleEditBtn1st();
+                      setNation(e.target.src);
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/12/nepal-01-1.png"
@@ -2029,6 +2148,7 @@ function Rater() {
                   <img
                     onClick={(e) => {
                       handleEditBtn1st();
+                      setNation(e.target.src);
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/12/Netherlands-01-1.png"
@@ -2044,6 +2164,7 @@ function Rater() {
                   <img
                     onClick={(e) => {
                       handleEditBtn1st();
+                      setNation(e.target.src);
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/12/New-Zealand-01-1.png"
@@ -2059,6 +2180,7 @@ function Rater() {
                   <img
                     onClick={(e) => {
                       handleEditBtn1st();
+                      setNation(e.target.src);
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/12/nauru-01-1.png"
@@ -2072,6 +2194,7 @@ function Rater() {
                   <img
                     onClick={(e) => {
                       handleEditBtn1st();
+                      setNation(e.target.src);
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/12/Nicaragua-01-1.png"
@@ -2087,6 +2210,7 @@ function Rater() {
                   <img
                     onClick={(e) => {
                       handleEditBtn1st();
+                      setNation(e.target.src);
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/12/Niger-01-1.png"
@@ -2100,6 +2224,7 @@ function Rater() {
                   <img
                     onClick={(e) => {
                       handleEditBtn1st();
+                      setNation(e.target.src);
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/12/Nigeria-01-1.png"
@@ -2113,6 +2238,7 @@ function Rater() {
                   <img
                     onClick={(e) => {
                       handleEditBtn1st();
+                      setNation(e.target.src);
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/12/north-korea-01-1.png"
@@ -2128,6 +2254,7 @@ function Rater() {
                   <img
                     onClick={(e) => {
                       handleEditBtn1st();
+                      setNation(e.target.src);
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/12/macedonia-01-1.png"
@@ -2143,6 +2270,7 @@ function Rater() {
                   <img
                     onClick={(e) => {
                       handleEditBtn1st();
+                      setNation(e.target.src);
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/12/Norway-01-1.png"
@@ -2156,6 +2284,7 @@ function Rater() {
                   <img
                     onClick={(e) => {
                       handleEditBtn1st();
+                      setNation(e.target.src);
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/12/Oman-01-1.png"
@@ -2169,6 +2298,7 @@ function Rater() {
                   <img
                     onClick={(e) => {
                       handleEditBtn1st();
+                      setNation(e.target.src);
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/12/Flag-of-Pakistan-01-1.png"
@@ -2184,6 +2314,7 @@ function Rater() {
                   <img
                     onClick={(e) => {
                       handleEditBtn1st();
+                      setNation(e.target.src);
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/12/Palau-01-1.png"
@@ -2197,6 +2328,7 @@ function Rater() {
                   <img
                     onClick={(e) => {
                       handleEditBtn1st();
+                      setNation(e.target.src);
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/12/Palestine-01-1.png"
@@ -2212,6 +2344,7 @@ function Rater() {
                   <img
                     onClick={(e) => {
                       handleEditBtn1st();
+                      setNation(e.target.src);
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/12/Panama-01-1.png"
@@ -2225,6 +2358,7 @@ function Rater() {
                   <img
                     onClick={(e) => {
                       handleEditBtn1st();
+                      setNation(e.target.src);
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/12/papua-new-guinea-01-1.png"
@@ -2240,6 +2374,7 @@ function Rater() {
                   <img
                     onClick={(e) => {
                       handleEditBtn1st();
+                      setNation(e.target.src);
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/12/paraguay-01-1.png"
@@ -2255,6 +2390,7 @@ function Rater() {
                   <img
                     onClick={(e) => {
                       handleEditBtn1st();
+                      setNation(e.target.src);
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/12/peru-01-3.png"
@@ -2268,6 +2404,7 @@ function Rater() {
                   <img
                     onClick={(e) => {
                       handleEditBtn1st();
+                      setNation(e.target.src);
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/12/philippines-01-1.png"
@@ -2283,6 +2420,7 @@ function Rater() {
                   <img
                     onClick={(e) => {
                       handleEditBtn1st();
+                      setNation(e.target.src);
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/12/Poland-01-2.png"
@@ -2296,6 +2434,7 @@ function Rater() {
                   <img
                     onClick={(e) => {
                       handleEditBtn1st();
+                      setNation(e.target.src);
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/12/portugal-01-1.png"
@@ -2311,6 +2450,7 @@ function Rater() {
                   <img
                     onClick={(e) => {
                       handleEditBtn1st();
+                      setNation(e.target.src);
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/12/qatar-01-2.png"
@@ -2324,6 +2464,7 @@ function Rater() {
                   <img
                     onClick={(e) => {
                       handleEditBtn1st();
+                      setNation(e.target.src);
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/12/romania-01-2.png"
@@ -2337,6 +2478,7 @@ function Rater() {
                   <img
                     onClick={(e) => {
                       handleEditBtn1st();
+                      setNation(e.target.src);
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/12/Russia-01-1.png"
@@ -2350,6 +2492,7 @@ function Rater() {
                   <img
                     onClick={(e) => {
                       handleEditBtn1st();
+                      setNation(e.target.src);
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/12/Rwanda-01-1.png"
@@ -2363,6 +2506,7 @@ function Rater() {
                   <img
                     onClick={(e) => {
                       handleEditBtn1st();
+                      setNation(e.target.src);
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/12/Saint-Kitts-and-Nevis-01-1.png"
@@ -2378,6 +2522,7 @@ function Rater() {
                   <img
                     onClick={(e) => {
                       handleEditBtn1st();
+                      setNation(e.target.src);
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/12/Saint-Lucia-01-1.png"
@@ -2393,6 +2538,7 @@ function Rater() {
                   <img
                     onClick={(e) => {
                       handleEditBtn1st();
+                      setNation(e.target.src);
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/12/Saint-Vincent-01-2.png"
@@ -2408,6 +2554,7 @@ function Rater() {
                   <img
                     onClick={(e) => {
                       handleEditBtn1st();
+                      setNation(e.target.src);
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/12/Samoa-01-1.png"
@@ -2421,6 +2568,7 @@ function Rater() {
                   <img
                     onClick={(e) => {
                       handleEditBtn1st();
+                      setNation(e.target.src);
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/12/San-Marino-01-1.png"
@@ -2436,6 +2584,7 @@ function Rater() {
                   <img
                     onClick={(e) => {
                       handleEditBtn1st();
+                      setNation(e.target.src);
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/12/Sao-Tome-01-1.png"
@@ -2451,6 +2600,7 @@ function Rater() {
                   <img
                     onClick={(e) => {
                       handleEditBtn1st();
+                      setNation(e.target.src);
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/12/Saudi-Arabia-01-1.png"
@@ -2466,6 +2616,7 @@ function Rater() {
                   <img
                     onClick={(e) => {
                       handleEditBtn1st();
+                      setNation(e.target.src);
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2022/01/Scotland-01-1.png"
@@ -2481,6 +2632,7 @@ function Rater() {
                   <img
                     onClick={(e) => {
                       handleEditBtn1st();
+                      setNation(e.target.src);
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/12/Senegal-01-1.png"
@@ -2494,6 +2646,7 @@ function Rater() {
                   <img
                     onClick={(e) => {
                       handleEditBtn1st();
+                      setNation(e.target.src);
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/12/Serbia-01-1.png"
@@ -2507,6 +2660,7 @@ function Rater() {
                   <img
                     onClick={(e) => {
                       handleEditBtn1st();
+                      setNation(e.target.src);
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/12/Seychelles-01-4.png"
@@ -2522,6 +2676,7 @@ function Rater() {
                   <img
                     onClick={(e) => {
                       handleEditBtn1st();
+                      setNation(e.target.src);
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/12/Sierra-Leone-01-1.png"
@@ -2537,6 +2692,7 @@ function Rater() {
                   <img
                     onClick={(e) => {
                       handleEditBtn1st();
+                      setNation(e.target.src);
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/12/Singapore-01-1.png"
@@ -2552,6 +2708,7 @@ function Rater() {
                   <img
                     onClick={(e) => {
                       handleEditBtn1st();
+                      setNation(e.target.src);
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/12/fSlovakia-01-1.png"
@@ -2567,6 +2724,7 @@ function Rater() {
                   <img
                     onClick={(e) => {
                       handleEditBtn1st();
+                      setNation(e.target.src);
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/12/Slovenia-01-1.png"
@@ -2582,6 +2740,7 @@ function Rater() {
                   <img
                     onClick={(e) => {
                       handleEditBtn1st();
+                      setNation(e.target.src);
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/12/Solomon-Islands-01-1.png"
@@ -2597,6 +2756,7 @@ function Rater() {
                   <img
                     onClick={(e) => {
                       handleEditBtn1st();
+                      setNation(e.target.src);
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/12/Somalia-01-1.png"
@@ -2610,6 +2770,7 @@ function Rater() {
                   <img
                     onClick={(e) => {
                       handleEditBtn1st();
+                      setNation(e.target.src);
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/12/South-Africa-01-1.png"
@@ -2625,6 +2786,7 @@ function Rater() {
                   <img
                     onClick={(e) => {
                       handleEditBtn1st();
+                      setNation(e.target.src);
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/12/South-Korea-01-1.png"
@@ -2640,6 +2802,7 @@ function Rater() {
                   <img
                     onClick={(e) => {
                       handleEditBtn1st();
+                      setNation(e.target.src);
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/12/South-Sudan-01-1.png"
@@ -2655,6 +2818,7 @@ function Rater() {
                   <img
                     onClick={(e) => {
                       handleEditBtn1st();
+                      setNation(e.target.src);
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/12/Flag-of-Spain-01-1.png"
@@ -2668,6 +2832,7 @@ function Rater() {
                   <img
                     onClick={(e) => {
                       handleEditBtn1st();
+                      setNation(e.target.src);
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/12/Sri-Lankan-01-1.png"
@@ -2683,6 +2848,7 @@ function Rater() {
                   <img
                     onClick={(e) => {
                       handleEditBtn1st();
+                      setNation(e.target.src);
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/12/Sudan-01-2.png"
@@ -2696,6 +2862,7 @@ function Rater() {
                   <img
                     onClick={(e) => {
                       handleEditBtn1st();
+                      setNation(e.target.src);
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/12/Suriname-01-6.png"
@@ -2711,6 +2878,7 @@ function Rater() {
                   <img
                     onClick={(e) => {
                       handleEditBtn1st();
+                      setNation(e.target.src);
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/12/Swedish-01-2.png"
@@ -2724,6 +2892,7 @@ function Rater() {
                   <img
                     onClick={(e) => {
                       handleEditBtn1st();
+                      setNation(e.target.src);
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/12/Swaziland-01-1.png"
@@ -2739,6 +2908,7 @@ function Rater() {
                   <img
                     onClick={(e) => {
                       handleEditBtn1st();
+                      setNation(e.target.src);
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/12/Syria-01-1.png"
@@ -2752,6 +2922,7 @@ function Rater() {
                   <img
                     onClick={(e) => {
                       handleEditBtn1st();
+                      setNation(e.target.src);
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/12/Tajikistan-01-1.png"
@@ -2767,6 +2938,7 @@ function Rater() {
                   <img
                     onClick={(e) => {
                       handleEditBtn1st();
+                      setNation(e.target.src);
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/12/Tanzania-01-1.png"
@@ -2782,6 +2954,7 @@ function Rater() {
                   <img
                     onClick={(e) => {
                       handleEditBtn1st();
+                      setNation(e.target.src);
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/12/thailand-01-1.png"
@@ -2797,6 +2970,7 @@ function Rater() {
                   <img
                     onClick={(e) => {
                       handleEditBtn1st();
+                      setNation(e.target.src);
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/12/Timor-Leste-01-1.png"
@@ -2812,6 +2986,7 @@ function Rater() {
                   <img
                     onClick={(e) => {
                       handleEditBtn1st();
+                      setNation(e.target.src);
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/12/Togo-01-1.png"
@@ -2825,6 +3000,7 @@ function Rater() {
                   <img
                     onClick={(e) => {
                       handleEditBtn1st();
+                      setNation(e.target.src);
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/12/Tonga-01-1.png"
@@ -2838,6 +3014,7 @@ function Rater() {
                   <img
                     onClick={(e) => {
                       handleEditBtn1st();
+                      setNation(e.target.src);
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/12/Trinidad-01-1.png"
@@ -2853,6 +3030,7 @@ function Rater() {
                   <img
                     onClick={(e) => {
                       handleEditBtn1st();
+                      setNation(e.target.src);
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/12/Tunisia-01-1.png"
@@ -2866,6 +3044,7 @@ function Rater() {
                   <img
                     onClick={(e) => {
                       handleEditBtn1st();
+                      setNation(e.target.src);
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/12/Turkey-01-4.png"
@@ -2879,6 +3058,7 @@ function Rater() {
                   <img
                     onClick={(e) => {
                       handleEditBtn1st();
+                      setNation(e.target.src);
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/12/Turkmenistan-01-1.png"
@@ -2894,6 +3074,7 @@ function Rater() {
                   <img
                     onClick={(e) => {
                       handleEditBtn1st();
+                      setNation(e.target.src);
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/12/Tuvalu-01-3.png"
@@ -2907,6 +3088,7 @@ function Rater() {
                   <img
                     onClick={(e) => {
                       handleEditBtn1st();
+                      setNation(e.target.src);
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/12/Uganda-01-1.png"
@@ -2920,6 +3102,7 @@ function Rater() {
                   <img
                     onClick={(e) => {
                       handleEditBtn1st();
+                      setNation(e.target.src);
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/12/Ukraine-01-1.png"
@@ -2933,6 +3116,7 @@ function Rater() {
                   <img
                     onClick={(e) => {
                       handleEditBtn1st();
+                      setNation(e.target.src);
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/12/United-Arab-Emirates-01-1.png"
@@ -2948,6 +3132,7 @@ function Rater() {
                   <img
                     onClick={(e) => {
                       handleEditBtn1st();
+                      setNation(e.target.src);
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/12/America-01-1.png"
@@ -2963,6 +3148,7 @@ function Rater() {
                   <img
                     onClick={(e) => {
                       handleEditBtn1st();
+                      setNation(e.target.src);
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/12/Uruguay-01-1.png"
@@ -2976,6 +3162,7 @@ function Rater() {
                   <img
                     onClick={(e) => {
                       handleEditBtn1st();
+                      setNation(e.target.src);
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/12/Uzbekistan-01-1.png"
@@ -2991,6 +3178,7 @@ function Rater() {
                   <img
                     onClick={(e) => {
                       handleEditBtn1st();
+                      setNation(e.target.src);
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/12/Vanuatu-01-1.png"
@@ -3004,6 +3192,7 @@ function Rater() {
                   <img
                     onClick={(e) => {
                       handleEditBtn1st();
+                      setNation(e.target.src);
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/12/Vatican-01-1.png"
@@ -3017,6 +3206,7 @@ function Rater() {
                   <img
                     onClick={(e) => {
                       handleEditBtn1st();
+                      setNation(e.target.src);
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/12/Venezuela-01-1.png"
@@ -3032,6 +3222,7 @@ function Rater() {
                   <img
                     onClick={(e) => {
                       handleEditBtn1st();
+                      setNation(e.target.src);
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/12/Vietnam-01-1.png"
@@ -3045,6 +3236,7 @@ function Rater() {
                   <img
                     onClick={(e) => {
                       handleEditBtn1st();
+                      setNation(e.target.src);
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2022/01/Welsh-01-1.png"
@@ -3058,6 +3250,7 @@ function Rater() {
                   <img
                     onClick={(e) => {
                       handleEditBtn1st();
+                      setNation(e.target.src);
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/12/Yemen-01-1.png"
@@ -3071,6 +3264,7 @@ function Rater() {
                   <img
                     onClick={(e) => {
                       handleEditBtn1st();
+                      setNation(e.target.src);
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/12/zambia-01-1.png"
@@ -3084,6 +3278,7 @@ function Rater() {
                   <img
                     onClick={(e) => {
                       handleEditBtn1st();
+                      setNation(e.target.src);
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/12/Zimbabwe-01.png"
@@ -3273,6 +3468,7 @@ function Rater() {
                     <img
                       onClick={() => {
                         handleEditBtnteams();
+                        setTeam(e.target.src);
                       }}
                       className="h-[200px] w-[300px] cursor-pointer"
                       src="https://upload.wikimedia.org/wikipedia/en/thumb/c/c5/FC_Augsburg_logo.svg/140px-FC_Augsburg_logo.svg.png"
@@ -3288,6 +3484,7 @@ function Rater() {
                     <img
                       onClick={() => {
                         handleEditBtnteams();
+                        setTeam(e.target.src);
                       }}
                       className="h-[200px] w-[300px] cursor-pointer"
                       src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/Hertha_BSC_Logo_2012.svg/190px-Hertha_BSC_Logo_2012.svg.png"
@@ -3303,6 +3500,7 @@ function Rater() {
                     <img
                       onClick={() => {
                         handleEditBtnteams();
+                        setTeam(e.target.src);
                       }}
                       className="h-[200px] w-[300px] cursor-pointer"
                       src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/1._FC_Union_Berlin_Logo.svg/220px-1._FC_Union_Berlin_Logo.svg.png"
@@ -3318,6 +3516,7 @@ function Rater() {
                     <img
                       onClick={() => {
                         handleEditBtnteams();
+                        setTeam(e.target.src);
                       }}
                       className="h-[200px] w-[300px] cursor-pointer"
                       src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/VfL_Bochum_logo.svg/170px-VfL_Bochum_logo.svg.png"
@@ -3333,6 +3532,7 @@ function Rater() {
                     <img
                       onClick={() => {
                         handleEditBtnteams();
+                        setTeam(e.target.src);
                       }}
                       className="h-[200px] w-[300px] cursor-pointer"
                       src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/SV-Werder-Bremen-Logo.svg/150px-SV-Werder-Bremen-Logo.svg.png"
@@ -3348,6 +3548,7 @@ function Rater() {
                     <img
                       onClick={() => {
                         handleEditBtnteams();
+                        setTeam(e.target.src);
                       }}
                       className="h-[200px] w-[300px] cursor-pointer"
                       src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Borussia_Dortmund_logo.svg/185px-Borussia_Dortmund_logo.svg.png"
@@ -3363,6 +3564,7 @@ function Rater() {
                     <img
                       onClick={() => {
                         handleEditBtnteams();
+                        setTeam(e.target.src);
                       }}
                       className="h-[200px] w-[300px] cursor-pointer"
                       src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/Eintracht_Frankfurt_Logo.svg/180px-Eintracht_Frankfurt_Logo.svg.png"
@@ -3378,6 +3580,7 @@ function Rater() {
                     <img
                       onClick={() => {
                         handleEditBtnteams();
+                        setTeam(e.target.src);
                       }}
                       className="h-[200px] w-[300px] cursor-pointer"
                       src="https://upload.wikimedia.org/wikipedia/en/thumb/6/6d/SC_Freiburg_logo.svg/150px-SC_Freiburg_logo.svg.png"
@@ -3393,6 +3596,7 @@ function Rater() {
                     <img
                       onClick={() => {
                         handleEditBtnteams();
+                        setTeam(e.target.src);
                       }}
                       className="h-[200px] w-[300px] cursor-pointer"
                       src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Logo_TSG_Hoffenheim.svg/160px-Logo_TSG_Hoffenheim.svg.png"
@@ -3408,6 +3612,7 @@ function Rater() {
                     <img
                       onClick={() => {
                         handleEditBtnteams();
+                        setTeam(e.target.src);
                       }}
                       className="h-[200px] w-[300px] cursor-pointer"
                       src="https://upload.wikimedia.org/wikipedia/en/thumb/5/53/FC_Cologne_logo.svg/180px-FC_Cologne_logo.svg.png"
@@ -3423,6 +3628,7 @@ function Rater() {
                     <img
                       onClick={() => {
                         handleEditBtnteams();
+                        setTeam(e.target.src);
                       }}
                       className="h-[200px] w-[300px] cursor-pointer"
                       src="https://upload.wikimedia.org/wikipedia/en/thumb/0/04/RB_Leipzig_2014_logo.svg/280px-RB_Leipzig_2014_logo.svg.png"
@@ -3438,6 +3644,7 @@ function Rater() {
                     <img
                       onClick={() => {
                         handleEditBtnteams();
+                        setTeam(e.target.src);
                       }}
                       className="h-[200px] w-[300px] cursor-pointer"
                       src="https://upload.wikimedia.org/wikipedia/en/thumb/5/59/Bayer_04_Leverkusen_logo.svg/220px-Bayer_04_Leverkusen_logo.svg.png"
@@ -3453,6 +3660,7 @@ function Rater() {
                     <img
                       onClick={() => {
                         handleEditBtnteams();
+                        setTeam(e.target.src);
                       }}
                       className="h-[200px] w-[300px] cursor-pointer"
                       src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Logo_Mainz_05.svg/190px-Logo_Mainz_05.svg.png"
@@ -3468,6 +3676,7 @@ function Rater() {
                     <img
                       onClick={() => {
                         handleEditBtnteams();
+                        setTeam(e.target.src);
                       }}
                       className="h-[200px] w-[300px] cursor-pointer"
                       src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/Borussia_M%C3%B6nchengladbach_logo.svg/140px-Borussia_M%C3%B6nchengladbach_logo.svg.png"
@@ -3483,6 +3692,7 @@ function Rater() {
                     <img
                       onClick={() => {
                         handleEditBtnteams();
+                        setTeam(e.target.src);
                       }}
                       className="h-[200px] w-[300px] cursor-pointer"
                       src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/FC_Bayern_M%C3%BCnchen_logo_%282017%29.svg/180px-FC_Bayern_M%C3%BCnchen_logo_%282017%29.svg.png"
@@ -3498,6 +3708,7 @@ function Rater() {
                     <img
                       onClick={() => {
                         handleEditBtnteams();
+                        setTeam(e.target.src);
                       }}
                       className="h-[200px] w-[300px] cursor-pointer"
                       src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/FC_Schalke_04_Logo.svg/180px-FC_Schalke_04_Logo.svg.png"
@@ -3513,6 +3724,7 @@ function Rater() {
                     <img
                       onClick={() => {
                         handleEditBtnteams();
+                        setTeam(e.target.src);
                       }}
                       className="h-[200px] w-[300px] cursor-pointer"
                       src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/VfB_Stuttgart_1893_Logo.svg/180px-VfB_Stuttgart_1893_Logo.svg.png"
@@ -3528,6 +3740,7 @@ function Rater() {
                     <img
                       onClick={() => {
                         handleEditBtnteams();
+                        setTeam(e.target.src);
                       }}
                       className="h-[200px] w-[300px] cursor-pointer"
                       src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/VfL_Wolfsburg_Logo.svg/190px-VfL_Wolfsburg_Logo.svg.png"
@@ -3581,6 +3794,7 @@ function Rater() {
                     <img
                       onClick={() => {
                         handleEditBtnteams();
+                        setTeam(e.target.src);
                       }}
                       className="h-[200px] w-[300px] cursor-pointer"
                       src="https://upload.wikimedia.org/wikipedia/en/thumb/1/13/UD_Almer%C3%ADa_logo.png/140px-UD_Almer%C3%ADa_logo.png"
@@ -3596,6 +3810,7 @@ function Rater() {
                     <img
                       onClick={() => {
                         handleEditBtnteams();
+                        setTeam(e.target.src);
                       }}
                       className="h-[200px] w-[300px] cursor-pointer"
                       src="https://upload.wikimedia.org/wikipedia/en/thumb/9/98/Club_Athletic_Bilbao_logo.svg/150px-Club_Athletic_Bilbao_logo.svg.png"
@@ -3611,6 +3826,7 @@ function Rater() {
                     <img
                       onClick={() => {
                         handleEditBtnteams();
+                        setTeam(e.target.src);
                       }}
                       className="h-[200px] w-[300px] cursor-pointer"
                       src="https://upload.wikimedia.org/wikipedia/en/thumb/f/f4/Atletico_Madrid_2017_logo.svg/150px-Atletico_Madrid_2017_logo.svg.png"
@@ -3626,6 +3842,7 @@ function Rater() {
                     <img
                       onClick={() => {
                         handleEditBtnteams();
+                        setTeam(e.target.src);
                       }}
                       className="h-[200px] w-[300px] cursor-pointer"
                       src="https://upload.wikimedia.org/wikipedia/en/thumb/4/47/FC_Barcelona_%28crest%29.svg/190px-FC_Barcelona_%28crest%29.svg.png"
@@ -3641,6 +3858,7 @@ function Rater() {
                     <img
                       onClick={() => {
                         handleEditBtnteams();
+                        setTeam(e.target.src);
                       }}
                       className="h-[200px] w-[300px] cursor-pointer"
                       src="https://upload.wikimedia.org/wikipedia/en/thumb/5/58/C%C3%A1diz_CF_logo.svg/120px-C%C3%A1diz_CF_logo.svg.png"
@@ -3654,6 +3872,7 @@ function Rater() {
                     <img
                       onClick={() => {
                         handleEditBtnteams();
+                        setTeam(e.target.src);
                       }}
                       className="h-[200px] w-[300px] cursor-pointer"
                       src="https://upload.wikimedia.org/wikipedia/en/thumb/1/12/RC_Celta_de_Vigo_logo.svg/110px-RC_Celta_de_Vigo_logo.svg.png"
@@ -3669,6 +3888,7 @@ function Rater() {
                     <img
                       onClick={() => {
                         handleEditBtnteams();
+                        setTeam(e.target.src);
                       }}
                       className="h-[200px] w-[300px] cursor-pointer"
                       src="https://upload.wikimedia.org/wikipedia/en/thumb/a/a7/Elche_CF_logo.svg/150px-Elche_CF_logo.svg.png"
@@ -3682,6 +3902,7 @@ function Rater() {
                     <img
                       onClick={() => {
                         handleEditBtnteams();
+                        setTeam(e.target.src);
                       }}
                       className="h-[200px] w-[300px] cursor-pointer"
                       src="https://upload.wikimedia.org/wikipedia/en/thumb/d/d6/Rcd_espanyol_logo.svg/140px-Rcd_espanyol_logo.svg.png"
@@ -3697,6 +3918,7 @@ function Rater() {
                     <img
                       onClick={() => {
                         handleEditBtnteams();
+                        setTeam(e.target.src);
                       }}
                       className="h-[200px] w-[300px] cursor-pointer"
                       src="https://upload.wikimedia.org/wikipedia/en/thumb/4/46/Getafe_logo.svg/170px-Getafe_logo.svg.png"
@@ -3712,6 +3934,7 @@ function Rater() {
                     <img
                       onClick={() => {
                         handleEditBtnteams();
+                        setTeam(e.target.src);
                       }}
                       className="h-[200px] w-[300px] cursor-pointer"
                       src="https://upload.wikimedia.org/wikipedia/en/thumb/7/7a/Girona_FC_new_logo.png/190px-Girona_FC_new_logo.png"
@@ -3727,6 +3950,7 @@ function Rater() {
                     <img
                       onClick={() => {
                         handleEditBtnteams();
+                        setTeam(e.target.src);
                       }}
                       className="h-[200px] w-[300px] cursor-pointer"
                       src="https://upload.wikimedia.org/wikipedia/en/thumb/e/e0/Rcd_mallorca.svg/150px-Rcd_mallorca.svg.png"
@@ -3742,6 +3966,7 @@ function Rater() {
                     <img
                       onClick={() => {
                         handleEditBtnteams();
+                        setTeam(e.target.src);
                       }}
                       className="h-[200px] w-[300px] cursor-pointer"
                       src="https://upload.wikimedia.org/wikipedia/en/thumb/d/db/Osasuna_logo.svg/150px-Osasuna_logo.svg.png"
@@ -3757,6 +3982,7 @@ function Rater() {
                     <img
                       onClick={() => {
                         handleEditBtnteams();
+                        setTeam(e.target.src);
                       }}
                       className="h-[200px] w-[300px] cursor-pointer"
                       src="https://upload.wikimedia.org/wikipedia/en/thumb/1/17/Rayo_Vallecano_logo.png/180px-Rayo_Vallecano_logo.png"
@@ -3772,6 +3998,7 @@ function Rater() {
                     <img
                       onClick={() => {
                         handleEditBtnteams();
+                        setTeam(e.target.src);
                       }}
                       className="h-[200px] w-[300px] cursor-pointer"
                       src="https://upload.wikimedia.org/wikipedia/en/thumb/1/13/Real_betis_logo.svg/200px-Real_betis_logo.svg.png"
@@ -3787,6 +4014,7 @@ function Rater() {
                     <img
                       onClick={() => {
                         handleEditBtnteams();
+                        setTeam(e.target.src);
                       }}
                       className="h-[200px] w-[300px] cursor-pointer"
                       src="https://upload.wikimedia.org/wikipedia/en/thumb/5/56/Real_Madrid_CF.svg/150px-Real_Madrid_CF.svg.png"
@@ -3802,6 +4030,7 @@ function Rater() {
                     <img
                       onClick={() => {
                         handleEditBtnteams();
+                        setTeam(e.target.src);
                       }}
                       className="h-[200px] w-[300px] cursor-pointer"
                       src="https://upload.wikimedia.org/wikipedia/en/thumb/f/f1/Real_Sociedad_logo.svg/170px-Real_Sociedad_logo.svg.png"
@@ -3817,6 +4046,7 @@ function Rater() {
                     <img
                       onClick={() => {
                         handleEditBtnteams();
+                        setTeam(e.target.src);
                       }}
                       className="h-[200px] w-[300px] cursor-pointer"
                       src="https://upload.wikimedia.org/wikipedia/en/thumb/3/3b/Sevilla_FC_logo.svg/150px-Sevilla_FC_logo.svg.png"
@@ -3832,6 +4062,7 @@ function Rater() {
                     <img
                       onClick={() => {
                         handleEditBtnteams();
+                        setTeam(e.target.src);
                       }}
                       className="h-[200px] w-[300px] cursor-pointer"
                       src="https://upload.wikimedia.org/wikipedia/en/thumb/c/ce/Valenciacf.svg/160px-Valenciacf.svg.png"
@@ -3847,6 +4078,7 @@ function Rater() {
                     <img
                       onClick={() => {
                         handleEditBtnteams();
+                        setTeam(e.target.src);
                       }}
                       className="h-[200px] w-[300px] cursor-pointer"
                       src="https://upload.wikimedia.org/wikipedia/en/thumb/c/c5/Shield_of_Real_Valladolid.png/150px-Shield_of_Real_Valladolid.png"
@@ -3862,6 +4094,7 @@ function Rater() {
                     <img
                       onClick={() => {
                         handleEditBtnteams();
+                        setTeam(e.target.src);
                       }}
                       className="h-[200px] w-[300px] cursor-pointer"
                       src="https://upload.wikimedia.org/wikipedia/en/thumb/b/b9/Villarreal_CF_logo-en.svg/160px-Villarreal_CF_logo-en.svg.png"
@@ -3915,6 +4148,7 @@ function Rater() {
                     <img
                       onClick={() => {
                         handleEditBtnteams();
+                        setTeam(e.target.src);
                       }}
                       className="h-[200px] w-[300px] cursor-pointer"
                       src="https://upload.wikimedia.org/wikipedia/en/thumb/1/1f/AC_Ajaccio_logo.svg/130px-AC_Ajaccio_logo.svg.png"
@@ -3930,6 +4164,7 @@ function Rater() {
                     <img
                       onClick={() => {
                         handleEditBtnteams();
+                        setTeam(e.target.src);
                       }}
                       className="h-[200px] w-[300px] cursor-pointer"
                       src="https://upload.wikimedia.org/wikipedia/en/thumb/6/6c/Angers_SCO.png/150px-Angers_SCO.png"
@@ -3945,6 +4180,7 @@ function Rater() {
                     <img
                       onClick={() => {
                         handleEditBtnteams();
+                        setTeam(e.target.src);
                       }}
                       className="h-[200px] w-[300px] cursor-pointer"
                       src="https://upload.wikimedia.org/wikipedia/en/thumb/5/51/AJAuxerreLogo.svg/140px-AJAuxerreLogo.svg.png"
@@ -3960,6 +4196,7 @@ function Rater() {
                     <img
                       onClick={() => {
                         handleEditBtnteams();
+                        setTeam(e.target.src);
                       }}
                       className="h-[200px] w-[300px] cursor-pointer"
                       src="https://upload.wikimedia.org/wikipedia/en/thumb/0/05/Stade_Brestois_29_logo.svg/150px-Stade_Brestois_29_logo.svg.png"
@@ -3973,6 +4210,7 @@ function Rater() {
                     <img
                       onClick={() => {
                         handleEditBtnteams();
+                        setTeam(e.target.src);
                       }}
                       className="h-[200px] w-[300px] cursor-pointer"
                       src="https://upload.wikimedia.org/wikipedia/en/thumb/5/52/Clermont_Foot_logo.svg/140px-Clermont_Foot_logo.svg.png"
@@ -3988,6 +4226,7 @@ function Rater() {
                     <img
                       onClick={() => {
                         handleEditBtnteams();
+                        setTeam(e.target.src);
                       }}
                       className="h-[200px] w-[300px] cursor-pointer"
                       src="https://upload.wikimedia.org/wikipedia/en/thumb/c/cc/RC_Lens_logo.svg/135px-RC_Lens_logo.svg.png"
@@ -4003,6 +4242,7 @@ function Rater() {
                     <img
                       onClick={() => {
                         handleEditBtnteams();
+                        setTeam(e.target.src);
                       }}
                       className="h-[200px] w-[300px] cursor-pointer"
                       src="https://upload.wikimedia.org/wikipedia/en/thumb/3/3f/Lille_OSC_2018_logo.svg/170px-Lille_OSC_2018_logo.svg.png"
@@ -4018,6 +4258,7 @@ function Rater() {
                     <img
                       onClick={() => {
                         handleEditBtnteams();
+                        setTeam(e.target.src);
                       }}
                       className="h-[200px] w-[300px] cursor-pointer"
                       src="https://upload.wikimedia.org/wikipedia/en/thumb/4/4c/FC_Lorient_logo.svg/130px-FC_Lorient_logo.svg.png"
@@ -4033,6 +4274,7 @@ function Rater() {
                     <img
                       onClick={() => {
                         handleEditBtnteams();
+                        setTeam(e.target.src);
                       }}
                       className="h-[200px] w-[300px] cursor-pointer"
                       src="https://upload.wikimedia.org/wikipedia/en/1/12/Logo_Olympique_Lyonnais_2022.png"
@@ -4048,6 +4290,7 @@ function Rater() {
                     <img
                       onClick={() => {
                         handleEditBtnteams();
+                        setTeam(e.target.src);
                       }}
                       className="h-[200px] w-[300px] cursor-pointer"
                       src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/Olympique_Marseille_logo.svg/170px-Olympique_Marseille_logo.svg.png"
@@ -4063,6 +4306,7 @@ function Rater() {
                     <img
                       onClick={() => {
                         handleEditBtnteams();
+                        setTeam(e.target.src);
                       }}
                       className="h-[200px] w-[300px] cursor-pointer"
                       src="https://upload.wikimedia.org/wikipedia/en/thumb/c/cf/LogoASMonacoFC2021.svg/120px-LogoASMonacoFC2021.svg.png"
@@ -4078,6 +4322,7 @@ function Rater() {
                     <img
                       onClick={() => {
                         handleEditBtnteams();
+                        setTeam(e.target.src);
                       }}
                       className="h-[200px] w-[300px] cursor-pointer"
                       src="https://upload.wikimedia.org/wikipedia/en/thumb/a/a8/Montpellier_HSC_logo.svg/170px-Montpellier_HSC_logo.svg.png"
@@ -4093,6 +4338,7 @@ function Rater() {
                     <img
                       onClick={() => {
                         handleEditBtnteams();
+                        setTeam(e.target.src);
                       }}
                       className="h-[200px] w-[300px] cursor-pointer"
                       src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Logo_FC_Nantes_%28avec_fond%29_-_2019.svg/140px-Logo_FC_Nantes_%28avec_fond%29_-_2019.svg.png"
@@ -4108,6 +4354,7 @@ function Rater() {
                     <img
                       onClick={() => {
                         handleEditBtnteams();
+                        setTeam(e.target.src);
                       }}
                       className="h-[200px] w-[300px] cursor-pointer"
                       src="https://upload.wikimedia.org/wikipedia/en/thumb/2/2e/OGC_Nice_logo.svg/150px-OGC_Nice_logo.svg.png"
@@ -4123,6 +4370,7 @@ function Rater() {
                     <img
                       onClick={() => {
                         handleEditBtnteams();
+                        setTeam(e.target.src);
                       }}
                       className="h-[200px] w-[300px] cursor-pointer"
                       src="https://upload.wikimedia.org/wikipedia/en/thumb/a/a7/Paris_Saint-Germain_F.C..svg/180px-Paris_Saint-Germain_F.C..svg.png"
@@ -4138,6 +4386,7 @@ function Rater() {
                     <img
                       onClick={() => {
                         handleEditBtnteams();
+                        setTeam(e.target.src);
                       }}
                       className="h-[200px] w-[300px] cursor-pointer"
                       src="https://upload.wikimedia.org/wikipedia/en/thumb/1/19/Stade_de_Reims_logo.svg/100px-Stade_de_Reims_logo.svg.png"
@@ -4153,6 +4402,7 @@ function Rater() {
                     <img
                       onClick={() => {
                         handleEditBtnteams();
+                        setTeam(e.target.src);
                       }}
                       className="h-[200px] w-[300px] cursor-pointer"
                       src="https://upload.wikimedia.org/wikipedia/en/thumb/9/9e/Stade_Rennais_FC.svg/170px-Stade_Rennais_FC.svg.png"
@@ -4168,6 +4418,7 @@ function Rater() {
                     <img
                       onClick={() => {
                         handleEditBtnteams();
+                        setTeam(e.target.src);
                       }}
                       className="h-[200px] w-[300px] cursor-pointer"
                       src="https://upload.wikimedia.org/wikipedia/en/thumb/8/80/Racing_Club_de_Strasbourg_logo.svg/170px-Racing_Club_de_Strasbourg_logo.svg.png"
@@ -4183,6 +4434,7 @@ function Rater() {
                     <img
                       onClick={() => {
                         handleEditBtnteams();
+                        setTeam(e.target.src);
                       }}
                       className="h-[200px] w-[300px] cursor-pointer"
                       src="https://upload.wikimedia.org/wikipedia/en/thumb/6/63/Toulouse_FC_2018_logo.svg/170px-Toulouse_FC_2018_logo.svg.png"
@@ -4198,6 +4450,7 @@ function Rater() {
                     <img
                       onClick={() => {
                         handleEditBtnteams();
+                        setTeam(e.target.src);
                       }}
                       className="h-[200px] w-[300px] cursor-pointer"
                       src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/ES_Troyes_AC.svg/140px-ES_Troyes_AC.svg.png"
@@ -4248,6 +4501,7 @@ function Rater() {
                     <img
                       onClick={() => {
                         handleEditBtnteams();
+                        setTeam(e.target.src);
                       }}
                       className="h-[200px] w-[300px] cursor-pointer"
                       src="https://upload.wikimedia.org/wikipedia/en/thumb/5/53/Arsenal_FC.svg/170px-Arsenal_FC.svg.png"
@@ -4263,6 +4517,7 @@ function Rater() {
                     <img
                       onClick={() => {
                         handleEditBtnteams();
+                        setTeam(e.target.src);
                       }}
                       className="h-[200px] w-[300px] cursor-pointer"
                       src="https://upload.wikimedia.org/wikipedia/en/thumb/f/f9/Aston_Villa_FC_crest_%282016%29.svg/140px-Aston_Villa_FC_crest_%282016%29.svg.png"
@@ -4278,6 +4533,7 @@ function Rater() {
                     <img
                       onClick={() => {
                         handleEditBtnteams();
+                        setTeam(e.target.src);
                       }}
                       className="h-[200px] w-[300px] cursor-pointer"
                       src="https://upload.wikimedia.org/wikipedia/en/thumb/e/e5/AFC_Bournemouth_%282013%29.svg/150px-AFC_Bournemouth_%282013%29.svg.png"
@@ -4293,6 +4549,7 @@ function Rater() {
                     <img
                       onClick={() => {
                         handleEditBtnteams();
+                        setTeam(e.target.src);
                       }}
                       className="h-[200px] w-[300px] cursor-pointer"
                       src="https://upload.wikimedia.org/wikipedia/en/thumb/2/2a/Brentford_FC_crest.svg/180px-Brentford_FC_crest.svg.png"
@@ -4308,6 +4565,7 @@ function Rater() {
                     <img
                       onClick={() => {
                         handleEditBtnteams();
+                        setTeam(e.target.src);
                       }}
                       className="h-[200px] w-[300px] cursor-pointer"
                       src="https://upload.wikimedia.org/wikipedia/en/thumb/f/fd/Brighton_%26_Hove_Albion_logo.svg/195px-Brighton_%26_Hove_Albion_logo.svg.png"
@@ -4323,6 +4581,7 @@ function Rater() {
                     <img
                       onClick={() => {
                         handleEditBtnteams();
+                        setTeam(e.target.src);
                       }}
                       className="h-[200px] w-[300px] cursor-pointer"
                       src="https://upload.wikimedia.org/wikipedia/en/thumb/c/cc/Chelsea_FC.svg/180px-Chelsea_FC.svg.png"
@@ -4338,6 +4597,7 @@ function Rater() {
                     <img
                       onClick={() => {
                         handleEditBtnteams();
+                        setTeam(e.target.src);
                       }}
                       className="h-[200px] w-[300px] cursor-pointer"
                       src="https://upload.wikimedia.org/wikipedia/en/thumb/a/a2/Crystal_Palace_FC_logo_%282022%29.svg/170px-Crystal_Palace_FC_logo_%282022%29.svg.png"
@@ -4353,6 +4613,7 @@ function Rater() {
                     <img
                       onClick={() => {
                         handleEditBtnteams();
+                        setTeam(e.target.src);
                       }}
                       className="h-[200px] w-[300px] cursor-pointer"
                       src="https://upload.wikimedia.org/wikipedia/en/thumb/7/7c/Everton_FC_logo.svg/195px-Everton_FC_logo.svg.png"
@@ -4368,6 +4629,7 @@ function Rater() {
                     <img
                       onClick={() => {
                         handleEditBtnteams();
+                        setTeam(e.target.src);
                       }}
                       className="h-[200px] w-[300px] cursor-pointer"
                       src="https://upload.wikimedia.org/wikipedia/en/thumb/e/eb/Fulham_FC_%28shield%29.svg/146px-Fulham_FC_%28shield%29.svg.png"
@@ -4383,6 +4645,7 @@ function Rater() {
                     <img
                       onClick={() => {
                         handleEditBtnteams();
+                        setTeam(e.target.src);
                       }}
                       className="h-[200px] w-[300px] cursor-pointer"
                       src="https://upload.wikimedia.org/wikipedia/en/thumb/5/54/Leeds_United_F.C._logo.svg/160px-Leeds_United_F.C._logo.svg.png"
@@ -4398,6 +4661,7 @@ function Rater() {
                     <img
                       onClick={() => {
                         handleEditBtnteams();
+                        setTeam(e.target.src);
                       }}
                       className="h-[200px] w-[300px] cursor-pointer"
                       src="https://upload.wikimedia.org/wikipedia/en/thumb/2/2d/Leicester_City_crest.svg/180px-Leicester_City_crest.svg.png"
@@ -4413,6 +4677,7 @@ function Rater() {
                     <img
                       onClick={() => {
                         handleEditBtnteams();
+                        setTeam(e.target.src);
                       }}
                       className="h-[200px] w-[300px] cursor-pointer"
                       src="https://upload.wikimedia.org/wikipedia/en/thumb/0/0c/Liverpool_FC.svg/180px-Liverpool_FC.svg.png"
@@ -4428,6 +4693,7 @@ function Rater() {
                     <img
                       onClick={() => {
                         handleEditBtnteams();
+                        setTeam(e.target.src);
                       }}
                       className="h-[200px] w-[300px] cursor-pointer"
                       src="https://upload.wikimedia.org/wikipedia/en/thumb/e/eb/Manchester_City_FC_badge.svg/180px-Manchester_City_FC_badge.svg.png"
@@ -4443,6 +4709,7 @@ function Rater() {
                     <img
                       onClick={() => {
                         handleEditBtnteams();
+                        setTeam(e.target.src);
                       }}
                       className="h-[200px] w-[300px] cursor-pointer"
                       src="https://upload.wikimedia.org/wikipedia/en/thumb/7/7a/Manchester_United_FC_crest.svg/190px-Manchester_United_FC_crest.svg.png"
@@ -4458,6 +4725,7 @@ function Rater() {
                     <img
                       onClick={() => {
                         handleEditBtnteams();
+                        setTeam(e.target.src);
                       }}
                       className="h-[200px] w-[300px] cursor-pointer"
                       src="https://upload.wikimedia.org/wikipedia/en/thumb/5/56/Newcastle_United_Logo.svg/200px-Newcastle_United_Logo.svg.png"
@@ -4473,6 +4741,7 @@ function Rater() {
                     <img
                       onClick={() => {
                         handleEditBtnteams();
+                        setTeam(e.target.src);
                       }}
                       className="h-[200px] w-[300px] cursor-pointer"
                       src="https://upload.wikimedia.org/wikipedia/en/thumb/e/e5/Nottingham_Forest_F.C._logo.svg/110px-Nottingham_Forest_F.C._logo.svg.png"
@@ -4488,6 +4757,7 @@ function Rater() {
                     <img
                       onClick={() => {
                         handleEditBtnteams();
+                        setTeam(e.target.src);
                       }}
                       className="h-[200px] w-[300px] cursor-pointer"
                       src="https://upload.wikimedia.org/wikipedia/en/thumb/c/c9/FC_Southampton.svg/180px-FC_Southampton.svg.png"
@@ -4503,6 +4773,7 @@ function Rater() {
                     <img
                       onClick={() => {
                         handleEditBtnteams();
+                        setTeam(e.target.src);
                       }}
                       className="h-[200px] w-[300px] cursor-pointer"
                       src="https://upload.wikimedia.org/wikipedia/en/thumb/b/b4/Tottenham_Hotspur.svg/120px-Tottenham_Hotspur.svg.png"
@@ -4518,6 +4789,7 @@ function Rater() {
                     <img
                       onClick={() => {
                         handleEditBtnteams();
+                        setTeam(e.target.src);
                       }}
                       className="h-[200px] w-[300px] cursor-pointer"
                       src="https://upload.wikimedia.org/wikipedia/en/thumb/c/c2/West_Ham_United_FC_logo.svg/165px-West_Ham_United_FC_logo.svg.png"
@@ -4533,6 +4805,7 @@ function Rater() {
                     <img
                       onClick={() => {
                         handleEditBtnteams();
+                        setTeam(e.target.src);
                       }}
                       className="h-[200px] w-[300px] cursor-pointer"
                       src="https://upload.wikimedia.org/wikipedia/en/thumb/f/fc/Wolverhampton_Wanderers.svg/190px-Wolverhampton_Wanderers.svg.png"
@@ -4586,6 +4859,7 @@ function Rater() {
                     <img
                       onClick={() => {
                         handleEditBtnteams();
+                        setTeam(e.target.src);
                       }}
                       className="h-[200px] w-[300px] cursor-pointer"
                       src="https://upload.wikimedia.org/wikipedia/en/thumb/6/66/AtalantaBC.svg/130px-AtalantaBC.svg.png"
@@ -4601,6 +4875,7 @@ function Rater() {
                     <img
                       onClick={() => {
                         handleEditBtnteams();
+                        setTeam(e.target.src);
                       }}
                       className="h-[200px] w-[300px] cursor-pointer"
                       src="https://upload.wikimedia.org/wikipedia/en/thumb/5/5b/Bologna_F.C._1909_logo.svg/130px-Bologna_F.C._1909_logo.svg.png"
@@ -4616,6 +4891,7 @@ function Rater() {
                     <img
                       onClick={() => {
                         handleEditBtnteams();
+                        setTeam(e.target.src);
                       }}
                       className="h-[200px] w-[300px] cursor-pointer"
                       src="https://upload.wikimedia.org/wikipedia/en/thumb/e/e1/US_Cremonese_logo.svg/190px-US_Cremonese_logo.svg.png"
@@ -4631,6 +4907,7 @@ function Rater() {
                     <img
                       onClick={() => {
                         handleEditBtnteams();
+                        setTeam(e.target.src);
                       }}
                       className="h-[200px] w-[300px] cursor-pointer"
                       src="https://upload.wikimedia.org/wikipedia/en/thumb/e/e9/Empoli_F.C._logo_%282021%29.png/150px-Empoli_F.C._logo_%282021%29.png"
@@ -4646,6 +4923,7 @@ function Rater() {
                     <img
                       onClick={() => {
                         handleEditBtnteams();
+                        setTeam(e.target.src);
                       }}
                       className="h-[200px] w-[300px] cursor-pointer"
                       src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/2022_ACF_Fiorentina_logo.svg/200px-2022_ACF_Fiorentina_logo.svg.png"
@@ -4661,6 +4939,7 @@ function Rater() {
                     <img
                       onClick={() => {
                         handleEditBtnteams();
+                        setTeam(e.target.src);
                       }}
                       className="h-[200px] w-[300px] cursor-pointer"
                       src="https://upload.wikimedia.org/wikipedia/en/thumb/9/92/Hellas_Verona_FC_logo_%282020%29.svg/170px-Hellas_Verona_FC_logo_%282020%29.svg.png"
@@ -4676,6 +4955,7 @@ function Rater() {
                     <img
                       onClick={() => {
                         handleEditBtnteams();
+                        setTeam(e.target.src);
                       }}
                       className="h-[200px] w-[300px] cursor-pointer"
                       src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/FC_Internazionale_Milano_2021.svg/180px-FC_Internazionale_Milano_2021.svg.png"
@@ -4691,6 +4971,7 @@ function Rater() {
                     <img
                       onClick={() => {
                         handleEditBtnteams();
+                        setTeam(e.target.src);
                       }}
                       className="h-[200px] w-[300px] cursor-pointer"
                       src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Juventus_FC_2017_icon_%28black%29.svg/110px-Juventus_FC_2017_icon_%28black%29.svg.png"
@@ -4706,6 +4987,7 @@ function Rater() {
                     <img
                       onClick={() => {
                         handleEditBtnteams();
+                        setTeam(e.target.src);
                       }}
                       className="h-[200px] w-[300px] cursor-pointer"
                       src="https://upload.wikimedia.org/wikipedia/en/thumb/c/ce/S.S._Lazio_badge.svg/220px-S.S._Lazio_badge.svg.png"
@@ -4719,6 +5001,7 @@ function Rater() {
                     <img
                       onClick={() => {
                         handleEditBtnteams();
+                        setTeam(e.target.src);
                       }}
                       className="h-[200px] w-[300px] cursor-pointer"
                       src="https://upload.wikimedia.org/wikipedia/en/thumb/8/85/Us_lecce.svg/150px-Us_lecce.svg.png"
@@ -4732,6 +5015,7 @@ function Rater() {
                     <img
                       onClick={() => {
                         handleEditBtnteams();
+                        setTeam(e.target.src);
                       }}
                       className="h-[200px] w-[300px] cursor-pointer"
                       src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Logo_of_AC_Milan.svg/130px-Logo_of_AC_Milan.svg.png"
@@ -4747,6 +5031,7 @@ function Rater() {
                     <img
                       onClick={() => {
                         handleEditBtnteams();
+                        setTeam(e.target.src);
                       }}
                       className="h-[200px] w-[300px] cursor-pointer"
                       src="https://upload.wikimedia.org/wikipedia/en/thumb/1/1c/A.C._Monza_logo_%282019%29.svg/150px-A.C._Monza_logo_%282019%29.svg.png"
@@ -4760,6 +5045,7 @@ function Rater() {
                     <img
                       onClick={() => {
                         handleEditBtnteams();
+                        setTeam(e.target.src);
                       }}
                       className="h-[200px] w-[300px] cursor-pointer"
                       src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/SSC_Neapel.svg/170px-SSC_Neapel.svg.png"
@@ -4775,6 +5061,7 @@ function Rater() {
                     <img
                       onClick={() => {
                         handleEditBtnteams();
+                        setTeam(e.target.src);
                       }}
                       className="h-[200px] w-[300px] cursor-pointer"
                       src="https://upload.wikimedia.org/wikipedia/en/thumb/f/f7/AS_Roma_logo_%282017%29.svg/155px-AS_Roma_logo_%282017%29.svg.png"
@@ -4790,6 +5077,7 @@ function Rater() {
                     <img
                       onClick={() => {
                         handleEditBtnteams();
+                        setTeam(e.target.src);
                       }}
                       className="h-[200px] w-[300px] cursor-pointer"
                       src="https://upload.wikimedia.org/wikipedia/en/thumb/8/85/US_Salernitana_1919_logo.svg/170px-US_Salernitana_1919_logo.svg.png"
@@ -4805,6 +5093,7 @@ function Rater() {
                     <img
                       onClick={() => {
                         handleEditBtnteams();
+                        setTeam(e.target.src);
                       }}
                       className="h-[200px] w-[300px] cursor-pointer"
                       src="https://upload.wikimedia.org/wikipedia/en/thumb/d/d2/U.C._Sampdoria_logo.svg/140px-U.C._Sampdoria_logo.svg.png"
@@ -4820,6 +5109,7 @@ function Rater() {
                     <img
                       onClick={() => {
                         handleEditBtnteams();
+                        setTeam(e.target.src);
                       }}
                       className="h-[200px] w-[300px] cursor-pointer"
                       src="https://upload.wikimedia.org/wikipedia/en/thumb/1/1c/US_Sassuolo_Calcio_logo.svg/170px-US_Sassuolo_Calcio_logo.svg.png"
@@ -4835,6 +5125,7 @@ function Rater() {
                     <img
                       onClick={() => {
                         handleEditBtnteams();
+                        setTeam(e.target.src);
                       }}
                       className="h-[200px] w-[300px] cursor-pointer"
                       src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Spezia_Calcio.svg/180px-Spezia_Calcio.svg.png"
@@ -4850,6 +5141,7 @@ function Rater() {
                     <img
                       onClick={() => {
                         handleEditBtnteams();
+                        setTeam(e.target.src);
                       }}
                       className="h-[200px] w-[300px] cursor-pointer"
                       src="https://upload.wikimedia.org/wikipedia/en/thumb/2/2e/Torino_FC_Logo.svg/150px-Torino_FC_Logo.svg.png"
@@ -4865,6 +5157,7 @@ function Rater() {
                     <img
                       onClick={() => {
                         handleEditBtnteams();
+                        setTeam(e.target.src);
                       }}
                       className="h-[200px] w-[300px] cursor-pointer"
                       src="https://upload.wikimedia.org/wikipedia/en/thumb/c/ce/Udinese_Calcio_logo.svg/180px-Udinese_Calcio_logo.svg.png"
@@ -4915,6 +5208,7 @@ function Rater() {
                     <img
                       onClick={() => {
                         handleEditBtnteams();
+                        setTeam(e.target.src);
                       }}
                       className="h-[200px] w-[300px] cursor-pointer"
                       src="https://upload.wikimedia.org/wikipedia/en/thumb/9/9d/Logo_Al-Nassr.png/180px-Logo_Al-Nassr.png"
@@ -4930,6 +5224,7 @@ function Rater() {
                     <img
                       onClick={() => {
                         handleEditBtnteams();
+                        setTeam(e.target.src);
                       }}
                       className="h-[200px] w-[300px] cursor-pointer"
                       src="https://upload.wikimedia.org/wikipedia/en/thumb/3/35/Celtic_FC.svg/180px-Celtic_FC.svg.png"
@@ -4945,6 +5240,7 @@ function Rater() {
                     <img
                       onClick={() => {
                         handleEditBtnteams();
+                        setTeam(e.target.src);
                       }}
                       className="h-[200px] w-[300px] cursor-pointer"
                       src="https://upload.wikimedia.org/wikipedia/en/thumb/4/43/Rangers_FC.svg/180px-Rangers_FC.svg.png"
@@ -4960,6 +5256,7 @@ function Rater() {
                     <img
                       onClick={() => {
                         handleEditBtnteams();
+                        setTeam(e.target.src);
                       }}
                       className="h-[200px] w-[300px] cursor-pointer"
                       src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/BesiktasJK-Logo.svg/180px-BesiktasJK-Logo.svg.png"
@@ -4975,6 +5272,7 @@ function Rater() {
                     <img
                       onClick={() => {
                         handleEditBtnteams();
+                        setTeam(e.target.src);
                       }}
                       className="h-[200px] w-[300px] cursor-pointer"
                       src="https://upload.wikimedia.org/wikipedia/en/thumb/d/dd/Enyimba_International_F.C._logo.png/180px-Enyimba_International_F.C._logo.png"
@@ -4990,6 +5288,7 @@ function Rater() {
                     <img
                       onClick={() => {
                         handleEditBtnteams();
+                        setTeam(e.target.src);
                       }}
                       className="h-[200px] w-[300px] cursor-pointer"
                       src="https://upload.wikimedia.org/wikipedia/en/thumb/8/8c/Al_Ahly_SC_logo.png/170px-Al_Ahly_SC_logo.png"
@@ -5005,6 +5304,7 @@ function Rater() {
                     <img
                       onClick={() => {
                         handleEditBtnteams();
+                        setTeam(e.target.src);
                       }}
                       className="h-[200px] w-[300px] cursor-pointer"
                       src="https://upload.wikimedia.org/wikipedia/en/thumb/5/55/The_logo_of_Mamelodi_Sundowns_F.C.png/220px-The_logo_of_Mamelodi_Sundowns_F.C.png"
@@ -5020,6 +5320,7 @@ function Rater() {
                     <img
                       onClick={() => {
                         handleEditBtnteams();
+                        setTeam(e.target.src);
                       }}
                       className="h-[200px] w-[300px] cursor-pointer"
                       src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/Escudo_del_C_A_River_Plate.svg/130px-Escudo_del_C_A_River_Plate.svg.png"
@@ -5035,6 +5336,7 @@ function Rater() {
                     <img
                       onClick={() => {
                         handleEditBtnteams();
+                        setTeam(e.target.src);
                       }}
                       className="h-[200px] w-[300px] cursor-pointer"
                       src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Boca_Juniors_logo18.svg/150px-Boca_Juniors_logo18.svg.png"
@@ -5050,6 +5352,7 @@ function Rater() {
                     <img
                       onClick={() => {
                         handleEditBtnteams();
+                        setTeam(e.target.src);
                       }}
                       className="h-[200px] w-[300px] cursor-pointer"
                       src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Flamengo_braz_logo.svg/150px-Flamengo_braz_logo.svg.png"
@@ -5065,6 +5368,7 @@ function Rater() {
                     <img
                       onClick={() => {
                         handleEditBtnteams();
+                        setTeam(e.target.src);
                       }}
                       className="h-[200px] w-[300px] cursor-pointer"
                       src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Los_Angeles_Galaxy_logo.svg/180px-Los_Angeles_Galaxy_logo.svg.png"
@@ -5080,6 +5384,7 @@ function Rater() {
                     <img
                       onClick={() => {
                         handleEditBtnteams();
+                        setTeam(e.target.src);
                       }}
                       className="h-[200px] w-[300px] cursor-pointer"
                       src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Palmeiras_logo.svg/190px-Palmeiras_logo.svg.png"
