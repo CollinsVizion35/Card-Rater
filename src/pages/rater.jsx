@@ -14,7 +14,7 @@ import "pure-react-carousel/dist/react-carousel.es.css";
 import { AiOutlineLeft, AiOutlineRight } from "react-icons/ai/index";
 import defaultImg from "./imgs/default-icon.png";
 
-import { AppPass } from "../contexts/AppContext";
+import { AppPass }  from "../contexts/AppContext";
 import { Link, useNavigate } from "react-router-dom";
 import { updateProfile } from "firebase/auth";
 import CardImg from "./imgs/carder.png.png";
@@ -41,13 +41,88 @@ function Rater() {
 
   const navigate = useNavigate();
 
-  // const {
-  //   // name,
-  //   // setName,
-  //   // url,
-  //   setUrl,
-  //   uploader,
-  // } = AppPass();
+  const {
+    name,
+    setName,
+    Nation, 
+    setNation, 
+    Team, 
+    setTeam,
+    Position, 
+    setPosition,
+    Acceleration,
+    setAcceleration,
+    Aggression,
+    setAggression,
+    Agility,
+    setAgility,
+    AttackingPosition,
+    setAttackingPosition,
+    Awareness,
+    setAwareness,
+    Balance,
+    setBalance,
+    BallControl,
+    setBallControl,
+    Composure,
+    setComposure,
+    Crossing,
+    setCrossing,
+    Curve,
+    setCurve,
+    Defending,
+    setDefending,
+    Dribbling,
+    setDribbling,
+    Finishing,
+    setFinishing,
+    FreeKick,
+    setFreeKick,
+    Heading,
+    setHeading,
+    Interceptions,
+    setInterceptions,
+    Jumping,
+    setJumping,
+    LongPassing,
+    setLongPassing,
+    LongShot,
+    setLongShot,
+    Marking,
+    setMarking,
+    Pace,
+    setPace,
+    Passing,
+    setPassing,
+    Penalties,
+    setPenalties,
+    Physical,
+    setPhysical,
+    Positioning,
+    setPositioning,
+    Reactions,
+    setReactions,
+    Shooting,
+    setShooting,
+    ShortPassing,
+    setShortPassing,
+    ShotPower,
+    setShotPower,
+    SlidingTackle,
+    setSlidingTackle,
+    SprintSpeed,
+    setSprintSpeed,
+    Stamina,
+    setStamina,
+    StandingTackle,
+    setStandingTackle,
+    Strength,
+    setStrength,
+    Vision,
+    setVision,
+    Volleys,
+    setVolleys,
+  } = AppPass();
 
   const save2Ref = useRef();
   const confirmedRef = useRef();
@@ -67,7 +142,7 @@ function Rater() {
   teamsRef;
 
   const data = {
-    name: name,
+    // name: name,
   };
 
   const [photoURL, setPhotoURL] = useState(defaultImg);
@@ -161,9 +236,10 @@ function Rater() {
     skillSetRef.current.style.display = "none";
   };
 
-  const handleEditBtn1st = () => {
+  const handleEditBtn1st = (e) => {
     nationRef.current.style.display = "none";
     clubNationRef.current.style.display = "block";
+    console.log(e.target.src)
   };
 
   const handleEditBtnBund = () => {
@@ -279,8 +355,10 @@ function Rater() {
               <Slide index={0}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                    onClick={() => {
+                    onClick={(e) => {
                       handleEditBtn1st();
+                      
+    console.log(e.target.src)
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
                     src="https://seekflag.com/app/uploads/2021/11/flag-of-afghanistan-01.png"
@@ -294,7 +372,7 @@ function Rater() {
               <Slide index={1}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                    onClick={() => {
+                    onClick={(e) => {
                       handleEditBtn1st();
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
@@ -307,7 +385,7 @@ function Rater() {
               <Slide index={2}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                    onClick={() => {
+                    onClick={(e) => {
                       handleEditBtn1st();
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
@@ -320,7 +398,7 @@ function Rater() {
               <Slide index={3}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                    onClick={() => {
+                    onClick={(e) => {
                       handleEditBtn1st();
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
@@ -333,7 +411,7 @@ function Rater() {
               <Slide index={4}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                    onClick={() => {
+                    onClick={(e) => {
                       handleEditBtn1st();
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
@@ -346,7 +424,7 @@ function Rater() {
               <Slide index={5}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                    onClick={() => {
+                    onClick={(e) => {
                       handleEditBtn1st();
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
@@ -361,7 +439,7 @@ function Rater() {
               <Slide index={6}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                    onClick={() => {
+                    onClick={(e) => {
                       handleEditBtn1st();
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
@@ -376,7 +454,7 @@ function Rater() {
               <Slide index={7}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                    onClick={() => {
+                    onClick={(e) => {
                       handleEditBtn1st();
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
@@ -389,7 +467,7 @@ function Rater() {
               <Slide index={8}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                    onClick={() => {
+                    onClick={(e) => {
                       handleEditBtn1st();
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
@@ -404,7 +482,7 @@ function Rater() {
               <Slide index={9}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                    onClick={() => {
+                    onClick={(e) => {
                       handleEditBtn1st();
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
@@ -417,7 +495,7 @@ function Rater() {
               <Slide index={10}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                    onClick={() => {
+                    onClick={(e) => {
                       handleEditBtn1st();
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
@@ -432,7 +510,7 @@ function Rater() {
               <Slide index={11}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                    onClick={() => {
+                    onClick={(e) => {
                       handleEditBtn1st();
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
@@ -445,7 +523,7 @@ function Rater() {
               <Slide index={12}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                    onClick={() => {
+                    onClick={(e) => {
                       handleEditBtn1st();
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
@@ -458,7 +536,7 @@ function Rater() {
               <Slide index={13}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                    onClick={() => {
+                    onClick={(e) => {
                       handleEditBtn1st();
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
@@ -473,7 +551,7 @@ function Rater() {
               <Slide index={14}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                    onClick={() => {
+                    onClick={(e) => {
                       handleEditBtn1st();
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
@@ -488,7 +566,7 @@ function Rater() {
               <Slide index={15}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                    onClick={() => {
+                    onClick={(e) => {
                       handleEditBtn1st();
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
@@ -501,7 +579,7 @@ function Rater() {
               <Slide index={16}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                    onClick={() => {
+                    onClick={(e) => {
                       handleEditBtn1st();
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
@@ -514,7 +592,7 @@ function Rater() {
               <Slide index={17}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                    onClick={() => {
+                    onClick={(e) => {
                       handleEditBtn1st();
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
@@ -527,7 +605,7 @@ function Rater() {
               <Slide index={18}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                    onClick={() => {
+                    onClick={(e) => {
                       handleEditBtn1st();
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
@@ -540,7 +618,7 @@ function Rater() {
               <Slide index={19}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                    onClick={() => {
+                    onClick={(e) => {
                       handleEditBtn1st();
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
@@ -553,7 +631,7 @@ function Rater() {
               <Slide index={20}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                    onClick={() => {
+                    onClick={(e) => {
                       handleEditBtn1st();
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
@@ -566,7 +644,7 @@ function Rater() {
               <Slide index={21}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                    onClick={() => {
+                    onClick={(e) => {
                       handleEditBtn1st();
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
@@ -582,7 +660,7 @@ function Rater() {
               <Slide index={22}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                    onClick={() => {
+                    onClick={(e) => {
                       handleEditBtn1st();
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
@@ -597,7 +675,7 @@ function Rater() {
               <Slide index={23}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                    onClick={() => {
+                    onClick={(e) => {
                       handleEditBtn1st();
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
@@ -610,7 +688,7 @@ function Rater() {
               <Slide index={24}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                    onClick={() => {
+                    onClick={(e) => {
                       handleEditBtn1st();
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
@@ -623,7 +701,7 @@ function Rater() {
               <Slide index={25}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                    onClick={() => {
+                    onClick={(e) => {
                       handleEditBtn1st();
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
@@ -638,7 +716,7 @@ function Rater() {
               <Slide index={26}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                    onClick={() => {
+                    onClick={(e) => {
                       handleEditBtn1st();
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
@@ -653,7 +731,7 @@ function Rater() {
               <Slide index={27}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                    onClick={() => {
+                    onClick={(e) => {
                       handleEditBtn1st();
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
@@ -666,7 +744,7 @@ function Rater() {
               <Slide index={28}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                    onClick={() => {
+                    onClick={(e) => {
                       handleEditBtn1st();
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
@@ -681,7 +759,7 @@ function Rater() {
               <Slide index={29}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                    onClick={() => {
+                    onClick={(e) => {
                       handleEditBtn1st();
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
@@ -696,7 +774,7 @@ function Rater() {
               <Slide index={30}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                    onClick={() => {
+                    onClick={(e) => {
                       handleEditBtn1st();
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
@@ -711,7 +789,7 @@ function Rater() {
               <Slide index={31}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                    onClick={() => {
+                    onClick={(e) => {
                       handleEditBtn1st();
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
@@ -726,7 +804,7 @@ function Rater() {
               <Slide index={32}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                    onClick={() => {
+                    onClick={(e) => {
                       handleEditBtn1st();
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
@@ -739,7 +817,7 @@ function Rater() {
               <Slide index={33}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                    onClick={() => {
+                    onClick={(e) => {
                       handleEditBtn1st();
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
@@ -754,7 +832,7 @@ function Rater() {
               <Slide index={34}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                    onClick={() => {
+                    onClick={(e) => {
                       handleEditBtn1st();
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
@@ -767,7 +845,7 @@ function Rater() {
               <Slide index={35}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                    onClick={() => {
+                    onClick={(e) => {
                       handleEditBtn1st();
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
@@ -780,7 +858,7 @@ function Rater() {
               <Slide index={36}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                    onClick={() => {
+                    onClick={(e) => {
                       handleEditBtn1st();
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
@@ -793,7 +871,7 @@ function Rater() {
               <Slide index={37}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                    onClick={() => {
+                    onClick={(e) => {
                       handleEditBtn1st();
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
@@ -808,7 +886,7 @@ function Rater() {
               <Slide index={38}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                    onClick={() => {
+                    onClick={(e) => {
                       handleEditBtn1st();
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
@@ -821,7 +899,7 @@ function Rater() {
               <Slide index={39}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                    onClick={() => {
+                    onClick={(e) => {
                       handleEditBtn1st();
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
@@ -836,7 +914,7 @@ function Rater() {
               <Slide index={40}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                    onClick={() => {
+                    onClick={(e) => {
                       handleEditBtn1st();
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
@@ -851,7 +929,7 @@ function Rater() {
               <Slide index={41}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                    onClick={() => {
+                    onClick={(e) => {
                       handleEditBtn1st();
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
@@ -864,7 +942,7 @@ function Rater() {
               <Slide index={42}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                    onClick={() => {
+                    onClick={(e) => {
                       handleEditBtn1st();
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
@@ -877,7 +955,7 @@ function Rater() {
               <Slide index={43}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                    onClick={() => {
+                    onClick={(e) => {
                       handleEditBtn1st();
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
@@ -890,7 +968,7 @@ function Rater() {
               <Slide index={44}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                    onClick={() => {
+                    onClick={(e) => {
                       handleEditBtn1st();
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
@@ -903,7 +981,7 @@ function Rater() {
               <Slide index={45}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                    onClick={() => {
+                    onClick={(e) => {
                       handleEditBtn1st();
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
@@ -918,7 +996,7 @@ function Rater() {
               <Slide index={45}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                    onClick={() => {
+                    onClick={(e) => {
                       handleEditBtn1st();
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
@@ -931,7 +1009,7 @@ function Rater() {
               <Slide index={47}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                    onClick={() => {
+                    onClick={(e) => {
                       handleEditBtn1st();
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
@@ -946,7 +1024,7 @@ function Rater() {
               <Slide index={48}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                    onClick={() => {
+                    onClick={(e) => {
                       handleEditBtn1st();
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
@@ -961,7 +1039,7 @@ function Rater() {
               <Slide index={49}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                    onClick={() => {
+                    onClick={(e) => {
                       handleEditBtn1st();
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
@@ -976,7 +1054,7 @@ function Rater() {
               <Slide index={50}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                    onClick={() => {
+                    onClick={(e) => {
                       handleEditBtn1st();
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
@@ -989,7 +1067,7 @@ function Rater() {
               <Slide index={51}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                    onClick={() => {
+                    onClick={(e) => {
                       handleEditBtn1st();
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
@@ -1002,7 +1080,7 @@ function Rater() {
               <Slide index={52}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                    onClick={() => {
+                    onClick={(e) => {
                       handleEditBtn1st();
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
@@ -1017,7 +1095,7 @@ function Rater() {
               <Slide index={53}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                    onClick={() => {
+                    onClick={(e) => {
                       handleEditBtn1st();
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
@@ -1030,7 +1108,7 @@ function Rater() {
               <Slide index={54}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                    onClick={() => {
+                    onClick={(e) => {
                       handleEditBtn1st();
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
@@ -1045,7 +1123,7 @@ function Rater() {
               <Slide index={55}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                    onClick={() => {
+                    onClick={(e) => {
                       handleEditBtn1st();
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
@@ -1058,7 +1136,7 @@ function Rater() {
               <Slide index={56}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                    onClick={() => {
+                    onClick={(e) => {
                       handleEditBtn1st();
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
@@ -1071,7 +1149,7 @@ function Rater() {
               <Slide index={57}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                    onClick={() => {
+                    onClick={(e) => {
                       handleEditBtn1st();
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
@@ -1086,7 +1164,7 @@ function Rater() {
               <Slide index={58}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                    onClick={() => {
+                    onClick={(e) => {
                       handleEditBtn1st();
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
@@ -1101,7 +1179,7 @@ function Rater() {
               <Slide index={59}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                    onClick={() => {
+                    onClick={(e) => {
                       handleEditBtn1st();
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
@@ -1114,7 +1192,7 @@ function Rater() {
               <Slide index={60}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                    onClick={() => {
+                    onClick={(e) => {
                       handleEditBtn1st();
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
@@ -1127,7 +1205,7 @@ function Rater() {
               <Slide index={61}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                    onClick={() => {
+                    onClick={(e) => {
                       handleEditBtn1st();
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
@@ -1140,7 +1218,7 @@ function Rater() {
               <Slide index={62}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                    onClick={() => {
+                    onClick={(e) => {
                       handleEditBtn1st();
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
@@ -1153,7 +1231,7 @@ function Rater() {
               <Slide index={63}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                    onClick={() => {
+                    onClick={(e) => {
                       handleEditBtn1st();
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
@@ -1166,7 +1244,7 @@ function Rater() {
               <Slide index={64}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                    onClick={() => {
+                    onClick={(e) => {
                       handleEditBtn1st();
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
@@ -1179,7 +1257,7 @@ function Rater() {
               <Slide index={65}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                    onClick={() => {
+                    onClick={(e) => {
                       handleEditBtn1st();
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
@@ -1192,7 +1270,7 @@ function Rater() {
               <Slide index={66}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                    onClick={() => {
+                    onClick={(e) => {
                       handleEditBtn1st();
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
@@ -1205,7 +1283,7 @@ function Rater() {
               <Slide index={67}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                    onClick={() => {
+                    onClick={(e) => {
                       handleEditBtn1st();
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
@@ -1218,7 +1296,7 @@ function Rater() {
               <Slide index={68}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                    onClick={() => {
+                    onClick={(e) => {
                       handleEditBtn1st();
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
@@ -1231,7 +1309,7 @@ function Rater() {
               <Slide index={69}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                    onClick={() => {
+                    onClick={(e) => {
                       handleEditBtn1st();
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
@@ -1246,7 +1324,7 @@ function Rater() {
               <Slide index={70}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                    onClick={() => {
+                    onClick={(e) => {
                       handleEditBtn1st();
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
@@ -1259,7 +1337,7 @@ function Rater() {
               <Slide index={71}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                    onClick={() => {
+                    onClick={(e) => {
                       handleEditBtn1st();
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
@@ -1274,7 +1352,7 @@ function Rater() {
               <Slide index={72}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                    onClick={() => {
+                    onClick={(e) => {
                       handleEditBtn1st();
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
@@ -1287,7 +1365,7 @@ function Rater() {
               <Slide index={73}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                    onClick={() => {
+                    onClick={(e) => {
                       handleEditBtn1st();
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
@@ -1300,7 +1378,7 @@ function Rater() {
               <Slide index={74}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                    onClick={() => {
+                    onClick={(e) => {
                       handleEditBtn1st();
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
@@ -1315,7 +1393,7 @@ function Rater() {
               <Slide index={75}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                    onClick={() => {
+                    onClick={(e) => {
                       handleEditBtn1st();
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
@@ -1328,7 +1406,7 @@ function Rater() {
               <Slide index={76}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                    onClick={() => {
+                    onClick={(e) => {
                       handleEditBtn1st();
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
@@ -1341,7 +1419,7 @@ function Rater() {
               <Slide index={77}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                    onClick={() => {
+                    onClick={(e) => {
                       handleEditBtn1st();
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
@@ -1354,7 +1432,7 @@ function Rater() {
               <Slide index={78}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                    onClick={() => {
+                    onClick={(e) => {
                       handleEditBtn1st();
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
@@ -1369,7 +1447,7 @@ function Rater() {
               <Slide index={79}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                    onClick={() => {
+                    onClick={(e) => {
                       handleEditBtn1st();
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
@@ -1382,7 +1460,7 @@ function Rater() {
               <Slide index={80}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                    onClick={() => {
+                    onClick={(e) => {
                       handleEditBtn1st();
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
@@ -1395,7 +1473,7 @@ function Rater() {
               <Slide index={81}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                    onClick={() => {
+                    onClick={(e) => {
                       handleEditBtn1st();
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
@@ -1408,7 +1486,7 @@ function Rater() {
               <Slide index={82}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                    onClick={() => {
+                    onClick={(e) => {
                       handleEditBtn1st();
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
@@ -1421,7 +1499,7 @@ function Rater() {
               <Slide index={83}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                    onClick={() => {
+                    onClick={(e) => {
                       handleEditBtn1st();
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
@@ -1434,7 +1512,7 @@ function Rater() {
               <Slide index={84}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                    onClick={() => {
+                    onClick={(e) => {
                       handleEditBtn1st();
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
@@ -1447,7 +1525,7 @@ function Rater() {
               <Slide index={85}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                    onClick={() => {
+                    onClick={(e) => {
                       handleEditBtn1st();
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
@@ -1460,7 +1538,7 @@ function Rater() {
               <Slide index={86}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                    onClick={() => {
+                    onClick={(e) => {
                       handleEditBtn1st();
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
@@ -1473,7 +1551,7 @@ function Rater() {
               <Slide index={87}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                    onClick={() => {
+                    onClick={(e) => {
                       handleEditBtn1st();
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
@@ -1488,7 +1566,7 @@ function Rater() {
               <Slide index={88}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                    onClick={() => {
+                    onClick={(e) => {
                       handleEditBtn1st();
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
@@ -1501,7 +1579,7 @@ function Rater() {
               <Slide index={89}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                    onClick={() => {
+                    onClick={(e) => {
                       handleEditBtn1st();
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
@@ -1516,7 +1594,7 @@ function Rater() {
               <Slide index={90}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                    onClick={() => {
+                    onClick={(e) => {
                       handleEditBtn1st();
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
@@ -1529,7 +1607,7 @@ function Rater() {
               <Slide index={91}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                    onClick={() => {
+                    onClick={(e) => {
                       handleEditBtn1st();
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
@@ -1544,7 +1622,7 @@ function Rater() {
               <Slide index={92}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                    onClick={() => {
+                    onClick={(e) => {
                       handleEditBtn1st();
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
@@ -1557,7 +1635,7 @@ function Rater() {
               <Slide index={93}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                    onClick={() => {
+                    onClick={(e) => {
                       handleEditBtn1st();
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
@@ -1570,7 +1648,7 @@ function Rater() {
               <Slide index={94}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                    onClick={() => {
+                    onClick={(e) => {
                       handleEditBtn1st();
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
@@ -1583,7 +1661,7 @@ function Rater() {
               <Slide index={95}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                    onClick={() => {
+                    onClick={(e) => {
                       handleEditBtn1st();
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
@@ -1596,7 +1674,7 @@ function Rater() {
               <Slide index={96}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                    onClick={() => {
+                    onClick={(e) => {
                       handleEditBtn1st();
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
@@ -1609,7 +1687,7 @@ function Rater() {
               <Slide index={97}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                    onClick={() => {
+                    onClick={(e) => {
                       handleEditBtn1st();
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
@@ -1622,7 +1700,7 @@ function Rater() {
               <Slide index={98}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                    onClick={() => {
+                    onClick={(e) => {
                       handleEditBtn1st();
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
@@ -1637,7 +1715,7 @@ function Rater() {
               <Slide index={99}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                    onClick={() => {
+                    onClick={(e) => {
                       handleEditBtn1st();
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
@@ -1652,7 +1730,7 @@ function Rater() {
               <Slide index={100}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                    onClick={() => {
+                    onClick={(e) => {
                       handleEditBtn1st();
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
@@ -1667,7 +1745,7 @@ function Rater() {
               <Slide index={101}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                    onClick={() => {
+                    onClick={(e) => {
                       handleEditBtn1st();
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
@@ -1682,7 +1760,7 @@ function Rater() {
               <Slide index={102}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                    onClick={() => {
+                    onClick={(e) => {
                       handleEditBtn1st();
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
@@ -1695,7 +1773,7 @@ function Rater() {
               <Slide index={103}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                    onClick={() => {
+                    onClick={(e) => {
                       handleEditBtn1st();
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
@@ -1710,7 +1788,7 @@ function Rater() {
               <Slide index={104}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                    onClick={() => {
+                    onClick={(e) => {
                       handleEditBtn1st();
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
@@ -1725,7 +1803,7 @@ function Rater() {
               <Slide index={105}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                    onClick={() => {
+                    onClick={(e) => {
                       handleEditBtn1st();
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
@@ -1738,7 +1816,7 @@ function Rater() {
               <Slide index={106}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                    onClick={() => {
+                    onClick={(e) => {
                       handleEditBtn1st();
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
@@ -1751,7 +1829,7 @@ function Rater() {
               <Slide index={107}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                    onClick={() => {
+                    onClick={(e) => {
                       handleEditBtn1st();
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
@@ -1766,7 +1844,7 @@ function Rater() {
               <Slide index={108}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                    onClick={() => {
+                    onClick={(e) => {
                       handleEditBtn1st();
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
@@ -1781,7 +1859,7 @@ function Rater() {
               <Slide index={109}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                    onClick={() => {
+                    onClick={(e) => {
                       handleEditBtn1st();
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
@@ -1796,7 +1874,7 @@ function Rater() {
               <Slide index={110}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                    onClick={() => {
+                    onClick={(e) => {
                       handleEditBtn1st();
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
@@ -1809,7 +1887,7 @@ function Rater() {
               <Slide index={111}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                    onClick={() => {
+                    onClick={(e) => {
                       handleEditBtn1st();
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
@@ -1824,7 +1902,7 @@ function Rater() {
               <Slide index={112}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                    onClick={() => {
+                    onClick={(e) => {
                       handleEditBtn1st();
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
@@ -1837,7 +1915,7 @@ function Rater() {
               <Slide index={113}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                    onClick={() => {
+                    onClick={(e) => {
                       handleEditBtn1st();
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
@@ -1850,7 +1928,7 @@ function Rater() {
               <Slide index={114}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                    onClick={() => {
+                    onClick={(e) => {
                       handleEditBtn1st();
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
@@ -1865,7 +1943,7 @@ function Rater() {
               <Slide index={115}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                    onClick={() => {
+                    onClick={(e) => {
                       handleEditBtn1st();
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
@@ -1880,7 +1958,7 @@ function Rater() {
               <Slide index={116}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                    onClick={() => {
+                    onClick={(e) => {
                       handleEditBtn1st();
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
@@ -1893,7 +1971,7 @@ function Rater() {
               <Slide index={117}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                    onClick={() => {
+                    onClick={(e) => {
                       handleEditBtn1st();
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
@@ -1908,7 +1986,7 @@ function Rater() {
               <Slide index={118}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                    onClick={() => {
+                    onClick={(e) => {
                       handleEditBtn1st();
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
@@ -1923,7 +2001,7 @@ function Rater() {
               <Slide index={119}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                    onClick={() => {
+                    onClick={(e) => {
                       handleEditBtn1st();
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
@@ -1936,7 +2014,7 @@ function Rater() {
               <Slide index={120}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                    onClick={() => {
+                    onClick={(e) => {
                       handleEditBtn1st();
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
@@ -1949,7 +2027,7 @@ function Rater() {
               <Slide index={121}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                    onClick={() => {
+                    onClick={(e) => {
                       handleEditBtn1st();
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
@@ -1964,7 +2042,7 @@ function Rater() {
               <Slide index={122}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                    onClick={() => {
+                    onClick={(e) => {
                       handleEditBtn1st();
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
@@ -1979,7 +2057,7 @@ function Rater() {
               <Slide index={123}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                    onClick={() => {
+                    onClick={(e) => {
                       handleEditBtn1st();
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
@@ -1992,7 +2070,7 @@ function Rater() {
               <Slide index={124}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                    onClick={() => {
+                    onClick={(e) => {
                       handleEditBtn1st();
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
@@ -2007,7 +2085,7 @@ function Rater() {
               <Slide index={125}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                    onClick={() => {
+                    onClick={(e) => {
                       handleEditBtn1st();
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
@@ -2020,7 +2098,7 @@ function Rater() {
               <Slide index={126}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                    onClick={() => {
+                    onClick={(e) => {
                       handleEditBtn1st();
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
@@ -2033,7 +2111,7 @@ function Rater() {
               <Slide index={127}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                    onClick={() => {
+                    onClick={(e) => {
                       handleEditBtn1st();
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
@@ -2048,7 +2126,7 @@ function Rater() {
               <Slide index={128}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                    onClick={() => {
+                    onClick={(e) => {
                       handleEditBtn1st();
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
@@ -2063,7 +2141,7 @@ function Rater() {
               <Slide index={129}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                    onClick={() => {
+                    onClick={(e) => {
                       handleEditBtn1st();
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
@@ -2076,7 +2154,7 @@ function Rater() {
               <Slide index={130}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                    onClick={() => {
+                    onClick={(e) => {
                       handleEditBtn1st();
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
@@ -2089,7 +2167,7 @@ function Rater() {
               <Slide index={131}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                    onClick={() => {
+                    onClick={(e) => {
                       handleEditBtn1st();
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
@@ -2104,7 +2182,7 @@ function Rater() {
               <Slide index={132}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                    onClick={() => {
+                    onClick={(e) => {
                       handleEditBtn1st();
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
@@ -2117,7 +2195,7 @@ function Rater() {
               <Slide index={133}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                    onClick={() => {
+                    onClick={(e) => {
                       handleEditBtn1st();
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
@@ -2132,7 +2210,7 @@ function Rater() {
               <Slide index={134}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                    onClick={() => {
+                    onClick={(e) => {
                       handleEditBtn1st();
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
@@ -2145,7 +2223,7 @@ function Rater() {
               <Slide index={135}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                    onClick={() => {
+                    onClick={(e) => {
                       handleEditBtn1st();
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
@@ -2160,7 +2238,7 @@ function Rater() {
               <Slide index={136}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                    onClick={() => {
+                    onClick={(e) => {
                       handleEditBtn1st();
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
@@ -2175,7 +2253,7 @@ function Rater() {
               <Slide index={137}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                    onClick={() => {
+                    onClick={(e) => {
                       handleEditBtn1st();
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
@@ -2188,7 +2266,7 @@ function Rater() {
               <Slide index={138}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                    onClick={() => {
+                    onClick={(e) => {
                       handleEditBtn1st();
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
@@ -2203,7 +2281,7 @@ function Rater() {
               <Slide index={139}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                    onClick={() => {
+                    onClick={(e) => {
                       handleEditBtn1st();
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
@@ -2216,7 +2294,7 @@ function Rater() {
               <Slide index={140}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                    onClick={() => {
+                    onClick={(e) => {
                       handleEditBtn1st();
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
@@ -2231,7 +2309,7 @@ function Rater() {
               <Slide index={141}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                    onClick={() => {
+                    onClick={(e) => {
                       handleEditBtn1st();
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
@@ -2244,7 +2322,7 @@ function Rater() {
               <Slide index={142}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                    onClick={() => {
+                    onClick={(e) => {
                       handleEditBtn1st();
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
@@ -2257,7 +2335,7 @@ function Rater() {
               <Slide index={143}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                    onClick={() => {
+                    onClick={(e) => {
                       handleEditBtn1st();
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
@@ -2270,7 +2348,7 @@ function Rater() {
               <Slide index={144}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                    onClick={() => {
+                    onClick={(e) => {
                       handleEditBtn1st();
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
@@ -2283,7 +2361,7 @@ function Rater() {
               <Slide index={145}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                    onClick={() => {
+                    onClick={(e) => {
                       handleEditBtn1st();
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
@@ -2298,7 +2376,7 @@ function Rater() {
               <Slide index={146}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                    onClick={() => {
+                    onClick={(e) => {
                       handleEditBtn1st();
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
@@ -2313,7 +2391,7 @@ function Rater() {
               <Slide index={147}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                    onClick={() => {
+                    onClick={(e) => {
                       handleEditBtn1st();
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
@@ -2328,7 +2406,7 @@ function Rater() {
               <Slide index={148}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                    onClick={() => {
+                    onClick={(e) => {
                       handleEditBtn1st();
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
@@ -2341,7 +2419,7 @@ function Rater() {
               <Slide index={149}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                    onClick={() => {
+                    onClick={(e) => {
                       handleEditBtn1st();
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
@@ -2356,7 +2434,7 @@ function Rater() {
               <Slide index={150}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                    onClick={() => {
+                    onClick={(e) => {
                       handleEditBtn1st();
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
@@ -2371,7 +2449,7 @@ function Rater() {
               <Slide index={151}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                    onClick={() => {
+                    onClick={(e) => {
                       handleEditBtn1st();
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
@@ -2386,7 +2464,7 @@ function Rater() {
               <Slide index={152}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                    onClick={() => {
+                    onClick={(e) => {
                       handleEditBtn1st();
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
@@ -2401,7 +2479,7 @@ function Rater() {
               <Slide index={153}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                    onClick={() => {
+                    onClick={(e) => {
                       handleEditBtn1st();
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
@@ -2414,7 +2492,7 @@ function Rater() {
               <Slide index={154}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                    onClick={() => {
+                    onClick={(e) => {
                       handleEditBtn1st();
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
@@ -2427,7 +2505,7 @@ function Rater() {
               <Slide index={155}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                    onClick={() => {
+                    onClick={(e) => {
                       handleEditBtn1st();
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
@@ -2442,7 +2520,7 @@ function Rater() {
               <Slide index={156}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                    onClick={() => {
+                    onClick={(e) => {
                       handleEditBtn1st();
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
@@ -2457,7 +2535,7 @@ function Rater() {
               <Slide index={157}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                    onClick={() => {
+                    onClick={(e) => {
                       handleEditBtn1st();
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
@@ -2472,7 +2550,7 @@ function Rater() {
               <Slide index={158}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                    onClick={() => {
+                    onClick={(e) => {
                       handleEditBtn1st();
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
@@ -2487,7 +2565,7 @@ function Rater() {
               <Slide index={159}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                    onClick={() => {
+                    onClick={(e) => {
                       handleEditBtn1st();
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
@@ -2502,7 +2580,7 @@ function Rater() {
               <Slide index={160}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                    onClick={() => {
+                    onClick={(e) => {
                       handleEditBtn1st();
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
@@ -2517,7 +2595,7 @@ function Rater() {
               <Slide index={161}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                    onClick={() => {
+                    onClick={(e) => {
                       handleEditBtn1st();
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
@@ -2530,7 +2608,7 @@ function Rater() {
               <Slide index={162}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                    onClick={() => {
+                    onClick={(e) => {
                       handleEditBtn1st();
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
@@ -2545,7 +2623,7 @@ function Rater() {
               <Slide index={163}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                    onClick={() => {
+                    onClick={(e) => {
                       handleEditBtn1st();
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
@@ -2560,7 +2638,7 @@ function Rater() {
               <Slide index={164}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                    onClick={() => {
+                    onClick={(e) => {
                       handleEditBtn1st();
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
@@ -2575,7 +2653,7 @@ function Rater() {
               <Slide index={165}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                    onClick={() => {
+                    onClick={(e) => {
                       handleEditBtn1st();
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
@@ -2588,7 +2666,7 @@ function Rater() {
               <Slide index={166}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                    onClick={() => {
+                    onClick={(e) => {
                       handleEditBtn1st();
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
@@ -2603,7 +2681,7 @@ function Rater() {
               <Slide index={167}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                    onClick={() => {
+                    onClick={(e) => {
                       handleEditBtn1st();
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
@@ -2616,7 +2694,7 @@ function Rater() {
               <Slide index={168}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                    onClick={() => {
+                    onClick={(e) => {
                       handleEditBtn1st();
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
@@ -2631,7 +2709,7 @@ function Rater() {
               <Slide index={169}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                    onClick={() => {
+                    onClick={(e) => {
                       handleEditBtn1st();
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
@@ -2644,7 +2722,7 @@ function Rater() {
               <Slide index={170}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                    onClick={() => {
+                    onClick={(e) => {
                       handleEditBtn1st();
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
@@ -2659,7 +2737,7 @@ function Rater() {
               <Slide index={171}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                    onClick={() => {
+                    onClick={(e) => {
                       handleEditBtn1st();
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
@@ -2672,7 +2750,7 @@ function Rater() {
               <Slide index={172}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                    onClick={() => {
+                    onClick={(e) => {
                       handleEditBtn1st();
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
@@ -2687,7 +2765,7 @@ function Rater() {
               <Slide index={173}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                    onClick={() => {
+                    onClick={(e) => {
                       handleEditBtn1st();
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
@@ -2702,7 +2780,7 @@ function Rater() {
               <Slide index={174}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                    onClick={() => {
+                    onClick={(e) => {
                       handleEditBtn1st();
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
@@ -2717,7 +2795,7 @@ function Rater() {
               <Slide index={175}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                    onClick={() => {
+                    onClick={(e) => {
                       handleEditBtn1st();
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
@@ -2732,7 +2810,7 @@ function Rater() {
               <Slide index={176}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                    onClick={() => {
+                    onClick={(e) => {
                       handleEditBtn1st();
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
@@ -2745,7 +2823,7 @@ function Rater() {
               <Slide index={177}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                    onClick={() => {
+                    onClick={(e) => {
                       handleEditBtn1st();
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
@@ -2758,7 +2836,7 @@ function Rater() {
               <Slide index={178}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                    onClick={() => {
+                    onClick={(e) => {
                       handleEditBtn1st();
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
@@ -2773,7 +2851,7 @@ function Rater() {
               <Slide index={179}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                    onClick={() => {
+                    onClick={(e) => {
                       handleEditBtn1st();
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
@@ -2786,7 +2864,7 @@ function Rater() {
               <Slide index={180}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                    onClick={() => {
+                    onClick={(e) => {
                       handleEditBtn1st();
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
@@ -2799,7 +2877,7 @@ function Rater() {
               <Slide index={181}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                    onClick={() => {
+                    onClick={(e) => {
                       handleEditBtn1st();
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
@@ -2814,7 +2892,7 @@ function Rater() {
               <Slide index={182}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                    onClick={() => {
+                    onClick={(e) => {
                       handleEditBtn1st();
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
@@ -2827,7 +2905,7 @@ function Rater() {
               <Slide index={183}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                    onClick={() => {
+                    onClick={(e) => {
                       handleEditBtn1st();
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
@@ -2840,7 +2918,7 @@ function Rater() {
               <Slide index={184}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                    onClick={() => {
+                    onClick={(e) => {
                       handleEditBtn1st();
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
@@ -2853,7 +2931,7 @@ function Rater() {
               <Slide index={185}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                    onClick={() => {
+                    onClick={(e) => {
                       handleEditBtn1st();
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
@@ -2868,7 +2946,7 @@ function Rater() {
               <Slide index={186}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                    onClick={() => {
+                    onClick={(e) => {
                       handleEditBtn1st();
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
@@ -2883,7 +2961,7 @@ function Rater() {
               <Slide index={187}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                    onClick={() => {
+                    onClick={(e) => {
                       handleEditBtn1st();
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
@@ -2896,7 +2974,7 @@ function Rater() {
               <Slide index={188}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                    onClick={() => {
+                    onClick={(e) => {
                       handleEditBtn1st();
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
@@ -2911,7 +2989,7 @@ function Rater() {
               <Slide index={189}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                    onClick={() => {
+                    onClick={(e) => {
                       handleEditBtn1st();
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
@@ -2924,7 +3002,7 @@ function Rater() {
               <Slide index={190}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                    onClick={() => {
+                    onClick={(e) => {
                       handleEditBtn1st();
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
@@ -2937,7 +3015,7 @@ function Rater() {
               <Slide index={191}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                    onClick={() => {
+                    onClick={(e) => {
                       handleEditBtn1st();
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
@@ -2952,7 +3030,7 @@ function Rater() {
               <Slide index={192}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                    onClick={() => {
+                    onClick={(e) => {
                       handleEditBtn1st();
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
@@ -2965,7 +3043,7 @@ function Rater() {
               <Slide index={193}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                    onClick={() => {
+                    onClick={(e) => {
                       handleEditBtn1st();
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
@@ -2978,7 +3056,7 @@ function Rater() {
               <Slide index={194}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                    onClick={() => {
+                    onClick={(e) => {
                       handleEditBtn1st();
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
@@ -2991,7 +3069,7 @@ function Rater() {
               <Slide index={195}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                    onClick={() => {
+                    onClick={(e) => {
                       handleEditBtn1st();
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
@@ -3004,7 +3082,7 @@ function Rater() {
               <Slide index={196}>
                 <div className="flex flex-col items-center content-center justify-center">
                   <img
-                    onClick={() => {
+                    onClick={(e) => {
                       handleEditBtn1st();
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
@@ -5061,7 +5139,9 @@ function Rater() {
           </button>
         </div>
         <div className="relative flex flex-col justify-center items-center mb-4 mt-10">
-          <div className=" lg:text-7xl text-3xl lg:mb-16">Add Potrait to Card</div>
+          <div className=" lg:text-7xl text-3xl lg:mb-16">
+            Add Potrait to Card
+          </div>
 
           <div className="flex lg:flex-row flex-col">
             <div className="rounded-[50%] h-36 mx-auto  lg:mb-10 w-36 border flex justify-center items-center bg-white">
@@ -5195,7 +5275,7 @@ function Rater() {
                 <select
                   onChange={(e) => {
                     // selectedClass();
-                    setClassRoom(e.target.value);
+                    setPosition(e.target.value);
                   }}
                   className="rounder resize-none w-full h-[6rem] bg-[#01112B] text-base border-[5px] border-[#34FEF8] text-[#34FEF8] mb-2 mt-2 p-3 pl-4 pt-0 placeholder-opacity-60 placeholder-[#34FEF8]"
                 >
@@ -5289,7 +5369,7 @@ function Rater() {
 
           <div>
             <label className="mb text-md text-[#34FEF8] font-bold uppercase">
-              Position
+              Acceleration
             </label>
             <br />
             <div
@@ -5300,7 +5380,7 @@ function Rater() {
                 <select
                   onChange={(e) => {
                     // selectedClass();
-                    setClassRoom(e.target.value);
+                    setAcceleration(e.target.value);
                   }}
                   className="rounder resize-none w-full h-[6rem] bg-[#01112B] text-base border-[5px] border-[#34FEF8] text-[#34FEF8] mb-2 mt-2 p-3 pl-4 pt-0 placeholder-opacity-60 placeholder-[#34FEF8]"
                 >
@@ -5310,82 +5390,307 @@ function Rater() {
                     className="block"
                     disabled
                   >
-                    Select your Preferred Playing Position
+                    Select a rating
                   </option>
-                  <option className="py-2" value="GK">
-                    GoalKeeper
+                  <option clasName="py-2" value="99">
+                    99
                   </option>
-                  <option className="py-2" value="RB">
-                    Right Back
+                  <option clasName="py-2" value="98">
+                    98
                   </option>
-                  <option className="py-2" value="RCB">
-                    Right Center Back
+                  <option clasName="py-2" value="97">
+                    97
                   </option>
-                  <option className="py-2" value="CB">
-                    Center Back
+                  <option clasName="py-2" value="96">
+                    96
                   </option>
-                  <option className="py-2" value="LCB">
-                    Left Center Back
+                  <option clasName="py-2" value="95">
+                    95
                   </option>
-                  <option className="py-2" value="LB">
-                    Left Back
+                  <option clasName="py-2" value="94">
+                    94
                   </option>
-                  <option className="py-2" value="RWB">
-                    Right Wing Back
+                  <option clasName="py-2" value="93">
+                    93
                   </option>
-                  <option className="py-2" value="LWB">
-                    Left Wing Back
+                  <option clasName="py-2" value="92">
+                    92
                   </option>
-                  <option className="py-2" value="RDM">
-                    Right Defensive Midfielder
+                  <option clasName="py-2" value="91">
+                    91
                   </option>
-                  <option className="py-2" value="DM">
-                    Defensive Midfielder
+                  <option clasName="py-2" value="90">
+                    90
                   </option>
-                  <option className="py-2" value="LDM">
-                    Left Defensive Midfielder
+                  <option clasName="py-2" value="89">
+                    89
                   </option>
-                  <option className="py-2" value="RM">
-                    Right Midfielder
+                  <option clasName="py-2" value="88">
+                    88
                   </option>
-                  <option className="py-2" value="RCM">
-                    Right Center Midfielder
+                  <option clasName="py-2" value="87">
+                    87
                   </option>
-                  <option className="py-2" value="CM">
-                    Center Midfielder
+                  <option clasName="py-2" value="86">
+                    86
                   </option>
-                  <option className="py-2" value="LCM">
-                    Left Center Midfielder
+                  <option clasName="py-2" value="85">
+                    85
                   </option>
-                  <option className="py-2" value="LM">
-                    Left Midfielder
+                  <option clasName="py-2" value="84">
+                    84
                   </option>
-                  <option className="py-2" value="RAM">
-                    Right Attacking Midfielder
+                  <option clasName="py-2" value="83">
+                    83
                   </option>
-                  <option className="py-2" value="AM">
-                    Attacking Midfielder
+                  <option clasName="py-2" value="82">
+                    82
                   </option>
-                  <option className="py-2" value="LAM">
-                    Left Attacking Midfielder
+                  <option clasName="py-2" value="81">
+                    81
                   </option>
-                  <option className="py-2" value="RW">
-                    Right Winger
+                  <option clasName="py-2" value="80">
+                    80
                   </option>
-                  <option className="py-2" value="LW">
-                    Left Winger
+                  <option clasName="py-2" value="79">
+                    79
                   </option>
-                  <option className="py-2" value="SS">
-                    Second Striker
+                  <option clasName="py-2" value="78">
+                    78
                   </option>
-                  <option className="py-2" value="RS">
-                    Right Striker
+                  <option clasName="py-2" value="77">
+                    77
                   </option>
-                  <option className="py-2" value="LS">
-                    Left Striker
+                  <option clasName="py-2" value="76">
+                    76
                   </option>
-                  <option className="py-2" value="CF">
-                    Center Foward
+                  <option clasName="py-2" value="75">
+                    75
+                  </option>
+                  <option clasName="py-2" value="74">
+                    74
+                  </option>
+                  <option clasName="py-2" value="73">
+                    73
+                  </option>
+                  <option clasName="py-2" value="72">
+                    72
+                  </option>
+                  <option clasName="py-2" value="71">
+                    71
+                  </option>
+                  <option clasName="py-2" value="70">
+                    70
+                  </option>
+                  <option clasName="py-2" value="69">
+                    69
+                  </option>
+                  <option clasName="py-2" value="68">
+                    68
+                  </option>
+                  <option clasName="py-2" value="67">
+                    67
+                  </option>
+                  <option clasName="py-2" value="66">
+                    66
+                  </option>
+                  <option clasName="py-2" value="65">
+                    65
+                  </option>
+                  <option clasName="py-2" value="64">
+                    64
+                  </option>
+                  <option clasName="py-2" value="63">
+                    63
+                  </option>
+                  <option clasName="py-2" value="62">
+                    62
+                  </option>
+                  <option clasName="py-2" value="61">
+                    61
+                  </option>
+                  <option clasName="py-2" value="60">
+                    60
+                  </option>
+                  <option clasName="py-2" value="59">
+                    59
+                  </option>
+                  <option clasName="py-2" value="58">
+                    58
+                  </option>
+                  <option clasName="py-2" value="57">
+                    57
+                  </option>
+                  <option clasName="py-2" value="56">
+                    56
+                  </option>
+                  <option clasName="py-2" value="55">
+                    55
+                  </option>
+                  <option clasName="py-2" value="54">
+                    54
+                  </option>
+                  <option clasName="py-2" value="53">
+                    53
+                  </option>
+                  <option clasName="py-2" value="52">
+                    52
+                  </option>
+                  <option clasName="py-2" value="51">
+                    51
+                  </option>
+                  <option clasName="py-2" value="50">
+                    50
+                  </option>
+                  <option clasName="py-2" value="49">
+                    49
+                  </option>
+                  <option clasName="py-2" value="48">
+                    48
+                  </option>
+                  <option clasName="py-2" value="47">
+                    47
+                  </option>
+                  <option clasName="py-2" value="46">
+                    46
+                  </option>
+                  <option clasName="py-2" value="45">
+                    45
+                  </option>
+                  <option clasName="py-2" value="44">
+                    44
+                  </option>
+                  <option clasName="py-2" value="43">
+                    43
+                  </option>
+                  <option clasName="py-2" value="42">
+                    42
+                  </option>
+                  <option clasName="py-2" value="41">
+                    41
+                  </option>
+                  <option clasName="py-2" value="40">
+                    40
+                  </option>
+                  <option clasName="py-2" value="39">
+                    39
+                  </option>
+                  <option clasName="py-2" value="38">
+                    38
+                  </option>
+                  <option clasName="py-2" value="37">
+                    37
+                  </option>
+                  <option clasName="py-2" value="36">
+                    36
+                  </option>
+                  <option clasName="py-2" value="35">
+                    35
+                  </option>
+                  <option clasName="py-2" value="34">
+                    34
+                  </option>
+                  <option clasName="py-2" value="33">
+                    33
+                  </option>
+                  <option clasName="py-2" value="32">
+                    32
+                  </option>
+                  <option clasName="py-2" value="31">
+                    31
+                  </option>
+                  <option clasName="py-2" value="30">
+                    30
+                  </option>
+                  <option clasName="py-2" value="29">
+                    29
+                  </option>
+                  <option clasName="py-2" value="28">
+                    28
+                  </option>
+                  <option clasName="py-2" value="27">
+                    27
+                  </option>
+                  <option clasName="py-2" value="26">
+                    26
+                  </option>
+                  <option clasName="py-2" value="25">
+                    25
+                  </option>
+                  <option clasName="py-2" value="24">
+                    24
+                  </option>
+                  <option clasName="py-2" value="23">
+                    23
+                  </option>
+                  <option clasName="py-2" value="22">
+                    22
+                  </option>
+                  <option clasName="py-2" value="21">
+                    21
+                  </option>
+                  <option clasName="py-2" value="20">
+                    20
+                  </option>
+                  <option clasName="py-2" value="19">
+                    19
+                  </option>
+                  <option clasName="py-2" value="18">
+                    18
+                  </option>
+                  <option clasName="py-2" value="17">
+                    17
+                  </option>
+                  <option clasName="py-2" value="16">
+                    16
+                  </option>
+                  <option clasName="py-2" value="15">
+                    15
+                  </option>
+                  <option clasName="py-2" value="14">
+                    14
+                  </option>
+                  <option clasName="py-2" value="13">
+                    13
+                  </option>
+                  <option clasName="py-2" value="12">
+                    12
+                  </option>
+                  <option clasName="py-2" value="11">
+                    11
+                  </option>
+                  <option clasName="py-2" value="10">
+                    10
+                  </option>
+                  <option clasName="py-2" value="9">
+                    9
+                  </option>
+                  <option clasName="py-2" value="8">
+                    8
+                  </option>
+                  <option clasName="py-2" value="7">
+                    7
+                  </option>
+                  <option clasName="py-2" value="6">
+                    6
+                  </option>
+                  <option clasName="py-2" value="5">
+                    5
+                  </option>
+                  <option clasName="py-2" value="4">
+                    4
+                  </option>
+                  <option clasName="py-2" value="3">
+                    3
+                  </option>
+                  <option clasName="py-2" value="2">
+                    2
+                  </option>
+                  <option clasName="py-2" value="1">
+                    1
+                  </option>
+                  <option clasName="py-2" value="0">
+                    0
                   </option>
                 </select>
               </div>
@@ -5394,7 +5699,7 @@ function Rater() {
 
           <div>
             <label className="mb text-md text-[#34FEF8] font-bold uppercase">
-              Position
+              Aggression
             </label>
             <br />
             <div
@@ -5405,7 +5710,7 @@ function Rater() {
                 <select
                   onChange={(e) => {
                     // selectedClass();
-                    setClassRoom(e.target.value);
+                    setAggression(e.target.value);
                   }}
                   className="rounder resize-none w-full h-[6rem] bg-[#01112B] text-base border-[5px] border-[#34FEF8] text-[#34FEF8] mb-2 mt-2 p-3 pl-4 pt-0 placeholder-opacity-60 placeholder-[#34FEF8]"
                 >
@@ -5415,82 +5720,307 @@ function Rater() {
                     className="block"
                     disabled
                   >
-                    Select your Preferred Playing Position
+                    Select a rating
                   </option>
-                  <option className="py-2" value="GK">
-                    GoalKeeper
+                  <option clasName="py-2" value="99">
+                    99
                   </option>
-                  <option className="py-2" value="RB">
-                    Right Back
+                  <option clasName="py-2" value="98">
+                    98
                   </option>
-                  <option className="py-2" value="RCB">
-                    Right Center Back
+                  <option clasName="py-2" value="97">
+                    97
                   </option>
-                  <option className="py-2" value="CB">
-                    Center Back
+                  <option clasName="py-2" value="96">
+                    96
                   </option>
-                  <option className="py-2" value="LCB">
-                    Left Center Back
+                  <option clasName="py-2" value="95">
+                    95
                   </option>
-                  <option className="py-2" value="LB">
-                    Left Back
+                  <option clasName="py-2" value="94">
+                    94
                   </option>
-                  <option className="py-2" value="RWB">
-                    Right Wing Back
+                  <option clasName="py-2" value="93">
+                    93
                   </option>
-                  <option className="py-2" value="LWB">
-                    Left Wing Back
+                  <option clasName="py-2" value="92">
+                    92
                   </option>
-                  <option className="py-2" value="RDM">
-                    Right Defensive Midfielder
+                  <option clasName="py-2" value="91">
+                    91
                   </option>
-                  <option className="py-2" value="DM">
-                    Defensive Midfielder
+                  <option clasName="py-2" value="90">
+                    90
                   </option>
-                  <option className="py-2" value="LDM">
-                    Left Defensive Midfielder
+                  <option clasName="py-2" value="89">
+                    89
                   </option>
-                  <option className="py-2" value="RM">
-                    Right Midfielder
+                  <option clasName="py-2" value="88">
+                    88
                   </option>
-                  <option className="py-2" value="RCM">
-                    Right Center Midfielder
+                  <option clasName="py-2" value="87">
+                    87
                   </option>
-                  <option className="py-2" value="CM">
-                    Center Midfielder
+                  <option clasName="py-2" value="86">
+                    86
                   </option>
-                  <option className="py-2" value="LCM">
-                    Left Center Midfielder
+                  <option clasName="py-2" value="85">
+                    85
                   </option>
-                  <option className="py-2" value="LM">
-                    Left Midfielder
+                  <option clasName="py-2" value="84">
+                    84
                   </option>
-                  <option className="py-2" value="RAM">
-                    Right Attacking Midfielder
+                  <option clasName="py-2" value="83">
+                    83
                   </option>
-                  <option className="py-2" value="AM">
-                    Attacking Midfielder
+                  <option clasName="py-2" value="82">
+                    82
                   </option>
-                  <option className="py-2" value="LAM">
-                    Left Attacking Midfielder
+                  <option clasName="py-2" value="81">
+                    81
                   </option>
-                  <option className="py-2" value="RW">
-                    Right Winger
+                  <option clasName="py-2" value="80">
+                    80
                   </option>
-                  <option className="py-2" value="LW">
-                    Left Winger
+                  <option clasName="py-2" value="79">
+                    79
                   </option>
-                  <option className="py-2" value="SS">
-                    Second Striker
+                  <option clasName="py-2" value="78">
+                    78
                   </option>
-                  <option className="py-2" value="RS">
-                    Right Striker
+                  <option clasName="py-2" value="77">
+                    77
                   </option>
-                  <option className="py-2" value="LS">
-                    Left Striker
+                  <option clasName="py-2" value="76">
+                    76
                   </option>
-                  <option className="py-2" value="CF">
-                    Center Foward
+                  <option clasName="py-2" value="75">
+                    75
+                  </option>
+                  <option clasName="py-2" value="74">
+                    74
+                  </option>
+                  <option clasName="py-2" value="73">
+                    73
+                  </option>
+                  <option clasName="py-2" value="72">
+                    72
+                  </option>
+                  <option clasName="py-2" value="71">
+                    71
+                  </option>
+                  <option clasName="py-2" value="70">
+                    70
+                  </option>
+                  <option clasName="py-2" value="69">
+                    69
+                  </option>
+                  <option clasName="py-2" value="68">
+                    68
+                  </option>
+                  <option clasName="py-2" value="67">
+                    67
+                  </option>
+                  <option clasName="py-2" value="66">
+                    66
+                  </option>
+                  <option clasName="py-2" value="65">
+                    65
+                  </option>
+                  <option clasName="py-2" value="64">
+                    64
+                  </option>
+                  <option clasName="py-2" value="63">
+                    63
+                  </option>
+                  <option clasName="py-2" value="62">
+                    62
+                  </option>
+                  <option clasName="py-2" value="61">
+                    61
+                  </option>
+                  <option clasName="py-2" value="60">
+                    60
+                  </option>
+                  <option clasName="py-2" value="59">
+                    59
+                  </option>
+                  <option clasName="py-2" value="58">
+                    58
+                  </option>
+                  <option clasName="py-2" value="57">
+                    57
+                  </option>
+                  <option clasName="py-2" value="56">
+                    56
+                  </option>
+                  <option clasName="py-2" value="55">
+                    55
+                  </option>
+                  <option clasName="py-2" value="54">
+                    54
+                  </option>
+                  <option clasName="py-2" value="53">
+                    53
+                  </option>
+                  <option clasName="py-2" value="52">
+                    52
+                  </option>
+                  <option clasName="py-2" value="51">
+                    51
+                  </option>
+                  <option clasName="py-2" value="50">
+                    50
+                  </option>
+                  <option clasName="py-2" value="49">
+                    49
+                  </option>
+                  <option clasName="py-2" value="48">
+                    48
+                  </option>
+                  <option clasName="py-2" value="47">
+                    47
+                  </option>
+                  <option clasName="py-2" value="46">
+                    46
+                  </option>
+                  <option clasName="py-2" value="45">
+                    45
+                  </option>
+                  <option clasName="py-2" value="44">
+                    44
+                  </option>
+                  <option clasName="py-2" value="43">
+                    43
+                  </option>
+                  <option clasName="py-2" value="42">
+                    42
+                  </option>
+                  <option clasName="py-2" value="41">
+                    41
+                  </option>
+                  <option clasName="py-2" value="40">
+                    40
+                  </option>
+                  <option clasName="py-2" value="39">
+                    39
+                  </option>
+                  <option clasName="py-2" value="38">
+                    38
+                  </option>
+                  <option clasName="py-2" value="37">
+                    37
+                  </option>
+                  <option clasName="py-2" value="36">
+                    36
+                  </option>
+                  <option clasName="py-2" value="35">
+                    35
+                  </option>
+                  <option clasName="py-2" value="34">
+                    34
+                  </option>
+                  <option clasName="py-2" value="33">
+                    33
+                  </option>
+                  <option clasName="py-2" value="32">
+                    32
+                  </option>
+                  <option clasName="py-2" value="31">
+                    31
+                  </option>
+                  <option clasName="py-2" value="30">
+                    30
+                  </option>
+                  <option clasName="py-2" value="29">
+                    29
+                  </option>
+                  <option clasName="py-2" value="28">
+                    28
+                  </option>
+                  <option clasName="py-2" value="27">
+                    27
+                  </option>
+                  <option clasName="py-2" value="26">
+                    26
+                  </option>
+                  <option clasName="py-2" value="25">
+                    25
+                  </option>
+                  <option clasName="py-2" value="24">
+                    24
+                  </option>
+                  <option clasName="py-2" value="23">
+                    23
+                  </option>
+                  <option clasName="py-2" value="22">
+                    22
+                  </option>
+                  <option clasName="py-2" value="21">
+                    21
+                  </option>
+                  <option clasName="py-2" value="20">
+                    20
+                  </option>
+                  <option clasName="py-2" value="19">
+                    19
+                  </option>
+                  <option clasName="py-2" value="18">
+                    18
+                  </option>
+                  <option clasName="py-2" value="17">
+                    17
+                  </option>
+                  <option clasName="py-2" value="16">
+                    16
+                  </option>
+                  <option clasName="py-2" value="15">
+                    15
+                  </option>
+                  <option clasName="py-2" value="14">
+                    14
+                  </option>
+                  <option clasName="py-2" value="13">
+                    13
+                  </option>
+                  <option clasName="py-2" value="12">
+                    12
+                  </option>
+                  <option clasName="py-2" value="11">
+                    11
+                  </option>
+                  <option clasName="py-2" value="10">
+                    10
+                  </option>
+                  <option clasName="py-2" value="9">
+                    9
+                  </option>
+                  <option clasName="py-2" value="8">
+                    8
+                  </option>
+                  <option clasName="py-2" value="7">
+                    7
+                  </option>
+                  <option clasName="py-2" value="6">
+                    6
+                  </option>
+                  <option clasName="py-2" value="5">
+                    5
+                  </option>
+                  <option clasName="py-2" value="4">
+                    4
+                  </option>
+                  <option clasName="py-2" value="3">
+                    3
+                  </option>
+                  <option clasName="py-2" value="2">
+                    2
+                  </option>
+                  <option clasName="py-2" value="1">
+                    1
+                  </option>
+                  <option clasName="py-2" value="0">
+                    0
                   </option>
                 </select>
               </div>
@@ -5499,7 +6029,7 @@ function Rater() {
 
           <div>
             <label className="mb text-md text-[#34FEF8] font-bold uppercase">
-              Position
+              Agility
             </label>
             <br />
             <div
@@ -5510,7 +6040,7 @@ function Rater() {
                 <select
                   onChange={(e) => {
                     // selectedClass();
-                    setClassRoom(e.target.value);
+                    setAgility(e.target.value);
                   }}
                   className="rounder resize-none w-full h-[6rem] bg-[#01112B] text-base border-[5px] border-[#34FEF8] text-[#34FEF8] mb-2 mt-2 p-3 pl-4 pt-0 placeholder-opacity-60 placeholder-[#34FEF8]"
                 >
@@ -5520,82 +6050,307 @@ function Rater() {
                     className="block"
                     disabled
                   >
-                    Select your Preferred Playing Position
+                    Select a rating
                   </option>
-                  <option className="py-2" value="GK">
-                    GoalKeeper
+                  <option clasName="py-2" value="99">
+                    99
                   </option>
-                  <option className="py-2" value="RB">
-                    Right Back
+                  <option clasName="py-2" value="98">
+                    98
                   </option>
-                  <option className="py-2" value="RCB">
-                    Right Center Back
+                  <option clasName="py-2" value="97">
+                    97
                   </option>
-                  <option className="py-2" value="CB">
-                    Center Back
+                  <option clasName="py-2" value="96">
+                    96
                   </option>
-                  <option className="py-2" value="LCB">
-                    Left Center Back
+                  <option clasName="py-2" value="95">
+                    95
                   </option>
-                  <option className="py-2" value="LB">
-                    Left Back
+                  <option clasName="py-2" value="94">
+                    94
                   </option>
-                  <option className="py-2" value="RWB">
-                    Right Wing Back
+                  <option clasName="py-2" value="93">
+                    93
                   </option>
-                  <option className="py-2" value="LWB">
-                    Left Wing Back
+                  <option clasName="py-2" value="92">
+                    92
                   </option>
-                  <option className="py-2" value="RDM">
-                    Right Defensive Midfielder
+                  <option clasName="py-2" value="91">
+                    91
                   </option>
-                  <option className="py-2" value="DM">
-                    Defensive Midfielder
+                  <option clasName="py-2" value="90">
+                    90
                   </option>
-                  <option className="py-2" value="LDM">
-                    Left Defensive Midfielder
+                  <option clasName="py-2" value="89">
+                    89
                   </option>
-                  <option className="py-2" value="RM">
-                    Right Midfielder
+                  <option clasName="py-2" value="88">
+                    88
                   </option>
-                  <option className="py-2" value="RCM">
-                    Right Center Midfielder
+                  <option clasName="py-2" value="87">
+                    87
                   </option>
-                  <option className="py-2" value="CM">
-                    Center Midfielder
+                  <option clasName="py-2" value="86">
+                    86
                   </option>
-                  <option className="py-2" value="LCM">
-                    Left Center Midfielder
+                  <option clasName="py-2" value="85">
+                    85
                   </option>
-                  <option className="py-2" value="LM">
-                    Left Midfielder
+                  <option clasName="py-2" value="84">
+                    84
                   </option>
-                  <option className="py-2" value="RAM">
-                    Right Attacking Midfielder
+                  <option clasName="py-2" value="83">
+                    83
                   </option>
-                  <option className="py-2" value="AM">
-                    Attacking Midfielder
+                  <option clasName="py-2" value="82">
+                    82
                   </option>
-                  <option className="py-2" value="LAM">
-                    Left Attacking Midfielder
+                  <option clasName="py-2" value="81">
+                    81
                   </option>
-                  <option className="py-2" value="RW">
-                    Right Winger
+                  <option clasName="py-2" value="80">
+                    80
                   </option>
-                  <option className="py-2" value="LW">
-                    Left Winger
+                  <option clasName="py-2" value="79">
+                    79
                   </option>
-                  <option className="py-2" value="SS">
-                    Second Striker
+                  <option clasName="py-2" value="78">
+                    78
                   </option>
-                  <option className="py-2" value="RS">
-                    Right Striker
+                  <option clasName="py-2" value="77">
+                    77
                   </option>
-                  <option className="py-2" value="LS">
-                    Left Striker
+                  <option clasName="py-2" value="76">
+                    76
                   </option>
-                  <option className="py-2" value="CF">
-                    Center Foward
+                  <option clasName="py-2" value="75">
+                    75
+                  </option>
+                  <option clasName="py-2" value="74">
+                    74
+                  </option>
+                  <option clasName="py-2" value="73">
+                    73
+                  </option>
+                  <option clasName="py-2" value="72">
+                    72
+                  </option>
+                  <option clasName="py-2" value="71">
+                    71
+                  </option>
+                  <option clasName="py-2" value="70">
+                    70
+                  </option>
+                  <option clasName="py-2" value="69">
+                    69
+                  </option>
+                  <option clasName="py-2" value="68">
+                    68
+                  </option>
+                  <option clasName="py-2" value="67">
+                    67
+                  </option>
+                  <option clasName="py-2" value="66">
+                    66
+                  </option>
+                  <option clasName="py-2" value="65">
+                    65
+                  </option>
+                  <option clasName="py-2" value="64">
+                    64
+                  </option>
+                  <option clasName="py-2" value="63">
+                    63
+                  </option>
+                  <option clasName="py-2" value="62">
+                    62
+                  </option>
+                  <option clasName="py-2" value="61">
+                    61
+                  </option>
+                  <option clasName="py-2" value="60">
+                    60
+                  </option>
+                  <option clasName="py-2" value="59">
+                    59
+                  </option>
+                  <option clasName="py-2" value="58">
+                    58
+                  </option>
+                  <option clasName="py-2" value="57">
+                    57
+                  </option>
+                  <option clasName="py-2" value="56">
+                    56
+                  </option>
+                  <option clasName="py-2" value="55">
+                    55
+                  </option>
+                  <option clasName="py-2" value="54">
+                    54
+                  </option>
+                  <option clasName="py-2" value="53">
+                    53
+                  </option>
+                  <option clasName="py-2" value="52">
+                    52
+                  </option>
+                  <option clasName="py-2" value="51">
+                    51
+                  </option>
+                  <option clasName="py-2" value="50">
+                    50
+                  </option>
+                  <option clasName="py-2" value="49">
+                    49
+                  </option>
+                  <option clasName="py-2" value="48">
+                    48
+                  </option>
+                  <option clasName="py-2" value="47">
+                    47
+                  </option>
+                  <option clasName="py-2" value="46">
+                    46
+                  </option>
+                  <option clasName="py-2" value="45">
+                    45
+                  </option>
+                  <option clasName="py-2" value="44">
+                    44
+                  </option>
+                  <option clasName="py-2" value="43">
+                    43
+                  </option>
+                  <option clasName="py-2" value="42">
+                    42
+                  </option>
+                  <option clasName="py-2" value="41">
+                    41
+                  </option>
+                  <option clasName="py-2" value="40">
+                    40
+                  </option>
+                  <option clasName="py-2" value="39">
+                    39
+                  </option>
+                  <option clasName="py-2" value="38">
+                    38
+                  </option>
+                  <option clasName="py-2" value="37">
+                    37
+                  </option>
+                  <option clasName="py-2" value="36">
+                    36
+                  </option>
+                  <option clasName="py-2" value="35">
+                    35
+                  </option>
+                  <option clasName="py-2" value="34">
+                    34
+                  </option>
+                  <option clasName="py-2" value="33">
+                    33
+                  </option>
+                  <option clasName="py-2" value="32">
+                    32
+                  </option>
+                  <option clasName="py-2" value="31">
+                    31
+                  </option>
+                  <option clasName="py-2" value="30">
+                    30
+                  </option>
+                  <option clasName="py-2" value="29">
+                    29
+                  </option>
+                  <option clasName="py-2" value="28">
+                    28
+                  </option>
+                  <option clasName="py-2" value="27">
+                    27
+                  </option>
+                  <option clasName="py-2" value="26">
+                    26
+                  </option>
+                  <option clasName="py-2" value="25">
+                    25
+                  </option>
+                  <option clasName="py-2" value="24">
+                    24
+                  </option>
+                  <option clasName="py-2" value="23">
+                    23
+                  </option>
+                  <option clasName="py-2" value="22">
+                    22
+                  </option>
+                  <option clasName="py-2" value="21">
+                    21
+                  </option>
+                  <option clasName="py-2" value="20">
+                    20
+                  </option>
+                  <option clasName="py-2" value="19">
+                    19
+                  </option>
+                  <option clasName="py-2" value="18">
+                    18
+                  </option>
+                  <option clasName="py-2" value="17">
+                    17
+                  </option>
+                  <option clasName="py-2" value="16">
+                    16
+                  </option>
+                  <option clasName="py-2" value="15">
+                    15
+                  </option>
+                  <option clasName="py-2" value="14">
+                    14
+                  </option>
+                  <option clasName="py-2" value="13">
+                    13
+                  </option>
+                  <option clasName="py-2" value="12">
+                    12
+                  </option>
+                  <option clasName="py-2" value="11">
+                    11
+                  </option>
+                  <option clasName="py-2" value="10">
+                    10
+                  </option>
+                  <option clasName="py-2" value="9">
+                    9
+                  </option>
+                  <option clasName="py-2" value="8">
+                    8
+                  </option>
+                  <option clasName="py-2" value="7">
+                    7
+                  </option>
+                  <option clasName="py-2" value="6">
+                    6
+                  </option>
+                  <option clasName="py-2" value="5">
+                    5
+                  </option>
+                  <option clasName="py-2" value="4">
+                    4
+                  </option>
+                  <option clasName="py-2" value="3">
+                    3
+                  </option>
+                  <option clasName="py-2" value="2">
+                    2
+                  </option>
+                  <option clasName="py-2" value="1">
+                    1
+                  </option>
+                  <option clasName="py-2" value="0">
+                    0
                   </option>
                 </select>
               </div>
@@ -5604,7 +6359,7 @@ function Rater() {
 
           <div>
             <label className="mb text-md text-[#34FEF8] font-bold uppercase">
-              Position
+              Attacking Position
             </label>
             <br />
             <div
@@ -5615,7 +6370,7 @@ function Rater() {
                 <select
                   onChange={(e) => {
                     // selectedClass();
-                    setClassRoom(e.target.value);
+                    setAttackingPosition(e.target.value);
                   }}
                   className="rounder resize-none w-full h-[6rem] bg-[#01112B] text-base border-[5px] border-[#34FEF8] text-[#34FEF8] mb-2 mt-2 p-3 pl-4 pt-0 placeholder-opacity-60 placeholder-[#34FEF8]"
                 >
@@ -5625,82 +6380,307 @@ function Rater() {
                     className="block"
                     disabled
                   >
-                    Select your Preferred Playing Position
+                    Select a rating
                   </option>
-                  <option className="py-2" value="GK">
-                    GoalKeeper
+                  <option clasName="py-2" value="99">
+                    99
                   </option>
-                  <option className="py-2" value="RB">
-                    Right Back
+                  <option clasName="py-2" value="98">
+                    98
                   </option>
-                  <option className="py-2" value="RCB">
-                    Right Center Back
+                  <option clasName="py-2" value="97">
+                    97
                   </option>
-                  <option className="py-2" value="CB">
-                    Center Back
+                  <option clasName="py-2" value="96">
+                    96
                   </option>
-                  <option className="py-2" value="LCB">
-                    Left Center Back
+                  <option clasName="py-2" value="95">
+                    95
                   </option>
-                  <option className="py-2" value="LB">
-                    Left Back
+                  <option clasName="py-2" value="94">
+                    94
                   </option>
-                  <option className="py-2" value="RWB">
-                    Right Wing Back
+                  <option clasName="py-2" value="93">
+                    93
                   </option>
-                  <option className="py-2" value="LWB">
-                    Left Wing Back
+                  <option clasName="py-2" value="92">
+                    92
                   </option>
-                  <option className="py-2" value="RDM">
-                    Right Defensive Midfielder
+                  <option clasName="py-2" value="91">
+                    91
                   </option>
-                  <option className="py-2" value="DM">
-                    Defensive Midfielder
+                  <option clasName="py-2" value="90">
+                    90
                   </option>
-                  <option className="py-2" value="LDM">
-                    Left Defensive Midfielder
+                  <option clasName="py-2" value="89">
+                    89
                   </option>
-                  <option className="py-2" value="RM">
-                    Right Midfielder
+                  <option clasName="py-2" value="88">
+                    88
                   </option>
-                  <option className="py-2" value="RCM">
-                    Right Center Midfielder
+                  <option clasName="py-2" value="87">
+                    87
                   </option>
-                  <option className="py-2" value="CM">
-                    Center Midfielder
+                  <option clasName="py-2" value="86">
+                    86
                   </option>
-                  <option className="py-2" value="LCM">
-                    Left Center Midfielder
+                  <option clasName="py-2" value="85">
+                    85
                   </option>
-                  <option className="py-2" value="LM">
-                    Left Midfielder
+                  <option clasName="py-2" value="84">
+                    84
                   </option>
-                  <option className="py-2" value="RAM">
-                    Right Attacking Midfielder
+                  <option clasName="py-2" value="83">
+                    83
                   </option>
-                  <option className="py-2" value="AM">
-                    Attacking Midfielder
+                  <option clasName="py-2" value="82">
+                    82
                   </option>
-                  <option className="py-2" value="LAM">
-                    Left Attacking Midfielder
+                  <option clasName="py-2" value="81">
+                    81
                   </option>
-                  <option className="py-2" value="RW">
-                    Right Winger
+                  <option clasName="py-2" value="80">
+                    80
                   </option>
-                  <option className="py-2" value="LW">
-                    Left Winger
+                  <option clasName="py-2" value="79">
+                    79
                   </option>
-                  <option className="py-2" value="SS">
-                    Second Striker
+                  <option clasName="py-2" value="78">
+                    78
                   </option>
-                  <option className="py-2" value="RS">
-                    Right Striker
+                  <option clasName="py-2" value="77">
+                    77
                   </option>
-                  <option className="py-2" value="LS">
-                    Left Striker
+                  <option clasName="py-2" value="76">
+                    76
                   </option>
-                  <option className="py-2" value="CF">
-                    Center Foward
+                  <option clasName="py-2" value="75">
+                    75
+                  </option>
+                  <option clasName="py-2" value="74">
+                    74
+                  </option>
+                  <option clasName="py-2" value="73">
+                    73
+                  </option>
+                  <option clasName="py-2" value="72">
+                    72
+                  </option>
+                  <option clasName="py-2" value="71">
+                    71
+                  </option>
+                  <option clasName="py-2" value="70">
+                    70
+                  </option>
+                  <option clasName="py-2" value="69">
+                    69
+                  </option>
+                  <option clasName="py-2" value="68">
+                    68
+                  </option>
+                  <option clasName="py-2" value="67">
+                    67
+                  </option>
+                  <option clasName="py-2" value="66">
+                    66
+                  </option>
+                  <option clasName="py-2" value="65">
+                    65
+                  </option>
+                  <option clasName="py-2" value="64">
+                    64
+                  </option>
+                  <option clasName="py-2" value="63">
+                    63
+                  </option>
+                  <option clasName="py-2" value="62">
+                    62
+                  </option>
+                  <option clasName="py-2" value="61">
+                    61
+                  </option>
+                  <option clasName="py-2" value="60">
+                    60
+                  </option>
+                  <option clasName="py-2" value="59">
+                    59
+                  </option>
+                  <option clasName="py-2" value="58">
+                    58
+                  </option>
+                  <option clasName="py-2" value="57">
+                    57
+                  </option>
+                  <option clasName="py-2" value="56">
+                    56
+                  </option>
+                  <option clasName="py-2" value="55">
+                    55
+                  </option>
+                  <option clasName="py-2" value="54">
+                    54
+                  </option>
+                  <option clasName="py-2" value="53">
+                    53
+                  </option>
+                  <option clasName="py-2" value="52">
+                    52
+                  </option>
+                  <option clasName="py-2" value="51">
+                    51
+                  </option>
+                  <option clasName="py-2" value="50">
+                    50
+                  </option>
+                  <option clasName="py-2" value="49">
+                    49
+                  </option>
+                  <option clasName="py-2" value="48">
+                    48
+                  </option>
+                  <option clasName="py-2" value="47">
+                    47
+                  </option>
+                  <option clasName="py-2" value="46">
+                    46
+                  </option>
+                  <option clasName="py-2" value="45">
+                    45
+                  </option>
+                  <option clasName="py-2" value="44">
+                    44
+                  </option>
+                  <option clasName="py-2" value="43">
+                    43
+                  </option>
+                  <option clasName="py-2" value="42">
+                    42
+                  </option>
+                  <option clasName="py-2" value="41">
+                    41
+                  </option>
+                  <option clasName="py-2" value="40">
+                    40
+                  </option>
+                  <option clasName="py-2" value="39">
+                    39
+                  </option>
+                  <option clasName="py-2" value="38">
+                    38
+                  </option>
+                  <option clasName="py-2" value="37">
+                    37
+                  </option>
+                  <option clasName="py-2" value="36">
+                    36
+                  </option>
+                  <option clasName="py-2" value="35">
+                    35
+                  </option>
+                  <option clasName="py-2" value="34">
+                    34
+                  </option>
+                  <option clasName="py-2" value="33">
+                    33
+                  </option>
+                  <option clasName="py-2" value="32">
+                    32
+                  </option>
+                  <option clasName="py-2" value="31">
+                    31
+                  </option>
+                  <option clasName="py-2" value="30">
+                    30
+                  </option>
+                  <option clasName="py-2" value="29">
+                    29
+                  </option>
+                  <option clasName="py-2" value="28">
+                    28
+                  </option>
+                  <option clasName="py-2" value="27">
+                    27
+                  </option>
+                  <option clasName="py-2" value="26">
+                    26
+                  </option>
+                  <option clasName="py-2" value="25">
+                    25
+                  </option>
+                  <option clasName="py-2" value="24">
+                    24
+                  </option>
+                  <option clasName="py-2" value="23">
+                    23
+                  </option>
+                  <option clasName="py-2" value="22">
+                    22
+                  </option>
+                  <option clasName="py-2" value="21">
+                    21
+                  </option>
+                  <option clasName="py-2" value="20">
+                    20
+                  </option>
+                  <option clasName="py-2" value="19">
+                    19
+                  </option>
+                  <option clasName="py-2" value="18">
+                    18
+                  </option>
+                  <option clasName="py-2" value="17">
+                    17
+                  </option>
+                  <option clasName="py-2" value="16">
+                    16
+                  </option>
+                  <option clasName="py-2" value="15">
+                    15
+                  </option>
+                  <option clasName="py-2" value="14">
+                    14
+                  </option>
+                  <option clasName="py-2" value="13">
+                    13
+                  </option>
+                  <option clasName="py-2" value="12">
+                    12
+                  </option>
+                  <option clasName="py-2" value="11">
+                    11
+                  </option>
+                  <option clasName="py-2" value="10">
+                    10
+                  </option>
+                  <option clasName="py-2" value="9">
+                    9
+                  </option>
+                  <option clasName="py-2" value="8">
+                    8
+                  </option>
+                  <option clasName="py-2" value="7">
+                    7
+                  </option>
+                  <option clasName="py-2" value="6">
+                    6
+                  </option>
+                  <option clasName="py-2" value="5">
+                    5
+                  </option>
+                  <option clasName="py-2" value="4">
+                    4
+                  </option>
+                  <option clasName="py-2" value="3">
+                    3
+                  </option>
+                  <option clasName="py-2" value="2">
+                    2
+                  </option>
+                  <option clasName="py-2" value="1">
+                    1
+                  </option>
+                  <option clasName="py-2" value="0">
+                    0
                   </option>
                 </select>
               </div>
@@ -5709,7 +6689,7 @@ function Rater() {
 
           <div>
             <label className="mb text-md text-[#34FEF8] font-bold uppercase">
-              Position
+              Awareness
             </label>
             <br />
             <div
@@ -5720,7 +6700,7 @@ function Rater() {
                 <select
                   onChange={(e) => {
                     // selectedClass();
-                    setClassRoom(e.target.value);
+                    setAwareness(e.target.value);
                   }}
                   className="rounder resize-none w-full h-[6rem] bg-[#01112B] text-base border-[5px] border-[#34FEF8] text-[#34FEF8] mb-2 mt-2 p-3 pl-4 pt-0 placeholder-opacity-60 placeholder-[#34FEF8]"
                 >
@@ -5730,82 +6710,307 @@ function Rater() {
                     className="block"
                     disabled
                   >
-                    Select your Preferred Playing Position
+                    Select a rating
                   </option>
-                  <option className="py-2" value="GK">
-                    GoalKeeper
+                  <option clasName="py-2" value="99">
+                    99
                   </option>
-                  <option className="py-2" value="RB">
-                    Right Back
+                  <option clasName="py-2" value="98">
+                    98
                   </option>
-                  <option className="py-2" value="RCB">
-                    Right Center Back
+                  <option clasName="py-2" value="97">
+                    97
                   </option>
-                  <option className="py-2" value="CB">
-                    Center Back
+                  <option clasName="py-2" value="96">
+                    96
                   </option>
-                  <option className="py-2" value="LCB">
-                    Left Center Back
+                  <option clasName="py-2" value="95">
+                    95
                   </option>
-                  <option className="py-2" value="LB">
-                    Left Back
+                  <option clasName="py-2" value="94">
+                    94
                   </option>
-                  <option className="py-2" value="RWB">
-                    Right Wing Back
+                  <option clasName="py-2" value="93">
+                    93
                   </option>
-                  <option className="py-2" value="LWB">
-                    Left Wing Back
+                  <option clasName="py-2" value="92">
+                    92
                   </option>
-                  <option className="py-2" value="RDM">
-                    Right Defensive Midfielder
+                  <option clasName="py-2" value="91">
+                    91
                   </option>
-                  <option className="py-2" value="DM">
-                    Defensive Midfielder
+                  <option clasName="py-2" value="90">
+                    90
                   </option>
-                  <option className="py-2" value="LDM">
-                    Left Defensive Midfielder
+                  <option clasName="py-2" value="89">
+                    89
                   </option>
-                  <option className="py-2" value="RM">
-                    Right Midfielder
+                  <option clasName="py-2" value="88">
+                    88
                   </option>
-                  <option className="py-2" value="RCM">
-                    Right Center Midfielder
+                  <option clasName="py-2" value="87">
+                    87
                   </option>
-                  <option className="py-2" value="CM">
-                    Center Midfielder
+                  <option clasName="py-2" value="86">
+                    86
                   </option>
-                  <option className="py-2" value="LCM">
-                    Left Center Midfielder
+                  <option clasName="py-2" value="85">
+                    85
                   </option>
-                  <option className="py-2" value="LM">
-                    Left Midfielder
+                  <option clasName="py-2" value="84">
+                    84
                   </option>
-                  <option className="py-2" value="RAM">
-                    Right Attacking Midfielder
+                  <option clasName="py-2" value="83">
+                    83
                   </option>
-                  <option className="py-2" value="AM">
-                    Attacking Midfielder
+                  <option clasName="py-2" value="82">
+                    82
                   </option>
-                  <option className="py-2" value="LAM">
-                    Left Attacking Midfielder
+                  <option clasName="py-2" value="81">
+                    81
                   </option>
-                  <option className="py-2" value="RW">
-                    Right Winger
+                  <option clasName="py-2" value="80">
+                    80
                   </option>
-                  <option className="py-2" value="LW">
-                    Left Winger
+                  <option clasName="py-2" value="79">
+                    79
                   </option>
-                  <option className="py-2" value="SS">
-                    Second Striker
+                  <option clasName="py-2" value="78">
+                    78
                   </option>
-                  <option className="py-2" value="RS">
-                    Right Striker
+                  <option clasName="py-2" value="77">
+                    77
                   </option>
-                  <option className="py-2" value="LS">
-                    Left Striker
+                  <option clasName="py-2" value="76">
+                    76
                   </option>
-                  <option className="py-2" value="CF">
-                    Center Foward
+                  <option clasName="py-2" value="75">
+                    75
+                  </option>
+                  <option clasName="py-2" value="74">
+                    74
+                  </option>
+                  <option clasName="py-2" value="73">
+                    73
+                  </option>
+                  <option clasName="py-2" value="72">
+                    72
+                  </option>
+                  <option clasName="py-2" value="71">
+                    71
+                  </option>
+                  <option clasName="py-2" value="70">
+                    70
+                  </option>
+                  <option clasName="py-2" value="69">
+                    69
+                  </option>
+                  <option clasName="py-2" value="68">
+                    68
+                  </option>
+                  <option clasName="py-2" value="67">
+                    67
+                  </option>
+                  <option clasName="py-2" value="66">
+                    66
+                  </option>
+                  <option clasName="py-2" value="65">
+                    65
+                  </option>
+                  <option clasName="py-2" value="64">
+                    64
+                  </option>
+                  <option clasName="py-2" value="63">
+                    63
+                  </option>
+                  <option clasName="py-2" value="62">
+                    62
+                  </option>
+                  <option clasName="py-2" value="61">
+                    61
+                  </option>
+                  <option clasName="py-2" value="60">
+                    60
+                  </option>
+                  <option clasName="py-2" value="59">
+                    59
+                  </option>
+                  <option clasName="py-2" value="58">
+                    58
+                  </option>
+                  <option clasName="py-2" value="57">
+                    57
+                  </option>
+                  <option clasName="py-2" value="56">
+                    56
+                  </option>
+                  <option clasName="py-2" value="55">
+                    55
+                  </option>
+                  <option clasName="py-2" value="54">
+                    54
+                  </option>
+                  <option clasName="py-2" value="53">
+                    53
+                  </option>
+                  <option clasName="py-2" value="52">
+                    52
+                  </option>
+                  <option clasName="py-2" value="51">
+                    51
+                  </option>
+                  <option clasName="py-2" value="50">
+                    50
+                  </option>
+                  <option clasName="py-2" value="49">
+                    49
+                  </option>
+                  <option clasName="py-2" value="48">
+                    48
+                  </option>
+                  <option clasName="py-2" value="47">
+                    47
+                  </option>
+                  <option clasName="py-2" value="46">
+                    46
+                  </option>
+                  <option clasName="py-2" value="45">
+                    45
+                  </option>
+                  <option clasName="py-2" value="44">
+                    44
+                  </option>
+                  <option clasName="py-2" value="43">
+                    43
+                  </option>
+                  <option clasName="py-2" value="42">
+                    42
+                  </option>
+                  <option clasName="py-2" value="41">
+                    41
+                  </option>
+                  <option clasName="py-2" value="40">
+                    40
+                  </option>
+                  <option clasName="py-2" value="39">
+                    39
+                  </option>
+                  <option clasName="py-2" value="38">
+                    38
+                  </option>
+                  <option clasName="py-2" value="37">
+                    37
+                  </option>
+                  <option clasName="py-2" value="36">
+                    36
+                  </option>
+                  <option clasName="py-2" value="35">
+                    35
+                  </option>
+                  <option clasName="py-2" value="34">
+                    34
+                  </option>
+                  <option clasName="py-2" value="33">
+                    33
+                  </option>
+                  <option clasName="py-2" value="32">
+                    32
+                  </option>
+                  <option clasName="py-2" value="31">
+                    31
+                  </option>
+                  <option clasName="py-2" value="30">
+                    30
+                  </option>
+                  <option clasName="py-2" value="29">
+                    29
+                  </option>
+                  <option clasName="py-2" value="28">
+                    28
+                  </option>
+                  <option clasName="py-2" value="27">
+                    27
+                  </option>
+                  <option clasName="py-2" value="26">
+                    26
+                  </option>
+                  <option clasName="py-2" value="25">
+                    25
+                  </option>
+                  <option clasName="py-2" value="24">
+                    24
+                  </option>
+                  <option clasName="py-2" value="23">
+                    23
+                  </option>
+                  <option clasName="py-2" value="22">
+                    22
+                  </option>
+                  <option clasName="py-2" value="21">
+                    21
+                  </option>
+                  <option clasName="py-2" value="20">
+                    20
+                  </option>
+                  <option clasName="py-2" value="19">
+                    19
+                  </option>
+                  <option clasName="py-2" value="18">
+                    18
+                  </option>
+                  <option clasName="py-2" value="17">
+                    17
+                  </option>
+                  <option clasName="py-2" value="16">
+                    16
+                  </option>
+                  <option clasName="py-2" value="15">
+                    15
+                  </option>
+                  <option clasName="py-2" value="14">
+                    14
+                  </option>
+                  <option clasName="py-2" value="13">
+                    13
+                  </option>
+                  <option clasName="py-2" value="12">
+                    12
+                  </option>
+                  <option clasName="py-2" value="11">
+                    11
+                  </option>
+                  <option clasName="py-2" value="10">
+                    10
+                  </option>
+                  <option clasName="py-2" value="9">
+                    9
+                  </option>
+                  <option clasName="py-2" value="8">
+                    8
+                  </option>
+                  <option clasName="py-2" value="7">
+                    7
+                  </option>
+                  <option clasName="py-2" value="6">
+                    6
+                  </option>
+                  <option clasName="py-2" value="5">
+                    5
+                  </option>
+                  <option clasName="py-2" value="4">
+                    4
+                  </option>
+                  <option clasName="py-2" value="3">
+                    3
+                  </option>
+                  <option clasName="py-2" value="2">
+                    2
+                  </option>
+                  <option clasName="py-2" value="1">
+                    1
+                  </option>
+                  <option clasName="py-2" value="0">
+                    0
                   </option>
                 </select>
               </div>
@@ -5814,7 +7019,7 @@ function Rater() {
 
           <div>
             <label className="mb text-md text-[#34FEF8] font-bold uppercase">
-              Position
+              Balance
             </label>
             <br />
             <div
@@ -5825,7 +7030,7 @@ function Rater() {
                 <select
                   onChange={(e) => {
                     // selectedClass();
-                    setClassRoom(e.target.value);
+                    setBalance(e.target.value);
                   }}
                   className="rounder resize-none w-full h-[6rem] bg-[#01112B] text-base border-[5px] border-[#34FEF8] text-[#34FEF8] mb-2 mt-2 p-3 pl-4 pt-0 placeholder-opacity-60 placeholder-[#34FEF8]"
                 >
@@ -5835,82 +7040,307 @@ function Rater() {
                     className="block"
                     disabled
                   >
-                    Select your Preferred Playing Position
+                    Select a rating
                   </option>
-                  <option className="py-2" value="GK">
-                    GoalKeeper
+                  <option clasName="py-2" value="99">
+                    99
                   </option>
-                  <option className="py-2" value="RB">
-                    Right Back
+                  <option clasName="py-2" value="98">
+                    98
                   </option>
-                  <option className="py-2" value="RCB">
-                    Right Center Back
+                  <option clasName="py-2" value="97">
+                    97
                   </option>
-                  <option className="py-2" value="CB">
-                    Center Back
+                  <option clasName="py-2" value="96">
+                    96
                   </option>
-                  <option className="py-2" value="LCB">
-                    Left Center Back
+                  <option clasName="py-2" value="95">
+                    95
                   </option>
-                  <option className="py-2" value="LB">
-                    Left Back
+                  <option clasName="py-2" value="94">
+                    94
                   </option>
-                  <option className="py-2" value="RWB">
-                    Right Wing Back
+                  <option clasName="py-2" value="93">
+                    93
                   </option>
-                  <option className="py-2" value="LWB">
-                    Left Wing Back
+                  <option clasName="py-2" value="92">
+                    92
                   </option>
-                  <option className="py-2" value="RDM">
-                    Right Defensive Midfielder
+                  <option clasName="py-2" value="91">
+                    91
                   </option>
-                  <option className="py-2" value="DM">
-                    Defensive Midfielder
+                  <option clasName="py-2" value="90">
+                    90
                   </option>
-                  <option className="py-2" value="LDM">
-                    Left Defensive Midfielder
+                  <option clasName="py-2" value="89">
+                    89
                   </option>
-                  <option className="py-2" value="RM">
-                    Right Midfielder
+                  <option clasName="py-2" value="88">
+                    88
                   </option>
-                  <option className="py-2" value="RCM">
-                    Right Center Midfielder
+                  <option clasName="py-2" value="87">
+                    87
                   </option>
-                  <option className="py-2" value="CM">
-                    Center Midfielder
+                  <option clasName="py-2" value="86">
+                    86
                   </option>
-                  <option className="py-2" value="LCM">
-                    Left Center Midfielder
+                  <option clasName="py-2" value="85">
+                    85
                   </option>
-                  <option className="py-2" value="LM">
-                    Left Midfielder
+                  <option clasName="py-2" value="84">
+                    84
                   </option>
-                  <option className="py-2" value="RAM">
-                    Right Attacking Midfielder
+                  <option clasName="py-2" value="83">
+                    83
                   </option>
-                  <option className="py-2" value="AM">
-                    Attacking Midfielder
+                  <option clasName="py-2" value="82">
+                    82
                   </option>
-                  <option className="py-2" value="LAM">
-                    Left Attacking Midfielder
+                  <option clasName="py-2" value="81">
+                    81
                   </option>
-                  <option className="py-2" value="RW">
-                    Right Winger
+                  <option clasName="py-2" value="80">
+                    80
                   </option>
-                  <option className="py-2" value="LW">
-                    Left Winger
+                  <option clasName="py-2" value="79">
+                    79
                   </option>
-                  <option className="py-2" value="SS">
-                    Second Striker
+                  <option clasName="py-2" value="78">
+                    78
                   </option>
-                  <option className="py-2" value="RS">
-                    Right Striker
+                  <option clasName="py-2" value="77">
+                    77
                   </option>
-                  <option className="py-2" value="LS">
-                    Left Striker
+                  <option clasName="py-2" value="76">
+                    76
                   </option>
-                  <option className="py-2" value="CF">
-                    Center Foward
+                  <option clasName="py-2" value="75">
+                    75
+                  </option>
+                  <option clasName="py-2" value="74">
+                    74
+                  </option>
+                  <option clasName="py-2" value="73">
+                    73
+                  </option>
+                  <option clasName="py-2" value="72">
+                    72
+                  </option>
+                  <option clasName="py-2" value="71">
+                    71
+                  </option>
+                  <option clasName="py-2" value="70">
+                    70
+                  </option>
+                  <option clasName="py-2" value="69">
+                    69
+                  </option>
+                  <option clasName="py-2" value="68">
+                    68
+                  </option>
+                  <option clasName="py-2" value="67">
+                    67
+                  </option>
+                  <option clasName="py-2" value="66">
+                    66
+                  </option>
+                  <option clasName="py-2" value="65">
+                    65
+                  </option>
+                  <option clasName="py-2" value="64">
+                    64
+                  </option>
+                  <option clasName="py-2" value="63">
+                    63
+                  </option>
+                  <option clasName="py-2" value="62">
+                    62
+                  </option>
+                  <option clasName="py-2" value="61">
+                    61
+                  </option>
+                  <option clasName="py-2" value="60">
+                    60
+                  </option>
+                  <option clasName="py-2" value="59">
+                    59
+                  </option>
+                  <option clasName="py-2" value="58">
+                    58
+                  </option>
+                  <option clasName="py-2" value="57">
+                    57
+                  </option>
+                  <option clasName="py-2" value="56">
+                    56
+                  </option>
+                  <option clasName="py-2" value="55">
+                    55
+                  </option>
+                  <option clasName="py-2" value="54">
+                    54
+                  </option>
+                  <option clasName="py-2" value="53">
+                    53
+                  </option>
+                  <option clasName="py-2" value="52">
+                    52
+                  </option>
+                  <option clasName="py-2" value="51">
+                    51
+                  </option>
+                  <option clasName="py-2" value="50">
+                    50
+                  </option>
+                  <option clasName="py-2" value="49">
+                    49
+                  </option>
+                  <option clasName="py-2" value="48">
+                    48
+                  </option>
+                  <option clasName="py-2" value="47">
+                    47
+                  </option>
+                  <option clasName="py-2" value="46">
+                    46
+                  </option>
+                  <option clasName="py-2" value="45">
+                    45
+                  </option>
+                  <option clasName="py-2" value="44">
+                    44
+                  </option>
+                  <option clasName="py-2" value="43">
+                    43
+                  </option>
+                  <option clasName="py-2" value="42">
+                    42
+                  </option>
+                  <option clasName="py-2" value="41">
+                    41
+                  </option>
+                  <option clasName="py-2" value="40">
+                    40
+                  </option>
+                  <option clasName="py-2" value="39">
+                    39
+                  </option>
+                  <option clasName="py-2" value="38">
+                    38
+                  </option>
+                  <option clasName="py-2" value="37">
+                    37
+                  </option>
+                  <option clasName="py-2" value="36">
+                    36
+                  </option>
+                  <option clasName="py-2" value="35">
+                    35
+                  </option>
+                  <option clasName="py-2" value="34">
+                    34
+                  </option>
+                  <option clasName="py-2" value="33">
+                    33
+                  </option>
+                  <option clasName="py-2" value="32">
+                    32
+                  </option>
+                  <option clasName="py-2" value="31">
+                    31
+                  </option>
+                  <option clasName="py-2" value="30">
+                    30
+                  </option>
+                  <option clasName="py-2" value="29">
+                    29
+                  </option>
+                  <option clasName="py-2" value="28">
+                    28
+                  </option>
+                  <option clasName="py-2" value="27">
+                    27
+                  </option>
+                  <option clasName="py-2" value="26">
+                    26
+                  </option>
+                  <option clasName="py-2" value="25">
+                    25
+                  </option>
+                  <option clasName="py-2" value="24">
+                    24
+                  </option>
+                  <option clasName="py-2" value="23">
+                    23
+                  </option>
+                  <option clasName="py-2" value="22">
+                    22
+                  </option>
+                  <option clasName="py-2" value="21">
+                    21
+                  </option>
+                  <option clasName="py-2" value="20">
+                    20
+                  </option>
+                  <option clasName="py-2" value="19">
+                    19
+                  </option>
+                  <option clasName="py-2" value="18">
+                    18
+                  </option>
+                  <option clasName="py-2" value="17">
+                    17
+                  </option>
+                  <option clasName="py-2" value="16">
+                    16
+                  </option>
+                  <option clasName="py-2" value="15">
+                    15
+                  </option>
+                  <option clasName="py-2" value="14">
+                    14
+                  </option>
+                  <option clasName="py-2" value="13">
+                    13
+                  </option>
+                  <option clasName="py-2" value="12">
+                    12
+                  </option>
+                  <option clasName="py-2" value="11">
+                    11
+                  </option>
+                  <option clasName="py-2" value="10">
+                    10
+                  </option>
+                  <option clasName="py-2" value="9">
+                    9
+                  </option>
+                  <option clasName="py-2" value="8">
+                    8
+                  </option>
+                  <option clasName="py-2" value="7">
+                    7
+                  </option>
+                  <option clasName="py-2" value="6">
+                    6
+                  </option>
+                  <option clasName="py-2" value="5">
+                    5
+                  </option>
+                  <option clasName="py-2" value="4">
+                    4
+                  </option>
+                  <option clasName="py-2" value="3">
+                    3
+                  </option>
+                  <option clasName="py-2" value="2">
+                    2
+                  </option>
+                  <option clasName="py-2" value="1">
+                    1
+                  </option>
+                  <option clasName="py-2" value="0">
+                    0
                   </option>
                 </select>
               </div>
@@ -5919,7 +7349,7 @@ function Rater() {
 
           <div>
             <label className="mb text-md text-[#34FEF8] font-bold uppercase">
-              Position
+              Ball Control
             </label>
             <br />
             <div
@@ -5930,7 +7360,7 @@ function Rater() {
                 <select
                   onChange={(e) => {
                     // selectedClass();
-                    setClassRoom(e.target.value);
+                    setBallControl(e.target.value);
                   }}
                   className="rounder resize-none w-full h-[6rem] bg-[#01112B] text-base border-[5px] border-[#34FEF8] text-[#34FEF8] mb-2 mt-2 p-3 pl-4 pt-0 placeholder-opacity-60 placeholder-[#34FEF8]"
                 >
@@ -5940,82 +7370,307 @@ function Rater() {
                     className="block"
                     disabled
                   >
-                    Select your Preferred Playing Position
+                    Select a rating
                   </option>
-                  <option className="py-2" value="GK">
-                    GoalKeeper
+                  <option clasName="py-2" value="99">
+                    99
                   </option>
-                  <option className="py-2" value="RB">
-                    Right Back
+                  <option clasName="py-2" value="98">
+                    98
                   </option>
-                  <option className="py-2" value="RCB">
-                    Right Center Back
+                  <option clasName="py-2" value="97">
+                    97
                   </option>
-                  <option className="py-2" value="CB">
-                    Center Back
+                  <option clasName="py-2" value="96">
+                    96
                   </option>
-                  <option className="py-2" value="LCB">
-                    Left Center Back
+                  <option clasName="py-2" value="95">
+                    95
                   </option>
-                  <option className="py-2" value="LB">
-                    Left Back
+                  <option clasName="py-2" value="94">
+                    94
                   </option>
-                  <option className="py-2" value="RWB">
-                    Right Wing Back
+                  <option clasName="py-2" value="93">
+                    93
                   </option>
-                  <option className="py-2" value="LWB">
-                    Left Wing Back
+                  <option clasName="py-2" value="92">
+                    92
                   </option>
-                  <option className="py-2" value="RDM">
-                    Right Defensive Midfielder
+                  <option clasName="py-2" value="91">
+                    91
                   </option>
-                  <option className="py-2" value="DM">
-                    Defensive Midfielder
+                  <option clasName="py-2" value="90">
+                    90
                   </option>
-                  <option className="py-2" value="LDM">
-                    Left Defensive Midfielder
+                  <option clasName="py-2" value="89">
+                    89
                   </option>
-                  <option className="py-2" value="RM">
-                    Right Midfielder
+                  <option clasName="py-2" value="88">
+                    88
                   </option>
-                  <option className="py-2" value="RCM">
-                    Right Center Midfielder
+                  <option clasName="py-2" value="87">
+                    87
                   </option>
-                  <option className="py-2" value="CM">
-                    Center Midfielder
+                  <option clasName="py-2" value="86">
+                    86
                   </option>
-                  <option className="py-2" value="LCM">
-                    Left Center Midfielder
+                  <option clasName="py-2" value="85">
+                    85
                   </option>
-                  <option className="py-2" value="LM">
-                    Left Midfielder
+                  <option clasName="py-2" value="84">
+                    84
                   </option>
-                  <option className="py-2" value="RAM">
-                    Right Attacking Midfielder
+                  <option clasName="py-2" value="83">
+                    83
                   </option>
-                  <option className="py-2" value="AM">
-                    Attacking Midfielder
+                  <option clasName="py-2" value="82">
+                    82
                   </option>
-                  <option className="py-2" value="LAM">
-                    Left Attacking Midfielder
+                  <option clasName="py-2" value="81">
+                    81
                   </option>
-                  <option className="py-2" value="RW">
-                    Right Winger
+                  <option clasName="py-2" value="80">
+                    80
                   </option>
-                  <option className="py-2" value="LW">
-                    Left Winger
+                  <option clasName="py-2" value="79">
+                    79
                   </option>
-                  <option className="py-2" value="SS">
-                    Second Striker
+                  <option clasName="py-2" value="78">
+                    78
                   </option>
-                  <option className="py-2" value="RS">
-                    Right Striker
+                  <option clasName="py-2" value="77">
+                    77
                   </option>
-                  <option className="py-2" value="LS">
-                    Left Striker
+                  <option clasName="py-2" value="76">
+                    76
                   </option>
-                  <option className="py-2" value="CF">
-                    Center Foward
+                  <option clasName="py-2" value="75">
+                    75
+                  </option>
+                  <option clasName="py-2" value="74">
+                    74
+                  </option>
+                  <option clasName="py-2" value="73">
+                    73
+                  </option>
+                  <option clasName="py-2" value="72">
+                    72
+                  </option>
+                  <option clasName="py-2" value="71">
+                    71
+                  </option>
+                  <option clasName="py-2" value="70">
+                    70
+                  </option>
+                  <option clasName="py-2" value="69">
+                    69
+                  </option>
+                  <option clasName="py-2" value="68">
+                    68
+                  </option>
+                  <option clasName="py-2" value="67">
+                    67
+                  </option>
+                  <option clasName="py-2" value="66">
+                    66
+                  </option>
+                  <option clasName="py-2" value="65">
+                    65
+                  </option>
+                  <option clasName="py-2" value="64">
+                    64
+                  </option>
+                  <option clasName="py-2" value="63">
+                    63
+                  </option>
+                  <option clasName="py-2" value="62">
+                    62
+                  </option>
+                  <option clasName="py-2" value="61">
+                    61
+                  </option>
+                  <option clasName="py-2" value="60">
+                    60
+                  </option>
+                  <option clasName="py-2" value="59">
+                    59
+                  </option>
+                  <option clasName="py-2" value="58">
+                    58
+                  </option>
+                  <option clasName="py-2" value="57">
+                    57
+                  </option>
+                  <option clasName="py-2" value="56">
+                    56
+                  </option>
+                  <option clasName="py-2" value="55">
+                    55
+                  </option>
+                  <option clasName="py-2" value="54">
+                    54
+                  </option>
+                  <option clasName="py-2" value="53">
+                    53
+                  </option>
+                  <option clasName="py-2" value="52">
+                    52
+                  </option>
+                  <option clasName="py-2" value="51">
+                    51
+                  </option>
+                  <option clasName="py-2" value="50">
+                    50
+                  </option>
+                  <option clasName="py-2" value="49">
+                    49
+                  </option>
+                  <option clasName="py-2" value="48">
+                    48
+                  </option>
+                  <option clasName="py-2" value="47">
+                    47
+                  </option>
+                  <option clasName="py-2" value="46">
+                    46
+                  </option>
+                  <option clasName="py-2" value="45">
+                    45
+                  </option>
+                  <option clasName="py-2" value="44">
+                    44
+                  </option>
+                  <option clasName="py-2" value="43">
+                    43
+                  </option>
+                  <option clasName="py-2" value="42">
+                    42
+                  </option>
+                  <option clasName="py-2" value="41">
+                    41
+                  </option>
+                  <option clasName="py-2" value="40">
+                    40
+                  </option>
+                  <option clasName="py-2" value="39">
+                    39
+                  </option>
+                  <option clasName="py-2" value="38">
+                    38
+                  </option>
+                  <option clasName="py-2" value="37">
+                    37
+                  </option>
+                  <option clasName="py-2" value="36">
+                    36
+                  </option>
+                  <option clasName="py-2" value="35">
+                    35
+                  </option>
+                  <option clasName="py-2" value="34">
+                    34
+                  </option>
+                  <option clasName="py-2" value="33">
+                    33
+                  </option>
+                  <option clasName="py-2" value="32">
+                    32
+                  </option>
+                  <option clasName="py-2" value="31">
+                    31
+                  </option>
+                  <option clasName="py-2" value="30">
+                    30
+                  </option>
+                  <option clasName="py-2" value="29">
+                    29
+                  </option>
+                  <option clasName="py-2" value="28">
+                    28
+                  </option>
+                  <option clasName="py-2" value="27">
+                    27
+                  </option>
+                  <option clasName="py-2" value="26">
+                    26
+                  </option>
+                  <option clasName="py-2" value="25">
+                    25
+                  </option>
+                  <option clasName="py-2" value="24">
+                    24
+                  </option>
+                  <option clasName="py-2" value="23">
+                    23
+                  </option>
+                  <option clasName="py-2" value="22">
+                    22
+                  </option>
+                  <option clasName="py-2" value="21">
+                    21
+                  </option>
+                  <option clasName="py-2" value="20">
+                    20
+                  </option>
+                  <option clasName="py-2" value="19">
+                    19
+                  </option>
+                  <option clasName="py-2" value="18">
+                    18
+                  </option>
+                  <option clasName="py-2" value="17">
+                    17
+                  </option>
+                  <option clasName="py-2" value="16">
+                    16
+                  </option>
+                  <option clasName="py-2" value="15">
+                    15
+                  </option>
+                  <option clasName="py-2" value="14">
+                    14
+                  </option>
+                  <option clasName="py-2" value="13">
+                    13
+                  </option>
+                  <option clasName="py-2" value="12">
+                    12
+                  </option>
+                  <option clasName="py-2" value="11">
+                    11
+                  </option>
+                  <option clasName="py-2" value="10">
+                    10
+                  </option>
+                  <option clasName="py-2" value="9">
+                    9
+                  </option>
+                  <option clasName="py-2" value="8">
+                    8
+                  </option>
+                  <option clasName="py-2" value="7">
+                    7
+                  </option>
+                  <option clasName="py-2" value="6">
+                    6
+                  </option>
+                  <option clasName="py-2" value="5">
+                    5
+                  </option>
+                  <option clasName="py-2" value="4">
+                    4
+                  </option>
+                  <option clasName="py-2" value="3">
+                    3
+                  </option>
+                  <option clasName="py-2" value="2">
+                    2
+                  </option>
+                  <option clasName="py-2" value="1">
+                    1
+                  </option>
+                  <option clasName="py-2" value="0">
+                    0
                   </option>
                 </select>
               </div>
@@ -6024,7 +7679,7 @@ function Rater() {
 
           <div>
             <label className="mb text-md text-[#34FEF8] font-bold uppercase">
-              Position
+              Composure
             </label>
             <br />
             <div
@@ -6035,7 +7690,7 @@ function Rater() {
                 <select
                   onChange={(e) => {
                     // selectedClass();
-                    setClassRoom(e.target.value);
+                    setComposure(e.target.value);
                   }}
                   className="rounder resize-none w-full h-[6rem] bg-[#01112B] text-base border-[5px] border-[#34FEF8] text-[#34FEF8] mb-2 mt-2 p-3 pl-4 pt-0 placeholder-opacity-60 placeholder-[#34FEF8]"
                 >
@@ -6045,82 +7700,9547 @@ function Rater() {
                     className="block"
                     disabled
                   >
-                    Select your Preferred Playing Position
+                    Select a rating
                   </option>
-                  <option className="py-2" value="GK">
-                    GoalKeeper
+                  <option clasName="py-2" value="99">
+                    99
                   </option>
-                  <option className="py-2" value="RB">
-                    Right Back
+                  <option clasName="py-2" value="98">
+                    98
                   </option>
-                  <option className="py-2" value="RCB">
-                    Right Center Back
+                  <option clasName="py-2" value="97">
+                    97
                   </option>
-                  <option className="py-2" value="CB">
-                    Center Back
+                  <option clasName="py-2" value="96">
+                    96
                   </option>
-                  <option className="py-2" value="LCB">
-                    Left Center Back
+                  <option clasName="py-2" value="95">
+                    95
                   </option>
-                  <option className="py-2" value="LB">
-                    Left Back
+                  <option clasName="py-2" value="94">
+                    94
                   </option>
-                  <option className="py-2" value="RWB">
-                    Right Wing Back
+                  <option clasName="py-2" value="93">
+                    93
                   </option>
-                  <option className="py-2" value="LWB">
-                    Left Wing Back
+                  <option clasName="py-2" value="92">
+                    92
                   </option>
-                  <option className="py-2" value="RDM">
-                    Right Defensive Midfielder
+                  <option clasName="py-2" value="91">
+                    91
                   </option>
-                  <option className="py-2" value="DM">
-                    Defensive Midfielder
+                  <option clasName="py-2" value="90">
+                    90
                   </option>
-                  <option className="py-2" value="LDM">
-                    Left Defensive Midfielder
+                  <option clasName="py-2" value="89">
+                    89
                   </option>
-                  <option className="py-2" value="RM">
-                    Right Midfielder
+                  <option clasName="py-2" value="88">
+                    88
                   </option>
-                  <option className="py-2" value="RCM">
-                    Right Center Midfielder
+                  <option clasName="py-2" value="87">
+                    87
                   </option>
-                  <option className="py-2" value="CM">
-                    Center Midfielder
+                  <option clasName="py-2" value="86">
+                    86
                   </option>
-                  <option className="py-2" value="LCM">
-                    Left Center Midfielder
+                  <option clasName="py-2" value="85">
+                    85
                   </option>
-                  <option className="py-2" value="LM">
-                    Left Midfielder
+                  <option clasName="py-2" value="84">
+                    84
                   </option>
-                  <option className="py-2" value="RAM">
-                    Right Attacking Midfielder
+                  <option clasName="py-2" value="83">
+                    83
                   </option>
-                  <option className="py-2" value="AM">
-                    Attacking Midfielder
+                  <option clasName="py-2" value="82">
+                    82
                   </option>
-                  <option className="py-2" value="LAM">
-                    Left Attacking Midfielder
+                  <option clasName="py-2" value="81">
+                    81
                   </option>
-                  <option className="py-2" value="RW">
-                    Right Winger
+                  <option clasName="py-2" value="80">
+                    80
                   </option>
-                  <option className="py-2" value="LW">
-                    Left Winger
+                  <option clasName="py-2" value="79">
+                    79
                   </option>
-                  <option className="py-2" value="SS">
-                    Second Striker
+                  <option clasName="py-2" value="78">
+                    78
                   </option>
-                  <option className="py-2" value="RS">
-                    Right Striker
+                  <option clasName="py-2" value="77">
+                    77
                   </option>
-                  <option className="py-2" value="LS">
-                    Left Striker
+                  <option clasName="py-2" value="76">
+                    76
                   </option>
-                  <option className="py-2" value="CF">
-                    Center Foward
+                  <option clasName="py-2" value="75">
+                    75
+                  </option>
+                  <option clasName="py-2" value="74">
+                    74
+                  </option>
+                  <option clasName="py-2" value="73">
+                    73
+                  </option>
+                  <option clasName="py-2" value="72">
+                    72
+                  </option>
+                  <option clasName="py-2" value="71">
+                    71
+                  </option>
+                  <option clasName="py-2" value="70">
+                    70
+                  </option>
+                  <option clasName="py-2" value="69">
+                    69
+                  </option>
+                  <option clasName="py-2" value="68">
+                    68
+                  </option>
+                  <option clasName="py-2" value="67">
+                    67
+                  </option>
+                  <option clasName="py-2" value="66">
+                    66
+                  </option>
+                  <option clasName="py-2" value="65">
+                    65
+                  </option>
+                  <option clasName="py-2" value="64">
+                    64
+                  </option>
+                  <option clasName="py-2" value="63">
+                    63
+                  </option>
+                  <option clasName="py-2" value="62">
+                    62
+                  </option>
+                  <option clasName="py-2" value="61">
+                    61
+                  </option>
+                  <option clasName="py-2" value="60">
+                    60
+                  </option>
+                  <option clasName="py-2" value="59">
+                    59
+                  </option>
+                  <option clasName="py-2" value="58">
+                    58
+                  </option>
+                  <option clasName="py-2" value="57">
+                    57
+                  </option>
+                  <option clasName="py-2" value="56">
+                    56
+                  </option>
+                  <option clasName="py-2" value="55">
+                    55
+                  </option>
+                  <option clasName="py-2" value="54">
+                    54
+                  </option>
+                  <option clasName="py-2" value="53">
+                    53
+                  </option>
+                  <option clasName="py-2" value="52">
+                    52
+                  </option>
+                  <option clasName="py-2" value="51">
+                    51
+                  </option>
+                  <option clasName="py-2" value="50">
+                    50
+                  </option>
+                  <option clasName="py-2" value="49">
+                    49
+                  </option>
+                  <option clasName="py-2" value="48">
+                    48
+                  </option>
+                  <option clasName="py-2" value="47">
+                    47
+                  </option>
+                  <option clasName="py-2" value="46">
+                    46
+                  </option>
+                  <option clasName="py-2" value="45">
+                    45
+                  </option>
+                  <option clasName="py-2" value="44">
+                    44
+                  </option>
+                  <option clasName="py-2" value="43">
+                    43
+                  </option>
+                  <option clasName="py-2" value="42">
+                    42
+                  </option>
+                  <option clasName="py-2" value="41">
+                    41
+                  </option>
+                  <option clasName="py-2" value="40">
+                    40
+                  </option>
+                  <option clasName="py-2" value="39">
+                    39
+                  </option>
+                  <option clasName="py-2" value="38">
+                    38
+                  </option>
+                  <option clasName="py-2" value="37">
+                    37
+                  </option>
+                  <option clasName="py-2" value="36">
+                    36
+                  </option>
+                  <option clasName="py-2" value="35">
+                    35
+                  </option>
+                  <option clasName="py-2" value="34">
+                    34
+                  </option>
+                  <option clasName="py-2" value="33">
+                    33
+                  </option>
+                  <option clasName="py-2" value="32">
+                    32
+                  </option>
+                  <option clasName="py-2" value="31">
+                    31
+                  </option>
+                  <option clasName="py-2" value="30">
+                    30
+                  </option>
+                  <option clasName="py-2" value="29">
+                    29
+                  </option>
+                  <option clasName="py-2" value="28">
+                    28
+                  </option>
+                  <option clasName="py-2" value="27">
+                    27
+                  </option>
+                  <option clasName="py-2" value="26">
+                    26
+                  </option>
+                  <option clasName="py-2" value="25">
+                    25
+                  </option>
+                  <option clasName="py-2" value="24">
+                    24
+                  </option>
+                  <option clasName="py-2" value="23">
+                    23
+                  </option>
+                  <option clasName="py-2" value="22">
+                    22
+                  </option>
+                  <option clasName="py-2" value="21">
+                    21
+                  </option>
+                  <option clasName="py-2" value="20">
+                    20
+                  </option>
+                  <option clasName="py-2" value="19">
+                    19
+                  </option>
+                  <option clasName="py-2" value="18">
+                    18
+                  </option>
+                  <option clasName="py-2" value="17">
+                    17
+                  </option>
+                  <option clasName="py-2" value="16">
+                    16
+                  </option>
+                  <option clasName="py-2" value="15">
+                    15
+                  </option>
+                  <option clasName="py-2" value="14">
+                    14
+                  </option>
+                  <option clasName="py-2" value="13">
+                    13
+                  </option>
+                  <option clasName="py-2" value="12">
+                    12
+                  </option>
+                  <option clasName="py-2" value="11">
+                    11
+                  </option>
+                  <option clasName="py-2" value="10">
+                    10
+                  </option>
+                  <option clasName="py-2" value="9">
+                    9
+                  </option>
+                  <option clasName="py-2" value="8">
+                    8
+                  </option>
+                  <option clasName="py-2" value="7">
+                    7
+                  </option>
+                  <option clasName="py-2" value="6">
+                    6
+                  </option>
+                  <option clasName="py-2" value="5">
+                    5
+                  </option>
+                  <option clasName="py-2" value="4">
+                    4
+                  </option>
+                  <option clasName="py-2" value="3">
+                    3
+                  </option>
+                  <option clasName="py-2" value="2">
+                    2
+                  </option>
+                  <option clasName="py-2" value="1">
+                    1
+                  </option>
+                  <option clasName="py-2" value="0">
+                    0
+                  </option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <label className="mb text-md text-[#34FEF8] font-bold uppercase">
+              Crossing
+            </label>
+            <br />
+            <div
+              className="z-[1000]"
+              //  style={{transform: 'translate(-50%, -50%)'}}
+            >
+              <div className="rounded-lg border-[#34FEF8] px-6">
+                <select
+                  onChange={(e) => {
+                    // selectedClass();
+                    setCrossing(e.target.value);
+                  }}
+                  className="rounder resize-none w-full h-[6rem] bg-[#01112B] text-base border-[5px] border-[#34FEF8] text-[#34FEF8] mb-2 mt-2 p-3 pl-4 pt-0 placeholder-opacity-60 placeholder-[#34FEF8]"
+                >
+                  <option
+                    value="Select a Category"
+                    selected
+                    className="block"
+                    disabled
+                  >
+                    Select a rating
+                  </option>
+                  <option clasName="py-2" value="99">
+                    99
+                  </option>
+                  <option clasName="py-2" value="98">
+                    98
+                  </option>
+                  <option clasName="py-2" value="97">
+                    97
+                  </option>
+                  <option clasName="py-2" value="96">
+                    96
+                  </option>
+                  <option clasName="py-2" value="95">
+                    95
+                  </option>
+                  <option clasName="py-2" value="94">
+                    94
+                  </option>
+                  <option clasName="py-2" value="93">
+                    93
+                  </option>
+                  <option clasName="py-2" value="92">
+                    92
+                  </option>
+                  <option clasName="py-2" value="91">
+                    91
+                  </option>
+                  <option clasName="py-2" value="90">
+                    90
+                  </option>
+                  <option clasName="py-2" value="89">
+                    89
+                  </option>
+                  <option clasName="py-2" value="88">
+                    88
+                  </option>
+                  <option clasName="py-2" value="87">
+                    87
+                  </option>
+                  <option clasName="py-2" value="86">
+                    86
+                  </option>
+                  <option clasName="py-2" value="85">
+                    85
+                  </option>
+                  <option clasName="py-2" value="84">
+                    84
+                  </option>
+                  <option clasName="py-2" value="83">
+                    83
+                  </option>
+                  <option clasName="py-2" value="82">
+                    82
+                  </option>
+                  <option clasName="py-2" value="81">
+                    81
+                  </option>
+                  <option clasName="py-2" value="80">
+                    80
+                  </option>
+                  <option clasName="py-2" value="79">
+                    79
+                  </option>
+                  <option clasName="py-2" value="78">
+                    78
+                  </option>
+                  <option clasName="py-2" value="77">
+                    77
+                  </option>
+                  <option clasName="py-2" value="76">
+                    76
+                  </option>
+                  <option clasName="py-2" value="75">
+                    75
+                  </option>
+                  <option clasName="py-2" value="74">
+                    74
+                  </option>
+                  <option clasName="py-2" value="73">
+                    73
+                  </option>
+                  <option clasName="py-2" value="72">
+                    72
+                  </option>
+                  <option clasName="py-2" value="71">
+                    71
+                  </option>
+                  <option clasName="py-2" value="70">
+                    70
+                  </option>
+                  <option clasName="py-2" value="69">
+                    69
+                  </option>
+                  <option clasName="py-2" value="68">
+                    68
+                  </option>
+                  <option clasName="py-2" value="67">
+                    67
+                  </option>
+                  <option clasName="py-2" value="66">
+                    66
+                  </option>
+                  <option clasName="py-2" value="65">
+                    65
+                  </option>
+                  <option clasName="py-2" value="64">
+                    64
+                  </option>
+                  <option clasName="py-2" value="63">
+                    63
+                  </option>
+                  <option clasName="py-2" value="62">
+                    62
+                  </option>
+                  <option clasName="py-2" value="61">
+                    61
+                  </option>
+                  <option clasName="py-2" value="60">
+                    60
+                  </option>
+                  <option clasName="py-2" value="59">
+                    59
+                  </option>
+                  <option clasName="py-2" value="58">
+                    58
+                  </option>
+                  <option clasName="py-2" value="57">
+                    57
+                  </option>
+                  <option clasName="py-2" value="56">
+                    56
+                  </option>
+                  <option clasName="py-2" value="55">
+                    55
+                  </option>
+                  <option clasName="py-2" value="54">
+                    54
+                  </option>
+                  <option clasName="py-2" value="53">
+                    53
+                  </option>
+                  <option clasName="py-2" value="52">
+                    52
+                  </option>
+                  <option clasName="py-2" value="51">
+                    51
+                  </option>
+                  <option clasName="py-2" value="50">
+                    50
+                  </option>
+                  <option clasName="py-2" value="49">
+                    49
+                  </option>
+                  <option clasName="py-2" value="48">
+                    48
+                  </option>
+                  <option clasName="py-2" value="47">
+                    47
+                  </option>
+                  <option clasName="py-2" value="46">
+                    46
+                  </option>
+                  <option clasName="py-2" value="45">
+                    45
+                  </option>
+                  <option clasName="py-2" value="44">
+                    44
+                  </option>
+                  <option clasName="py-2" value="43">
+                    43
+                  </option>
+                  <option clasName="py-2" value="42">
+                    42
+                  </option>
+                  <option clasName="py-2" value="41">
+                    41
+                  </option>
+                  <option clasName="py-2" value="40">
+                    40
+                  </option>
+                  <option clasName="py-2" value="39">
+                    39
+                  </option>
+                  <option clasName="py-2" value="38">
+                    38
+                  </option>
+                  <option clasName="py-2" value="37">
+                    37
+                  </option>
+                  <option clasName="py-2" value="36">
+                    36
+                  </option>
+                  <option clasName="py-2" value="35">
+                    35
+                  </option>
+                  <option clasName="py-2" value="34">
+                    34
+                  </option>
+                  <option clasName="py-2" value="33">
+                    33
+                  </option>
+                  <option clasName="py-2" value="32">
+                    32
+                  </option>
+                  <option clasName="py-2" value="31">
+                    31
+                  </option>
+                  <option clasName="py-2" value="30">
+                    30
+                  </option>
+                  <option clasName="py-2" value="29">
+                    29
+                  </option>
+                  <option clasName="py-2" value="28">
+                    28
+                  </option>
+                  <option clasName="py-2" value="27">
+                    27
+                  </option>
+                  <option clasName="py-2" value="26">
+                    26
+                  </option>
+                  <option clasName="py-2" value="25">
+                    25
+                  </option>
+                  <option clasName="py-2" value="24">
+                    24
+                  </option>
+                  <option clasName="py-2" value="23">
+                    23
+                  </option>
+                  <option clasName="py-2" value="22">
+                    22
+                  </option>
+                  <option clasName="py-2" value="21">
+                    21
+                  </option>
+                  <option clasName="py-2" value="20">
+                    20
+                  </option>
+                  <option clasName="py-2" value="19">
+                    19
+                  </option>
+                  <option clasName="py-2" value="18">
+                    18
+                  </option>
+                  <option clasName="py-2" value="17">
+                    17
+                  </option>
+                  <option clasName="py-2" value="16">
+                    16
+                  </option>
+                  <option clasName="py-2" value="15">
+                    15
+                  </option>
+                  <option clasName="py-2" value="14">
+                    14
+                  </option>
+                  <option clasName="py-2" value="13">
+                    13
+                  </option>
+                  <option clasName="py-2" value="12">
+                    12
+                  </option>
+                  <option clasName="py-2" value="11">
+                    11
+                  </option>
+                  <option clasName="py-2" value="10">
+                    10
+                  </option>
+                  <option clasName="py-2" value="9">
+                    9
+                  </option>
+                  <option clasName="py-2" value="8">
+                    8
+                  </option>
+                  <option clasName="py-2" value="7">
+                    7
+                  </option>
+                  <option clasName="py-2" value="6">
+                    6
+                  </option>
+                  <option clasName="py-2" value="5">
+                    5
+                  </option>
+                  <option clasName="py-2" value="4">
+                    4
+                  </option>
+                  <option clasName="py-2" value="3">
+                    3
+                  </option>
+                  <option clasName="py-2" value="2">
+                    2
+                  </option>
+                  <option clasName="py-2" value="1">
+                    1
+                  </option>
+                  <option clasName="py-2" value="0">
+                    0
+                  </option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <label className="mb text-md text-[#34FEF8] font-bold uppercase">
+              Curve
+            </label>
+            <br />
+            <div
+              className="z-[1000]"
+              //  style={{transform: 'translate(-50%, -50%)'}}
+            >
+              <div className="rounded-lg border-[#34FEF8] px-6">
+                <select
+                  onChange={(e) => {
+                    // selectedClass();
+                    setCurve(e.target.value);
+                  }}
+                  className="rounder resize-none w-full h-[6rem] bg-[#01112B] text-base border-[5px] border-[#34FEF8] text-[#34FEF8] mb-2 mt-2 p-3 pl-4 pt-0 placeholder-opacity-60 placeholder-[#34FEF8]"
+                >
+                  <option
+                    value="Select a Category"
+                    selected
+                    className="block"
+                    disabled
+                  >
+                    Select a rating
+                  </option>
+                  <option clasName="py-2" value="99">
+                    99
+                  </option>
+                  <option clasName="py-2" value="98">
+                    98
+                  </option>
+                  <option clasName="py-2" value="97">
+                    97
+                  </option>
+                  <option clasName="py-2" value="96">
+                    96
+                  </option>
+                  <option clasName="py-2" value="95">
+                    95
+                  </option>
+                  <option clasName="py-2" value="94">
+                    94
+                  </option>
+                  <option clasName="py-2" value="93">
+                    93
+                  </option>
+                  <option clasName="py-2" value="92">
+                    92
+                  </option>
+                  <option clasName="py-2" value="91">
+                    91
+                  </option>
+                  <option clasName="py-2" value="90">
+                    90
+                  </option>
+                  <option clasName="py-2" value="89">
+                    89
+                  </option>
+                  <option clasName="py-2" value="88">
+                    88
+                  </option>
+                  <option clasName="py-2" value="87">
+                    87
+                  </option>
+                  <option clasName="py-2" value="86">
+                    86
+                  </option>
+                  <option clasName="py-2" value="85">
+                    85
+                  </option>
+                  <option clasName="py-2" value="84">
+                    84
+                  </option>
+                  <option clasName="py-2" value="83">
+                    83
+                  </option>
+                  <option clasName="py-2" value="82">
+                    82
+                  </option>
+                  <option clasName="py-2" value="81">
+                    81
+                  </option>
+                  <option clasName="py-2" value="80">
+                    80
+                  </option>
+                  <option clasName="py-2" value="79">
+                    79
+                  </option>
+                  <option clasName="py-2" value="78">
+                    78
+                  </option>
+                  <option clasName="py-2" value="77">
+                    77
+                  </option>
+                  <option clasName="py-2" value="76">
+                    76
+                  </option>
+                  <option clasName="py-2" value="75">
+                    75
+                  </option>
+                  <option clasName="py-2" value="74">
+                    74
+                  </option>
+                  <option clasName="py-2" value="73">
+                    73
+                  </option>
+                  <option clasName="py-2" value="72">
+                    72
+                  </option>
+                  <option clasName="py-2" value="71">
+                    71
+                  </option>
+                  <option clasName="py-2" value="70">
+                    70
+                  </option>
+                  <option clasName="py-2" value="69">
+                    69
+                  </option>
+                  <option clasName="py-2" value="68">
+                    68
+                  </option>
+                  <option clasName="py-2" value="67">
+                    67
+                  </option>
+                  <option clasName="py-2" value="66">
+                    66
+                  </option>
+                  <option clasName="py-2" value="65">
+                    65
+                  </option>
+                  <option clasName="py-2" value="64">
+                    64
+                  </option>
+                  <option clasName="py-2" value="63">
+                    63
+                  </option>
+                  <option clasName="py-2" value="62">
+                    62
+                  </option>
+                  <option clasName="py-2" value="61">
+                    61
+                  </option>
+                  <option clasName="py-2" value="60">
+                    60
+                  </option>
+                  <option clasName="py-2" value="59">
+                    59
+                  </option>
+                  <option clasName="py-2" value="58">
+                    58
+                  </option>
+                  <option clasName="py-2" value="57">
+                    57
+                  </option>
+                  <option clasName="py-2" value="56">
+                    56
+                  </option>
+                  <option clasName="py-2" value="55">
+                    55
+                  </option>
+                  <option clasName="py-2" value="54">
+                    54
+                  </option>
+                  <option clasName="py-2" value="53">
+                    53
+                  </option>
+                  <option clasName="py-2" value="52">
+                    52
+                  </option>
+                  <option clasName="py-2" value="51">
+                    51
+                  </option>
+                  <option clasName="py-2" value="50">
+                    50
+                  </option>
+                  <option clasName="py-2" value="49">
+                    49
+                  </option>
+                  <option clasName="py-2" value="48">
+                    48
+                  </option>
+                  <option clasName="py-2" value="47">
+                    47
+                  </option>
+                  <option clasName="py-2" value="46">
+                    46
+                  </option>
+                  <option clasName="py-2" value="45">
+                    45
+                  </option>
+                  <option clasName="py-2" value="44">
+                    44
+                  </option>
+                  <option clasName="py-2" value="43">
+                    43
+                  </option>
+                  <option clasName="py-2" value="42">
+                    42
+                  </option>
+                  <option clasName="py-2" value="41">
+                    41
+                  </option>
+                  <option clasName="py-2" value="40">
+                    40
+                  </option>
+                  <option clasName="py-2" value="39">
+                    39
+                  </option>
+                  <option clasName="py-2" value="38">
+                    38
+                  </option>
+                  <option clasName="py-2" value="37">
+                    37
+                  </option>
+                  <option clasName="py-2" value="36">
+                    36
+                  </option>
+                  <option clasName="py-2" value="35">
+                    35
+                  </option>
+                  <option clasName="py-2" value="34">
+                    34
+                  </option>
+                  <option clasName="py-2" value="33">
+                    33
+                  </option>
+                  <option clasName="py-2" value="32">
+                    32
+                  </option>
+                  <option clasName="py-2" value="31">
+                    31
+                  </option>
+                  <option clasName="py-2" value="30">
+                    30
+                  </option>
+                  <option clasName="py-2" value="29">
+                    29
+                  </option>
+                  <option clasName="py-2" value="28">
+                    28
+                  </option>
+                  <option clasName="py-2" value="27">
+                    27
+                  </option>
+                  <option clasName="py-2" value="26">
+                    26
+                  </option>
+                  <option clasName="py-2" value="25">
+                    25
+                  </option>
+                  <option clasName="py-2" value="24">
+                    24
+                  </option>
+                  <option clasName="py-2" value="23">
+                    23
+                  </option>
+                  <option clasName="py-2" value="22">
+                    22
+                  </option>
+                  <option clasName="py-2" value="21">
+                    21
+                  </option>
+                  <option clasName="py-2" value="20">
+                    20
+                  </option>
+                  <option clasName="py-2" value="19">
+                    19
+                  </option>
+                  <option clasName="py-2" value="18">
+                    18
+                  </option>
+                  <option clasName="py-2" value="17">
+                    17
+                  </option>
+                  <option clasName="py-2" value="16">
+                    16
+                  </option>
+                  <option clasName="py-2" value="15">
+                    15
+                  </option>
+                  <option clasName="py-2" value="14">
+                    14
+                  </option>
+                  <option clasName="py-2" value="13">
+                    13
+                  </option>
+                  <option clasName="py-2" value="12">
+                    12
+                  </option>
+                  <option clasName="py-2" value="11">
+                    11
+                  </option>
+                  <option clasName="py-2" value="10">
+                    10
+                  </option>
+                  <option clasName="py-2" value="9">
+                    9
+                  </option>
+                  <option clasName="py-2" value="8">
+                    8
+                  </option>
+                  <option clasName="py-2" value="7">
+                    7
+                  </option>
+                  <option clasName="py-2" value="6">
+                    6
+                  </option>
+                  <option clasName="py-2" value="5">
+                    5
+                  </option>
+                  <option clasName="py-2" value="4">
+                    4
+                  </option>
+                  <option clasName="py-2" value="3">
+                    3
+                  </option>
+                  <option clasName="py-2" value="2">
+                    2
+                  </option>
+                  <option clasName="py-2" value="1">
+                    1
+                  </option>
+                  <option clasName="py-2" value="0">
+                    0
+                  </option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <label className="mb text-md text-[#34FEF8] font-bold uppercase">
+              Defending
+            </label>
+            <br />
+            <div
+              className="z-[1000]"
+              //  style={{transform: 'translate(-50%, -50%)'}}
+            >
+              <div className="rounded-lg border-[#34FEF8] px-6">
+                <select
+                  onChange={(e) => {
+                    // selectedClass();
+                    setDefending(e.target.value);
+                  }}
+                  className="rounder resize-none w-full h-[6rem] bg-[#01112B] text-base border-[5px] border-[#34FEF8] text-[#34FEF8] mb-2 mt-2 p-3 pl-4 pt-0 placeholder-opacity-60 placeholder-[#34FEF8]"
+                >
+                  <option
+                    value="Select a Category"
+                    selected
+                    className="block"
+                    disabled
+                  >
+                    Select a rating
+                  </option>
+                  <option clasName="py-2" value="99">
+                    99
+                  </option>
+                  <option clasName="py-2" value="98">
+                    98
+                  </option>
+                  <option clasName="py-2" value="97">
+                    97
+                  </option>
+                  <option clasName="py-2" value="96">
+                    96
+                  </option>
+                  <option clasName="py-2" value="95">
+                    95
+                  </option>
+                  <option clasName="py-2" value="94">
+                    94
+                  </option>
+                  <option clasName="py-2" value="93">
+                    93
+                  </option>
+                  <option clasName="py-2" value="92">
+                    92
+                  </option>
+                  <option clasName="py-2" value="91">
+                    91
+                  </option>
+                  <option clasName="py-2" value="90">
+                    90
+                  </option>
+                  <option clasName="py-2" value="89">
+                    89
+                  </option>
+                  <option clasName="py-2" value="88">
+                    88
+                  </option>
+                  <option clasName="py-2" value="87">
+                    87
+                  </option>
+                  <option clasName="py-2" value="86">
+                    86
+                  </option>
+                  <option clasName="py-2" value="85">
+                    85
+                  </option>
+                  <option clasName="py-2" value="84">
+                    84
+                  </option>
+                  <option clasName="py-2" value="83">
+                    83
+                  </option>
+                  <option clasName="py-2" value="82">
+                    82
+                  </option>
+                  <option clasName="py-2" value="81">
+                    81
+                  </option>
+                  <option clasName="py-2" value="80">
+                    80
+                  </option>
+                  <option clasName="py-2" value="79">
+                    79
+                  </option>
+                  <option clasName="py-2" value="78">
+                    78
+                  </option>
+                  <option clasName="py-2" value="77">
+                    77
+                  </option>
+                  <option clasName="py-2" value="76">
+                    76
+                  </option>
+                  <option clasName="py-2" value="75">
+                    75
+                  </option>
+                  <option clasName="py-2" value="74">
+                    74
+                  </option>
+                  <option clasName="py-2" value="73">
+                    73
+                  </option>
+                  <option clasName="py-2" value="72">
+                    72
+                  </option>
+                  <option clasName="py-2" value="71">
+                    71
+                  </option>
+                  <option clasName="py-2" value="70">
+                    70
+                  </option>
+                  <option clasName="py-2" value="69">
+                    69
+                  </option>
+                  <option clasName="py-2" value="68">
+                    68
+                  </option>
+                  <option clasName="py-2" value="67">
+                    67
+                  </option>
+                  <option clasName="py-2" value="66">
+                    66
+                  </option>
+                  <option clasName="py-2" value="65">
+                    65
+                  </option>
+                  <option clasName="py-2" value="64">
+                    64
+                  </option>
+                  <option clasName="py-2" value="63">
+                    63
+                  </option>
+                  <option clasName="py-2" value="62">
+                    62
+                  </option>
+                  <option clasName="py-2" value="61">
+                    61
+                  </option>
+                  <option clasName="py-2" value="60">
+                    60
+                  </option>
+                  <option clasName="py-2" value="59">
+                    59
+                  </option>
+                  <option clasName="py-2" value="58">
+                    58
+                  </option>
+                  <option clasName="py-2" value="57">
+                    57
+                  </option>
+                  <option clasName="py-2" value="56">
+                    56
+                  </option>
+                  <option clasName="py-2" value="55">
+                    55
+                  </option>
+                  <option clasName="py-2" value="54">
+                    54
+                  </option>
+                  <option clasName="py-2" value="53">
+                    53
+                  </option>
+                  <option clasName="py-2" value="52">
+                    52
+                  </option>
+                  <option clasName="py-2" value="51">
+                    51
+                  </option>
+                  <option clasName="py-2" value="50">
+                    50
+                  </option>
+                  <option clasName="py-2" value="49">
+                    49
+                  </option>
+                  <option clasName="py-2" value="48">
+                    48
+                  </option>
+                  <option clasName="py-2" value="47">
+                    47
+                  </option>
+                  <option clasName="py-2" value="46">
+                    46
+                  </option>
+                  <option clasName="py-2" value="45">
+                    45
+                  </option>
+                  <option clasName="py-2" value="44">
+                    44
+                  </option>
+                  <option clasName="py-2" value="43">
+                    43
+                  </option>
+                  <option clasName="py-2" value="42">
+                    42
+                  </option>
+                  <option clasName="py-2" value="41">
+                    41
+                  </option>
+                  <option clasName="py-2" value="40">
+                    40
+                  </option>
+                  <option clasName="py-2" value="39">
+                    39
+                  </option>
+                  <option clasName="py-2" value="38">
+                    38
+                  </option>
+                  <option clasName="py-2" value="37">
+                    37
+                  </option>
+                  <option clasName="py-2" value="36">
+                    36
+                  </option>
+                  <option clasName="py-2" value="35">
+                    35
+                  </option>
+                  <option clasName="py-2" value="34">
+                    34
+                  </option>
+                  <option clasName="py-2" value="33">
+                    33
+                  </option>
+                  <option clasName="py-2" value="32">
+                    32
+                  </option>
+                  <option clasName="py-2" value="31">
+                    31
+                  </option>
+                  <option clasName="py-2" value="30">
+                    30
+                  </option>
+                  <option clasName="py-2" value="29">
+                    29
+                  </option>
+                  <option clasName="py-2" value="28">
+                    28
+                  </option>
+                  <option clasName="py-2" value="27">
+                    27
+                  </option>
+                  <option clasName="py-2" value="26">
+                    26
+                  </option>
+                  <option clasName="py-2" value="25">
+                    25
+                  </option>
+                  <option clasName="py-2" value="24">
+                    24
+                  </option>
+                  <option clasName="py-2" value="23">
+                    23
+                  </option>
+                  <option clasName="py-2" value="22">
+                    22
+                  </option>
+                  <option clasName="py-2" value="21">
+                    21
+                  </option>
+                  <option clasName="py-2" value="20">
+                    20
+                  </option>
+                  <option clasName="py-2" value="19">
+                    19
+                  </option>
+                  <option clasName="py-2" value="18">
+                    18
+                  </option>
+                  <option clasName="py-2" value="17">
+                    17
+                  </option>
+                  <option clasName="py-2" value="16">
+                    16
+                  </option>
+                  <option clasName="py-2" value="15">
+                    15
+                  </option>
+                  <option clasName="py-2" value="14">
+                    14
+                  </option>
+                  <option clasName="py-2" value="13">
+                    13
+                  </option>
+                  <option clasName="py-2" value="12">
+                    12
+                  </option>
+                  <option clasName="py-2" value="11">
+                    11
+                  </option>
+                  <option clasName="py-2" value="10">
+                    10
+                  </option>
+                  <option clasName="py-2" value="9">
+                    9
+                  </option>
+                  <option clasName="py-2" value="8">
+                    8
+                  </option>
+                  <option clasName="py-2" value="7">
+                    7
+                  </option>
+                  <option clasName="py-2" value="6">
+                    6
+                  </option>
+                  <option clasName="py-2" value="5">
+                    5
+                  </option>
+                  <option clasName="py-2" value="4">
+                    4
+                  </option>
+                  <option clasName="py-2" value="3">
+                    3
+                  </option>
+                  <option clasName="py-2" value="2">
+                    2
+                  </option>
+                  <option clasName="py-2" value="1">
+                    1
+                  </option>
+                  <option clasName="py-2" value="0">
+                    0
+                  </option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <label className="mb text-md text-[#34FEF8] font-bold uppercase">
+              Dribbling
+            </label>
+            <br />
+            <div
+              className="z-[1000]"
+              //  style={{transform: 'translate(-50%, -50%)'}}
+            >
+              <div className="rounded-lg border-[#34FEF8] px-6">
+                <select
+                  onChange={(e) => {
+                    // selectedClass();
+                    setDribbling(e.target.value);
+                  }}
+                  className="rounder resize-none w-full h-[6rem] bg-[#01112B] text-base border-[5px] border-[#34FEF8] text-[#34FEF8] mb-2 mt-2 p-3 pl-4 pt-0 placeholder-opacity-60 placeholder-[#34FEF8]"
+                >
+                  <option
+                    value="Select a Category"
+                    selected
+                    className="block"
+                    disabled
+                  >
+                    Select a rating
+                  </option>
+                  <option clasName="py-2" value="99">
+                    99
+                  </option>
+                  <option clasName="py-2" value="98">
+                    98
+                  </option>
+                  <option clasName="py-2" value="97">
+                    97
+                  </option>
+                  <option clasName="py-2" value="96">
+                    96
+                  </option>
+                  <option clasName="py-2" value="95">
+                    95
+                  </option>
+                  <option clasName="py-2" value="94">
+                    94
+                  </option>
+                  <option clasName="py-2" value="93">
+                    93
+                  </option>
+                  <option clasName="py-2" value="92">
+                    92
+                  </option>
+                  <option clasName="py-2" value="91">
+                    91
+                  </option>
+                  <option clasName="py-2" value="90">
+                    90
+                  </option>
+                  <option clasName="py-2" value="89">
+                    89
+                  </option>
+                  <option clasName="py-2" value="88">
+                    88
+                  </option>
+                  <option clasName="py-2" value="87">
+                    87
+                  </option>
+                  <option clasName="py-2" value="86">
+                    86
+                  </option>
+                  <option clasName="py-2" value="85">
+                    85
+                  </option>
+                  <option clasName="py-2" value="84">
+                    84
+                  </option>
+                  <option clasName="py-2" value="83">
+                    83
+                  </option>
+                  <option clasName="py-2" value="82">
+                    82
+                  </option>
+                  <option clasName="py-2" value="81">
+                    81
+                  </option>
+                  <option clasName="py-2" value="80">
+                    80
+                  </option>
+                  <option clasName="py-2" value="79">
+                    79
+                  </option>
+                  <option clasName="py-2" value="78">
+                    78
+                  </option>
+                  <option clasName="py-2" value="77">
+                    77
+                  </option>
+                  <option clasName="py-2" value="76">
+                    76
+                  </option>
+                  <option clasName="py-2" value="75">
+                    75
+                  </option>
+                  <option clasName="py-2" value="74">
+                    74
+                  </option>
+                  <option clasName="py-2" value="73">
+                    73
+                  </option>
+                  <option clasName="py-2" value="72">
+                    72
+                  </option>
+                  <option clasName="py-2" value="71">
+                    71
+                  </option>
+                  <option clasName="py-2" value="70">
+                    70
+                  </option>
+                  <option clasName="py-2" value="69">
+                    69
+                  </option>
+                  <option clasName="py-2" value="68">
+                    68
+                  </option>
+                  <option clasName="py-2" value="67">
+                    67
+                  </option>
+                  <option clasName="py-2" value="66">
+                    66
+                  </option>
+                  <option clasName="py-2" value="65">
+                    65
+                  </option>
+                  <option clasName="py-2" value="64">
+                    64
+                  </option>
+                  <option clasName="py-2" value="63">
+                    63
+                  </option>
+                  <option clasName="py-2" value="62">
+                    62
+                  </option>
+                  <option clasName="py-2" value="61">
+                    61
+                  </option>
+                  <option clasName="py-2" value="60">
+                    60
+                  </option>
+                  <option clasName="py-2" value="59">
+                    59
+                  </option>
+                  <option clasName="py-2" value="58">
+                    58
+                  </option>
+                  <option clasName="py-2" value="57">
+                    57
+                  </option>
+                  <option clasName="py-2" value="56">
+                    56
+                  </option>
+                  <option clasName="py-2" value="55">
+                    55
+                  </option>
+                  <option clasName="py-2" value="54">
+                    54
+                  </option>
+                  <option clasName="py-2" value="53">
+                    53
+                  </option>
+                  <option clasName="py-2" value="52">
+                    52
+                  </option>
+                  <option clasName="py-2" value="51">
+                    51
+                  </option>
+                  <option clasName="py-2" value="50">
+                    50
+                  </option>
+                  <option clasName="py-2" value="49">
+                    49
+                  </option>
+                  <option clasName="py-2" value="48">
+                    48
+                  </option>
+                  <option clasName="py-2" value="47">
+                    47
+                  </option>
+                  <option clasName="py-2" value="46">
+                    46
+                  </option>
+                  <option clasName="py-2" value="45">
+                    45
+                  </option>
+                  <option clasName="py-2" value="44">
+                    44
+                  </option>
+                  <option clasName="py-2" value="43">
+                    43
+                  </option>
+                  <option clasName="py-2" value="42">
+                    42
+                  </option>
+                  <option clasName="py-2" value="41">
+                    41
+                  </option>
+                  <option clasName="py-2" value="40">
+                    40
+                  </option>
+                  <option clasName="py-2" value="39">
+                    39
+                  </option>
+                  <option clasName="py-2" value="38">
+                    38
+                  </option>
+                  <option clasName="py-2" value="37">
+                    37
+                  </option>
+                  <option clasName="py-2" value="36">
+                    36
+                  </option>
+                  <option clasName="py-2" value="35">
+                    35
+                  </option>
+                  <option clasName="py-2" value="34">
+                    34
+                  </option>
+                  <option clasName="py-2" value="33">
+                    33
+                  </option>
+                  <option clasName="py-2" value="32">
+                    32
+                  </option>
+                  <option clasName="py-2" value="31">
+                    31
+                  </option>
+                  <option clasName="py-2" value="30">
+                    30
+                  </option>
+                  <option clasName="py-2" value="29">
+                    29
+                  </option>
+                  <option clasName="py-2" value="28">
+                    28
+                  </option>
+                  <option clasName="py-2" value="27">
+                    27
+                  </option>
+                  <option clasName="py-2" value="26">
+                    26
+                  </option>
+                  <option clasName="py-2" value="25">
+                    25
+                  </option>
+                  <option clasName="py-2" value="24">
+                    24
+                  </option>
+                  <option clasName="py-2" value="23">
+                    23
+                  </option>
+                  <option clasName="py-2" value="22">
+                    22
+                  </option>
+                  <option clasName="py-2" value="21">
+                    21
+                  </option>
+                  <option clasName="py-2" value="20">
+                    20
+                  </option>
+                  <option clasName="py-2" value="19">
+                    19
+                  </option>
+                  <option clasName="py-2" value="18">
+                    18
+                  </option>
+                  <option clasName="py-2" value="17">
+                    17
+                  </option>
+                  <option clasName="py-2" value="16">
+                    16
+                  </option>
+                  <option clasName="py-2" value="15">
+                    15
+                  </option>
+                  <option clasName="py-2" value="14">
+                    14
+                  </option>
+                  <option clasName="py-2" value="13">
+                    13
+                  </option>
+                  <option clasName="py-2" value="12">
+                    12
+                  </option>
+                  <option clasName="py-2" value="11">
+                    11
+                  </option>
+                  <option clasName="py-2" value="10">
+                    10
+                  </option>
+                  <option clasName="py-2" value="9">
+                    9
+                  </option>
+                  <option clasName="py-2" value="8">
+                    8
+                  </option>
+                  <option clasName="py-2" value="7">
+                    7
+                  </option>
+                  <option clasName="py-2" value="6">
+                    6
+                  </option>
+                  <option clasName="py-2" value="5">
+                    5
+                  </option>
+                  <option clasName="py-2" value="4">
+                    4
+                  </option>
+                  <option clasName="py-2" value="3">
+                    3
+                  </option>
+                  <option clasName="py-2" value="2">
+                    2
+                  </option>
+                  <option clasName="py-2" value="1">
+                    1
+                  </option>
+                  <option clasName="py-2" value="0">
+                    0
+                  </option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <label className="mb text-md text-[#34FEF8] font-bold uppercase">
+              Finishing
+            </label>
+            <br />
+            <div
+              className="z-[1000]"
+              //  style={{transform: 'translate(-50%, -50%)'}}
+            >
+              <div className="rounded-lg border-[#34FEF8] px-6">
+                <select
+                  onChange={(e) => {
+                    // selectedClass();
+                    setFinishing(e.target.value);
+                  }}
+                  className="rounder resize-none w-full h-[6rem] bg-[#01112B] text-base border-[5px] border-[#34FEF8] text-[#34FEF8] mb-2 mt-2 p-3 pl-4 pt-0 placeholder-opacity-60 placeholder-[#34FEF8]"
+                >
+                  <option
+                    value="Select a Category"
+                    selected
+                    className="block"
+                    disabled
+                  >
+                    Select a rating
+                  </option>
+                  <option clasName="py-2" value="99">
+                    99
+                  </option>
+                  <option clasName="py-2" value="98">
+                    98
+                  </option>
+                  <option clasName="py-2" value="97">
+                    97
+                  </option>
+                  <option clasName="py-2" value="96">
+                    96
+                  </option>
+                  <option clasName="py-2" value="95">
+                    95
+                  </option>
+                  <option clasName="py-2" value="94">
+                    94
+                  </option>
+                  <option clasName="py-2" value="93">
+                    93
+                  </option>
+                  <option clasName="py-2" value="92">
+                    92
+                  </option>
+                  <option clasName="py-2" value="91">
+                    91
+                  </option>
+                  <option clasName="py-2" value="90">
+                    90
+                  </option>
+                  <option clasName="py-2" value="89">
+                    89
+                  </option>
+                  <option clasName="py-2" value="88">
+                    88
+                  </option>
+                  <option clasName="py-2" value="87">
+                    87
+                  </option>
+                  <option clasName="py-2" value="86">
+                    86
+                  </option>
+                  <option clasName="py-2" value="85">
+                    85
+                  </option>
+                  <option clasName="py-2" value="84">
+                    84
+                  </option>
+                  <option clasName="py-2" value="83">
+                    83
+                  </option>
+                  <option clasName="py-2" value="82">
+                    82
+                  </option>
+                  <option clasName="py-2" value="81">
+                    81
+                  </option>
+                  <option clasName="py-2" value="80">
+                    80
+                  </option>
+                  <option clasName="py-2" value="79">
+                    79
+                  </option>
+                  <option clasName="py-2" value="78">
+                    78
+                  </option>
+                  <option clasName="py-2" value="77">
+                    77
+                  </option>
+                  <option clasName="py-2" value="76">
+                    76
+                  </option>
+                  <option clasName="py-2" value="75">
+                    75
+                  </option>
+                  <option clasName="py-2" value="74">
+                    74
+                  </option>
+                  <option clasName="py-2" value="73">
+                    73
+                  </option>
+                  <option clasName="py-2" value="72">
+                    72
+                  </option>
+                  <option clasName="py-2" value="71">
+                    71
+                  </option>
+                  <option clasName="py-2" value="70">
+                    70
+                  </option>
+                  <option clasName="py-2" value="69">
+                    69
+                  </option>
+                  <option clasName="py-2" value="68">
+                    68
+                  </option>
+                  <option clasName="py-2" value="67">
+                    67
+                  </option>
+                  <option clasName="py-2" value="66">
+                    66
+                  </option>
+                  <option clasName="py-2" value="65">
+                    65
+                  </option>
+                  <option clasName="py-2" value="64">
+                    64
+                  </option>
+                  <option clasName="py-2" value="63">
+                    63
+                  </option>
+                  <option clasName="py-2" value="62">
+                    62
+                  </option>
+                  <option clasName="py-2" value="61">
+                    61
+                  </option>
+                  <option clasName="py-2" value="60">
+                    60
+                  </option>
+                  <option clasName="py-2" value="59">
+                    59
+                  </option>
+                  <option clasName="py-2" value="58">
+                    58
+                  </option>
+                  <option clasName="py-2" value="57">
+                    57
+                  </option>
+                  <option clasName="py-2" value="56">
+                    56
+                  </option>
+                  <option clasName="py-2" value="55">
+                    55
+                  </option>
+                  <option clasName="py-2" value="54">
+                    54
+                  </option>
+                  <option clasName="py-2" value="53">
+                    53
+                  </option>
+                  <option clasName="py-2" value="52">
+                    52
+                  </option>
+                  <option clasName="py-2" value="51">
+                    51
+                  </option>
+                  <option clasName="py-2" value="50">
+                    50
+                  </option>
+                  <option clasName="py-2" value="49">
+                    49
+                  </option>
+                  <option clasName="py-2" value="48">
+                    48
+                  </option>
+                  <option clasName="py-2" value="47">
+                    47
+                  </option>
+                  <option clasName="py-2" value="46">
+                    46
+                  </option>
+                  <option clasName="py-2" value="45">
+                    45
+                  </option>
+                  <option clasName="py-2" value="44">
+                    44
+                  </option>
+                  <option clasName="py-2" value="43">
+                    43
+                  </option>
+                  <option clasName="py-2" value="42">
+                    42
+                  </option>
+                  <option clasName="py-2" value="41">
+                    41
+                  </option>
+                  <option clasName="py-2" value="40">
+                    40
+                  </option>
+                  <option clasName="py-2" value="39">
+                    39
+                  </option>
+                  <option clasName="py-2" value="38">
+                    38
+                  </option>
+                  <option clasName="py-2" value="37">
+                    37
+                  </option>
+                  <option clasName="py-2" value="36">
+                    36
+                  </option>
+                  <option clasName="py-2" value="35">
+                    35
+                  </option>
+                  <option clasName="py-2" value="34">
+                    34
+                  </option>
+                  <option clasName="py-2" value="33">
+                    33
+                  </option>
+                  <option clasName="py-2" value="32">
+                    32
+                  </option>
+                  <option clasName="py-2" value="31">
+                    31
+                  </option>
+                  <option clasName="py-2" value="30">
+                    30
+                  </option>
+                  <option clasName="py-2" value="29">
+                    29
+                  </option>
+                  <option clasName="py-2" value="28">
+                    28
+                  </option>
+                  <option clasName="py-2" value="27">
+                    27
+                  </option>
+                  <option clasName="py-2" value="26">
+                    26
+                  </option>
+                  <option clasName="py-2" value="25">
+                    25
+                  </option>
+                  <option clasName="py-2" value="24">
+                    24
+                  </option>
+                  <option clasName="py-2" value="23">
+                    23
+                  </option>
+                  <option clasName="py-2" value="22">
+                    22
+                  </option>
+                  <option clasName="py-2" value="21">
+                    21
+                  </option>
+                  <option clasName="py-2" value="20">
+                    20
+                  </option>
+                  <option clasName="py-2" value="19">
+                    19
+                  </option>
+                  <option clasName="py-2" value="18">
+                    18
+                  </option>
+                  <option clasName="py-2" value="17">
+                    17
+                  </option>
+                  <option clasName="py-2" value="16">
+                    16
+                  </option>
+                  <option clasName="py-2" value="15">
+                    15
+                  </option>
+                  <option clasName="py-2" value="14">
+                    14
+                  </option>
+                  <option clasName="py-2" value="13">
+                    13
+                  </option>
+                  <option clasName="py-2" value="12">
+                    12
+                  </option>
+                  <option clasName="py-2" value="11">
+                    11
+                  </option>
+                  <option clasName="py-2" value="10">
+                    10
+                  </option>
+                  <option clasName="py-2" value="9">
+                    9
+                  </option>
+                  <option clasName="py-2" value="8">
+                    8
+                  </option>
+                  <option clasName="py-2" value="7">
+                    7
+                  </option>
+                  <option clasName="py-2" value="6">
+                    6
+                  </option>
+                  <option clasName="py-2" value="5">
+                    5
+                  </option>
+                  <option clasName="py-2" value="4">
+                    4
+                  </option>
+                  <option clasName="py-2" value="3">
+                    3
+                  </option>
+                  <option clasName="py-2" value="2">
+                    2
+                  </option>
+                  <option clasName="py-2" value="1">
+                    1
+                  </option>
+                  <option clasName="py-2" value="0">
+                    0
+                  </option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <label className="mb text-md text-[#34FEF8] font-bold uppercase">
+              Free Kick
+            </label>
+            <br />
+            <div
+              className="z-[1000]"
+              //  style={{transform: 'translate(-50%, -50%)'}}
+            >
+              <div className="rounded-lg border-[#34FEF8] px-6">
+                <select
+                  onChange={(e) => {
+                    // selectedClass();
+                    setFreeKick(e.target.value);
+                  }}
+                  className="rounder resize-none w-full h-[6rem] bg-[#01112B] text-base border-[5px] border-[#34FEF8] text-[#34FEF8] mb-2 mt-2 p-3 pl-4 pt-0 placeholder-opacity-60 placeholder-[#34FEF8]"
+                >
+                  <option
+                    value="Select a Category"
+                    selected
+                    className="block"
+                    disabled
+                  >
+                    Select a rating
+                  </option>
+                  <option clasName="py-2" value="99">
+                    99
+                  </option>
+                  <option clasName="py-2" value="98">
+                    98
+                  </option>
+                  <option clasName="py-2" value="97">
+                    97
+                  </option>
+                  <option clasName="py-2" value="96">
+                    96
+                  </option>
+                  <option clasName="py-2" value="95">
+                    95
+                  </option>
+                  <option clasName="py-2" value="94">
+                    94
+                  </option>
+                  <option clasName="py-2" value="93">
+                    93
+                  </option>
+                  <option clasName="py-2" value="92">
+                    92
+                  </option>
+                  <option clasName="py-2" value="91">
+                    91
+                  </option>
+                  <option clasName="py-2" value="90">
+                    90
+                  </option>
+                  <option clasName="py-2" value="89">
+                    89
+                  </option>
+                  <option clasName="py-2" value="88">
+                    88
+                  </option>
+                  <option clasName="py-2" value="87">
+                    87
+                  </option>
+                  <option clasName="py-2" value="86">
+                    86
+                  </option>
+                  <option clasName="py-2" value="85">
+                    85
+                  </option>
+                  <option clasName="py-2" value="84">
+                    84
+                  </option>
+                  <option clasName="py-2" value="83">
+                    83
+                  </option>
+                  <option clasName="py-2" value="82">
+                    82
+                  </option>
+                  <option clasName="py-2" value="81">
+                    81
+                  </option>
+                  <option clasName="py-2" value="80">
+                    80
+                  </option>
+                  <option clasName="py-2" value="79">
+                    79
+                  </option>
+                  <option clasName="py-2" value="78">
+                    78
+                  </option>
+                  <option clasName="py-2" value="77">
+                    77
+                  </option>
+                  <option clasName="py-2" value="76">
+                    76
+                  </option>
+                  <option clasName="py-2" value="75">
+                    75
+                  </option>
+                  <option clasName="py-2" value="74">
+                    74
+                  </option>
+                  <option clasName="py-2" value="73">
+                    73
+                  </option>
+                  <option clasName="py-2" value="72">
+                    72
+                  </option>
+                  <option clasName="py-2" value="71">
+                    71
+                  </option>
+                  <option clasName="py-2" value="70">
+                    70
+                  </option>
+                  <option clasName="py-2" value="69">
+                    69
+                  </option>
+                  <option clasName="py-2" value="68">
+                    68
+                  </option>
+                  <option clasName="py-2" value="67">
+                    67
+                  </option>
+                  <option clasName="py-2" value="66">
+                    66
+                  </option>
+                  <option clasName="py-2" value="65">
+                    65
+                  </option>
+                  <option clasName="py-2" value="64">
+                    64
+                  </option>
+                  <option clasName="py-2" value="63">
+                    63
+                  </option>
+                  <option clasName="py-2" value="62">
+                    62
+                  </option>
+                  <option clasName="py-2" value="61">
+                    61
+                  </option>
+                  <option clasName="py-2" value="60">
+                    60
+                  </option>
+                  <option clasName="py-2" value="59">
+                    59
+                  </option>
+                  <option clasName="py-2" value="58">
+                    58
+                  </option>
+                  <option clasName="py-2" value="57">
+                    57
+                  </option>
+                  <option clasName="py-2" value="56">
+                    56
+                  </option>
+                  <option clasName="py-2" value="55">
+                    55
+                  </option>
+                  <option clasName="py-2" value="54">
+                    54
+                  </option>
+                  <option clasName="py-2" value="53">
+                    53
+                  </option>
+                  <option clasName="py-2" value="52">
+                    52
+                  </option>
+                  <option clasName="py-2" value="51">
+                    51
+                  </option>
+                  <option clasName="py-2" value="50">
+                    50
+                  </option>
+                  <option clasName="py-2" value="49">
+                    49
+                  </option>
+                  <option clasName="py-2" value="48">
+                    48
+                  </option>
+                  <option clasName="py-2" value="47">
+                    47
+                  </option>
+                  <option clasName="py-2" value="46">
+                    46
+                  </option>
+                  <option clasName="py-2" value="45">
+                    45
+                  </option>
+                  <option clasName="py-2" value="44">
+                    44
+                  </option>
+                  <option clasName="py-2" value="43">
+                    43
+                  </option>
+                  <option clasName="py-2" value="42">
+                    42
+                  </option>
+                  <option clasName="py-2" value="41">
+                    41
+                  </option>
+                  <option clasName="py-2" value="40">
+                    40
+                  </option>
+                  <option clasName="py-2" value="39">
+                    39
+                  </option>
+                  <option clasName="py-2" value="38">
+                    38
+                  </option>
+                  <option clasName="py-2" value="37">
+                    37
+                  </option>
+                  <option clasName="py-2" value="36">
+                    36
+                  </option>
+                  <option clasName="py-2" value="35">
+                    35
+                  </option>
+                  <option clasName="py-2" value="34">
+                    34
+                  </option>
+                  <option clasName="py-2" value="33">
+                    33
+                  </option>
+                  <option clasName="py-2" value="32">
+                    32
+                  </option>
+                  <option clasName="py-2" value="31">
+                    31
+                  </option>
+                  <option clasName="py-2" value="30">
+                    30
+                  </option>
+                  <option clasName="py-2" value="29">
+                    29
+                  </option>
+                  <option clasName="py-2" value="28">
+                    28
+                  </option>
+                  <option clasName="py-2" value="27">
+                    27
+                  </option>
+                  <option clasName="py-2" value="26">
+                    26
+                  </option>
+                  <option clasName="py-2" value="25">
+                    25
+                  </option>
+                  <option clasName="py-2" value="24">
+                    24
+                  </option>
+                  <option clasName="py-2" value="23">
+                    23
+                  </option>
+                  <option clasName="py-2" value="22">
+                    22
+                  </option>
+                  <option clasName="py-2" value="21">
+                    21
+                  </option>
+                  <option clasName="py-2" value="20">
+                    20
+                  </option>
+                  <option clasName="py-2" value="19">
+                    19
+                  </option>
+                  <option clasName="py-2" value="18">
+                    18
+                  </option>
+                  <option clasName="py-2" value="17">
+                    17
+                  </option>
+                  <option clasName="py-2" value="16">
+                    16
+                  </option>
+                  <option clasName="py-2" value="15">
+                    15
+                  </option>
+                  <option clasName="py-2" value="14">
+                    14
+                  </option>
+                  <option clasName="py-2" value="13">
+                    13
+                  </option>
+                  <option clasName="py-2" value="12">
+                    12
+                  </option>
+                  <option clasName="py-2" value="11">
+                    11
+                  </option>
+                  <option clasName="py-2" value="10">
+                    10
+                  </option>
+                  <option clasName="py-2" value="9">
+                    9
+                  </option>
+                  <option clasName="py-2" value="8">
+                    8
+                  </option>
+                  <option clasName="py-2" value="7">
+                    7
+                  </option>
+                  <option clasName="py-2" value="6">
+                    6
+                  </option>
+                  <option clasName="py-2" value="5">
+                    5
+                  </option>
+                  <option clasName="py-2" value="4">
+                    4
+                  </option>
+                  <option clasName="py-2" value="3">
+                    3
+                  </option>
+                  <option clasName="py-2" value="2">
+                    2
+                  </option>
+                  <option clasName="py-2" value="1">
+                    1
+                  </option>
+                  <option clasName="py-2" value="0">
+                    0
+                  </option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <label className="mb text-md text-[#34FEF8] font-bold uppercase">
+              Heading
+            </label>
+            <br />
+            <div
+              className="z-[1000]"
+              //  style={{transform: 'translate(-50%, -50%)'}}
+            >
+              <div className="rounded-lg border-[#34FEF8] px-6">
+                <select
+                  onChange={(e) => {
+                    // selectedClass();
+                    setHeading(e.target.value);
+                  }}
+                  className="rounder resize-none w-full h-[6rem] bg-[#01112B] text-base border-[5px] border-[#34FEF8] text-[#34FEF8] mb-2 mt-2 p-3 pl-4 pt-0 placeholder-opacity-60 placeholder-[#34FEF8]"
+                >
+                  <option
+                    value="Select a Category"
+                    selected
+                    className="block"
+                    disabled
+                  >
+                    Select a rating
+                  </option>
+                  <option clasName="py-2" value="99">
+                    99
+                  </option>
+                  <option clasName="py-2" value="98">
+                    98
+                  </option>
+                  <option clasName="py-2" value="97">
+                    97
+                  </option>
+                  <option clasName="py-2" value="96">
+                    96
+                  </option>
+                  <option clasName="py-2" value="95">
+                    95
+                  </option>
+                  <option clasName="py-2" value="94">
+                    94
+                  </option>
+                  <option clasName="py-2" value="93">
+                    93
+                  </option>
+                  <option clasName="py-2" value="92">
+                    92
+                  </option>
+                  <option clasName="py-2" value="91">
+                    91
+                  </option>
+                  <option clasName="py-2" value="90">
+                    90
+                  </option>
+                  <option clasName="py-2" value="89">
+                    89
+                  </option>
+                  <option clasName="py-2" value="88">
+                    88
+                  </option>
+                  <option clasName="py-2" value="87">
+                    87
+                  </option>
+                  <option clasName="py-2" value="86">
+                    86
+                  </option>
+                  <option clasName="py-2" value="85">
+                    85
+                  </option>
+                  <option clasName="py-2" value="84">
+                    84
+                  </option>
+                  <option clasName="py-2" value="83">
+                    83
+                  </option>
+                  <option clasName="py-2" value="82">
+                    82
+                  </option>
+                  <option clasName="py-2" value="81">
+                    81
+                  </option>
+                  <option clasName="py-2" value="80">
+                    80
+                  </option>
+                  <option clasName="py-2" value="79">
+                    79
+                  </option>
+                  <option clasName="py-2" value="78">
+                    78
+                  </option>
+                  <option clasName="py-2" value="77">
+                    77
+                  </option>
+                  <option clasName="py-2" value="76">
+                    76
+                  </option>
+                  <option clasName="py-2" value="75">
+                    75
+                  </option>
+                  <option clasName="py-2" value="74">
+                    74
+                  </option>
+                  <option clasName="py-2" value="73">
+                    73
+                  </option>
+                  <option clasName="py-2" value="72">
+                    72
+                  </option>
+                  <option clasName="py-2" value="71">
+                    71
+                  </option>
+                  <option clasName="py-2" value="70">
+                    70
+                  </option>
+                  <option clasName="py-2" value="69">
+                    69
+                  </option>
+                  <option clasName="py-2" value="68">
+                    68
+                  </option>
+                  <option clasName="py-2" value="67">
+                    67
+                  </option>
+                  <option clasName="py-2" value="66">
+                    66
+                  </option>
+                  <option clasName="py-2" value="65">
+                    65
+                  </option>
+                  <option clasName="py-2" value="64">
+                    64
+                  </option>
+                  <option clasName="py-2" value="63">
+                    63
+                  </option>
+                  <option clasName="py-2" value="62">
+                    62
+                  </option>
+                  <option clasName="py-2" value="61">
+                    61
+                  </option>
+                  <option clasName="py-2" value="60">
+                    60
+                  </option>
+                  <option clasName="py-2" value="59">
+                    59
+                  </option>
+                  <option clasName="py-2" value="58">
+                    58
+                  </option>
+                  <option clasName="py-2" value="57">
+                    57
+                  </option>
+                  <option clasName="py-2" value="56">
+                    56
+                  </option>
+                  <option clasName="py-2" value="55">
+                    55
+                  </option>
+                  <option clasName="py-2" value="54">
+                    54
+                  </option>
+                  <option clasName="py-2" value="53">
+                    53
+                  </option>
+                  <option clasName="py-2" value="52">
+                    52
+                  </option>
+                  <option clasName="py-2" value="51">
+                    51
+                  </option>
+                  <option clasName="py-2" value="50">
+                    50
+                  </option>
+                  <option clasName="py-2" value="49">
+                    49
+                  </option>
+                  <option clasName="py-2" value="48">
+                    48
+                  </option>
+                  <option clasName="py-2" value="47">
+                    47
+                  </option>
+                  <option clasName="py-2" value="46">
+                    46
+                  </option>
+                  <option clasName="py-2" value="45">
+                    45
+                  </option>
+                  <option clasName="py-2" value="44">
+                    44
+                  </option>
+                  <option clasName="py-2" value="43">
+                    43
+                  </option>
+                  <option clasName="py-2" value="42">
+                    42
+                  </option>
+                  <option clasName="py-2" value="41">
+                    41
+                  </option>
+                  <option clasName="py-2" value="40">
+                    40
+                  </option>
+                  <option clasName="py-2" value="39">
+                    39
+                  </option>
+                  <option clasName="py-2" value="38">
+                    38
+                  </option>
+                  <option clasName="py-2" value="37">
+                    37
+                  </option>
+                  <option clasName="py-2" value="36">
+                    36
+                  </option>
+                  <option clasName="py-2" value="35">
+                    35
+                  </option>
+                  <option clasName="py-2" value="34">
+                    34
+                  </option>
+                  <option clasName="py-2" value="33">
+                    33
+                  </option>
+                  <option clasName="py-2" value="32">
+                    32
+                  </option>
+                  <option clasName="py-2" value="31">
+                    31
+                  </option>
+                  <option clasName="py-2" value="30">
+                    30
+                  </option>
+                  <option clasName="py-2" value="29">
+                    29
+                  </option>
+                  <option clasName="py-2" value="28">
+                    28
+                  </option>
+                  <option clasName="py-2" value="27">
+                    27
+                  </option>
+                  <option clasName="py-2" value="26">
+                    26
+                  </option>
+                  <option clasName="py-2" value="25">
+                    25
+                  </option>
+                  <option clasName="py-2" value="24">
+                    24
+                  </option>
+                  <option clasName="py-2" value="23">
+                    23
+                  </option>
+                  <option clasName="py-2" value="22">
+                    22
+                  </option>
+                  <option clasName="py-2" value="21">
+                    21
+                  </option>
+                  <option clasName="py-2" value="20">
+                    20
+                  </option>
+                  <option clasName="py-2" value="19">
+                    19
+                  </option>
+                  <option clasName="py-2" value="18">
+                    18
+                  </option>
+                  <option clasName="py-2" value="17">
+                    17
+                  </option>
+                  <option clasName="py-2" value="16">
+                    16
+                  </option>
+                  <option clasName="py-2" value="15">
+                    15
+                  </option>
+                  <option clasName="py-2" value="14">
+                    14
+                  </option>
+                  <option clasName="py-2" value="13">
+                    13
+                  </option>
+                  <option clasName="py-2" value="12">
+                    12
+                  </option>
+                  <option clasName="py-2" value="11">
+                    11
+                  </option>
+                  <option clasName="py-2" value="10">
+                    10
+                  </option>
+                  <option clasName="py-2" value="9">
+                    9
+                  </option>
+                  <option clasName="py-2" value="8">
+                    8
+                  </option>
+                  <option clasName="py-2" value="7">
+                    7
+                  </option>
+                  <option clasName="py-2" value="6">
+                    6
+                  </option>
+                  <option clasName="py-2" value="5">
+                    5
+                  </option>
+                  <option clasName="py-2" value="4">
+                    4
+                  </option>
+                  <option clasName="py-2" value="3">
+                    3
+                  </option>
+                  <option clasName="py-2" value="2">
+                    2
+                  </option>
+                  <option clasName="py-2" value="1">
+                    1
+                  </option>
+                  <option clasName="py-2" value="0">
+                    0
+                  </option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <label className="mb text-md text-[#34FEF8] font-bold uppercase">
+              Interceptions
+            </label>
+            <br />
+            <div
+              className="z-[1000]"
+              //  style={{transform: 'translate(-50%, -50%)'}}
+            >
+              <div className="rounded-lg border-[#34FEF8] px-6">
+                <select
+                  onChange={(e) => {
+                    // selectedClass();
+                    setInterceptions(e.target.value);
+                  }}
+                  className="rounder resize-none w-full h-[6rem] bg-[#01112B] text-base border-[5px] border-[#34FEF8] text-[#34FEF8] mb-2 mt-2 p-3 pl-4 pt-0 placeholder-opacity-60 placeholder-[#34FEF8]"
+                >
+                  <option
+                    value="Select a Category"
+                    selected
+                    className="block"
+                    disabled
+                  >
+                    Select a rating
+                  </option>
+                  <option clasName="py-2" value="99">
+                    99
+                  </option>
+                  <option clasName="py-2" value="98">
+                    98
+                  </option>
+                  <option clasName="py-2" value="97">
+                    97
+                  </option>
+                  <option clasName="py-2" value="96">
+                    96
+                  </option>
+                  <option clasName="py-2" value="95">
+                    95
+                  </option>
+                  <option clasName="py-2" value="94">
+                    94
+                  </option>
+                  <option clasName="py-2" value="93">
+                    93
+                  </option>
+                  <option clasName="py-2" value="92">
+                    92
+                  </option>
+                  <option clasName="py-2" value="91">
+                    91
+                  </option>
+                  <option clasName="py-2" value="90">
+                    90
+                  </option>
+                  <option clasName="py-2" value="89">
+                    89
+                  </option>
+                  <option clasName="py-2" value="88">
+                    88
+                  </option>
+                  <option clasName="py-2" value="87">
+                    87
+                  </option>
+                  <option clasName="py-2" value="86">
+                    86
+                  </option>
+                  <option clasName="py-2" value="85">
+                    85
+                  </option>
+                  <option clasName="py-2" value="84">
+                    84
+                  </option>
+                  <option clasName="py-2" value="83">
+                    83
+                  </option>
+                  <option clasName="py-2" value="82">
+                    82
+                  </option>
+                  <option clasName="py-2" value="81">
+                    81
+                  </option>
+                  <option clasName="py-2" value="80">
+                    80
+                  </option>
+                  <option clasName="py-2" value="79">
+                    79
+                  </option>
+                  <option clasName="py-2" value="78">
+                    78
+                  </option>
+                  <option clasName="py-2" value="77">
+                    77
+                  </option>
+                  <option clasName="py-2" value="76">
+                    76
+                  </option>
+                  <option clasName="py-2" value="75">
+                    75
+                  </option>
+                  <option clasName="py-2" value="74">
+                    74
+                  </option>
+                  <option clasName="py-2" value="73">
+                    73
+                  </option>
+                  <option clasName="py-2" value="72">
+                    72
+                  </option>
+                  <option clasName="py-2" value="71">
+                    71
+                  </option>
+                  <option clasName="py-2" value="70">
+                    70
+                  </option>
+                  <option clasName="py-2" value="69">
+                    69
+                  </option>
+                  <option clasName="py-2" value="68">
+                    68
+                  </option>
+                  <option clasName="py-2" value="67">
+                    67
+                  </option>
+                  <option clasName="py-2" value="66">
+                    66
+                  </option>
+                  <option clasName="py-2" value="65">
+                    65
+                  </option>
+                  <option clasName="py-2" value="64">
+                    64
+                  </option>
+                  <option clasName="py-2" value="63">
+                    63
+                  </option>
+                  <option clasName="py-2" value="62">
+                    62
+                  </option>
+                  <option clasName="py-2" value="61">
+                    61
+                  </option>
+                  <option clasName="py-2" value="60">
+                    60
+                  </option>
+                  <option clasName="py-2" value="59">
+                    59
+                  </option>
+                  <option clasName="py-2" value="58">
+                    58
+                  </option>
+                  <option clasName="py-2" value="57">
+                    57
+                  </option>
+                  <option clasName="py-2" value="56">
+                    56
+                  </option>
+                  <option clasName="py-2" value="55">
+                    55
+                  </option>
+                  <option clasName="py-2" value="54">
+                    54
+                  </option>
+                  <option clasName="py-2" value="53">
+                    53
+                  </option>
+                  <option clasName="py-2" value="52">
+                    52
+                  </option>
+                  <option clasName="py-2" value="51">
+                    51
+                  </option>
+                  <option clasName="py-2" value="50">
+                    50
+                  </option>
+                  <option clasName="py-2" value="49">
+                    49
+                  </option>
+                  <option clasName="py-2" value="48">
+                    48
+                  </option>
+                  <option clasName="py-2" value="47">
+                    47
+                  </option>
+                  <option clasName="py-2" value="46">
+                    46
+                  </option>
+                  <option clasName="py-2" value="45">
+                    45
+                  </option>
+                  <option clasName="py-2" value="44">
+                    44
+                  </option>
+                  <option clasName="py-2" value="43">
+                    43
+                  </option>
+                  <option clasName="py-2" value="42">
+                    42
+                  </option>
+                  <option clasName="py-2" value="41">
+                    41
+                  </option>
+                  <option clasName="py-2" value="40">
+                    40
+                  </option>
+                  <option clasName="py-2" value="39">
+                    39
+                  </option>
+                  <option clasName="py-2" value="38">
+                    38
+                  </option>
+                  <option clasName="py-2" value="37">
+                    37
+                  </option>
+                  <option clasName="py-2" value="36">
+                    36
+                  </option>
+                  <option clasName="py-2" value="35">
+                    35
+                  </option>
+                  <option clasName="py-2" value="34">
+                    34
+                  </option>
+                  <option clasName="py-2" value="33">
+                    33
+                  </option>
+                  <option clasName="py-2" value="32">
+                    32
+                  </option>
+                  <option clasName="py-2" value="31">
+                    31
+                  </option>
+                  <option clasName="py-2" value="30">
+                    30
+                  </option>
+                  <option clasName="py-2" value="29">
+                    29
+                  </option>
+                  <option clasName="py-2" value="28">
+                    28
+                  </option>
+                  <option clasName="py-2" value="27">
+                    27
+                  </option>
+                  <option clasName="py-2" value="26">
+                    26
+                  </option>
+                  <option clasName="py-2" value="25">
+                    25
+                  </option>
+                  <option clasName="py-2" value="24">
+                    24
+                  </option>
+                  <option clasName="py-2" value="23">
+                    23
+                  </option>
+                  <option clasName="py-2" value="22">
+                    22
+                  </option>
+                  <option clasName="py-2" value="21">
+                    21
+                  </option>
+                  <option clasName="py-2" value="20">
+                    20
+                  </option>
+                  <option clasName="py-2" value="19">
+                    19
+                  </option>
+                  <option clasName="py-2" value="18">
+                    18
+                  </option>
+                  <option clasName="py-2" value="17">
+                    17
+                  </option>
+                  <option clasName="py-2" value="16">
+                    16
+                  </option>
+                  <option clasName="py-2" value="15">
+                    15
+                  </option>
+                  <option clasName="py-2" value="14">
+                    14
+                  </option>
+                  <option clasName="py-2" value="13">
+                    13
+                  </option>
+                  <option clasName="py-2" value="12">
+                    12
+                  </option>
+                  <option clasName="py-2" value="11">
+                    11
+                  </option>
+                  <option clasName="py-2" value="10">
+                    10
+                  </option>
+                  <option clasName="py-2" value="9">
+                    9
+                  </option>
+                  <option clasName="py-2" value="8">
+                    8
+                  </option>
+                  <option clasName="py-2" value="7">
+                    7
+                  </option>
+                  <option clasName="py-2" value="6">
+                    6
+                  </option>
+                  <option clasName="py-2" value="5">
+                    5
+                  </option>
+                  <option clasName="py-2" value="4">
+                    4
+                  </option>
+                  <option clasName="py-2" value="3">
+                    3
+                  </option>
+                  <option clasName="py-2" value="2">
+                    2
+                  </option>
+                  <option clasName="py-2" value="1">
+                    1
+                  </option>
+                  <option clasName="py-2" value="0">
+                    0
+                  </option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <label className="mb text-md text-[#34FEF8] font-bold uppercase">
+              Jumping
+            </label>
+            <br />
+            <div
+              className="z-[1000]"
+              //  style={{transform: 'translate(-50%, -50%)'}}
+            >
+              <div className="rounded-lg border-[#34FEF8] px-6">
+                <select
+                  onChange={(e) => {
+                    // selectedClass();
+                    setJumping(e.target.value);
+                  }}
+                  className="rounder resize-none w-full h-[6rem] bg-[#01112B] text-base border-[5px] border-[#34FEF8] text-[#34FEF8] mb-2 mt-2 p-3 pl-4 pt-0 placeholder-opacity-60 placeholder-[#34FEF8]"
+                >
+                  <option
+                    value="Select a Category"
+                    selected
+                    className="block"
+                    disabled
+                  >
+                    Select a rating
+                  </option>
+                  <option clasName="py-2" value="99">
+                    99
+                  </option>
+                  <option clasName="py-2" value="98">
+                    98
+                  </option>
+                  <option clasName="py-2" value="97">
+                    97
+                  </option>
+                  <option clasName="py-2" value="96">
+                    96
+                  </option>
+                  <option clasName="py-2" value="95">
+                    95
+                  </option>
+                  <option clasName="py-2" value="94">
+                    94
+                  </option>
+                  <option clasName="py-2" value="93">
+                    93
+                  </option>
+                  <option clasName="py-2" value="92">
+                    92
+                  </option>
+                  <option clasName="py-2" value="91">
+                    91
+                  </option>
+                  <option clasName="py-2" value="90">
+                    90
+                  </option>
+                  <option clasName="py-2" value="89">
+                    89
+                  </option>
+                  <option clasName="py-2" value="88">
+                    88
+                  </option>
+                  <option clasName="py-2" value="87">
+                    87
+                  </option>
+                  <option clasName="py-2" value="86">
+                    86
+                  </option>
+                  <option clasName="py-2" value="85">
+                    85
+                  </option>
+                  <option clasName="py-2" value="84">
+                    84
+                  </option>
+                  <option clasName="py-2" value="83">
+                    83
+                  </option>
+                  <option clasName="py-2" value="82">
+                    82
+                  </option>
+                  <option clasName="py-2" value="81">
+                    81
+                  </option>
+                  <option clasName="py-2" value="80">
+                    80
+                  </option>
+                  <option clasName="py-2" value="79">
+                    79
+                  </option>
+                  <option clasName="py-2" value="78">
+                    78
+                  </option>
+                  <option clasName="py-2" value="77">
+                    77
+                  </option>
+                  <option clasName="py-2" value="76">
+                    76
+                  </option>
+                  <option clasName="py-2" value="75">
+                    75
+                  </option>
+                  <option clasName="py-2" value="74">
+                    74
+                  </option>
+                  <option clasName="py-2" value="73">
+                    73
+                  </option>
+                  <option clasName="py-2" value="72">
+                    72
+                  </option>
+                  <option clasName="py-2" value="71">
+                    71
+                  </option>
+                  <option clasName="py-2" value="70">
+                    70
+                  </option>
+                  <option clasName="py-2" value="69">
+                    69
+                  </option>
+                  <option clasName="py-2" value="68">
+                    68
+                  </option>
+                  <option clasName="py-2" value="67">
+                    67
+                  </option>
+                  <option clasName="py-2" value="66">
+                    66
+                  </option>
+                  <option clasName="py-2" value="65">
+                    65
+                  </option>
+                  <option clasName="py-2" value="64">
+                    64
+                  </option>
+                  <option clasName="py-2" value="63">
+                    63
+                  </option>
+                  <option clasName="py-2" value="62">
+                    62
+                  </option>
+                  <option clasName="py-2" value="61">
+                    61
+                  </option>
+                  <option clasName="py-2" value="60">
+                    60
+                  </option>
+                  <option clasName="py-2" value="59">
+                    59
+                  </option>
+                  <option clasName="py-2" value="58">
+                    58
+                  </option>
+                  <option clasName="py-2" value="57">
+                    57
+                  </option>
+                  <option clasName="py-2" value="56">
+                    56
+                  </option>
+                  <option clasName="py-2" value="55">
+                    55
+                  </option>
+                  <option clasName="py-2" value="54">
+                    54
+                  </option>
+                  <option clasName="py-2" value="53">
+                    53
+                  </option>
+                  <option clasName="py-2" value="52">
+                    52
+                  </option>
+                  <option clasName="py-2" value="51">
+                    51
+                  </option>
+                  <option clasName="py-2" value="50">
+                    50
+                  </option>
+                  <option clasName="py-2" value="49">
+                    49
+                  </option>
+                  <option clasName="py-2" value="48">
+                    48
+                  </option>
+                  <option clasName="py-2" value="47">
+                    47
+                  </option>
+                  <option clasName="py-2" value="46">
+                    46
+                  </option>
+                  <option clasName="py-2" value="45">
+                    45
+                  </option>
+                  <option clasName="py-2" value="44">
+                    44
+                  </option>
+                  <option clasName="py-2" value="43">
+                    43
+                  </option>
+                  <option clasName="py-2" value="42">
+                    42
+                  </option>
+                  <option clasName="py-2" value="41">
+                    41
+                  </option>
+                  <option clasName="py-2" value="40">
+                    40
+                  </option>
+                  <option clasName="py-2" value="39">
+                    39
+                  </option>
+                  <option clasName="py-2" value="38">
+                    38
+                  </option>
+                  <option clasName="py-2" value="37">
+                    37
+                  </option>
+                  <option clasName="py-2" value="36">
+                    36
+                  </option>
+                  <option clasName="py-2" value="35">
+                    35
+                  </option>
+                  <option clasName="py-2" value="34">
+                    34
+                  </option>
+                  <option clasName="py-2" value="33">
+                    33
+                  </option>
+                  <option clasName="py-2" value="32">
+                    32
+                  </option>
+                  <option clasName="py-2" value="31">
+                    31
+                  </option>
+                  <option clasName="py-2" value="30">
+                    30
+                  </option>
+                  <option clasName="py-2" value="29">
+                    29
+                  </option>
+                  <option clasName="py-2" value="28">
+                    28
+                  </option>
+                  <option clasName="py-2" value="27">
+                    27
+                  </option>
+                  <option clasName="py-2" value="26">
+                    26
+                  </option>
+                  <option clasName="py-2" value="25">
+                    25
+                  </option>
+                  <option clasName="py-2" value="24">
+                    24
+                  </option>
+                  <option clasName="py-2" value="23">
+                    23
+                  </option>
+                  <option clasName="py-2" value="22">
+                    22
+                  </option>
+                  <option clasName="py-2" value="21">
+                    21
+                  </option>
+                  <option clasName="py-2" value="20">
+                    20
+                  </option>
+                  <option clasName="py-2" value="19">
+                    19
+                  </option>
+                  <option clasName="py-2" value="18">
+                    18
+                  </option>
+                  <option clasName="py-2" value="17">
+                    17
+                  </option>
+                  <option clasName="py-2" value="16">
+                    16
+                  </option>
+                  <option clasName="py-2" value="15">
+                    15
+                  </option>
+                  <option clasName="py-2" value="14">
+                    14
+                  </option>
+                  <option clasName="py-2" value="13">
+                    13
+                  </option>
+                  <option clasName="py-2" value="12">
+                    12
+                  </option>
+                  <option clasName="py-2" value="11">
+                    11
+                  </option>
+                  <option clasName="py-2" value="10">
+                    10
+                  </option>
+                  <option clasName="py-2" value="9">
+                    9
+                  </option>
+                  <option clasName="py-2" value="8">
+                    8
+                  </option>
+                  <option clasName="py-2" value="7">
+                    7
+                  </option>
+                  <option clasName="py-2" value="6">
+                    6
+                  </option>
+                  <option clasName="py-2" value="5">
+                    5
+                  </option>
+                  <option clasName="py-2" value="4">
+                    4
+                  </option>
+                  <option clasName="py-2" value="3">
+                    3
+                  </option>
+                  <option clasName="py-2" value="2">
+                    2
+                  </option>
+                  <option clasName="py-2" value="1">
+                    1
+                  </option>
+                  <option clasName="py-2" value="0">
+                    0
+                  </option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <label className="mb text-md text-[#34FEF8] font-bold uppercase">
+              Long Passing
+            </label>
+            <br />
+            <div
+              className="z-[1000]"
+              //  style={{transform: 'translate(-50%, -50%)'}}
+            >
+              <div className="rounded-lg border-[#34FEF8] px-6">
+                <select
+                  onChange={(e) => {
+                    // selectedClass();
+                    setLongPassing(e.target.value);
+                  }}
+                  className="rounder resize-none w-full h-[6rem] bg-[#01112B] text-base border-[5px] border-[#34FEF8] text-[#34FEF8] mb-2 mt-2 p-3 pl-4 pt-0 placeholder-opacity-60 placeholder-[#34FEF8]"
+                >
+                  <option
+                    value="Select a Category"
+                    selected
+                    className="block"
+                    disabled
+                  >
+                    Select a rating
+                  </option>
+                  <option clasName="py-2" value="99">
+                    99
+                  </option>
+                  <option clasName="py-2" value="98">
+                    98
+                  </option>
+                  <option clasName="py-2" value="97">
+                    97
+                  </option>
+                  <option clasName="py-2" value="96">
+                    96
+                  </option>
+                  <option clasName="py-2" value="95">
+                    95
+                  </option>
+                  <option clasName="py-2" value="94">
+                    94
+                  </option>
+                  <option clasName="py-2" value="93">
+                    93
+                  </option>
+                  <option clasName="py-2" value="92">
+                    92
+                  </option>
+                  <option clasName="py-2" value="91">
+                    91
+                  </option>
+                  <option clasName="py-2" value="90">
+                    90
+                  </option>
+                  <option clasName="py-2" value="89">
+                    89
+                  </option>
+                  <option clasName="py-2" value="88">
+                    88
+                  </option>
+                  <option clasName="py-2" value="87">
+                    87
+                  </option>
+                  <option clasName="py-2" value="86">
+                    86
+                  </option>
+                  <option clasName="py-2" value="85">
+                    85
+                  </option>
+                  <option clasName="py-2" value="84">
+                    84
+                  </option>
+                  <option clasName="py-2" value="83">
+                    83
+                  </option>
+                  <option clasName="py-2" value="82">
+                    82
+                  </option>
+                  <option clasName="py-2" value="81">
+                    81
+                  </option>
+                  <option clasName="py-2" value="80">
+                    80
+                  </option>
+                  <option clasName="py-2" value="79">
+                    79
+                  </option>
+                  <option clasName="py-2" value="78">
+                    78
+                  </option>
+                  <option clasName="py-2" value="77">
+                    77
+                  </option>
+                  <option clasName="py-2" value="76">
+                    76
+                  </option>
+                  <option clasName="py-2" value="75">
+                    75
+                  </option>
+                  <option clasName="py-2" value="74">
+                    74
+                  </option>
+                  <option clasName="py-2" value="73">
+                    73
+                  </option>
+                  <option clasName="py-2" value="72">
+                    72
+                  </option>
+                  <option clasName="py-2" value="71">
+                    71
+                  </option>
+                  <option clasName="py-2" value="70">
+                    70
+                  </option>
+                  <option clasName="py-2" value="69">
+                    69
+                  </option>
+                  <option clasName="py-2" value="68">
+                    68
+                  </option>
+                  <option clasName="py-2" value="67">
+                    67
+                  </option>
+                  <option clasName="py-2" value="66">
+                    66
+                  </option>
+                  <option clasName="py-2" value="65">
+                    65
+                  </option>
+                  <option clasName="py-2" value="64">
+                    64
+                  </option>
+                  <option clasName="py-2" value="63">
+                    63
+                  </option>
+                  <option clasName="py-2" value="62">
+                    62
+                  </option>
+                  <option clasName="py-2" value="61">
+                    61
+                  </option>
+                  <option clasName="py-2" value="60">
+                    60
+                  </option>
+                  <option clasName="py-2" value="59">
+                    59
+                  </option>
+                  <option clasName="py-2" value="58">
+                    58
+                  </option>
+                  <option clasName="py-2" value="57">
+                    57
+                  </option>
+                  <option clasName="py-2" value="56">
+                    56
+                  </option>
+                  <option clasName="py-2" value="55">
+                    55
+                  </option>
+                  <option clasName="py-2" value="54">
+                    54
+                  </option>
+                  <option clasName="py-2" value="53">
+                    53
+                  </option>
+                  <option clasName="py-2" value="52">
+                    52
+                  </option>
+                  <option clasName="py-2" value="51">
+                    51
+                  </option>
+                  <option clasName="py-2" value="50">
+                    50
+                  </option>
+                  <option clasName="py-2" value="49">
+                    49
+                  </option>
+                  <option clasName="py-2" value="48">
+                    48
+                  </option>
+                  <option clasName="py-2" value="47">
+                    47
+                  </option>
+                  <option clasName="py-2" value="46">
+                    46
+                  </option>
+                  <option clasName="py-2" value="45">
+                    45
+                  </option>
+                  <option clasName="py-2" value="44">
+                    44
+                  </option>
+                  <option clasName="py-2" value="43">
+                    43
+                  </option>
+                  <option clasName="py-2" value="42">
+                    42
+                  </option>
+                  <option clasName="py-2" value="41">
+                    41
+                  </option>
+                  <option clasName="py-2" value="40">
+                    40
+                  </option>
+                  <option clasName="py-2" value="39">
+                    39
+                  </option>
+                  <option clasName="py-2" value="38">
+                    38
+                  </option>
+                  <option clasName="py-2" value="37">
+                    37
+                  </option>
+                  <option clasName="py-2" value="36">
+                    36
+                  </option>
+                  <option clasName="py-2" value="35">
+                    35
+                  </option>
+                  <option clasName="py-2" value="34">
+                    34
+                  </option>
+                  <option clasName="py-2" value="33">
+                    33
+                  </option>
+                  <option clasName="py-2" value="32">
+                    32
+                  </option>
+                  <option clasName="py-2" value="31">
+                    31
+                  </option>
+                  <option clasName="py-2" value="30">
+                    30
+                  </option>
+                  <option clasName="py-2" value="29">
+                    29
+                  </option>
+                  <option clasName="py-2" value="28">
+                    28
+                  </option>
+                  <option clasName="py-2" value="27">
+                    27
+                  </option>
+                  <option clasName="py-2" value="26">
+                    26
+                  </option>
+                  <option clasName="py-2" value="25">
+                    25
+                  </option>
+                  <option clasName="py-2" value="24">
+                    24
+                  </option>
+                  <option clasName="py-2" value="23">
+                    23
+                  </option>
+                  <option clasName="py-2" value="22">
+                    22
+                  </option>
+                  <option clasName="py-2" value="21">
+                    21
+                  </option>
+                  <option clasName="py-2" value="20">
+                    20
+                  </option>
+                  <option clasName="py-2" value="19">
+                    19
+                  </option>
+                  <option clasName="py-2" value="18">
+                    18
+                  </option>
+                  <option clasName="py-2" value="17">
+                    17
+                  </option>
+                  <option clasName="py-2" value="16">
+                    16
+                  </option>
+                  <option clasName="py-2" value="15">
+                    15
+                  </option>
+                  <option clasName="py-2" value="14">
+                    14
+                  </option>
+                  <option clasName="py-2" value="13">
+                    13
+                  </option>
+                  <option clasName="py-2" value="12">
+                    12
+                  </option>
+                  <option clasName="py-2" value="11">
+                    11
+                  </option>
+                  <option clasName="py-2" value="10">
+                    10
+                  </option>
+                  <option clasName="py-2" value="9">
+                    9
+                  </option>
+                  <option clasName="py-2" value="8">
+                    8
+                  </option>
+                  <option clasName="py-2" value="7">
+                    7
+                  </option>
+                  <option clasName="py-2" value="6">
+                    6
+                  </option>
+                  <option clasName="py-2" value="5">
+                    5
+                  </option>
+                  <option clasName="py-2" value="4">
+                    4
+                  </option>
+                  <option clasName="py-2" value="3">
+                    3
+                  </option>
+                  <option clasName="py-2" value="2">
+                    2
+                  </option>
+                  <option clasName="py-2" value="1">
+                    1
+                  </option>
+                  <option clasName="py-2" value="0">
+                    0
+                  </option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <label className="mb text-md text-[#34FEF8] font-bold uppercase">
+              Long Shot
+            </label>
+            <br />
+            <div
+              className="z-[1000]"
+              //  style={{transform: 'translate(-50%, -50%)'}}
+            >
+              <div className="rounded-lg border-[#34FEF8] px-6">
+                <select
+                  onChange={(e) => {
+                    // selectedClass();
+                    setLongShot(e.target.value);
+                  }}
+                  className="rounder resize-none w-full h-[6rem] bg-[#01112B] text-base border-[5px] border-[#34FEF8] text-[#34FEF8] mb-2 mt-2 p-3 pl-4 pt-0 placeholder-opacity-60 placeholder-[#34FEF8]"
+                >
+                  <option
+                    value="Select a Category"
+                    selected
+                    className="block"
+                    disabled
+                  >
+                    Select a rating
+                  </option>
+                  <option clasName="py-2" value="99">
+                    99
+                  </option>
+                  <option clasName="py-2" value="98">
+                    98
+                  </option>
+                  <option clasName="py-2" value="97">
+                    97
+                  </option>
+                  <option clasName="py-2" value="96">
+                    96
+                  </option>
+                  <option clasName="py-2" value="95">
+                    95
+                  </option>
+                  <option clasName="py-2" value="94">
+                    94
+                  </option>
+                  <option clasName="py-2" value="93">
+                    93
+                  </option>
+                  <option clasName="py-2" value="92">
+                    92
+                  </option>
+                  <option clasName="py-2" value="91">
+                    91
+                  </option>
+                  <option clasName="py-2" value="90">
+                    90
+                  </option>
+                  <option clasName="py-2" value="89">
+                    89
+                  </option>
+                  <option clasName="py-2" value="88">
+                    88
+                  </option>
+                  <option clasName="py-2" value="87">
+                    87
+                  </option>
+                  <option clasName="py-2" value="86">
+                    86
+                  </option>
+                  <option clasName="py-2" value="85">
+                    85
+                  </option>
+                  <option clasName="py-2" value="84">
+                    84
+                  </option>
+                  <option clasName="py-2" value="83">
+                    83
+                  </option>
+                  <option clasName="py-2" value="82">
+                    82
+                  </option>
+                  <option clasName="py-2" value="81">
+                    81
+                  </option>
+                  <option clasName="py-2" value="80">
+                    80
+                  </option>
+                  <option clasName="py-2" value="79">
+                    79
+                  </option>
+                  <option clasName="py-2" value="78">
+                    78
+                  </option>
+                  <option clasName="py-2" value="77">
+                    77
+                  </option>
+                  <option clasName="py-2" value="76">
+                    76
+                  </option>
+                  <option clasName="py-2" value="75">
+                    75
+                  </option>
+                  <option clasName="py-2" value="74">
+                    74
+                  </option>
+                  <option clasName="py-2" value="73">
+                    73
+                  </option>
+                  <option clasName="py-2" value="72">
+                    72
+                  </option>
+                  <option clasName="py-2" value="71">
+                    71
+                  </option>
+                  <option clasName="py-2" value="70">
+                    70
+                  </option>
+                  <option clasName="py-2" value="69">
+                    69
+                  </option>
+                  <option clasName="py-2" value="68">
+                    68
+                  </option>
+                  <option clasName="py-2" value="67">
+                    67
+                  </option>
+                  <option clasName="py-2" value="66">
+                    66
+                  </option>
+                  <option clasName="py-2" value="65">
+                    65
+                  </option>
+                  <option clasName="py-2" value="64">
+                    64
+                  </option>
+                  <option clasName="py-2" value="63">
+                    63
+                  </option>
+                  <option clasName="py-2" value="62">
+                    62
+                  </option>
+                  <option clasName="py-2" value="61">
+                    61
+                  </option>
+                  <option clasName="py-2" value="60">
+                    60
+                  </option>
+                  <option clasName="py-2" value="59">
+                    59
+                  </option>
+                  <option clasName="py-2" value="58">
+                    58
+                  </option>
+                  <option clasName="py-2" value="57">
+                    57
+                  </option>
+                  <option clasName="py-2" value="56">
+                    56
+                  </option>
+                  <option clasName="py-2" value="55">
+                    55
+                  </option>
+                  <option clasName="py-2" value="54">
+                    54
+                  </option>
+                  <option clasName="py-2" value="53">
+                    53
+                  </option>
+                  <option clasName="py-2" value="52">
+                    52
+                  </option>
+                  <option clasName="py-2" value="51">
+                    51
+                  </option>
+                  <option clasName="py-2" value="50">
+                    50
+                  </option>
+                  <option clasName="py-2" value="49">
+                    49
+                  </option>
+                  <option clasName="py-2" value="48">
+                    48
+                  </option>
+                  <option clasName="py-2" value="47">
+                    47
+                  </option>
+                  <option clasName="py-2" value="46">
+                    46
+                  </option>
+                  <option clasName="py-2" value="45">
+                    45
+                  </option>
+                  <option clasName="py-2" value="44">
+                    44
+                  </option>
+                  <option clasName="py-2" value="43">
+                    43
+                  </option>
+                  <option clasName="py-2" value="42">
+                    42
+                  </option>
+                  <option clasName="py-2" value="41">
+                    41
+                  </option>
+                  <option clasName="py-2" value="40">
+                    40
+                  </option>
+                  <option clasName="py-2" value="39">
+                    39
+                  </option>
+                  <option clasName="py-2" value="38">
+                    38
+                  </option>
+                  <option clasName="py-2" value="37">
+                    37
+                  </option>
+                  <option clasName="py-2" value="36">
+                    36
+                  </option>
+                  <option clasName="py-2" value="35">
+                    35
+                  </option>
+                  <option clasName="py-2" value="34">
+                    34
+                  </option>
+                  <option clasName="py-2" value="33">
+                    33
+                  </option>
+                  <option clasName="py-2" value="32">
+                    32
+                  </option>
+                  <option clasName="py-2" value="31">
+                    31
+                  </option>
+                  <option clasName="py-2" value="30">
+                    30
+                  </option>
+                  <option clasName="py-2" value="29">
+                    29
+                  </option>
+                  <option clasName="py-2" value="28">
+                    28
+                  </option>
+                  <option clasName="py-2" value="27">
+                    27
+                  </option>
+                  <option clasName="py-2" value="26">
+                    26
+                  </option>
+                  <option clasName="py-2" value="25">
+                    25
+                  </option>
+                  <option clasName="py-2" value="24">
+                    24
+                  </option>
+                  <option clasName="py-2" value="23">
+                    23
+                  </option>
+                  <option clasName="py-2" value="22">
+                    22
+                  </option>
+                  <option clasName="py-2" value="21">
+                    21
+                  </option>
+                  <option clasName="py-2" value="20">
+                    20
+                  </option>
+                  <option clasName="py-2" value="19">
+                    19
+                  </option>
+                  <option clasName="py-2" value="18">
+                    18
+                  </option>
+                  <option clasName="py-2" value="17">
+                    17
+                  </option>
+                  <option clasName="py-2" value="16">
+                    16
+                  </option>
+                  <option clasName="py-2" value="15">
+                    15
+                  </option>
+                  <option clasName="py-2" value="14">
+                    14
+                  </option>
+                  <option clasName="py-2" value="13">
+                    13
+                  </option>
+                  <option clasName="py-2" value="12">
+                    12
+                  </option>
+                  <option clasName="py-2" value="11">
+                    11
+                  </option>
+                  <option clasName="py-2" value="10">
+                    10
+                  </option>
+                  <option clasName="py-2" value="9">
+                    9
+                  </option>
+                  <option clasName="py-2" value="8">
+                    8
+                  </option>
+                  <option clasName="py-2" value="7">
+                    7
+                  </option>
+                  <option clasName="py-2" value="6">
+                    6
+                  </option>
+                  <option clasName="py-2" value="5">
+                    5
+                  </option>
+                  <option clasName="py-2" value="4">
+                    4
+                  </option>
+                  <option clasName="py-2" value="3">
+                    3
+                  </option>
+                  <option clasName="py-2" value="2">
+                    2
+                  </option>
+                  <option clasName="py-2" value="1">
+                    1
+                  </option>
+                  <option clasName="py-2" value="0">
+                    0
+                  </option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <label className="mb text-md text-[#34FEF8] font-bold uppercase">
+              Marking
+            </label>
+            <br />
+            <div
+              className="z-[1000]"
+              //  style={{transform: 'translate(-50%, -50%)'}}
+            >
+              <div className="rounded-lg border-[#34FEF8] px-6">
+                <select
+                  onChange={(e) => {
+                    // selectedClass();
+                    setMarking(e.target.value);
+                  }}
+                  className="rounder resize-none w-full h-[6rem] bg-[#01112B] text-base border-[5px] border-[#34FEF8] text-[#34FEF8] mb-2 mt-2 p-3 pl-4 pt-0 placeholder-opacity-60 placeholder-[#34FEF8]"
+                >
+                  <option
+                    value="Select a Category"
+                    selected
+                    className="block"
+                    disabled
+                  >
+                    Select a rating
+                  </option>
+                  <option clasName="py-2" value="99">
+                    99
+                  </option>
+                  <option clasName="py-2" value="98">
+                    98
+                  </option>
+                  <option clasName="py-2" value="97">
+                    97
+                  </option>
+                  <option clasName="py-2" value="96">
+                    96
+                  </option>
+                  <option clasName="py-2" value="95">
+                    95
+                  </option>
+                  <option clasName="py-2" value="94">
+                    94
+                  </option>
+                  <option clasName="py-2" value="93">
+                    93
+                  </option>
+                  <option clasName="py-2" value="92">
+                    92
+                  </option>
+                  <option clasName="py-2" value="91">
+                    91
+                  </option>
+                  <option clasName="py-2" value="90">
+                    90
+                  </option>
+                  <option clasName="py-2" value="89">
+                    89
+                  </option>
+                  <option clasName="py-2" value="88">
+                    88
+                  </option>
+                  <option clasName="py-2" value="87">
+                    87
+                  </option>
+                  <option clasName="py-2" value="86">
+                    86
+                  </option>
+                  <option clasName="py-2" value="85">
+                    85
+                  </option>
+                  <option clasName="py-2" value="84">
+                    84
+                  </option>
+                  <option clasName="py-2" value="83">
+                    83
+                  </option>
+                  <option clasName="py-2" value="82">
+                    82
+                  </option>
+                  <option clasName="py-2" value="81">
+                    81
+                  </option>
+                  <option clasName="py-2" value="80">
+                    80
+                  </option>
+                  <option clasName="py-2" value="79">
+                    79
+                  </option>
+                  <option clasName="py-2" value="78">
+                    78
+                  </option>
+                  <option clasName="py-2" value="77">
+                    77
+                  </option>
+                  <option clasName="py-2" value="76">
+                    76
+                  </option>
+                  <option clasName="py-2" value="75">
+                    75
+                  </option>
+                  <option clasName="py-2" value="74">
+                    74
+                  </option>
+                  <option clasName="py-2" value="73">
+                    73
+                  </option>
+                  <option clasName="py-2" value="72">
+                    72
+                  </option>
+                  <option clasName="py-2" value="71">
+                    71
+                  </option>
+                  <option clasName="py-2" value="70">
+                    70
+                  </option>
+                  <option clasName="py-2" value="69">
+                    69
+                  </option>
+                  <option clasName="py-2" value="68">
+                    68
+                  </option>
+                  <option clasName="py-2" value="67">
+                    67
+                  </option>
+                  <option clasName="py-2" value="66">
+                    66
+                  </option>
+                  <option clasName="py-2" value="65">
+                    65
+                  </option>
+                  <option clasName="py-2" value="64">
+                    64
+                  </option>
+                  <option clasName="py-2" value="63">
+                    63
+                  </option>
+                  <option clasName="py-2" value="62">
+                    62
+                  </option>
+                  <option clasName="py-2" value="61">
+                    61
+                  </option>
+                  <option clasName="py-2" value="60">
+                    60
+                  </option>
+                  <option clasName="py-2" value="59">
+                    59
+                  </option>
+                  <option clasName="py-2" value="58">
+                    58
+                  </option>
+                  <option clasName="py-2" value="57">
+                    57
+                  </option>
+                  <option clasName="py-2" value="56">
+                    56
+                  </option>
+                  <option clasName="py-2" value="55">
+                    55
+                  </option>
+                  <option clasName="py-2" value="54">
+                    54
+                  </option>
+                  <option clasName="py-2" value="53">
+                    53
+                  </option>
+                  <option clasName="py-2" value="52">
+                    52
+                  </option>
+                  <option clasName="py-2" value="51">
+                    51
+                  </option>
+                  <option clasName="py-2" value="50">
+                    50
+                  </option>
+                  <option clasName="py-2" value="49">
+                    49
+                  </option>
+                  <option clasName="py-2" value="48">
+                    48
+                  </option>
+                  <option clasName="py-2" value="47">
+                    47
+                  </option>
+                  <option clasName="py-2" value="46">
+                    46
+                  </option>
+                  <option clasName="py-2" value="45">
+                    45
+                  </option>
+                  <option clasName="py-2" value="44">
+                    44
+                  </option>
+                  <option clasName="py-2" value="43">
+                    43
+                  </option>
+                  <option clasName="py-2" value="42">
+                    42
+                  </option>
+                  <option clasName="py-2" value="41">
+                    41
+                  </option>
+                  <option clasName="py-2" value="40">
+                    40
+                  </option>
+                  <option clasName="py-2" value="39">
+                    39
+                  </option>
+                  <option clasName="py-2" value="38">
+                    38
+                  </option>
+                  <option clasName="py-2" value="37">
+                    37
+                  </option>
+                  <option clasName="py-2" value="36">
+                    36
+                  </option>
+                  <option clasName="py-2" value="35">
+                    35
+                  </option>
+                  <option clasName="py-2" value="34">
+                    34
+                  </option>
+                  <option clasName="py-2" value="33">
+                    33
+                  </option>
+                  <option clasName="py-2" value="32">
+                    32
+                  </option>
+                  <option clasName="py-2" value="31">
+                    31
+                  </option>
+                  <option clasName="py-2" value="30">
+                    30
+                  </option>
+                  <option clasName="py-2" value="29">
+                    29
+                  </option>
+                  <option clasName="py-2" value="28">
+                    28
+                  </option>
+                  <option clasName="py-2" value="27">
+                    27
+                  </option>
+                  <option clasName="py-2" value="26">
+                    26
+                  </option>
+                  <option clasName="py-2" value="25">
+                    25
+                  </option>
+                  <option clasName="py-2" value="24">
+                    24
+                  </option>
+                  <option clasName="py-2" value="23">
+                    23
+                  </option>
+                  <option clasName="py-2" value="22">
+                    22
+                  </option>
+                  <option clasName="py-2" value="21">
+                    21
+                  </option>
+                  <option clasName="py-2" value="20">
+                    20
+                  </option>
+                  <option clasName="py-2" value="19">
+                    19
+                  </option>
+                  <option clasName="py-2" value="18">
+                    18
+                  </option>
+                  <option clasName="py-2" value="17">
+                    17
+                  </option>
+                  <option clasName="py-2" value="16">
+                    16
+                  </option>
+                  <option clasName="py-2" value="15">
+                    15
+                  </option>
+                  <option clasName="py-2" value="14">
+                    14
+                  </option>
+                  <option clasName="py-2" value="13">
+                    13
+                  </option>
+                  <option clasName="py-2" value="12">
+                    12
+                  </option>
+                  <option clasName="py-2" value="11">
+                    11
+                  </option>
+                  <option clasName="py-2" value="10">
+                    10
+                  </option>
+                  <option clasName="py-2" value="9">
+                    9
+                  </option>
+                  <option clasName="py-2" value="8">
+                    8
+                  </option>
+                  <option clasName="py-2" value="7">
+                    7
+                  </option>
+                  <option clasName="py-2" value="6">
+                    6
+                  </option>
+                  <option clasName="py-2" value="5">
+                    5
+                  </option>
+                  <option clasName="py-2" value="4">
+                    4
+                  </option>
+                  <option clasName="py-2" value="3">
+                    3
+                  </option>
+                  <option clasName="py-2" value="2">
+                    2
+                  </option>
+                  <option clasName="py-2" value="1">
+                    1
+                  </option>
+                  <option clasName="py-2" value="0">
+                    0
+                  </option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <label className="mb text-md text-[#34FEF8] font-bold uppercase">
+              Pace
+            </label>
+            <br />
+            <div
+              className="z-[1000]"
+              //  style={{transform: 'translate(-50%, -50%)'}}
+            >
+              <div className="rounded-lg border-[#34FEF8] px-6">
+                <select
+                  onChange={(e) => {
+                    // selectedClass();
+                    setPace(e.target.value);
+                  }}
+                  className="rounder resize-none w-full h-[6rem] bg-[#01112B] text-base border-[5px] border-[#34FEF8] text-[#34FEF8] mb-2 mt-2 p-3 pl-4 pt-0 placeholder-opacity-60 placeholder-[#34FEF8]"
+                >
+                  <option
+                    value="Select a Category"
+                    selected
+                    className="block"
+                    disabled
+                  >
+                    Select a rating
+                  </option>
+                  <option clasName="py-2" value="99">
+                    99
+                  </option>
+                  <option clasName="py-2" value="98">
+                    98
+                  </option>
+                  <option clasName="py-2" value="97">
+                    97
+                  </option>
+                  <option clasName="py-2" value="96">
+                    96
+                  </option>
+                  <option clasName="py-2" value="95">
+                    95
+                  </option>
+                  <option clasName="py-2" value="94">
+                    94
+                  </option>
+                  <option clasName="py-2" value="93">
+                    93
+                  </option>
+                  <option clasName="py-2" value="92">
+                    92
+                  </option>
+                  <option clasName="py-2" value="91">
+                    91
+                  </option>
+                  <option clasName="py-2" value="90">
+                    90
+                  </option>
+                  <option clasName="py-2" value="89">
+                    89
+                  </option>
+                  <option clasName="py-2" value="88">
+                    88
+                  </option>
+                  <option clasName="py-2" value="87">
+                    87
+                  </option>
+                  <option clasName="py-2" value="86">
+                    86
+                  </option>
+                  <option clasName="py-2" value="85">
+                    85
+                  </option>
+                  <option clasName="py-2" value="84">
+                    84
+                  </option>
+                  <option clasName="py-2" value="83">
+                    83
+                  </option>
+                  <option clasName="py-2" value="82">
+                    82
+                  </option>
+                  <option clasName="py-2" value="81">
+                    81
+                  </option>
+                  <option clasName="py-2" value="80">
+                    80
+                  </option>
+                  <option clasName="py-2" value="79">
+                    79
+                  </option>
+                  <option clasName="py-2" value="78">
+                    78
+                  </option>
+                  <option clasName="py-2" value="77">
+                    77
+                  </option>
+                  <option clasName="py-2" value="76">
+                    76
+                  </option>
+                  <option clasName="py-2" value="75">
+                    75
+                  </option>
+                  <option clasName="py-2" value="74">
+                    74
+                  </option>
+                  <option clasName="py-2" value="73">
+                    73
+                  </option>
+                  <option clasName="py-2" value="72">
+                    72
+                  </option>
+                  <option clasName="py-2" value="71">
+                    71
+                  </option>
+                  <option clasName="py-2" value="70">
+                    70
+                  </option>
+                  <option clasName="py-2" value="69">
+                    69
+                  </option>
+                  <option clasName="py-2" value="68">
+                    68
+                  </option>
+                  <option clasName="py-2" value="67">
+                    67
+                  </option>
+                  <option clasName="py-2" value="66">
+                    66
+                  </option>
+                  <option clasName="py-2" value="65">
+                    65
+                  </option>
+                  <option clasName="py-2" value="64">
+                    64
+                  </option>
+                  <option clasName="py-2" value="63">
+                    63
+                  </option>
+                  <option clasName="py-2" value="62">
+                    62
+                  </option>
+                  <option clasName="py-2" value="61">
+                    61
+                  </option>
+                  <option clasName="py-2" value="60">
+                    60
+                  </option>
+                  <option clasName="py-2" value="59">
+                    59
+                  </option>
+                  <option clasName="py-2" value="58">
+                    58
+                  </option>
+                  <option clasName="py-2" value="57">
+                    57
+                  </option>
+                  <option clasName="py-2" value="56">
+                    56
+                  </option>
+                  <option clasName="py-2" value="55">
+                    55
+                  </option>
+                  <option clasName="py-2" value="54">
+                    54
+                  </option>
+                  <option clasName="py-2" value="53">
+                    53
+                  </option>
+                  <option clasName="py-2" value="52">
+                    52
+                  </option>
+                  <option clasName="py-2" value="51">
+                    51
+                  </option>
+                  <option clasName="py-2" value="50">
+                    50
+                  </option>
+                  <option clasName="py-2" value="49">
+                    49
+                  </option>
+                  <option clasName="py-2" value="48">
+                    48
+                  </option>
+                  <option clasName="py-2" value="47">
+                    47
+                  </option>
+                  <option clasName="py-2" value="46">
+                    46
+                  </option>
+                  <option clasName="py-2" value="45">
+                    45
+                  </option>
+                  <option clasName="py-2" value="44">
+                    44
+                  </option>
+                  <option clasName="py-2" value="43">
+                    43
+                  </option>
+                  <option clasName="py-2" value="42">
+                    42
+                  </option>
+                  <option clasName="py-2" value="41">
+                    41
+                  </option>
+                  <option clasName="py-2" value="40">
+                    40
+                  </option>
+                  <option clasName="py-2" value="39">
+                    39
+                  </option>
+                  <option clasName="py-2" value="38">
+                    38
+                  </option>
+                  <option clasName="py-2" value="37">
+                    37
+                  </option>
+                  <option clasName="py-2" value="36">
+                    36
+                  </option>
+                  <option clasName="py-2" value="35">
+                    35
+                  </option>
+                  <option clasName="py-2" value="34">
+                    34
+                  </option>
+                  <option clasName="py-2" value="33">
+                    33
+                  </option>
+                  <option clasName="py-2" value="32">
+                    32
+                  </option>
+                  <option clasName="py-2" value="31">
+                    31
+                  </option>
+                  <option clasName="py-2" value="30">
+                    30
+                  </option>
+                  <option clasName="py-2" value="29">
+                    29
+                  </option>
+                  <option clasName="py-2" value="28">
+                    28
+                  </option>
+                  <option clasName="py-2" value="27">
+                    27
+                  </option>
+                  <option clasName="py-2" value="26">
+                    26
+                  </option>
+                  <option clasName="py-2" value="25">
+                    25
+                  </option>
+                  <option clasName="py-2" value="24">
+                    24
+                  </option>
+                  <option clasName="py-2" value="23">
+                    23
+                  </option>
+                  <option clasName="py-2" value="22">
+                    22
+                  </option>
+                  <option clasName="py-2" value="21">
+                    21
+                  </option>
+                  <option clasName="py-2" value="20">
+                    20
+                  </option>
+                  <option clasName="py-2" value="19">
+                    19
+                  </option>
+                  <option clasName="py-2" value="18">
+                    18
+                  </option>
+                  <option clasName="py-2" value="17">
+                    17
+                  </option>
+                  <option clasName="py-2" value="16">
+                    16
+                  </option>
+                  <option clasName="py-2" value="15">
+                    15
+                  </option>
+                  <option clasName="py-2" value="14">
+                    14
+                  </option>
+                  <option clasName="py-2" value="13">
+                    13
+                  </option>
+                  <option clasName="py-2" value="12">
+                    12
+                  </option>
+                  <option clasName="py-2" value="11">
+                    11
+                  </option>
+                  <option clasName="py-2" value="10">
+                    10
+                  </option>
+                  <option clasName="py-2" value="9">
+                    9
+                  </option>
+                  <option clasName="py-2" value="8">
+                    8
+                  </option>
+                  <option clasName="py-2" value="7">
+                    7
+                  </option>
+                  <option clasName="py-2" value="6">
+                    6
+                  </option>
+                  <option clasName="py-2" value="5">
+                    5
+                  </option>
+                  <option clasName="py-2" value="4">
+                    4
+                  </option>
+                  <option clasName="py-2" value="3">
+                    3
+                  </option>
+                  <option clasName="py-2" value="2">
+                    2
+                  </option>
+                  <option clasName="py-2" value="1">
+                    1
+                  </option>
+                  <option clasName="py-2" value="0">
+                    0
+                  </option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <label className="mb text-md text-[#34FEF8] font-bold uppercase">
+              Passing
+            </label>
+            <br />
+            <div
+              className="z-[1000]"
+              //  style={{transform: 'translate(-50%, -50%)'}}
+            >
+              <div className="rounded-lg border-[#34FEF8] px-6">
+                <select
+                  onChange={(e) => {
+                    // selectedClass();
+                    setPassing(e.target.value);
+                  }}
+                  className="rounder resize-none w-full h-[6rem] bg-[#01112B] text-base border-[5px] border-[#34FEF8] text-[#34FEF8] mb-2 mt-2 p-3 pl-4 pt-0 placeholder-opacity-60 placeholder-[#34FEF8]"
+                >
+                  <option
+                    value="Select a Category"
+                    selected
+                    className="block"
+                    disabled
+                  >
+                    Select a rating
+                  </option>
+                  <option clasName="py-2" value="99">
+                    99
+                  </option>
+                  <option clasName="py-2" value="98">
+                    98
+                  </option>
+                  <option clasName="py-2" value="97">
+                    97
+                  </option>
+                  <option clasName="py-2" value="96">
+                    96
+                  </option>
+                  <option clasName="py-2" value="95">
+                    95
+                  </option>
+                  <option clasName="py-2" value="94">
+                    94
+                  </option>
+                  <option clasName="py-2" value="93">
+                    93
+                  </option>
+                  <option clasName="py-2" value="92">
+                    92
+                  </option>
+                  <option clasName="py-2" value="91">
+                    91
+                  </option>
+                  <option clasName="py-2" value="90">
+                    90
+                  </option>
+                  <option clasName="py-2" value="89">
+                    89
+                  </option>
+                  <option clasName="py-2" value="88">
+                    88
+                  </option>
+                  <option clasName="py-2" value="87">
+                    87
+                  </option>
+                  <option clasName="py-2" value="86">
+                    86
+                  </option>
+                  <option clasName="py-2" value="85">
+                    85
+                  </option>
+                  <option clasName="py-2" value="84">
+                    84
+                  </option>
+                  <option clasName="py-2" value="83">
+                    83
+                  </option>
+                  <option clasName="py-2" value="82">
+                    82
+                  </option>
+                  <option clasName="py-2" value="81">
+                    81
+                  </option>
+                  <option clasName="py-2" value="80">
+                    80
+                  </option>
+                  <option clasName="py-2" value="79">
+                    79
+                  </option>
+                  <option clasName="py-2" value="78">
+                    78
+                  </option>
+                  <option clasName="py-2" value="77">
+                    77
+                  </option>
+                  <option clasName="py-2" value="76">
+                    76
+                  </option>
+                  <option clasName="py-2" value="75">
+                    75
+                  </option>
+                  <option clasName="py-2" value="74">
+                    74
+                  </option>
+                  <option clasName="py-2" value="73">
+                    73
+                  </option>
+                  <option clasName="py-2" value="72">
+                    72
+                  </option>
+                  <option clasName="py-2" value="71">
+                    71
+                  </option>
+                  <option clasName="py-2" value="70">
+                    70
+                  </option>
+                  <option clasName="py-2" value="69">
+                    69
+                  </option>
+                  <option clasName="py-2" value="68">
+                    68
+                  </option>
+                  <option clasName="py-2" value="67">
+                    67
+                  </option>
+                  <option clasName="py-2" value="66">
+                    66
+                  </option>
+                  <option clasName="py-2" value="65">
+                    65
+                  </option>
+                  <option clasName="py-2" value="64">
+                    64
+                  </option>
+                  <option clasName="py-2" value="63">
+                    63
+                  </option>
+                  <option clasName="py-2" value="62">
+                    62
+                  </option>
+                  <option clasName="py-2" value="61">
+                    61
+                  </option>
+                  <option clasName="py-2" value="60">
+                    60
+                  </option>
+                  <option clasName="py-2" value="59">
+                    59
+                  </option>
+                  <option clasName="py-2" value="58">
+                    58
+                  </option>
+                  <option clasName="py-2" value="57">
+                    57
+                  </option>
+                  <option clasName="py-2" value="56">
+                    56
+                  </option>
+                  <option clasName="py-2" value="55">
+                    55
+                  </option>
+                  <option clasName="py-2" value="54">
+                    54
+                  </option>
+                  <option clasName="py-2" value="53">
+                    53
+                  </option>
+                  <option clasName="py-2" value="52">
+                    52
+                  </option>
+                  <option clasName="py-2" value="51">
+                    51
+                  </option>
+                  <option clasName="py-2" value="50">
+                    50
+                  </option>
+                  <option clasName="py-2" value="49">
+                    49
+                  </option>
+                  <option clasName="py-2" value="48">
+                    48
+                  </option>
+                  <option clasName="py-2" value="47">
+                    47
+                  </option>
+                  <option clasName="py-2" value="46">
+                    46
+                  </option>
+                  <option clasName="py-2" value="45">
+                    45
+                  </option>
+                  <option clasName="py-2" value="44">
+                    44
+                  </option>
+                  <option clasName="py-2" value="43">
+                    43
+                  </option>
+                  <option clasName="py-2" value="42">
+                    42
+                  </option>
+                  <option clasName="py-2" value="41">
+                    41
+                  </option>
+                  <option clasName="py-2" value="40">
+                    40
+                  </option>
+                  <option clasName="py-2" value="39">
+                    39
+                  </option>
+                  <option clasName="py-2" value="38">
+                    38
+                  </option>
+                  <option clasName="py-2" value="37">
+                    37
+                  </option>
+                  <option clasName="py-2" value="36">
+                    36
+                  </option>
+                  <option clasName="py-2" value="35">
+                    35
+                  </option>
+                  <option clasName="py-2" value="34">
+                    34
+                  </option>
+                  <option clasName="py-2" value="33">
+                    33
+                  </option>
+                  <option clasName="py-2" value="32">
+                    32
+                  </option>
+                  <option clasName="py-2" value="31">
+                    31
+                  </option>
+                  <option clasName="py-2" value="30">
+                    30
+                  </option>
+                  <option clasName="py-2" value="29">
+                    29
+                  </option>
+                  <option clasName="py-2" value="28">
+                    28
+                  </option>
+                  <option clasName="py-2" value="27">
+                    27
+                  </option>
+                  <option clasName="py-2" value="26">
+                    26
+                  </option>
+                  <option clasName="py-2" value="25">
+                    25
+                  </option>
+                  <option clasName="py-2" value="24">
+                    24
+                  </option>
+                  <option clasName="py-2" value="23">
+                    23
+                  </option>
+                  <option clasName="py-2" value="22">
+                    22
+                  </option>
+                  <option clasName="py-2" value="21">
+                    21
+                  </option>
+                  <option clasName="py-2" value="20">
+                    20
+                  </option>
+                  <option clasName="py-2" value="19">
+                    19
+                  </option>
+                  <option clasName="py-2" value="18">
+                    18
+                  </option>
+                  <option clasName="py-2" value="17">
+                    17
+                  </option>
+                  <option clasName="py-2" value="16">
+                    16
+                  </option>
+                  <option clasName="py-2" value="15">
+                    15
+                  </option>
+                  <option clasName="py-2" value="14">
+                    14
+                  </option>
+                  <option clasName="py-2" value="13">
+                    13
+                  </option>
+                  <option clasName="py-2" value="12">
+                    12
+                  </option>
+                  <option clasName="py-2" value="11">
+                    11
+                  </option>
+                  <option clasName="py-2" value="10">
+                    10
+                  </option>
+                  <option clasName="py-2" value="9">
+                    9
+                  </option>
+                  <option clasName="py-2" value="8">
+                    8
+                  </option>
+                  <option clasName="py-2" value="7">
+                    7
+                  </option>
+                  <option clasName="py-2" value="6">
+                    6
+                  </option>
+                  <option clasName="py-2" value="5">
+                    5
+                  </option>
+                  <option clasName="py-2" value="4">
+                    4
+                  </option>
+                  <option clasName="py-2" value="3">
+                    3
+                  </option>
+                  <option clasName="py-2" value="2">
+                    2
+                  </option>
+                  <option clasName="py-2" value="1">
+                    1
+                  </option>
+                  <option clasName="py-2" value="0">
+                    0
+                  </option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <label className="mb text-md text-[#34FEF8] font-bold uppercase">
+              Penalties
+            </label>
+            <br />
+            <div
+              className="z-[1000]"
+              //  style={{transform: 'translate(-50%, -50%)'}}
+            >
+              <div className="rounded-lg border-[#34FEF8] px-6">
+                <select
+                  onChange={(e) => {
+                    // selectedClass();
+                    setPenalties(e.target.value);
+                  }}
+                  className="rounder resize-none w-full h-[6rem] bg-[#01112B] text-base border-[5px] border-[#34FEF8] text-[#34FEF8] mb-2 mt-2 p-3 pl-4 pt-0 placeholder-opacity-60 placeholder-[#34FEF8]"
+                >
+                  <option
+                    value="Select a Category"
+                    selected
+                    className="block"
+                    disabled
+                  >
+                    Select a rating
+                  </option>
+                  <option clasName="py-2" value="99">
+                    99
+                  </option>
+                  <option clasName="py-2" value="98">
+                    98
+                  </option>
+                  <option clasName="py-2" value="97">
+                    97
+                  </option>
+                  <option clasName="py-2" value="96">
+                    96
+                  </option>
+                  <option clasName="py-2" value="95">
+                    95
+                  </option>
+                  <option clasName="py-2" value="94">
+                    94
+                  </option>
+                  <option clasName="py-2" value="93">
+                    93
+                  </option>
+                  <option clasName="py-2" value="92">
+                    92
+                  </option>
+                  <option clasName="py-2" value="91">
+                    91
+                  </option>
+                  <option clasName="py-2" value="90">
+                    90
+                  </option>
+                  <option clasName="py-2" value="89">
+                    89
+                  </option>
+                  <option clasName="py-2" value="88">
+                    88
+                  </option>
+                  <option clasName="py-2" value="87">
+                    87
+                  </option>
+                  <option clasName="py-2" value="86">
+                    86
+                  </option>
+                  <option clasName="py-2" value="85">
+                    85
+                  </option>
+                  <option clasName="py-2" value="84">
+                    84
+                  </option>
+                  <option clasName="py-2" value="83">
+                    83
+                  </option>
+                  <option clasName="py-2" value="82">
+                    82
+                  </option>
+                  <option clasName="py-2" value="81">
+                    81
+                  </option>
+                  <option clasName="py-2" value="80">
+                    80
+                  </option>
+                  <option clasName="py-2" value="79">
+                    79
+                  </option>
+                  <option clasName="py-2" value="78">
+                    78
+                  </option>
+                  <option clasName="py-2" value="77">
+                    77
+                  </option>
+                  <option clasName="py-2" value="76">
+                    76
+                  </option>
+                  <option clasName="py-2" value="75">
+                    75
+                  </option>
+                  <option clasName="py-2" value="74">
+                    74
+                  </option>
+                  <option clasName="py-2" value="73">
+                    73
+                  </option>
+                  <option clasName="py-2" value="72">
+                    72
+                  </option>
+                  <option clasName="py-2" value="71">
+                    71
+                  </option>
+                  <option clasName="py-2" value="70">
+                    70
+                  </option>
+                  <option clasName="py-2" value="69">
+                    69
+                  </option>
+                  <option clasName="py-2" value="68">
+                    68
+                  </option>
+                  <option clasName="py-2" value="67">
+                    67
+                  </option>
+                  <option clasName="py-2" value="66">
+                    66
+                  </option>
+                  <option clasName="py-2" value="65">
+                    65
+                  </option>
+                  <option clasName="py-2" value="64">
+                    64
+                  </option>
+                  <option clasName="py-2" value="63">
+                    63
+                  </option>
+                  <option clasName="py-2" value="62">
+                    62
+                  </option>
+                  <option clasName="py-2" value="61">
+                    61
+                  </option>
+                  <option clasName="py-2" value="60">
+                    60
+                  </option>
+                  <option clasName="py-2" value="59">
+                    59
+                  </option>
+                  <option clasName="py-2" value="58">
+                    58
+                  </option>
+                  <option clasName="py-2" value="57">
+                    57
+                  </option>
+                  <option clasName="py-2" value="56">
+                    56
+                  </option>
+                  <option clasName="py-2" value="55">
+                    55
+                  </option>
+                  <option clasName="py-2" value="54">
+                    54
+                  </option>
+                  <option clasName="py-2" value="53">
+                    53
+                  </option>
+                  <option clasName="py-2" value="52">
+                    52
+                  </option>
+                  <option clasName="py-2" value="51">
+                    51
+                  </option>
+                  <option clasName="py-2" value="50">
+                    50
+                  </option>
+                  <option clasName="py-2" value="49">
+                    49
+                  </option>
+                  <option clasName="py-2" value="48">
+                    48
+                  </option>
+                  <option clasName="py-2" value="47">
+                    47
+                  </option>
+                  <option clasName="py-2" value="46">
+                    46
+                  </option>
+                  <option clasName="py-2" value="45">
+                    45
+                  </option>
+                  <option clasName="py-2" value="44">
+                    44
+                  </option>
+                  <option clasName="py-2" value="43">
+                    43
+                  </option>
+                  <option clasName="py-2" value="42">
+                    42
+                  </option>
+                  <option clasName="py-2" value="41">
+                    41
+                  </option>
+                  <option clasName="py-2" value="40">
+                    40
+                  </option>
+                  <option clasName="py-2" value="39">
+                    39
+                  </option>
+                  <option clasName="py-2" value="38">
+                    38
+                  </option>
+                  <option clasName="py-2" value="37">
+                    37
+                  </option>
+                  <option clasName="py-2" value="36">
+                    36
+                  </option>
+                  <option clasName="py-2" value="35">
+                    35
+                  </option>
+                  <option clasName="py-2" value="34">
+                    34
+                  </option>
+                  <option clasName="py-2" value="33">
+                    33
+                  </option>
+                  <option clasName="py-2" value="32">
+                    32
+                  </option>
+                  <option clasName="py-2" value="31">
+                    31
+                  </option>
+                  <option clasName="py-2" value="30">
+                    30
+                  </option>
+                  <option clasName="py-2" value="29">
+                    29
+                  </option>
+                  <option clasName="py-2" value="28">
+                    28
+                  </option>
+                  <option clasName="py-2" value="27">
+                    27
+                  </option>
+                  <option clasName="py-2" value="26">
+                    26
+                  </option>
+                  <option clasName="py-2" value="25">
+                    25
+                  </option>
+                  <option clasName="py-2" value="24">
+                    24
+                  </option>
+                  <option clasName="py-2" value="23">
+                    23
+                  </option>
+                  <option clasName="py-2" value="22">
+                    22
+                  </option>
+                  <option clasName="py-2" value="21">
+                    21
+                  </option>
+                  <option clasName="py-2" value="20">
+                    20
+                  </option>
+                  <option clasName="py-2" value="19">
+                    19
+                  </option>
+                  <option clasName="py-2" value="18">
+                    18
+                  </option>
+                  <option clasName="py-2" value="17">
+                    17
+                  </option>
+                  <option clasName="py-2" value="16">
+                    16
+                  </option>
+                  <option clasName="py-2" value="15">
+                    15
+                  </option>
+                  <option clasName="py-2" value="14">
+                    14
+                  </option>
+                  <option clasName="py-2" value="13">
+                    13
+                  </option>
+                  <option clasName="py-2" value="12">
+                    12
+                  </option>
+                  <option clasName="py-2" value="11">
+                    11
+                  </option>
+                  <option clasName="py-2" value="10">
+                    10
+                  </option>
+                  <option clasName="py-2" value="9">
+                    9
+                  </option>
+                  <option clasName="py-2" value="8">
+                    8
+                  </option>
+                  <option clasName="py-2" value="7">
+                    7
+                  </option>
+                  <option clasName="py-2" value="6">
+                    6
+                  </option>
+                  <option clasName="py-2" value="5">
+                    5
+                  </option>
+                  <option clasName="py-2" value="4">
+                    4
+                  </option>
+                  <option clasName="py-2" value="3">
+                    3
+                  </option>
+                  <option clasName="py-2" value="2">
+                    2
+                  </option>
+                  <option clasName="py-2" value="1">
+                    1
+                  </option>
+                  <option clasName="py-2" value="0">
+                    0
+                  </option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <label className="mb text-md text-[#34FEF8] font-bold uppercase">
+              Physical
+            </label>
+            <br />
+            <div
+              className="z-[1000]"
+              //  style={{transform: 'translate(-50%, -50%)'}}
+            >
+              <div className="rounded-lg border-[#34FEF8] px-6">
+                <select
+                  onChange={(e) => {
+                    // selectedClass();
+                    setPhysical(e.target.value);
+                  }}
+                  className="rounder resize-none w-full h-[6rem] bg-[#01112B] text-base border-[5px] border-[#34FEF8] text-[#34FEF8] mb-2 mt-2 p-3 pl-4 pt-0 placeholder-opacity-60 placeholder-[#34FEF8]"
+                >
+                  <option
+                    value="Select a Category"
+                    selected
+                    className="block"
+                    disabled
+                  >
+                    Select a rating
+                  </option>
+                  <option clasName="py-2" value="99">
+                    99
+                  </option>
+                  <option clasName="py-2" value="98">
+                    98
+                  </option>
+                  <option clasName="py-2" value="97">
+                    97
+                  </option>
+                  <option clasName="py-2" value="96">
+                    96
+                  </option>
+                  <option clasName="py-2" value="95">
+                    95
+                  </option>
+                  <option clasName="py-2" value="94">
+                    94
+                  </option>
+                  <option clasName="py-2" value="93">
+                    93
+                  </option>
+                  <option clasName="py-2" value="92">
+                    92
+                  </option>
+                  <option clasName="py-2" value="91">
+                    91
+                  </option>
+                  <option clasName="py-2" value="90">
+                    90
+                  </option>
+                  <option clasName="py-2" value="89">
+                    89
+                  </option>
+                  <option clasName="py-2" value="88">
+                    88
+                  </option>
+                  <option clasName="py-2" value="87">
+                    87
+                  </option>
+                  <option clasName="py-2" value="86">
+                    86
+                  </option>
+                  <option clasName="py-2" value="85">
+                    85
+                  </option>
+                  <option clasName="py-2" value="84">
+                    84
+                  </option>
+                  <option clasName="py-2" value="83">
+                    83
+                  </option>
+                  <option clasName="py-2" value="82">
+                    82
+                  </option>
+                  <option clasName="py-2" value="81">
+                    81
+                  </option>
+                  <option clasName="py-2" value="80">
+                    80
+                  </option>
+                  <option clasName="py-2" value="79">
+                    79
+                  </option>
+                  <option clasName="py-2" value="78">
+                    78
+                  </option>
+                  <option clasName="py-2" value="77">
+                    77
+                  </option>
+                  <option clasName="py-2" value="76">
+                    76
+                  </option>
+                  <option clasName="py-2" value="75">
+                    75
+                  </option>
+                  <option clasName="py-2" value="74">
+                    74
+                  </option>
+                  <option clasName="py-2" value="73">
+                    73
+                  </option>
+                  <option clasName="py-2" value="72">
+                    72
+                  </option>
+                  <option clasName="py-2" value="71">
+                    71
+                  </option>
+                  <option clasName="py-2" value="70">
+                    70
+                  </option>
+                  <option clasName="py-2" value="69">
+                    69
+                  </option>
+                  <option clasName="py-2" value="68">
+                    68
+                  </option>
+                  <option clasName="py-2" value="67">
+                    67
+                  </option>
+                  <option clasName="py-2" value="66">
+                    66
+                  </option>
+                  <option clasName="py-2" value="65">
+                    65
+                  </option>
+                  <option clasName="py-2" value="64">
+                    64
+                  </option>
+                  <option clasName="py-2" value="63">
+                    63
+                  </option>
+                  <option clasName="py-2" value="62">
+                    62
+                  </option>
+                  <option clasName="py-2" value="61">
+                    61
+                  </option>
+                  <option clasName="py-2" value="60">
+                    60
+                  </option>
+                  <option clasName="py-2" value="59">
+                    59
+                  </option>
+                  <option clasName="py-2" value="58">
+                    58
+                  </option>
+                  <option clasName="py-2" value="57">
+                    57
+                  </option>
+                  <option clasName="py-2" value="56">
+                    56
+                  </option>
+                  <option clasName="py-2" value="55">
+                    55
+                  </option>
+                  <option clasName="py-2" value="54">
+                    54
+                  </option>
+                  <option clasName="py-2" value="53">
+                    53
+                  </option>
+                  <option clasName="py-2" value="52">
+                    52
+                  </option>
+                  <option clasName="py-2" value="51">
+                    51
+                  </option>
+                  <option clasName="py-2" value="50">
+                    50
+                  </option>
+                  <option clasName="py-2" value="49">
+                    49
+                  </option>
+                  <option clasName="py-2" value="48">
+                    48
+                  </option>
+                  <option clasName="py-2" value="47">
+                    47
+                  </option>
+                  <option clasName="py-2" value="46">
+                    46
+                  </option>
+                  <option clasName="py-2" value="45">
+                    45
+                  </option>
+                  <option clasName="py-2" value="44">
+                    44
+                  </option>
+                  <option clasName="py-2" value="43">
+                    43
+                  </option>
+                  <option clasName="py-2" value="42">
+                    42
+                  </option>
+                  <option clasName="py-2" value="41">
+                    41
+                  </option>
+                  <option clasName="py-2" value="40">
+                    40
+                  </option>
+                  <option clasName="py-2" value="39">
+                    39
+                  </option>
+                  <option clasName="py-2" value="38">
+                    38
+                  </option>
+                  <option clasName="py-2" value="37">
+                    37
+                  </option>
+                  <option clasName="py-2" value="36">
+                    36
+                  </option>
+                  <option clasName="py-2" value="35">
+                    35
+                  </option>
+                  <option clasName="py-2" value="34">
+                    34
+                  </option>
+                  <option clasName="py-2" value="33">
+                    33
+                  </option>
+                  <option clasName="py-2" value="32">
+                    32
+                  </option>
+                  <option clasName="py-2" value="31">
+                    31
+                  </option>
+                  <option clasName="py-2" value="30">
+                    30
+                  </option>
+                  <option clasName="py-2" value="29">
+                    29
+                  </option>
+                  <option clasName="py-2" value="28">
+                    28
+                  </option>
+                  <option clasName="py-2" value="27">
+                    27
+                  </option>
+                  <option clasName="py-2" value="26">
+                    26
+                  </option>
+                  <option clasName="py-2" value="25">
+                    25
+                  </option>
+                  <option clasName="py-2" value="24">
+                    24
+                  </option>
+                  <option clasName="py-2" value="23">
+                    23
+                  </option>
+                  <option clasName="py-2" value="22">
+                    22
+                  </option>
+                  <option clasName="py-2" value="21">
+                    21
+                  </option>
+                  <option clasName="py-2" value="20">
+                    20
+                  </option>
+                  <option clasName="py-2" value="19">
+                    19
+                  </option>
+                  <option clasName="py-2" value="18">
+                    18
+                  </option>
+                  <option clasName="py-2" value="17">
+                    17
+                  </option>
+                  <option clasName="py-2" value="16">
+                    16
+                  </option>
+                  <option clasName="py-2" value="15">
+                    15
+                  </option>
+                  <option clasName="py-2" value="14">
+                    14
+                  </option>
+                  <option clasName="py-2" value="13">
+                    13
+                  </option>
+                  <option clasName="py-2" value="12">
+                    12
+                  </option>
+                  <option clasName="py-2" value="11">
+                    11
+                  </option>
+                  <option clasName="py-2" value="10">
+                    10
+                  </option>
+                  <option clasName="py-2" value="9">
+                    9
+                  </option>
+                  <option clasName="py-2" value="8">
+                    8
+                  </option>
+                  <option clasName="py-2" value="7">
+                    7
+                  </option>
+                  <option clasName="py-2" value="6">
+                    6
+                  </option>
+                  <option clasName="py-2" value="5">
+                    5
+                  </option>
+                  <option clasName="py-2" value="4">
+                    4
+                  </option>
+                  <option clasName="py-2" value="3">
+                    3
+                  </option>
+                  <option clasName="py-2" value="2">
+                    2
+                  </option>
+                  <option clasName="py-2" value="1">
+                    1
+                  </option>
+                  <option clasName="py-2" value="0">
+                    0
+                  </option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <label className="mb text-md text-[#34FEF8] font-bold uppercase">
+              Positioning
+            </label>
+            <br />
+            <div
+              className="z-[1000]"
+              //  style={{transform: 'translate(-50%, -50%)'}}
+            >
+              <div className="rounded-lg border-[#34FEF8] px-6">
+                <select
+                  onChange={(e) => {
+                    // selectedClass();
+                    setPositioning(e.target.value);
+                  }}
+                  className="rounder resize-none w-full h-[6rem] bg-[#01112B] text-base border-[5px] border-[#34FEF8] text-[#34FEF8] mb-2 mt-2 p-3 pl-4 pt-0 placeholder-opacity-60 placeholder-[#34FEF8]"
+                >
+                  <option
+                    value="Select a Category"
+                    selected
+                    className="block"
+                    disabled
+                  >
+                    Select a rating
+                  </option>
+                  <option clasName="py-2" value="99">
+                    99
+                  </option>
+                  <option clasName="py-2" value="98">
+                    98
+                  </option>
+                  <option clasName="py-2" value="97">
+                    97
+                  </option>
+                  <option clasName="py-2" value="96">
+                    96
+                  </option>
+                  <option clasName="py-2" value="95">
+                    95
+                  </option>
+                  <option clasName="py-2" value="94">
+                    94
+                  </option>
+                  <option clasName="py-2" value="93">
+                    93
+                  </option>
+                  <option clasName="py-2" value="92">
+                    92
+                  </option>
+                  <option clasName="py-2" value="91">
+                    91
+                  </option>
+                  <option clasName="py-2" value="90">
+                    90
+                  </option>
+                  <option clasName="py-2" value="89">
+                    89
+                  </option>
+                  <option clasName="py-2" value="88">
+                    88
+                  </option>
+                  <option clasName="py-2" value="87">
+                    87
+                  </option>
+                  <option clasName="py-2" value="86">
+                    86
+                  </option>
+                  <option clasName="py-2" value="85">
+                    85
+                  </option>
+                  <option clasName="py-2" value="84">
+                    84
+                  </option>
+                  <option clasName="py-2" value="83">
+                    83
+                  </option>
+                  <option clasName="py-2" value="82">
+                    82
+                  </option>
+                  <option clasName="py-2" value="81">
+                    81
+                  </option>
+                  <option clasName="py-2" value="80">
+                    80
+                  </option>
+                  <option clasName="py-2" value="79">
+                    79
+                  </option>
+                  <option clasName="py-2" value="78">
+                    78
+                  </option>
+                  <option clasName="py-2" value="77">
+                    77
+                  </option>
+                  <option clasName="py-2" value="76">
+                    76
+                  </option>
+                  <option clasName="py-2" value="75">
+                    75
+                  </option>
+                  <option clasName="py-2" value="74">
+                    74
+                  </option>
+                  <option clasName="py-2" value="73">
+                    73
+                  </option>
+                  <option clasName="py-2" value="72">
+                    72
+                  </option>
+                  <option clasName="py-2" value="71">
+                    71
+                  </option>
+                  <option clasName="py-2" value="70">
+                    70
+                  </option>
+                  <option clasName="py-2" value="69">
+                    69
+                  </option>
+                  <option clasName="py-2" value="68">
+                    68
+                  </option>
+                  <option clasName="py-2" value="67">
+                    67
+                  </option>
+                  <option clasName="py-2" value="66">
+                    66
+                  </option>
+                  <option clasName="py-2" value="65">
+                    65
+                  </option>
+                  <option clasName="py-2" value="64">
+                    64
+                  </option>
+                  <option clasName="py-2" value="63">
+                    63
+                  </option>
+                  <option clasName="py-2" value="62">
+                    62
+                  </option>
+                  <option clasName="py-2" value="61">
+                    61
+                  </option>
+                  <option clasName="py-2" value="60">
+                    60
+                  </option>
+                  <option clasName="py-2" value="59">
+                    59
+                  </option>
+                  <option clasName="py-2" value="58">
+                    58
+                  </option>
+                  <option clasName="py-2" value="57">
+                    57
+                  </option>
+                  <option clasName="py-2" value="56">
+                    56
+                  </option>
+                  <option clasName="py-2" value="55">
+                    55
+                  </option>
+                  <option clasName="py-2" value="54">
+                    54
+                  </option>
+                  <option clasName="py-2" value="53">
+                    53
+                  </option>
+                  <option clasName="py-2" value="52">
+                    52
+                  </option>
+                  <option clasName="py-2" value="51">
+                    51
+                  </option>
+                  <option clasName="py-2" value="50">
+                    50
+                  </option>
+                  <option clasName="py-2" value="49">
+                    49
+                  </option>
+                  <option clasName="py-2" value="48">
+                    48
+                  </option>
+                  <option clasName="py-2" value="47">
+                    47
+                  </option>
+                  <option clasName="py-2" value="46">
+                    46
+                  </option>
+                  <option clasName="py-2" value="45">
+                    45
+                  </option>
+                  <option clasName="py-2" value="44">
+                    44
+                  </option>
+                  <option clasName="py-2" value="43">
+                    43
+                  </option>
+                  <option clasName="py-2" value="42">
+                    42
+                  </option>
+                  <option clasName="py-2" value="41">
+                    41
+                  </option>
+                  <option clasName="py-2" value="40">
+                    40
+                  </option>
+                  <option clasName="py-2" value="39">
+                    39
+                  </option>
+                  <option clasName="py-2" value="38">
+                    38
+                  </option>
+                  <option clasName="py-2" value="37">
+                    37
+                  </option>
+                  <option clasName="py-2" value="36">
+                    36
+                  </option>
+                  <option clasName="py-2" value="35">
+                    35
+                  </option>
+                  <option clasName="py-2" value="34">
+                    34
+                  </option>
+                  <option clasName="py-2" value="33">
+                    33
+                  </option>
+                  <option clasName="py-2" value="32">
+                    32
+                  </option>
+                  <option clasName="py-2" value="31">
+                    31
+                  </option>
+                  <option clasName="py-2" value="30">
+                    30
+                  </option>
+                  <option clasName="py-2" value="29">
+                    29
+                  </option>
+                  <option clasName="py-2" value="28">
+                    28
+                  </option>
+                  <option clasName="py-2" value="27">
+                    27
+                  </option>
+                  <option clasName="py-2" value="26">
+                    26
+                  </option>
+                  <option clasName="py-2" value="25">
+                    25
+                  </option>
+                  <option clasName="py-2" value="24">
+                    24
+                  </option>
+                  <option clasName="py-2" value="23">
+                    23
+                  </option>
+                  <option clasName="py-2" value="22">
+                    22
+                  </option>
+                  <option clasName="py-2" value="21">
+                    21
+                  </option>
+                  <option clasName="py-2" value="20">
+                    20
+                  </option>
+                  <option clasName="py-2" value="19">
+                    19
+                  </option>
+                  <option clasName="py-2" value="18">
+                    18
+                  </option>
+                  <option clasName="py-2" value="17">
+                    17
+                  </option>
+                  <option clasName="py-2" value="16">
+                    16
+                  </option>
+                  <option clasName="py-2" value="15">
+                    15
+                  </option>
+                  <option clasName="py-2" value="14">
+                    14
+                  </option>
+                  <option clasName="py-2" value="13">
+                    13
+                  </option>
+                  <option clasName="py-2" value="12">
+                    12
+                  </option>
+                  <option clasName="py-2" value="11">
+                    11
+                  </option>
+                  <option clasName="py-2" value="10">
+                    10
+                  </option>
+                  <option clasName="py-2" value="9">
+                    9
+                  </option>
+                  <option clasName="py-2" value="8">
+                    8
+                  </option>
+                  <option clasName="py-2" value="7">
+                    7
+                  </option>
+                  <option clasName="py-2" value="6">
+                    6
+                  </option>
+                  <option clasName="py-2" value="5">
+                    5
+                  </option>
+                  <option clasName="py-2" value="4">
+                    4
+                  </option>
+                  <option clasName="py-2" value="3">
+                    3
+                  </option>
+                  <option clasName="py-2" value="2">
+                    2
+                  </option>
+                  <option clasName="py-2" value="1">
+                    1
+                  </option>
+                  <option clasName="py-2" value="0">
+                    0
+                  </option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <label className="mb text-md text-[#34FEF8] font-bold uppercase">
+              Reactions
+            </label>
+            <br />
+            <div
+              className="z-[1000]"
+              //  style={{transform: 'translate(-50%, -50%)'}}
+            >
+              <div className="rounded-lg border-[#34FEF8] px-6">
+                <select
+                  onChange={(e) => {
+                    // selectedClass();
+                    setReactions(e.target.value);
+                  }}
+                  className="rounder resize-none w-full h-[6rem] bg-[#01112B] text-base border-[5px] border-[#34FEF8] text-[#34FEF8] mb-2 mt-2 p-3 pl-4 pt-0 placeholder-opacity-60 placeholder-[#34FEF8]"
+                >
+                  <option
+                    value="Select a Category"
+                    selected
+                    className="block"
+                    disabled
+                  >
+                    Select a rating
+                  </option>
+                  <option clasName="py-2" value="99">
+                    99
+                  </option>
+                  <option clasName="py-2" value="98">
+                    98
+                  </option>
+                  <option clasName="py-2" value="97">
+                    97
+                  </option>
+                  <option clasName="py-2" value="96">
+                    96
+                  </option>
+                  <option clasName="py-2" value="95">
+                    95
+                  </option>
+                  <option clasName="py-2" value="94">
+                    94
+                  </option>
+                  <option clasName="py-2" value="93">
+                    93
+                  </option>
+                  <option clasName="py-2" value="92">
+                    92
+                  </option>
+                  <option clasName="py-2" value="91">
+                    91
+                  </option>
+                  <option clasName="py-2" value="90">
+                    90
+                  </option>
+                  <option clasName="py-2" value="89">
+                    89
+                  </option>
+                  <option clasName="py-2" value="88">
+                    88
+                  </option>
+                  <option clasName="py-2" value="87">
+                    87
+                  </option>
+                  <option clasName="py-2" value="86">
+                    86
+                  </option>
+                  <option clasName="py-2" value="85">
+                    85
+                  </option>
+                  <option clasName="py-2" value="84">
+                    84
+                  </option>
+                  <option clasName="py-2" value="83">
+                    83
+                  </option>
+                  <option clasName="py-2" value="82">
+                    82
+                  </option>
+                  <option clasName="py-2" value="81">
+                    81
+                  </option>
+                  <option clasName="py-2" value="80">
+                    80
+                  </option>
+                  <option clasName="py-2" value="79">
+                    79
+                  </option>
+                  <option clasName="py-2" value="78">
+                    78
+                  </option>
+                  <option clasName="py-2" value="77">
+                    77
+                  </option>
+                  <option clasName="py-2" value="76">
+                    76
+                  </option>
+                  <option clasName="py-2" value="75">
+                    75
+                  </option>
+                  <option clasName="py-2" value="74">
+                    74
+                  </option>
+                  <option clasName="py-2" value="73">
+                    73
+                  </option>
+                  <option clasName="py-2" value="72">
+                    72
+                  </option>
+                  <option clasName="py-2" value="71">
+                    71
+                  </option>
+                  <option clasName="py-2" value="70">
+                    70
+                  </option>
+                  <option clasName="py-2" value="69">
+                    69
+                  </option>
+                  <option clasName="py-2" value="68">
+                    68
+                  </option>
+                  <option clasName="py-2" value="67">
+                    67
+                  </option>
+                  <option clasName="py-2" value="66">
+                    66
+                  </option>
+                  <option clasName="py-2" value="65">
+                    65
+                  </option>
+                  <option clasName="py-2" value="64">
+                    64
+                  </option>
+                  <option clasName="py-2" value="63">
+                    63
+                  </option>
+                  <option clasName="py-2" value="62">
+                    62
+                  </option>
+                  <option clasName="py-2" value="61">
+                    61
+                  </option>
+                  <option clasName="py-2" value="60">
+                    60
+                  </option>
+                  <option clasName="py-2" value="59">
+                    59
+                  </option>
+                  <option clasName="py-2" value="58">
+                    58
+                  </option>
+                  <option clasName="py-2" value="57">
+                    57
+                  </option>
+                  <option clasName="py-2" value="56">
+                    56
+                  </option>
+                  <option clasName="py-2" value="55">
+                    55
+                  </option>
+                  <option clasName="py-2" value="54">
+                    54
+                  </option>
+                  <option clasName="py-2" value="53">
+                    53
+                  </option>
+                  <option clasName="py-2" value="52">
+                    52
+                  </option>
+                  <option clasName="py-2" value="51">
+                    51
+                  </option>
+                  <option clasName="py-2" value="50">
+                    50
+                  </option>
+                  <option clasName="py-2" value="49">
+                    49
+                  </option>
+                  <option clasName="py-2" value="48">
+                    48
+                  </option>
+                  <option clasName="py-2" value="47">
+                    47
+                  </option>
+                  <option clasName="py-2" value="46">
+                    46
+                  </option>
+                  <option clasName="py-2" value="45">
+                    45
+                  </option>
+                  <option clasName="py-2" value="44">
+                    44
+                  </option>
+                  <option clasName="py-2" value="43">
+                    43
+                  </option>
+                  <option clasName="py-2" value="42">
+                    42
+                  </option>
+                  <option clasName="py-2" value="41">
+                    41
+                  </option>
+                  <option clasName="py-2" value="40">
+                    40
+                  </option>
+                  <option clasName="py-2" value="39">
+                    39
+                  </option>
+                  <option clasName="py-2" value="38">
+                    38
+                  </option>
+                  <option clasName="py-2" value="37">
+                    37
+                  </option>
+                  <option clasName="py-2" value="36">
+                    36
+                  </option>
+                  <option clasName="py-2" value="35">
+                    35
+                  </option>
+                  <option clasName="py-2" value="34">
+                    34
+                  </option>
+                  <option clasName="py-2" value="33">
+                    33
+                  </option>
+                  <option clasName="py-2" value="32">
+                    32
+                  </option>
+                  <option clasName="py-2" value="31">
+                    31
+                  </option>
+                  <option clasName="py-2" value="30">
+                    30
+                  </option>
+                  <option clasName="py-2" value="29">
+                    29
+                  </option>
+                  <option clasName="py-2" value="28">
+                    28
+                  </option>
+                  <option clasName="py-2" value="27">
+                    27
+                  </option>
+                  <option clasName="py-2" value="26">
+                    26
+                  </option>
+                  <option clasName="py-2" value="25">
+                    25
+                  </option>
+                  <option clasName="py-2" value="24">
+                    24
+                  </option>
+                  <option clasName="py-2" value="23">
+                    23
+                  </option>
+                  <option clasName="py-2" value="22">
+                    22
+                  </option>
+                  <option clasName="py-2" value="21">
+                    21
+                  </option>
+                  <option clasName="py-2" value="20">
+                    20
+                  </option>
+                  <option clasName="py-2" value="19">
+                    19
+                  </option>
+                  <option clasName="py-2" value="18">
+                    18
+                  </option>
+                  <option clasName="py-2" value="17">
+                    17
+                  </option>
+                  <option clasName="py-2" value="16">
+                    16
+                  </option>
+                  <option clasName="py-2" value="15">
+                    15
+                  </option>
+                  <option clasName="py-2" value="14">
+                    14
+                  </option>
+                  <option clasName="py-2" value="13">
+                    13
+                  </option>
+                  <option clasName="py-2" value="12">
+                    12
+                  </option>
+                  <option clasName="py-2" value="11">
+                    11
+                  </option>
+                  <option clasName="py-2" value="10">
+                    10
+                  </option>
+                  <option clasName="py-2" value="9">
+                    9
+                  </option>
+                  <option clasName="py-2" value="8">
+                    8
+                  </option>
+                  <option clasName="py-2" value="7">
+                    7
+                  </option>
+                  <option clasName="py-2" value="6">
+                    6
+                  </option>
+                  <option clasName="py-2" value="5">
+                    5
+                  </option>
+                  <option clasName="py-2" value="4">
+                    4
+                  </option>
+                  <option clasName="py-2" value="3">
+                    3
+                  </option>
+                  <option clasName="py-2" value="2">
+                    2
+                  </option>
+                  <option clasName="py-2" value="1">
+                    1
+                  </option>
+                  <option clasName="py-2" value="0">
+                    0
+                  </option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <label className="mb text-md text-[#34FEF8] font-bold uppercase">
+              Shooting
+            </label>
+            <br />
+            <div
+              className="z-[1000]"
+              //  style={{transform: 'translate(-50%, -50%)'}}
+            >
+              <div className="rounded-lg border-[#34FEF8] px-6">
+                <select
+                  onChange={(e) => {
+                    // selectedClass();
+                    setShooting(e.target.value);
+                  }}
+                  className="rounder resize-none w-full h-[6rem] bg-[#01112B] text-base border-[5px] border-[#34FEF8] text-[#34FEF8] mb-2 mt-2 p-3 pl-4 pt-0 placeholder-opacity-60 placeholder-[#34FEF8]"
+                >
+                  <option
+                    value="Select a Category"
+                    selected
+                    className="block"
+                    disabled
+                  >
+                    Select a rating
+                  </option>
+                  <option clasName="py-2" value="99">
+                    99
+                  </option>
+                  <option clasName="py-2" value="98">
+                    98
+                  </option>
+                  <option clasName="py-2" value="97">
+                    97
+                  </option>
+                  <option clasName="py-2" value="96">
+                    96
+                  </option>
+                  <option clasName="py-2" value="95">
+                    95
+                  </option>
+                  <option clasName="py-2" value="94">
+                    94
+                  </option>
+                  <option clasName="py-2" value="93">
+                    93
+                  </option>
+                  <option clasName="py-2" value="92">
+                    92
+                  </option>
+                  <option clasName="py-2" value="91">
+                    91
+                  </option>
+                  <option clasName="py-2" value="90">
+                    90
+                  </option>
+                  <option clasName="py-2" value="89">
+                    89
+                  </option>
+                  <option clasName="py-2" value="88">
+                    88
+                  </option>
+                  <option clasName="py-2" value="87">
+                    87
+                  </option>
+                  <option clasName="py-2" value="86">
+                    86
+                  </option>
+                  <option clasName="py-2" value="85">
+                    85
+                  </option>
+                  <option clasName="py-2" value="84">
+                    84
+                  </option>
+                  <option clasName="py-2" value="83">
+                    83
+                  </option>
+                  <option clasName="py-2" value="82">
+                    82
+                  </option>
+                  <option clasName="py-2" value="81">
+                    81
+                  </option>
+                  <option clasName="py-2" value="80">
+                    80
+                  </option>
+                  <option clasName="py-2" value="79">
+                    79
+                  </option>
+                  <option clasName="py-2" value="78">
+                    78
+                  </option>
+                  <option clasName="py-2" value="77">
+                    77
+                  </option>
+                  <option clasName="py-2" value="76">
+                    76
+                  </option>
+                  <option clasName="py-2" value="75">
+                    75
+                  </option>
+                  <option clasName="py-2" value="74">
+                    74
+                  </option>
+                  <option clasName="py-2" value="73">
+                    73
+                  </option>
+                  <option clasName="py-2" value="72">
+                    72
+                  </option>
+                  <option clasName="py-2" value="71">
+                    71
+                  </option>
+                  <option clasName="py-2" value="70">
+                    70
+                  </option>
+                  <option clasName="py-2" value="69">
+                    69
+                  </option>
+                  <option clasName="py-2" value="68">
+                    68
+                  </option>
+                  <option clasName="py-2" value="67">
+                    67
+                  </option>
+                  <option clasName="py-2" value="66">
+                    66
+                  </option>
+                  <option clasName="py-2" value="65">
+                    65
+                  </option>
+                  <option clasName="py-2" value="64">
+                    64
+                  </option>
+                  <option clasName="py-2" value="63">
+                    63
+                  </option>
+                  <option clasName="py-2" value="62">
+                    62
+                  </option>
+                  <option clasName="py-2" value="61">
+                    61
+                  </option>
+                  <option clasName="py-2" value="60">
+                    60
+                  </option>
+                  <option clasName="py-2" value="59">
+                    59
+                  </option>
+                  <option clasName="py-2" value="58">
+                    58
+                  </option>
+                  <option clasName="py-2" value="57">
+                    57
+                  </option>
+                  <option clasName="py-2" value="56">
+                    56
+                  </option>
+                  <option clasName="py-2" value="55">
+                    55
+                  </option>
+                  <option clasName="py-2" value="54">
+                    54
+                  </option>
+                  <option clasName="py-2" value="53">
+                    53
+                  </option>
+                  <option clasName="py-2" value="52">
+                    52
+                  </option>
+                  <option clasName="py-2" value="51">
+                    51
+                  </option>
+                  <option clasName="py-2" value="50">
+                    50
+                  </option>
+                  <option clasName="py-2" value="49">
+                    49
+                  </option>
+                  <option clasName="py-2" value="48">
+                    48
+                  </option>
+                  <option clasName="py-2" value="47">
+                    47
+                  </option>
+                  <option clasName="py-2" value="46">
+                    46
+                  </option>
+                  <option clasName="py-2" value="45">
+                    45
+                  </option>
+                  <option clasName="py-2" value="44">
+                    44
+                  </option>
+                  <option clasName="py-2" value="43">
+                    43
+                  </option>
+                  <option clasName="py-2" value="42">
+                    42
+                  </option>
+                  <option clasName="py-2" value="41">
+                    41
+                  </option>
+                  <option clasName="py-2" value="40">
+                    40
+                  </option>
+                  <option clasName="py-2" value="39">
+                    39
+                  </option>
+                  <option clasName="py-2" value="38">
+                    38
+                  </option>
+                  <option clasName="py-2" value="37">
+                    37
+                  </option>
+                  <option clasName="py-2" value="36">
+                    36
+                  </option>
+                  <option clasName="py-2" value="35">
+                    35
+                  </option>
+                  <option clasName="py-2" value="34">
+                    34
+                  </option>
+                  <option clasName="py-2" value="33">
+                    33
+                  </option>
+                  <option clasName="py-2" value="32">
+                    32
+                  </option>
+                  <option clasName="py-2" value="31">
+                    31
+                  </option>
+                  <option clasName="py-2" value="30">
+                    30
+                  </option>
+                  <option clasName="py-2" value="29">
+                    29
+                  </option>
+                  <option clasName="py-2" value="28">
+                    28
+                  </option>
+                  <option clasName="py-2" value="27">
+                    27
+                  </option>
+                  <option clasName="py-2" value="26">
+                    26
+                  </option>
+                  <option clasName="py-2" value="25">
+                    25
+                  </option>
+                  <option clasName="py-2" value="24">
+                    24
+                  </option>
+                  <option clasName="py-2" value="23">
+                    23
+                  </option>
+                  <option clasName="py-2" value="22">
+                    22
+                  </option>
+                  <option clasName="py-2" value="21">
+                    21
+                  </option>
+                  <option clasName="py-2" value="20">
+                    20
+                  </option>
+                  <option clasName="py-2" value="19">
+                    19
+                  </option>
+                  <option clasName="py-2" value="18">
+                    18
+                  </option>
+                  <option clasName="py-2" value="17">
+                    17
+                  </option>
+                  <option clasName="py-2" value="16">
+                    16
+                  </option>
+                  <option clasName="py-2" value="15">
+                    15
+                  </option>
+                  <option clasName="py-2" value="14">
+                    14
+                  </option>
+                  <option clasName="py-2" value="13">
+                    13
+                  </option>
+                  <option clasName="py-2" value="12">
+                    12
+                  </option>
+                  <option clasName="py-2" value="11">
+                    11
+                  </option>
+                  <option clasName="py-2" value="10">
+                    10
+                  </option>
+                  <option clasName="py-2" value="9">
+                    9
+                  </option>
+                  <option clasName="py-2" value="8">
+                    8
+                  </option>
+                  <option clasName="py-2" value="7">
+                    7
+                  </option>
+                  <option clasName="py-2" value="6">
+                    6
+                  </option>
+                  <option clasName="py-2" value="5">
+                    5
+                  </option>
+                  <option clasName="py-2" value="4">
+                    4
+                  </option>
+                  <option clasName="py-2" value="3">
+                    3
+                  </option>
+                  <option clasName="py-2" value="2">
+                    2
+                  </option>
+                  <option clasName="py-2" value="1">
+                    1
+                  </option>
+                  <option clasName="py-2" value="0">
+                    0
+                  </option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <label className="mb text-md text-[#34FEF8] font-bold uppercase">
+              Short Passing
+            </label>
+            <br />
+            <div
+              className="z-[1000]"
+              //  style={{transform: 'translate(-50%, -50%)'}}
+            >
+              <div className="rounded-lg border-[#34FEF8] px-6">
+                <select
+                  onChange={(e) => {
+                    // selectedClass();
+                    setShortPassing(e.target.value);
+                  }}
+                  className="rounder resize-none w-full h-[6rem] bg-[#01112B] text-base border-[5px] border-[#34FEF8] text-[#34FEF8] mb-2 mt-2 p-3 pl-4 pt-0 placeholder-opacity-60 placeholder-[#34FEF8]"
+                >
+                  <option
+                    value="Select a Category"
+                    selected
+                    className="block"
+                    disabled
+                  >
+                    Select a rating
+                  </option>
+                  <option clasName="py-2" value="99">
+                    99
+                  </option>
+                  <option clasName="py-2" value="98">
+                    98
+                  </option>
+                  <option clasName="py-2" value="97">
+                    97
+                  </option>
+                  <option clasName="py-2" value="96">
+                    96
+                  </option>
+                  <option clasName="py-2" value="95">
+                    95
+                  </option>
+                  <option clasName="py-2" value="94">
+                    94
+                  </option>
+                  <option clasName="py-2" value="93">
+                    93
+                  </option>
+                  <option clasName="py-2" value="92">
+                    92
+                  </option>
+                  <option clasName="py-2" value="91">
+                    91
+                  </option>
+                  <option clasName="py-2" value="90">
+                    90
+                  </option>
+                  <option clasName="py-2" value="89">
+                    89
+                  </option>
+                  <option clasName="py-2" value="88">
+                    88
+                  </option>
+                  <option clasName="py-2" value="87">
+                    87
+                  </option>
+                  <option clasName="py-2" value="86">
+                    86
+                  </option>
+                  <option clasName="py-2" value="85">
+                    85
+                  </option>
+                  <option clasName="py-2" value="84">
+                    84
+                  </option>
+                  <option clasName="py-2" value="83">
+                    83
+                  </option>
+                  <option clasName="py-2" value="82">
+                    82
+                  </option>
+                  <option clasName="py-2" value="81">
+                    81
+                  </option>
+                  <option clasName="py-2" value="80">
+                    80
+                  </option>
+                  <option clasName="py-2" value="79">
+                    79
+                  </option>
+                  <option clasName="py-2" value="78">
+                    78
+                  </option>
+                  <option clasName="py-2" value="77">
+                    77
+                  </option>
+                  <option clasName="py-2" value="76">
+                    76
+                  </option>
+                  <option clasName="py-2" value="75">
+                    75
+                  </option>
+                  <option clasName="py-2" value="74">
+                    74
+                  </option>
+                  <option clasName="py-2" value="73">
+                    73
+                  </option>
+                  <option clasName="py-2" value="72">
+                    72
+                  </option>
+                  <option clasName="py-2" value="71">
+                    71
+                  </option>
+                  <option clasName="py-2" value="70">
+                    70
+                  </option>
+                  <option clasName="py-2" value="69">
+                    69
+                  </option>
+                  <option clasName="py-2" value="68">
+                    68
+                  </option>
+                  <option clasName="py-2" value="67">
+                    67
+                  </option>
+                  <option clasName="py-2" value="66">
+                    66
+                  </option>
+                  <option clasName="py-2" value="65">
+                    65
+                  </option>
+                  <option clasName="py-2" value="64">
+                    64
+                  </option>
+                  <option clasName="py-2" value="63">
+                    63
+                  </option>
+                  <option clasName="py-2" value="62">
+                    62
+                  </option>
+                  <option clasName="py-2" value="61">
+                    61
+                  </option>
+                  <option clasName="py-2" value="60">
+                    60
+                  </option>
+                  <option clasName="py-2" value="59">
+                    59
+                  </option>
+                  <option clasName="py-2" value="58">
+                    58
+                  </option>
+                  <option clasName="py-2" value="57">
+                    57
+                  </option>
+                  <option clasName="py-2" value="56">
+                    56
+                  </option>
+                  <option clasName="py-2" value="55">
+                    55
+                  </option>
+                  <option clasName="py-2" value="54">
+                    54
+                  </option>
+                  <option clasName="py-2" value="53">
+                    53
+                  </option>
+                  <option clasName="py-2" value="52">
+                    52
+                  </option>
+                  <option clasName="py-2" value="51">
+                    51
+                  </option>
+                  <option clasName="py-2" value="50">
+                    50
+                  </option>
+                  <option clasName="py-2" value="49">
+                    49
+                  </option>
+                  <option clasName="py-2" value="48">
+                    48
+                  </option>
+                  <option clasName="py-2" value="47">
+                    47
+                  </option>
+                  <option clasName="py-2" value="46">
+                    46
+                  </option>
+                  <option clasName="py-2" value="45">
+                    45
+                  </option>
+                  <option clasName="py-2" value="44">
+                    44
+                  </option>
+                  <option clasName="py-2" value="43">
+                    43
+                  </option>
+                  <option clasName="py-2" value="42">
+                    42
+                  </option>
+                  <option clasName="py-2" value="41">
+                    41
+                  </option>
+                  <option clasName="py-2" value="40">
+                    40
+                  </option>
+                  <option clasName="py-2" value="39">
+                    39
+                  </option>
+                  <option clasName="py-2" value="38">
+                    38
+                  </option>
+                  <option clasName="py-2" value="37">
+                    37
+                  </option>
+                  <option clasName="py-2" value="36">
+                    36
+                  </option>
+                  <option clasName="py-2" value="35">
+                    35
+                  </option>
+                  <option clasName="py-2" value="34">
+                    34
+                  </option>
+                  <option clasName="py-2" value="33">
+                    33
+                  </option>
+                  <option clasName="py-2" value="32">
+                    32
+                  </option>
+                  <option clasName="py-2" value="31">
+                    31
+                  </option>
+                  <option clasName="py-2" value="30">
+                    30
+                  </option>
+                  <option clasName="py-2" value="29">
+                    29
+                  </option>
+                  <option clasName="py-2" value="28">
+                    28
+                  </option>
+                  <option clasName="py-2" value="27">
+                    27
+                  </option>
+                  <option clasName="py-2" value="26">
+                    26
+                  </option>
+                  <option clasName="py-2" value="25">
+                    25
+                  </option>
+                  <option clasName="py-2" value="24">
+                    24
+                  </option>
+                  <option clasName="py-2" value="23">
+                    23
+                  </option>
+                  <option clasName="py-2" value="22">
+                    22
+                  </option>
+                  <option clasName="py-2" value="21">
+                    21
+                  </option>
+                  <option clasName="py-2" value="20">
+                    20
+                  </option>
+                  <option clasName="py-2" value="19">
+                    19
+                  </option>
+                  <option clasName="py-2" value="18">
+                    18
+                  </option>
+                  <option clasName="py-2" value="17">
+                    17
+                  </option>
+                  <option clasName="py-2" value="16">
+                    16
+                  </option>
+                  <option clasName="py-2" value="15">
+                    15
+                  </option>
+                  <option clasName="py-2" value="14">
+                    14
+                  </option>
+                  <option clasName="py-2" value="13">
+                    13
+                  </option>
+                  <option clasName="py-2" value="12">
+                    12
+                  </option>
+                  <option clasName="py-2" value="11">
+                    11
+                  </option>
+                  <option clasName="py-2" value="10">
+                    10
+                  </option>
+                  <option clasName="py-2" value="9">
+                    9
+                  </option>
+                  <option clasName="py-2" value="8">
+                    8
+                  </option>
+                  <option clasName="py-2" value="7">
+                    7
+                  </option>
+                  <option clasName="py-2" value="6">
+                    6
+                  </option>
+                  <option clasName="py-2" value="5">
+                    5
+                  </option>
+                  <option clasName="py-2" value="4">
+                    4
+                  </option>
+                  <option clasName="py-2" value="3">
+                    3
+                  </option>
+                  <option clasName="py-2" value="2">
+                    2
+                  </option>
+                  <option clasName="py-2" value="1">
+                    1
+                  </option>
+                  <option clasName="py-2" value="0">
+                    0
+                  </option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <label className="mb text-md text-[#34FEF8] font-bold uppercase">
+              Shot Power
+            </label>
+            <br />
+            <div
+              className="z-[1000]"
+              //  style={{transform: 'translate(-50%, -50%)'}}
+            >
+              <div className="rounded-lg border-[#34FEF8] px-6">
+                <select
+                  onChange={(e) => {
+                    // selectedClass();
+                    setShotPower(e.target.value);
+                  }}
+                  className="rounder resize-none w-full h-[6rem] bg-[#01112B] text-base border-[5px] border-[#34FEF8] text-[#34FEF8] mb-2 mt-2 p-3 pl-4 pt-0 placeholder-opacity-60 placeholder-[#34FEF8]"
+                >
+                  <option
+                    value="Select a Category"
+                    selected
+                    className="block"
+                    disabled
+                  >
+                    Select a rating
+                  </option>
+                  <option clasName="py-2" value="99">
+                    99
+                  </option>
+                  <option clasName="py-2" value="98">
+                    98
+                  </option>
+                  <option clasName="py-2" value="97">
+                    97
+                  </option>
+                  <option clasName="py-2" value="96">
+                    96
+                  </option>
+                  <option clasName="py-2" value="95">
+                    95
+                  </option>
+                  <option clasName="py-2" value="94">
+                    94
+                  </option>
+                  <option clasName="py-2" value="93">
+                    93
+                  </option>
+                  <option clasName="py-2" value="92">
+                    92
+                  </option>
+                  <option clasName="py-2" value="91">
+                    91
+                  </option>
+                  <option clasName="py-2" value="90">
+                    90
+                  </option>
+                  <option clasName="py-2" value="89">
+                    89
+                  </option>
+                  <option clasName="py-2" value="88">
+                    88
+                  </option>
+                  <option clasName="py-2" value="87">
+                    87
+                  </option>
+                  <option clasName="py-2" value="86">
+                    86
+                  </option>
+                  <option clasName="py-2" value="85">
+                    85
+                  </option>
+                  <option clasName="py-2" value="84">
+                    84
+                  </option>
+                  <option clasName="py-2" value="83">
+                    83
+                  </option>
+                  <option clasName="py-2" value="82">
+                    82
+                  </option>
+                  <option clasName="py-2" value="81">
+                    81
+                  </option>
+                  <option clasName="py-2" value="80">
+                    80
+                  </option>
+                  <option clasName="py-2" value="79">
+                    79
+                  </option>
+                  <option clasName="py-2" value="78">
+                    78
+                  </option>
+                  <option clasName="py-2" value="77">
+                    77
+                  </option>
+                  <option clasName="py-2" value="76">
+                    76
+                  </option>
+                  <option clasName="py-2" value="75">
+                    75
+                  </option>
+                  <option clasName="py-2" value="74">
+                    74
+                  </option>
+                  <option clasName="py-2" value="73">
+                    73
+                  </option>
+                  <option clasName="py-2" value="72">
+                    72
+                  </option>
+                  <option clasName="py-2" value="71">
+                    71
+                  </option>
+                  <option clasName="py-2" value="70">
+                    70
+                  </option>
+                  <option clasName="py-2" value="69">
+                    69
+                  </option>
+                  <option clasName="py-2" value="68">
+                    68
+                  </option>
+                  <option clasName="py-2" value="67">
+                    67
+                  </option>
+                  <option clasName="py-2" value="66">
+                    66
+                  </option>
+                  <option clasName="py-2" value="65">
+                    65
+                  </option>
+                  <option clasName="py-2" value="64">
+                    64
+                  </option>
+                  <option clasName="py-2" value="63">
+                    63
+                  </option>
+                  <option clasName="py-2" value="62">
+                    62
+                  </option>
+                  <option clasName="py-2" value="61">
+                    61
+                  </option>
+                  <option clasName="py-2" value="60">
+                    60
+                  </option>
+                  <option clasName="py-2" value="59">
+                    59
+                  </option>
+                  <option clasName="py-2" value="58">
+                    58
+                  </option>
+                  <option clasName="py-2" value="57">
+                    57
+                  </option>
+                  <option clasName="py-2" value="56">
+                    56
+                  </option>
+                  <option clasName="py-2" value="55">
+                    55
+                  </option>
+                  <option clasName="py-2" value="54">
+                    54
+                  </option>
+                  <option clasName="py-2" value="53">
+                    53
+                  </option>
+                  <option clasName="py-2" value="52">
+                    52
+                  </option>
+                  <option clasName="py-2" value="51">
+                    51
+                  </option>
+                  <option clasName="py-2" value="50">
+                    50
+                  </option>
+                  <option clasName="py-2" value="49">
+                    49
+                  </option>
+                  <option clasName="py-2" value="48">
+                    48
+                  </option>
+                  <option clasName="py-2" value="47">
+                    47
+                  </option>
+                  <option clasName="py-2" value="46">
+                    46
+                  </option>
+                  <option clasName="py-2" value="45">
+                    45
+                  </option>
+                  <option clasName="py-2" value="44">
+                    44
+                  </option>
+                  <option clasName="py-2" value="43">
+                    43
+                  </option>
+                  <option clasName="py-2" value="42">
+                    42
+                  </option>
+                  <option clasName="py-2" value="41">
+                    41
+                  </option>
+                  <option clasName="py-2" value="40">
+                    40
+                  </option>
+                  <option clasName="py-2" value="39">
+                    39
+                  </option>
+                  <option clasName="py-2" value="38">
+                    38
+                  </option>
+                  <option clasName="py-2" value="37">
+                    37
+                  </option>
+                  <option clasName="py-2" value="36">
+                    36
+                  </option>
+                  <option clasName="py-2" value="35">
+                    35
+                  </option>
+                  <option clasName="py-2" value="34">
+                    34
+                  </option>
+                  <option clasName="py-2" value="33">
+                    33
+                  </option>
+                  <option clasName="py-2" value="32">
+                    32
+                  </option>
+                  <option clasName="py-2" value="31">
+                    31
+                  </option>
+                  <option clasName="py-2" value="30">
+                    30
+                  </option>
+                  <option clasName="py-2" value="29">
+                    29
+                  </option>
+                  <option clasName="py-2" value="28">
+                    28
+                  </option>
+                  <option clasName="py-2" value="27">
+                    27
+                  </option>
+                  <option clasName="py-2" value="26">
+                    26
+                  </option>
+                  <option clasName="py-2" value="25">
+                    25
+                  </option>
+                  <option clasName="py-2" value="24">
+                    24
+                  </option>
+                  <option clasName="py-2" value="23">
+                    23
+                  </option>
+                  <option clasName="py-2" value="22">
+                    22
+                  </option>
+                  <option clasName="py-2" value="21">
+                    21
+                  </option>
+                  <option clasName="py-2" value="20">
+                    20
+                  </option>
+                  <option clasName="py-2" value="19">
+                    19
+                  </option>
+                  <option clasName="py-2" value="18">
+                    18
+                  </option>
+                  <option clasName="py-2" value="17">
+                    17
+                  </option>
+                  <option clasName="py-2" value="16">
+                    16
+                  </option>
+                  <option clasName="py-2" value="15">
+                    15
+                  </option>
+                  <option clasName="py-2" value="14">
+                    14
+                  </option>
+                  <option clasName="py-2" value="13">
+                    13
+                  </option>
+                  <option clasName="py-2" value="12">
+                    12
+                  </option>
+                  <option clasName="py-2" value="11">
+                    11
+                  </option>
+                  <option clasName="py-2" value="10">
+                    10
+                  </option>
+                  <option clasName="py-2" value="9">
+                    9
+                  </option>
+                  <option clasName="py-2" value="8">
+                    8
+                  </option>
+                  <option clasName="py-2" value="7">
+                    7
+                  </option>
+                  <option clasName="py-2" value="6">
+                    6
+                  </option>
+                  <option clasName="py-2" value="5">
+                    5
+                  </option>
+                  <option clasName="py-2" value="4">
+                    4
+                  </option>
+                  <option clasName="py-2" value="3">
+                    3
+                  </option>
+                  <option clasName="py-2" value="2">
+                    2
+                  </option>
+                  <option clasName="py-2" value="1">
+                    1
+                  </option>
+                  <option clasName="py-2" value="0">
+                    0
+                  </option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <label className="mb text-md text-[#34FEF8] font-bold uppercase">
+              Sliding Tackle
+            </label>
+            <br />
+            <div
+              className="z-[1000]"
+              //  style={{transform: 'translate(-50%, -50%)'}}
+            >
+              <div className="rounded-lg border-[#34FEF8] px-6">
+                <select
+                  onChange={(e) => {
+                    // selectedClass();
+                    setSlidingTackle(e.target.value);
+                  }}
+                  className="rounder resize-none w-full h-[6rem] bg-[#01112B] text-base border-[5px] border-[#34FEF8] text-[#34FEF8] mb-2 mt-2 p-3 pl-4 pt-0 placeholder-opacity-60 placeholder-[#34FEF8]"
+                >
+                  <option
+                    value="Select a Category"
+                    selected
+                    className="block"
+                    disabled
+                  >
+                    Select a rating
+                  </option>
+                  <option clasName="py-2" value="99">
+                    99
+                  </option>
+                  <option clasName="py-2" value="98">
+                    98
+                  </option>
+                  <option clasName="py-2" value="97">
+                    97
+                  </option>
+                  <option clasName="py-2" value="96">
+                    96
+                  </option>
+                  <option clasName="py-2" value="95">
+                    95
+                  </option>
+                  <option clasName="py-2" value="94">
+                    94
+                  </option>
+                  <option clasName="py-2" value="93">
+                    93
+                  </option>
+                  <option clasName="py-2" value="92">
+                    92
+                  </option>
+                  <option clasName="py-2" value="91">
+                    91
+                  </option>
+                  <option clasName="py-2" value="90">
+                    90
+                  </option>
+                  <option clasName="py-2" value="89">
+                    89
+                  </option>
+                  <option clasName="py-2" value="88">
+                    88
+                  </option>
+                  <option clasName="py-2" value="87">
+                    87
+                  </option>
+                  <option clasName="py-2" value="86">
+                    86
+                  </option>
+                  <option clasName="py-2" value="85">
+                    85
+                  </option>
+                  <option clasName="py-2" value="84">
+                    84
+                  </option>
+                  <option clasName="py-2" value="83">
+                    83
+                  </option>
+                  <option clasName="py-2" value="82">
+                    82
+                  </option>
+                  <option clasName="py-2" value="81">
+                    81
+                  </option>
+                  <option clasName="py-2" value="80">
+                    80
+                  </option>
+                  <option clasName="py-2" value="79">
+                    79
+                  </option>
+                  <option clasName="py-2" value="78">
+                    78
+                  </option>
+                  <option clasName="py-2" value="77">
+                    77
+                  </option>
+                  <option clasName="py-2" value="76">
+                    76
+                  </option>
+                  <option clasName="py-2" value="75">
+                    75
+                  </option>
+                  <option clasName="py-2" value="74">
+                    74
+                  </option>
+                  <option clasName="py-2" value="73">
+                    73
+                  </option>
+                  <option clasName="py-2" value="72">
+                    72
+                  </option>
+                  <option clasName="py-2" value="71">
+                    71
+                  </option>
+                  <option clasName="py-2" value="70">
+                    70
+                  </option>
+                  <option clasName="py-2" value="69">
+                    69
+                  </option>
+                  <option clasName="py-2" value="68">
+                    68
+                  </option>
+                  <option clasName="py-2" value="67">
+                    67
+                  </option>
+                  <option clasName="py-2" value="66">
+                    66
+                  </option>
+                  <option clasName="py-2" value="65">
+                    65
+                  </option>
+                  <option clasName="py-2" value="64">
+                    64
+                  </option>
+                  <option clasName="py-2" value="63">
+                    63
+                  </option>
+                  <option clasName="py-2" value="62">
+                    62
+                  </option>
+                  <option clasName="py-2" value="61">
+                    61
+                  </option>
+                  <option clasName="py-2" value="60">
+                    60
+                  </option>
+                  <option clasName="py-2" value="59">
+                    59
+                  </option>
+                  <option clasName="py-2" value="58">
+                    58
+                  </option>
+                  <option clasName="py-2" value="57">
+                    57
+                  </option>
+                  <option clasName="py-2" value="56">
+                    56
+                  </option>
+                  <option clasName="py-2" value="55">
+                    55
+                  </option>
+                  <option clasName="py-2" value="54">
+                    54
+                  </option>
+                  <option clasName="py-2" value="53">
+                    53
+                  </option>
+                  <option clasName="py-2" value="52">
+                    52
+                  </option>
+                  <option clasName="py-2" value="51">
+                    51
+                  </option>
+                  <option clasName="py-2" value="50">
+                    50
+                  </option>
+                  <option clasName="py-2" value="49">
+                    49
+                  </option>
+                  <option clasName="py-2" value="48">
+                    48
+                  </option>
+                  <option clasName="py-2" value="47">
+                    47
+                  </option>
+                  <option clasName="py-2" value="46">
+                    46
+                  </option>
+                  <option clasName="py-2" value="45">
+                    45
+                  </option>
+                  <option clasName="py-2" value="44">
+                    44
+                  </option>
+                  <option clasName="py-2" value="43">
+                    43
+                  </option>
+                  <option clasName="py-2" value="42">
+                    42
+                  </option>
+                  <option clasName="py-2" value="41">
+                    41
+                  </option>
+                  <option clasName="py-2" value="40">
+                    40
+                  </option>
+                  <option clasName="py-2" value="39">
+                    39
+                  </option>
+                  <option clasName="py-2" value="38">
+                    38
+                  </option>
+                  <option clasName="py-2" value="37">
+                    37
+                  </option>
+                  <option clasName="py-2" value="36">
+                    36
+                  </option>
+                  <option clasName="py-2" value="35">
+                    35
+                  </option>
+                  <option clasName="py-2" value="34">
+                    34
+                  </option>
+                  <option clasName="py-2" value="33">
+                    33
+                  </option>
+                  <option clasName="py-2" value="32">
+                    32
+                  </option>
+                  <option clasName="py-2" value="31">
+                    31
+                  </option>
+                  <option clasName="py-2" value="30">
+                    30
+                  </option>
+                  <option clasName="py-2" value="29">
+                    29
+                  </option>
+                  <option clasName="py-2" value="28">
+                    28
+                  </option>
+                  <option clasName="py-2" value="27">
+                    27
+                  </option>
+                  <option clasName="py-2" value="26">
+                    26
+                  </option>
+                  <option clasName="py-2" value="25">
+                    25
+                  </option>
+                  <option clasName="py-2" value="24">
+                    24
+                  </option>
+                  <option clasName="py-2" value="23">
+                    23
+                  </option>
+                  <option clasName="py-2" value="22">
+                    22
+                  </option>
+                  <option clasName="py-2" value="21">
+                    21
+                  </option>
+                  <option clasName="py-2" value="20">
+                    20
+                  </option>
+                  <option clasName="py-2" value="19">
+                    19
+                  </option>
+                  <option clasName="py-2" value="18">
+                    18
+                  </option>
+                  <option clasName="py-2" value="17">
+                    17
+                  </option>
+                  <option clasName="py-2" value="16">
+                    16
+                  </option>
+                  <option clasName="py-2" value="15">
+                    15
+                  </option>
+                  <option clasName="py-2" value="14">
+                    14
+                  </option>
+                  <option clasName="py-2" value="13">
+                    13
+                  </option>
+                  <option clasName="py-2" value="12">
+                    12
+                  </option>
+                  <option clasName="py-2" value="11">
+                    11
+                  </option>
+                  <option clasName="py-2" value="10">
+                    10
+                  </option>
+                  <option clasName="py-2" value="9">
+                    9
+                  </option>
+                  <option clasName="py-2" value="8">
+                    8
+                  </option>
+                  <option clasName="py-2" value="7">
+                    7
+                  </option>
+                  <option clasName="py-2" value="6">
+                    6
+                  </option>
+                  <option clasName="py-2" value="5">
+                    5
+                  </option>
+                  <option clasName="py-2" value="4">
+                    4
+                  </option>
+                  <option clasName="py-2" value="3">
+                    3
+                  </option>
+                  <option clasName="py-2" value="2">
+                    2
+                  </option>
+                  <option clasName="py-2" value="1">
+                    1
+                  </option>
+                  <option clasName="py-2" value="0">
+                    0
+                  </option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <label className="mb text-md text-[#34FEF8] font-bold uppercase">
+              Sprint Speed
+            </label>
+            <br />
+            <div
+              className="z-[1000]"
+              //  style={{transform: 'translate(-50%, -50%)'}}
+            >
+              <div className="rounded-lg border-[#34FEF8] px-6">
+                <select
+                  onChange={(e) => {
+                    // selectedClass();
+                    setSprintSpeed(e.target.value);
+                  }}
+                  className="rounder resize-none w-full h-[6rem] bg-[#01112B] text-base border-[5px] border-[#34FEF8] text-[#34FEF8] mb-2 mt-2 p-3 pl-4 pt-0 placeholder-opacity-60 placeholder-[#34FEF8]"
+                >
+                  <option
+                    value="Select a Category"
+                    selected
+                    className="block"
+                    disabled
+                  >
+                    Select a rating
+                  </option>
+                  <option clasName="py-2" value="99">
+                    99
+                  </option>
+                  <option clasName="py-2" value="98">
+                    98
+                  </option>
+                  <option clasName="py-2" value="97">
+                    97
+                  </option>
+                  <option clasName="py-2" value="96">
+                    96
+                  </option>
+                  <option clasName="py-2" value="95">
+                    95
+                  </option>
+                  <option clasName="py-2" value="94">
+                    94
+                  </option>
+                  <option clasName="py-2" value="93">
+                    93
+                  </option>
+                  <option clasName="py-2" value="92">
+                    92
+                  </option>
+                  <option clasName="py-2" value="91">
+                    91
+                  </option>
+                  <option clasName="py-2" value="90">
+                    90
+                  </option>
+                  <option clasName="py-2" value="89">
+                    89
+                  </option>
+                  <option clasName="py-2" value="88">
+                    88
+                  </option>
+                  <option clasName="py-2" value="87">
+                    87
+                  </option>
+                  <option clasName="py-2" value="86">
+                    86
+                  </option>
+                  <option clasName="py-2" value="85">
+                    85
+                  </option>
+                  <option clasName="py-2" value="84">
+                    84
+                  </option>
+                  <option clasName="py-2" value="83">
+                    83
+                  </option>
+                  <option clasName="py-2" value="82">
+                    82
+                  </option>
+                  <option clasName="py-2" value="81">
+                    81
+                  </option>
+                  <option clasName="py-2" value="80">
+                    80
+                  </option>
+                  <option clasName="py-2" value="79">
+                    79
+                  </option>
+                  <option clasName="py-2" value="78">
+                    78
+                  </option>
+                  <option clasName="py-2" value="77">
+                    77
+                  </option>
+                  <option clasName="py-2" value="76">
+                    76
+                  </option>
+                  <option clasName="py-2" value="75">
+                    75
+                  </option>
+                  <option clasName="py-2" value="74">
+                    74
+                  </option>
+                  <option clasName="py-2" value="73">
+                    73
+                  </option>
+                  <option clasName="py-2" value="72">
+                    72
+                  </option>
+                  <option clasName="py-2" value="71">
+                    71
+                  </option>
+                  <option clasName="py-2" value="70">
+                    70
+                  </option>
+                  <option clasName="py-2" value="69">
+                    69
+                  </option>
+                  <option clasName="py-2" value="68">
+                    68
+                  </option>
+                  <option clasName="py-2" value="67">
+                    67
+                  </option>
+                  <option clasName="py-2" value="66">
+                    66
+                  </option>
+                  <option clasName="py-2" value="65">
+                    65
+                  </option>
+                  <option clasName="py-2" value="64">
+                    64
+                  </option>
+                  <option clasName="py-2" value="63">
+                    63
+                  </option>
+                  <option clasName="py-2" value="62">
+                    62
+                  </option>
+                  <option clasName="py-2" value="61">
+                    61
+                  </option>
+                  <option clasName="py-2" value="60">
+                    60
+                  </option>
+                  <option clasName="py-2" value="59">
+                    59
+                  </option>
+                  <option clasName="py-2" value="58">
+                    58
+                  </option>
+                  <option clasName="py-2" value="57">
+                    57
+                  </option>
+                  <option clasName="py-2" value="56">
+                    56
+                  </option>
+                  <option clasName="py-2" value="55">
+                    55
+                  </option>
+                  <option clasName="py-2" value="54">
+                    54
+                  </option>
+                  <option clasName="py-2" value="53">
+                    53
+                  </option>
+                  <option clasName="py-2" value="52">
+                    52
+                  </option>
+                  <option clasName="py-2" value="51">
+                    51
+                  </option>
+                  <option clasName="py-2" value="50">
+                    50
+                  </option>
+                  <option clasName="py-2" value="49">
+                    49
+                  </option>
+                  <option clasName="py-2" value="48">
+                    48
+                  </option>
+                  <option clasName="py-2" value="47">
+                    47
+                  </option>
+                  <option clasName="py-2" value="46">
+                    46
+                  </option>
+                  <option clasName="py-2" value="45">
+                    45
+                  </option>
+                  <option clasName="py-2" value="44">
+                    44
+                  </option>
+                  <option clasName="py-2" value="43">
+                    43
+                  </option>
+                  <option clasName="py-2" value="42">
+                    42
+                  </option>
+                  <option clasName="py-2" value="41">
+                    41
+                  </option>
+                  <option clasName="py-2" value="40">
+                    40
+                  </option>
+                  <option clasName="py-2" value="39">
+                    39
+                  </option>
+                  <option clasName="py-2" value="38">
+                    38
+                  </option>
+                  <option clasName="py-2" value="37">
+                    37
+                  </option>
+                  <option clasName="py-2" value="36">
+                    36
+                  </option>
+                  <option clasName="py-2" value="35">
+                    35
+                  </option>
+                  <option clasName="py-2" value="34">
+                    34
+                  </option>
+                  <option clasName="py-2" value="33">
+                    33
+                  </option>
+                  <option clasName="py-2" value="32">
+                    32
+                  </option>
+                  <option clasName="py-2" value="31">
+                    31
+                  </option>
+                  <option clasName="py-2" value="30">
+                    30
+                  </option>
+                  <option clasName="py-2" value="29">
+                    29
+                  </option>
+                  <option clasName="py-2" value="28">
+                    28
+                  </option>
+                  <option clasName="py-2" value="27">
+                    27
+                  </option>
+                  <option clasName="py-2" value="26">
+                    26
+                  </option>
+                  <option clasName="py-2" value="25">
+                    25
+                  </option>
+                  <option clasName="py-2" value="24">
+                    24
+                  </option>
+                  <option clasName="py-2" value="23">
+                    23
+                  </option>
+                  <option clasName="py-2" value="22">
+                    22
+                  </option>
+                  <option clasName="py-2" value="21">
+                    21
+                  </option>
+                  <option clasName="py-2" value="20">
+                    20
+                  </option>
+                  <option clasName="py-2" value="19">
+                    19
+                  </option>
+                  <option clasName="py-2" value="18">
+                    18
+                  </option>
+                  <option clasName="py-2" value="17">
+                    17
+                  </option>
+                  <option clasName="py-2" value="16">
+                    16
+                  </option>
+                  <option clasName="py-2" value="15">
+                    15
+                  </option>
+                  <option clasName="py-2" value="14">
+                    14
+                  </option>
+                  <option clasName="py-2" value="13">
+                    13
+                  </option>
+                  <option clasName="py-2" value="12">
+                    12
+                  </option>
+                  <option clasName="py-2" value="11">
+                    11
+                  </option>
+                  <option clasName="py-2" value="10">
+                    10
+                  </option>
+                  <option clasName="py-2" value="9">
+                    9
+                  </option>
+                  <option clasName="py-2" value="8">
+                    8
+                  </option>
+                  <option clasName="py-2" value="7">
+                    7
+                  </option>
+                  <option clasName="py-2" value="6">
+                    6
+                  </option>
+                  <option clasName="py-2" value="5">
+                    5
+                  </option>
+                  <option clasName="py-2" value="4">
+                    4
+                  </option>
+                  <option clasName="py-2" value="3">
+                    3
+                  </option>
+                  <option clasName="py-2" value="2">
+                    2
+                  </option>
+                  <option clasName="py-2" value="1">
+                    1
+                  </option>
+                  <option clasName="py-2" value="0">
+                    0
+                  </option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <label className="mb text-md text-[#34FEF8] font-bold uppercase">
+              Stamina
+            </label>
+            <br />
+            <div
+              className="z-[1000]"
+              //  style={{transform: 'translate(-50%, -50%)'}}
+            >
+              <div className="rounded-lg border-[#34FEF8] px-6">
+                <select
+                  onChange={(e) => {
+                    // selectedClass();
+                    setStamina(e.target.value);
+                  }}
+                  className="rounder resize-none w-full h-[6rem] bg-[#01112B] text-base border-[5px] border-[#34FEF8] text-[#34FEF8] mb-2 mt-2 p-3 pl-4 pt-0 placeholder-opacity-60 placeholder-[#34FEF8]"
+                >
+                  <option
+                    value="Select a Category"
+                    selected
+                    className="block"
+                    disabled
+                  >
+                    Select a rating
+                  </option>
+                  <option clasName="py-2" value="99">
+                    99
+                  </option>
+                  <option clasName="py-2" value="98">
+                    98
+                  </option>
+                  <option clasName="py-2" value="97">
+                    97
+                  </option>
+                  <option clasName="py-2" value="96">
+                    96
+                  </option>
+                  <option clasName="py-2" value="95">
+                    95
+                  </option>
+                  <option clasName="py-2" value="94">
+                    94
+                  </option>
+                  <option clasName="py-2" value="93">
+                    93
+                  </option>
+                  <option clasName="py-2" value="92">
+                    92
+                  </option>
+                  <option clasName="py-2" value="91">
+                    91
+                  </option>
+                  <option clasName="py-2" value="90">
+                    90
+                  </option>
+                  <option clasName="py-2" value="89">
+                    89
+                  </option>
+                  <option clasName="py-2" value="88">
+                    88
+                  </option>
+                  <option clasName="py-2" value="87">
+                    87
+                  </option>
+                  <option clasName="py-2" value="86">
+                    86
+                  </option>
+                  <option clasName="py-2" value="85">
+                    85
+                  </option>
+                  <option clasName="py-2" value="84">
+                    84
+                  </option>
+                  <option clasName="py-2" value="83">
+                    83
+                  </option>
+                  <option clasName="py-2" value="82">
+                    82
+                  </option>
+                  <option clasName="py-2" value="81">
+                    81
+                  </option>
+                  <option clasName="py-2" value="80">
+                    80
+                  </option>
+                  <option clasName="py-2" value="79">
+                    79
+                  </option>
+                  <option clasName="py-2" value="78">
+                    78
+                  </option>
+                  <option clasName="py-2" value="77">
+                    77
+                  </option>
+                  <option clasName="py-2" value="76">
+                    76
+                  </option>
+                  <option clasName="py-2" value="75">
+                    75
+                  </option>
+                  <option clasName="py-2" value="74">
+                    74
+                  </option>
+                  <option clasName="py-2" value="73">
+                    73
+                  </option>
+                  <option clasName="py-2" value="72">
+                    72
+                  </option>
+                  <option clasName="py-2" value="71">
+                    71
+                  </option>
+                  <option clasName="py-2" value="70">
+                    70
+                  </option>
+                  <option clasName="py-2" value="69">
+                    69
+                  </option>
+                  <option clasName="py-2" value="68">
+                    68
+                  </option>
+                  <option clasName="py-2" value="67">
+                    67
+                  </option>
+                  <option clasName="py-2" value="66">
+                    66
+                  </option>
+                  <option clasName="py-2" value="65">
+                    65
+                  </option>
+                  <option clasName="py-2" value="64">
+                    64
+                  </option>
+                  <option clasName="py-2" value="63">
+                    63
+                  </option>
+                  <option clasName="py-2" value="62">
+                    62
+                  </option>
+                  <option clasName="py-2" value="61">
+                    61
+                  </option>
+                  <option clasName="py-2" value="60">
+                    60
+                  </option>
+                  <option clasName="py-2" value="59">
+                    59
+                  </option>
+                  <option clasName="py-2" value="58">
+                    58
+                  </option>
+                  <option clasName="py-2" value="57">
+                    57
+                  </option>
+                  <option clasName="py-2" value="56">
+                    56
+                  </option>
+                  <option clasName="py-2" value="55">
+                    55
+                  </option>
+                  <option clasName="py-2" value="54">
+                    54
+                  </option>
+                  <option clasName="py-2" value="53">
+                    53
+                  </option>
+                  <option clasName="py-2" value="52">
+                    52
+                  </option>
+                  <option clasName="py-2" value="51">
+                    51
+                  </option>
+                  <option clasName="py-2" value="50">
+                    50
+                  </option>
+                  <option clasName="py-2" value="49">
+                    49
+                  </option>
+                  <option clasName="py-2" value="48">
+                    48
+                  </option>
+                  <option clasName="py-2" value="47">
+                    47
+                  </option>
+                  <option clasName="py-2" value="46">
+                    46
+                  </option>
+                  <option clasName="py-2" value="45">
+                    45
+                  </option>
+                  <option clasName="py-2" value="44">
+                    44
+                  </option>
+                  <option clasName="py-2" value="43">
+                    43
+                  </option>
+                  <option clasName="py-2" value="42">
+                    42
+                  </option>
+                  <option clasName="py-2" value="41">
+                    41
+                  </option>
+                  <option clasName="py-2" value="40">
+                    40
+                  </option>
+                  <option clasName="py-2" value="39">
+                    39
+                  </option>
+                  <option clasName="py-2" value="38">
+                    38
+                  </option>
+                  <option clasName="py-2" value="37">
+                    37
+                  </option>
+                  <option clasName="py-2" value="36">
+                    36
+                  </option>
+                  <option clasName="py-2" value="35">
+                    35
+                  </option>
+                  <option clasName="py-2" value="34">
+                    34
+                  </option>
+                  <option clasName="py-2" value="33">
+                    33
+                  </option>
+                  <option clasName="py-2" value="32">
+                    32
+                  </option>
+                  <option clasName="py-2" value="31">
+                    31
+                  </option>
+                  <option clasName="py-2" value="30">
+                    30
+                  </option>
+                  <option clasName="py-2" value="29">
+                    29
+                  </option>
+                  <option clasName="py-2" value="28">
+                    28
+                  </option>
+                  <option clasName="py-2" value="27">
+                    27
+                  </option>
+                  <option clasName="py-2" value="26">
+                    26
+                  </option>
+                  <option clasName="py-2" value="25">
+                    25
+                  </option>
+                  <option clasName="py-2" value="24">
+                    24
+                  </option>
+                  <option clasName="py-2" value="23">
+                    23
+                  </option>
+                  <option clasName="py-2" value="22">
+                    22
+                  </option>
+                  <option clasName="py-2" value="21">
+                    21
+                  </option>
+                  <option clasName="py-2" value="20">
+                    20
+                  </option>
+                  <option clasName="py-2" value="19">
+                    19
+                  </option>
+                  <option clasName="py-2" value="18">
+                    18
+                  </option>
+                  <option clasName="py-2" value="17">
+                    17
+                  </option>
+                  <option clasName="py-2" value="16">
+                    16
+                  </option>
+                  <option clasName="py-2" value="15">
+                    15
+                  </option>
+                  <option clasName="py-2" value="14">
+                    14
+                  </option>
+                  <option clasName="py-2" value="13">
+                    13
+                  </option>
+                  <option clasName="py-2" value="12">
+                    12
+                  </option>
+                  <option clasName="py-2" value="11">
+                    11
+                  </option>
+                  <option clasName="py-2" value="10">
+                    10
+                  </option>
+                  <option clasName="py-2" value="9">
+                    9
+                  </option>
+                  <option clasName="py-2" value="8">
+                    8
+                  </option>
+                  <option clasName="py-2" value="7">
+                    7
+                  </option>
+                  <option clasName="py-2" value="6">
+                    6
+                  </option>
+                  <option clasName="py-2" value="5">
+                    5
+                  </option>
+                  <option clasName="py-2" value="4">
+                    4
+                  </option>
+                  <option clasName="py-2" value="3">
+                    3
+                  </option>
+                  <option clasName="py-2" value="2">
+                    2
+                  </option>
+                  <option clasName="py-2" value="1">
+                    1
+                  </option>
+                  <option clasName="py-2" value="0">
+                    0
+                  </option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <label className="mb text-md text-[#34FEF8] font-bold uppercase">
+              Standing Tackle
+            </label>
+            <br />
+            <div
+              className="z-[1000]"
+              //  style={{transform: 'translate(-50%, -50%)'}}
+            >
+              <div className="rounded-lg border-[#34FEF8] px-6">
+                <select
+                  onChange={(e) => {
+                    // selectedClass();
+                    setStandingTackle(e.target.value);
+                  }}
+                  className="rounder resize-none w-full h-[6rem] bg-[#01112B] text-base border-[5px] border-[#34FEF8] text-[#34FEF8] mb-2 mt-2 p-3 pl-4 pt-0 placeholder-opacity-60 placeholder-[#34FEF8]"
+                >
+                  <option
+                    value="Select a Category"
+                    selected
+                    className="block"
+                    disabled
+                  >
+                    Select a rating
+                  </option>
+                  <option clasName="py-2" value="99">
+                    99
+                  </option>
+                  <option clasName="py-2" value="98">
+                    98
+                  </option>
+                  <option clasName="py-2" value="97">
+                    97
+                  </option>
+                  <option clasName="py-2" value="96">
+                    96
+                  </option>
+                  <option clasName="py-2" value="95">
+                    95
+                  </option>
+                  <option clasName="py-2" value="94">
+                    94
+                  </option>
+                  <option clasName="py-2" value="93">
+                    93
+                  </option>
+                  <option clasName="py-2" value="92">
+                    92
+                  </option>
+                  <option clasName="py-2" value="91">
+                    91
+                  </option>
+                  <option clasName="py-2" value="90">
+                    90
+                  </option>
+                  <option clasName="py-2" value="89">
+                    89
+                  </option>
+                  <option clasName="py-2" value="88">
+                    88
+                  </option>
+                  <option clasName="py-2" value="87">
+                    87
+                  </option>
+                  <option clasName="py-2" value="86">
+                    86
+                  </option>
+                  <option clasName="py-2" value="85">
+                    85
+                  </option>
+                  <option clasName="py-2" value="84">
+                    84
+                  </option>
+                  <option clasName="py-2" value="83">
+                    83
+                  </option>
+                  <option clasName="py-2" value="82">
+                    82
+                  </option>
+                  <option clasName="py-2" value="81">
+                    81
+                  </option>
+                  <option clasName="py-2" value="80">
+                    80
+                  </option>
+                  <option clasName="py-2" value="79">
+                    79
+                  </option>
+                  <option clasName="py-2" value="78">
+                    78
+                  </option>
+                  <option clasName="py-2" value="77">
+                    77
+                  </option>
+                  <option clasName="py-2" value="76">
+                    76
+                  </option>
+                  <option clasName="py-2" value="75">
+                    75
+                  </option>
+                  <option clasName="py-2" value="74">
+                    74
+                  </option>
+                  <option clasName="py-2" value="73">
+                    73
+                  </option>
+                  <option clasName="py-2" value="72">
+                    72
+                  </option>
+                  <option clasName="py-2" value="71">
+                    71
+                  </option>
+                  <option clasName="py-2" value="70">
+                    70
+                  </option>
+                  <option clasName="py-2" value="69">
+                    69
+                  </option>
+                  <option clasName="py-2" value="68">
+                    68
+                  </option>
+                  <option clasName="py-2" value="67">
+                    67
+                  </option>
+                  <option clasName="py-2" value="66">
+                    66
+                  </option>
+                  <option clasName="py-2" value="65">
+                    65
+                  </option>
+                  <option clasName="py-2" value="64">
+                    64
+                  </option>
+                  <option clasName="py-2" value="63">
+                    63
+                  </option>
+                  <option clasName="py-2" value="62">
+                    62
+                  </option>
+                  <option clasName="py-2" value="61">
+                    61
+                  </option>
+                  <option clasName="py-2" value="60">
+                    60
+                  </option>
+                  <option clasName="py-2" value="59">
+                    59
+                  </option>
+                  <option clasName="py-2" value="58">
+                    58
+                  </option>
+                  <option clasName="py-2" value="57">
+                    57
+                  </option>
+                  <option clasName="py-2" value="56">
+                    56
+                  </option>
+                  <option clasName="py-2" value="55">
+                    55
+                  </option>
+                  <option clasName="py-2" value="54">
+                    54
+                  </option>
+                  <option clasName="py-2" value="53">
+                    53
+                  </option>
+                  <option clasName="py-2" value="52">
+                    52
+                  </option>
+                  <option clasName="py-2" value="51">
+                    51
+                  </option>
+                  <option clasName="py-2" value="50">
+                    50
+                  </option>
+                  <option clasName="py-2" value="49">
+                    49
+                  </option>
+                  <option clasName="py-2" value="48">
+                    48
+                  </option>
+                  <option clasName="py-2" value="47">
+                    47
+                  </option>
+                  <option clasName="py-2" value="46">
+                    46
+                  </option>
+                  <option clasName="py-2" value="45">
+                    45
+                  </option>
+                  <option clasName="py-2" value="44">
+                    44
+                  </option>
+                  <option clasName="py-2" value="43">
+                    43
+                  </option>
+                  <option clasName="py-2" value="42">
+                    42
+                  </option>
+                  <option clasName="py-2" value="41">
+                    41
+                  </option>
+                  <option clasName="py-2" value="40">
+                    40
+                  </option>
+                  <option clasName="py-2" value="39">
+                    39
+                  </option>
+                  <option clasName="py-2" value="38">
+                    38
+                  </option>
+                  <option clasName="py-2" value="37">
+                    37
+                  </option>
+                  <option clasName="py-2" value="36">
+                    36
+                  </option>
+                  <option clasName="py-2" value="35">
+                    35
+                  </option>
+                  <option clasName="py-2" value="34">
+                    34
+                  </option>
+                  <option clasName="py-2" value="33">
+                    33
+                  </option>
+                  <option clasName="py-2" value="32">
+                    32
+                  </option>
+                  <option clasName="py-2" value="31">
+                    31
+                  </option>
+                  <option clasName="py-2" value="30">
+                    30
+                  </option>
+                  <option clasName="py-2" value="29">
+                    29
+                  </option>
+                  <option clasName="py-2" value="28">
+                    28
+                  </option>
+                  <option clasName="py-2" value="27">
+                    27
+                  </option>
+                  <option clasName="py-2" value="26">
+                    26
+                  </option>
+                  <option clasName="py-2" value="25">
+                    25
+                  </option>
+                  <option clasName="py-2" value="24">
+                    24
+                  </option>
+                  <option clasName="py-2" value="23">
+                    23
+                  </option>
+                  <option clasName="py-2" value="22">
+                    22
+                  </option>
+                  <option clasName="py-2" value="21">
+                    21
+                  </option>
+                  <option clasName="py-2" value="20">
+                    20
+                  </option>
+                  <option clasName="py-2" value="19">
+                    19
+                  </option>
+                  <option clasName="py-2" value="18">
+                    18
+                  </option>
+                  <option clasName="py-2" value="17">
+                    17
+                  </option>
+                  <option clasName="py-2" value="16">
+                    16
+                  </option>
+                  <option clasName="py-2" value="15">
+                    15
+                  </option>
+                  <option clasName="py-2" value="14">
+                    14
+                  </option>
+                  <option clasName="py-2" value="13">
+                    13
+                  </option>
+                  <option clasName="py-2" value="12">
+                    12
+                  </option>
+                  <option clasName="py-2" value="11">
+                    11
+                  </option>
+                  <option clasName="py-2" value="10">
+                    10
+                  </option>
+                  <option clasName="py-2" value="9">
+                    9
+                  </option>
+                  <option clasName="py-2" value="8">
+                    8
+                  </option>
+                  <option clasName="py-2" value="7">
+                    7
+                  </option>
+                  <option clasName="py-2" value="6">
+                    6
+                  </option>
+                  <option clasName="py-2" value="5">
+                    5
+                  </option>
+                  <option clasName="py-2" value="4">
+                    4
+                  </option>
+                  <option clasName="py-2" value="3">
+                    3
+                  </option>
+                  <option clasName="py-2" value="2">
+                    2
+                  </option>
+                  <option clasName="py-2" value="1">
+                    1
+                  </option>
+                  <option clasName="py-2" value="0">
+                    0
+                  </option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <label className="mb text-md text-[#34FEF8] font-bold uppercase">
+              Strength
+            </label>
+            <br />
+            <div
+              className="z-[1000]"
+              //  style={{transform: 'translate(-50%, -50%)'}}
+            >
+              <div className="rounded-lg border-[#34FEF8] px-6">
+                <select
+                  onChange={(e) => {
+                    // selectedClass();
+                    setStrength(e.target.value);
+                  }}
+                  className="rounder resize-none w-full h-[6rem] bg-[#01112B] text-base border-[5px] border-[#34FEF8] text-[#34FEF8] mb-2 mt-2 p-3 pl-4 pt-0 placeholder-opacity-60 placeholder-[#34FEF8]"
+                >
+                  <option
+                    value="Select a Category"
+                    selected
+                    className="block"
+                    disabled
+                  >
+                    Select a rating
+                  </option>
+                  <option clasName="py-2" value="99">
+                    99
+                  </option>
+                  <option clasName="py-2" value="98">
+                    98
+                  </option>
+                  <option clasName="py-2" value="97">
+                    97
+                  </option>
+                  <option clasName="py-2" value="96">
+                    96
+                  </option>
+                  <option clasName="py-2" value="95">
+                    95
+                  </option>
+                  <option clasName="py-2" value="94">
+                    94
+                  </option>
+                  <option clasName="py-2" value="93">
+                    93
+                  </option>
+                  <option clasName="py-2" value="92">
+                    92
+                  </option>
+                  <option clasName="py-2" value="91">
+                    91
+                  </option>
+                  <option clasName="py-2" value="90">
+                    90
+                  </option>
+                  <option clasName="py-2" value="89">
+                    89
+                  </option>
+                  <option clasName="py-2" value="88">
+                    88
+                  </option>
+                  <option clasName="py-2" value="87">
+                    87
+                  </option>
+                  <option clasName="py-2" value="86">
+                    86
+                  </option>
+                  <option clasName="py-2" value="85">
+                    85
+                  </option>
+                  <option clasName="py-2" value="84">
+                    84
+                  </option>
+                  <option clasName="py-2" value="83">
+                    83
+                  </option>
+                  <option clasName="py-2" value="82">
+                    82
+                  </option>
+                  <option clasName="py-2" value="81">
+                    81
+                  </option>
+                  <option clasName="py-2" value="80">
+                    80
+                  </option>
+                  <option clasName="py-2" value="79">
+                    79
+                  </option>
+                  <option clasName="py-2" value="78">
+                    78
+                  </option>
+                  <option clasName="py-2" value="77">
+                    77
+                  </option>
+                  <option clasName="py-2" value="76">
+                    76
+                  </option>
+                  <option clasName="py-2" value="75">
+                    75
+                  </option>
+                  <option clasName="py-2" value="74">
+                    74
+                  </option>
+                  <option clasName="py-2" value="73">
+                    73
+                  </option>
+                  <option clasName="py-2" value="72">
+                    72
+                  </option>
+                  <option clasName="py-2" value="71">
+                    71
+                  </option>
+                  <option clasName="py-2" value="70">
+                    70
+                  </option>
+                  <option clasName="py-2" value="69">
+                    69
+                  </option>
+                  <option clasName="py-2" value="68">
+                    68
+                  </option>
+                  <option clasName="py-2" value="67">
+                    67
+                  </option>
+                  <option clasName="py-2" value="66">
+                    66
+                  </option>
+                  <option clasName="py-2" value="65">
+                    65
+                  </option>
+                  <option clasName="py-2" value="64">
+                    64
+                  </option>
+                  <option clasName="py-2" value="63">
+                    63
+                  </option>
+                  <option clasName="py-2" value="62">
+                    62
+                  </option>
+                  <option clasName="py-2" value="61">
+                    61
+                  </option>
+                  <option clasName="py-2" value="60">
+                    60
+                  </option>
+                  <option clasName="py-2" value="59">
+                    59
+                  </option>
+                  <option clasName="py-2" value="58">
+                    58
+                  </option>
+                  <option clasName="py-2" value="57">
+                    57
+                  </option>
+                  <option clasName="py-2" value="56">
+                    56
+                  </option>
+                  <option clasName="py-2" value="55">
+                    55
+                  </option>
+                  <option clasName="py-2" value="54">
+                    54
+                  </option>
+                  <option clasName="py-2" value="53">
+                    53
+                  </option>
+                  <option clasName="py-2" value="52">
+                    52
+                  </option>
+                  <option clasName="py-2" value="51">
+                    51
+                  </option>
+                  <option clasName="py-2" value="50">
+                    50
+                  </option>
+                  <option clasName="py-2" value="49">
+                    49
+                  </option>
+                  <option clasName="py-2" value="48">
+                    48
+                  </option>
+                  <option clasName="py-2" value="47">
+                    47
+                  </option>
+                  <option clasName="py-2" value="46">
+                    46
+                  </option>
+                  <option clasName="py-2" value="45">
+                    45
+                  </option>
+                  <option clasName="py-2" value="44">
+                    44
+                  </option>
+                  <option clasName="py-2" value="43">
+                    43
+                  </option>
+                  <option clasName="py-2" value="42">
+                    42
+                  </option>
+                  <option clasName="py-2" value="41">
+                    41
+                  </option>
+                  <option clasName="py-2" value="40">
+                    40
+                  </option>
+                  <option clasName="py-2" value="39">
+                    39
+                  </option>
+                  <option clasName="py-2" value="38">
+                    38
+                  </option>
+                  <option clasName="py-2" value="37">
+                    37
+                  </option>
+                  <option clasName="py-2" value="36">
+                    36
+                  </option>
+                  <option clasName="py-2" value="35">
+                    35
+                  </option>
+                  <option clasName="py-2" value="34">
+                    34
+                  </option>
+                  <option clasName="py-2" value="33">
+                    33
+                  </option>
+                  <option clasName="py-2" value="32">
+                    32
+                  </option>
+                  <option clasName="py-2" value="31">
+                    31
+                  </option>
+                  <option clasName="py-2" value="30">
+                    30
+                  </option>
+                  <option clasName="py-2" value="29">
+                    29
+                  </option>
+                  <option clasName="py-2" value="28">
+                    28
+                  </option>
+                  <option clasName="py-2" value="27">
+                    27
+                  </option>
+                  <option clasName="py-2" value="26">
+                    26
+                  </option>
+                  <option clasName="py-2" value="25">
+                    25
+                  </option>
+                  <option clasName="py-2" value="24">
+                    24
+                  </option>
+                  <option clasName="py-2" value="23">
+                    23
+                  </option>
+                  <option clasName="py-2" value="22">
+                    22
+                  </option>
+                  <option clasName="py-2" value="21">
+                    21
+                  </option>
+                  <option clasName="py-2" value="20">
+                    20
+                  </option>
+                  <option clasName="py-2" value="19">
+                    19
+                  </option>
+                  <option clasName="py-2" value="18">
+                    18
+                  </option>
+                  <option clasName="py-2" value="17">
+                    17
+                  </option>
+                  <option clasName="py-2" value="16">
+                    16
+                  </option>
+                  <option clasName="py-2" value="15">
+                    15
+                  </option>
+                  <option clasName="py-2" value="14">
+                    14
+                  </option>
+                  <option clasName="py-2" value="13">
+                    13
+                  </option>
+                  <option clasName="py-2" value="12">
+                    12
+                  </option>
+                  <option clasName="py-2" value="11">
+                    11
+                  </option>
+                  <option clasName="py-2" value="10">
+                    10
+                  </option>
+                  <option clasName="py-2" value="9">
+                    9
+                  </option>
+                  <option clasName="py-2" value="8">
+                    8
+                  </option>
+                  <option clasName="py-2" value="7">
+                    7
+                  </option>
+                  <option clasName="py-2" value="6">
+                    6
+                  </option>
+                  <option clasName="py-2" value="5">
+                    5
+                  </option>
+                  <option clasName="py-2" value="4">
+                    4
+                  </option>
+                  <option clasName="py-2" value="3">
+                    3
+                  </option>
+                  <option clasName="py-2" value="2">
+                    2
+                  </option>
+                  <option clasName="py-2" value="1">
+                    1
+                  </option>
+                  <option clasName="py-2" value="0">
+                    0
+                  </option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <label className="mb text-md text-[#34FEF8] font-bold uppercase">
+              Vision
+            </label>
+            <br />
+            <div
+              className="z-[1000]"
+              //  style={{transform: 'translate(-50%, -50%)'}}
+            >
+              <div className="rounded-lg border-[#34FEF8] px-6">
+                <select
+                  onChange={(e) => {
+                    // selectedClass();
+                    setVision(e.target.value);
+                  }}
+                  className="rounder resize-none w-full h-[6rem] bg-[#01112B] text-base border-[5px] border-[#34FEF8] text-[#34FEF8] mb-2 mt-2 p-3 pl-4 pt-0 placeholder-opacity-60 placeholder-[#34FEF8]"
+                >
+                  <option
+                    value="Select a Category"
+                    selected
+                    className="block"
+                    disabled
+                  >
+                    Select a rating
+                  </option>
+                  <option clasName="py-2" value="99">
+                    99
+                  </option>
+                  <option clasName="py-2" value="98">
+                    98
+                  </option>
+                  <option clasName="py-2" value="97">
+                    97
+                  </option>
+                  <option clasName="py-2" value="96">
+                    96
+                  </option>
+                  <option clasName="py-2" value="95">
+                    95
+                  </option>
+                  <option clasName="py-2" value="94">
+                    94
+                  </option>
+                  <option clasName="py-2" value="93">
+                    93
+                  </option>
+                  <option clasName="py-2" value="92">
+                    92
+                  </option>
+                  <option clasName="py-2" value="91">
+                    91
+                  </option>
+                  <option clasName="py-2" value="90">
+                    90
+                  </option>
+                  <option clasName="py-2" value="89">
+                    89
+                  </option>
+                  <option clasName="py-2" value="88">
+                    88
+                  </option>
+                  <option clasName="py-2" value="87">
+                    87
+                  </option>
+                  <option clasName="py-2" value="86">
+                    86
+                  </option>
+                  <option clasName="py-2" value="85">
+                    85
+                  </option>
+                  <option clasName="py-2" value="84">
+                    84
+                  </option>
+                  <option clasName="py-2" value="83">
+                    83
+                  </option>
+                  <option clasName="py-2" value="82">
+                    82
+                  </option>
+                  <option clasName="py-2" value="81">
+                    81
+                  </option>
+                  <option clasName="py-2" value="80">
+                    80
+                  </option>
+                  <option clasName="py-2" value="79">
+                    79
+                  </option>
+                  <option clasName="py-2" value="78">
+                    78
+                  </option>
+                  <option clasName="py-2" value="77">
+                    77
+                  </option>
+                  <option clasName="py-2" value="76">
+                    76
+                  </option>
+                  <option clasName="py-2" value="75">
+                    75
+                  </option>
+                  <option clasName="py-2" value="74">
+                    74
+                  </option>
+                  <option clasName="py-2" value="73">
+                    73
+                  </option>
+                  <option clasName="py-2" value="72">
+                    72
+                  </option>
+                  <option clasName="py-2" value="71">
+                    71
+                  </option>
+                  <option clasName="py-2" value="70">
+                    70
+                  </option>
+                  <option clasName="py-2" value="69">
+                    69
+                  </option>
+                  <option clasName="py-2" value="68">
+                    68
+                  </option>
+                  <option clasName="py-2" value="67">
+                    67
+                  </option>
+                  <option clasName="py-2" value="66">
+                    66
+                  </option>
+                  <option clasName="py-2" value="65">
+                    65
+                  </option>
+                  <option clasName="py-2" value="64">
+                    64
+                  </option>
+                  <option clasName="py-2" value="63">
+                    63
+                  </option>
+                  <option clasName="py-2" value="62">
+                    62
+                  </option>
+                  <option clasName="py-2" value="61">
+                    61
+                  </option>
+                  <option clasName="py-2" value="60">
+                    60
+                  </option>
+                  <option clasName="py-2" value="59">
+                    59
+                  </option>
+                  <option clasName="py-2" value="58">
+                    58
+                  </option>
+                  <option clasName="py-2" value="57">
+                    57
+                  </option>
+                  <option clasName="py-2" value="56">
+                    56
+                  </option>
+                  <option clasName="py-2" value="55">
+                    55
+                  </option>
+                  <option clasName="py-2" value="54">
+                    54
+                  </option>
+                  <option clasName="py-2" value="53">
+                    53
+                  </option>
+                  <option clasName="py-2" value="52">
+                    52
+                  </option>
+                  <option clasName="py-2" value="51">
+                    51
+                  </option>
+                  <option clasName="py-2" value="50">
+                    50
+                  </option>
+                  <option clasName="py-2" value="49">
+                    49
+                  </option>
+                  <option clasName="py-2" value="48">
+                    48
+                  </option>
+                  <option clasName="py-2" value="47">
+                    47
+                  </option>
+                  <option clasName="py-2" value="46">
+                    46
+                  </option>
+                  <option clasName="py-2" value="45">
+                    45
+                  </option>
+                  <option clasName="py-2" value="44">
+                    44
+                  </option>
+                  <option clasName="py-2" value="43">
+                    43
+                  </option>
+                  <option clasName="py-2" value="42">
+                    42
+                  </option>
+                  <option clasName="py-2" value="41">
+                    41
+                  </option>
+                  <option clasName="py-2" value="40">
+                    40
+                  </option>
+                  <option clasName="py-2" value="39">
+                    39
+                  </option>
+                  <option clasName="py-2" value="38">
+                    38
+                  </option>
+                  <option clasName="py-2" value="37">
+                    37
+                  </option>
+                  <option clasName="py-2" value="36">
+                    36
+                  </option>
+                  <option clasName="py-2" value="35">
+                    35
+                  </option>
+                  <option clasName="py-2" value="34">
+                    34
+                  </option>
+                  <option clasName="py-2" value="33">
+                    33
+                  </option>
+                  <option clasName="py-2" value="32">
+                    32
+                  </option>
+                  <option clasName="py-2" value="31">
+                    31
+                  </option>
+                  <option clasName="py-2" value="30">
+                    30
+                  </option>
+                  <option clasName="py-2" value="29">
+                    29
+                  </option>
+                  <option clasName="py-2" value="28">
+                    28
+                  </option>
+                  <option clasName="py-2" value="27">
+                    27
+                  </option>
+                  <option clasName="py-2" value="26">
+                    26
+                  </option>
+                  <option clasName="py-2" value="25">
+                    25
+                  </option>
+                  <option clasName="py-2" value="24">
+                    24
+                  </option>
+                  <option clasName="py-2" value="23">
+                    23
+                  </option>
+                  <option clasName="py-2" value="22">
+                    22
+                  </option>
+                  <option clasName="py-2" value="21">
+                    21
+                  </option>
+                  <option clasName="py-2" value="20">
+                    20
+                  </option>
+                  <option clasName="py-2" value="19">
+                    19
+                  </option>
+                  <option clasName="py-2" value="18">
+                    18
+                  </option>
+                  <option clasName="py-2" value="17">
+                    17
+                  </option>
+                  <option clasName="py-2" value="16">
+                    16
+                  </option>
+                  <option clasName="py-2" value="15">
+                    15
+                  </option>
+                  <option clasName="py-2" value="14">
+                    14
+                  </option>
+                  <option clasName="py-2" value="13">
+                    13
+                  </option>
+                  <option clasName="py-2" value="12">
+                    12
+                  </option>
+                  <option clasName="py-2" value="11">
+                    11
+                  </option>
+                  <option clasName="py-2" value="10">
+                    10
+                  </option>
+                  <option clasName="py-2" value="9">
+                    9
+                  </option>
+                  <option clasName="py-2" value="8">
+                    8
+                  </option>
+                  <option clasName="py-2" value="7">
+                    7
+                  </option>
+                  <option clasName="py-2" value="6">
+                    6
+                  </option>
+                  <option clasName="py-2" value="5">
+                    5
+                  </option>
+                  <option clasName="py-2" value="4">
+                    4
+                  </option>
+                  <option clasName="py-2" value="3">
+                    3
+                  </option>
+                  <option clasName="py-2" value="2">
+                    2
+                  </option>
+                  <option clasName="py-2" value="1">
+                    1
+                  </option>
+                  <option clasName="py-2" value="0">
+                    0
+                  </option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <label className="mb text-md text-[#34FEF8] font-bold uppercase">
+              Volleys
+            </label>
+            <br />
+            <div
+              className="z-[1000]"
+              //  style={{transform: 'translate(-50%, -50%)'}}
+            >
+              <div className="rounded-lg border-[#34FEF8] px-6">
+                <select
+                  onChange={(e) => {
+                    // selectedClass();
+                    setVolleys(e.target.value);
+                  }}
+                  className="rounder resize-none w-full h-[6rem] bg-[#01112B] text-base border-[5px] border-[#34FEF8] text-[#34FEF8] mb-2 mt-2 p-3 pl-4 pt-0 placeholder-opacity-60 placeholder-[#34FEF8]"
+                >
+                  <option
+                    value="Select a Category"
+                    selected
+                    className="block"
+                    disabled
+                  >
+                    Select a rating
+                  </option>
+                  <option clasName="py-2" value="99">
+                    99
+                  </option>
+                  <option clasName="py-2" value="98">
+                    98
+                  </option>
+                  <option clasName="py-2" value="97">
+                    97
+                  </option>
+                  <option clasName="py-2" value="96">
+                    96
+                  </option>
+                  <option clasName="py-2" value="95">
+                    95
+                  </option>
+                  <option clasName="py-2" value="94">
+                    94
+                  </option>
+                  <option clasName="py-2" value="93">
+                    93
+                  </option>
+                  <option clasName="py-2" value="92">
+                    92
+                  </option>
+                  <option clasName="py-2" value="91">
+                    91
+                  </option>
+                  <option clasName="py-2" value="90">
+                    90
+                  </option>
+                  <option clasName="py-2" value="89">
+                    89
+                  </option>
+                  <option clasName="py-2" value="88">
+                    88
+                  </option>
+                  <option clasName="py-2" value="87">
+                    87
+                  </option>
+                  <option clasName="py-2" value="86">
+                    86
+                  </option>
+                  <option clasName="py-2" value="85">
+                    85
+                  </option>
+                  <option clasName="py-2" value="84">
+                    84
+                  </option>
+                  <option clasName="py-2" value="83">
+                    83
+                  </option>
+                  <option clasName="py-2" value="82">
+                    82
+                  </option>
+                  <option clasName="py-2" value="81">
+                    81
+                  </option>
+                  <option clasName="py-2" value="80">
+                    80
+                  </option>
+                  <option clasName="py-2" value="79">
+                    79
+                  </option>
+                  <option clasName="py-2" value="78">
+                    78
+                  </option>
+                  <option clasName="py-2" value="77">
+                    77
+                  </option>
+                  <option clasName="py-2" value="76">
+                    76
+                  </option>
+                  <option clasName="py-2" value="75">
+                    75
+                  </option>
+                  <option clasName="py-2" value="74">
+                    74
+                  </option>
+                  <option clasName="py-2" value="73">
+                    73
+                  </option>
+                  <option clasName="py-2" value="72">
+                    72
+                  </option>
+                  <option clasName="py-2" value="71">
+                    71
+                  </option>
+                  <option clasName="py-2" value="70">
+                    70
+                  </option>
+                  <option clasName="py-2" value="69">
+                    69
+                  </option>
+                  <option clasName="py-2" value="68">
+                    68
+                  </option>
+                  <option clasName="py-2" value="67">
+                    67
+                  </option>
+                  <option clasName="py-2" value="66">
+                    66
+                  </option>
+                  <option clasName="py-2" value="65">
+                    65
+                  </option>
+                  <option clasName="py-2" value="64">
+                    64
+                  </option>
+                  <option clasName="py-2" value="63">
+                    63
+                  </option>
+                  <option clasName="py-2" value="62">
+                    62
+                  </option>
+                  <option clasName="py-2" value="61">
+                    61
+                  </option>
+                  <option clasName="py-2" value="60">
+                    60
+                  </option>
+                  <option clasName="py-2" value="59">
+                    59
+                  </option>
+                  <option clasName="py-2" value="58">
+                    58
+                  </option>
+                  <option clasName="py-2" value="57">
+                    57
+                  </option>
+                  <option clasName="py-2" value="56">
+                    56
+                  </option>
+                  <option clasName="py-2" value="55">
+                    55
+                  </option>
+                  <option clasName="py-2" value="54">
+                    54
+                  </option>
+                  <option clasName="py-2" value="53">
+                    53
+                  </option>
+                  <option clasName="py-2" value="52">
+                    52
+                  </option>
+                  <option clasName="py-2" value="51">
+                    51
+                  </option>
+                  <option clasName="py-2" value="50">
+                    50
+                  </option>
+                  <option clasName="py-2" value="49">
+                    49
+                  </option>
+                  <option clasName="py-2" value="48">
+                    48
+                  </option>
+                  <option clasName="py-2" value="47">
+                    47
+                  </option>
+                  <option clasName="py-2" value="46">
+                    46
+                  </option>
+                  <option clasName="py-2" value="45">
+                    45
+                  </option>
+                  <option clasName="py-2" value="44">
+                    44
+                  </option>
+                  <option clasName="py-2" value="43">
+                    43
+                  </option>
+                  <option clasName="py-2" value="42">
+                    42
+                  </option>
+                  <option clasName="py-2" value="41">
+                    41
+                  </option>
+                  <option clasName="py-2" value="40">
+                    40
+                  </option>
+                  <option clasName="py-2" value="39">
+                    39
+                  </option>
+                  <option clasName="py-2" value="38">
+                    38
+                  </option>
+                  <option clasName="py-2" value="37">
+                    37
+                  </option>
+                  <option clasName="py-2" value="36">
+                    36
+                  </option>
+                  <option clasName="py-2" value="35">
+                    35
+                  </option>
+                  <option clasName="py-2" value="34">
+                    34
+                  </option>
+                  <option clasName="py-2" value="33">
+                    33
+                  </option>
+                  <option clasName="py-2" value="32">
+                    32
+                  </option>
+                  <option clasName="py-2" value="31">
+                    31
+                  </option>
+                  <option clasName="py-2" value="30">
+                    30
+                  </option>
+                  <option clasName="py-2" value="29">
+                    29
+                  </option>
+                  <option clasName="py-2" value="28">
+                    28
+                  </option>
+                  <option clasName="py-2" value="27">
+                    27
+                  </option>
+                  <option clasName="py-2" value="26">
+                    26
+                  </option>
+                  <option clasName="py-2" value="25">
+                    25
+                  </option>
+                  <option clasName="py-2" value="24">
+                    24
+                  </option>
+                  <option clasName="py-2" value="23">
+                    23
+                  </option>
+                  <option clasName="py-2" value="22">
+                    22
+                  </option>
+                  <option clasName="py-2" value="21">
+                    21
+                  </option>
+                  <option clasName="py-2" value="20">
+                    20
+                  </option>
+                  <option clasName="py-2" value="19">
+                    19
+                  </option>
+                  <option clasName="py-2" value="18">
+                    18
+                  </option>
+                  <option clasName="py-2" value="17">
+                    17
+                  </option>
+                  <option clasName="py-2" value="16">
+                    16
+                  </option>
+                  <option clasName="py-2" value="15">
+                    15
+                  </option>
+                  <option clasName="py-2" value="14">
+                    14
+                  </option>
+                  <option clasName="py-2" value="13">
+                    13
+                  </option>
+                  <option clasName="py-2" value="12">
+                    12
+                  </option>
+                  <option clasName="py-2" value="11">
+                    11
+                  </option>
+                  <option clasName="py-2" value="10">
+                    10
+                  </option>
+                  <option clasName="py-2" value="9">
+                    9
+                  </option>
+                  <option clasName="py-2" value="8">
+                    8
+                  </option>
+                  <option clasName="py-2" value="7">
+                    7
+                  </option>
+                  <option clasName="py-2" value="6">
+                    6
+                  </option>
+                  <option clasName="py-2" value="5">
+                    5
+                  </option>
+                  <option clasName="py-2" value="4">
+                    4
+                  </option>
+                  <option clasName="py-2" value="3">
+                    3
+                  </option>
+                  <option clasName="py-2" value="2">
+                    2
+                  </option>
+                  <option clasName="py-2" value="1">
+                    1
+                  </option>
+                  <option clasName="py-2" value="0">
+                    0
                   </option>
                 </select>
               </div>
