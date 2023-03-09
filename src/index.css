@@ -91,7 +91,7 @@ button:focus-visible {
     background-repeat: no-repeat;
     /* background-position-x: center;
     background-position: inherit; */
-    height: 50vh;
+    height: 100vh;
     background-attachment: fixed;
 }
 
