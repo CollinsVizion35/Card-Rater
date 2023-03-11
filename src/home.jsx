@@ -1,6 +1,6 @@
 import React, { Suspense } from "react";
 import { Canvas } from "@react-three/fiber";
-import { OrbitControls, PerspectiveCamera } from "@react-three/drei";
+import { Html, OrbitControls, PerspectiveCamera } from "@react-three/drei";
 import Floor from "./Floor";
 import Plane1 from "./HomeButtons/HomeButton1";
 import Plane2 from "./HomeButtons/HomeButton2";
@@ -61,23 +61,34 @@ function Home() {
         navigate('/footballRater');
     }
   return (
+    <div className="h-[100vh] cursor-zoom-in touch-pinch-zoom">
     <Suspense fallback={null}>
       <Canvas shadows>
         <ManShow />
         <Plane1
           position={[-1.2, .5, 2]}
           onClick={() => {handleEditBtn()}}
+          className="cursor-pointer"
         />
         <Plane2
           position={[-1.2, 1.2, 2]}
           onClick={() => {handleEditBtn2()}}
+          className="cursor-pointer"
         />
         <Plane3
           position={[-1.2, 1.9, 2]}
           onClick={() => {handleEditBtn3()}}
+          className="cursor-pointer"
         />
+
+        <Html className="text-white w-max absolute mt-[20vh] ml-[-15vh]">
+          <div>
+            Zoom in For More View ---
+          </div>
+        </Html>
       </Canvas>
     </Suspense>
+    </div>
   );
 }
 

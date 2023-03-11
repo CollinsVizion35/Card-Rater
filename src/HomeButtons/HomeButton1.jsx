@@ -1,5 +1,5 @@
 import React, { useRef, useState } from "react";
-import { useFrame } from "@react-three/fiber";
+import { useFrame, useThree  } from "@react-three/fiber";
 import usePromise from "react-promise-suspense";
 import { Text } from "@react-three/drei";
 export default ({ time, ...props }) => {
@@ -20,6 +20,7 @@ useFrame(() => {
     boxRef.current.scale.set(1, 1, 1)
   }
 });
+const { viewport } = useThree()
 
 
   return (
@@ -27,7 +28,8 @@ useFrame(() => {
     
     <ambientLight intensity={0.1} />
     <mesh
-      {...props}
+      {...props} 
+      scale={[viewport.width, viewport.height, 1]}
       ref={boxRef}
       onPointerOver={e => setHover(true)}
       onPointerOut={e => setHover(false)}

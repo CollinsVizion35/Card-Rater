@@ -327,7 +327,7 @@ function Rater() {
   return (
     <>
       {/* main */}
-
+      
       <Nations />
       <TeamsNation />
       <Teams />
