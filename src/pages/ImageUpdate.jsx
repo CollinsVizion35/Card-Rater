@@ -70,8 +70,8 @@ function ImageUpdate() {
     url,
     setUrl,
     uploader,
-    image,
-    setImage,
+    images,
+    setImages,
     handleImageChange,
 
     Nation,
@@ -202,11 +202,11 @@ function ImageUpdate() {
 
           <div className="flex lg:flex-row flex-col">
             <div className="rounded-[50%] h-36 mx-auto  lg:mb-10 w-36 border flex justify-center items-center bg-white">
-              {image && (
+              {images && (
                 <img
                   className="h-36 w-36 rounded-[50%]"
                   // src={photoURL}
-                  src={image}
+                  src={images}
                   alt="Avatar"
                 />
               )}

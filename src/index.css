@@ -87,7 +87,7 @@ button:focus-visible {
 }
 
 .carder2 {
-  background-image: url("../imgs/futuFootball1.avif");
+  /* background-image: url("../imgs/futuFootball1.avif"); */
     background-repeat: no-repeat;
     /* background-position-x: center;
     background-position: inherit; */
@@ -127,4 +127,14 @@ button:focus-visible {
       z-index: 99999999999999999;
       height: 100%;
   }
+
+  
+.carderLg {
+  /* background-image: url("../imgs/futuFootball1.avif"); */
+    background-repeat: no-repeat;
+    /* background-position-x: center;
+    background-position: inherit; */
+    height: 100vh;
+    background-attachment: fixed;
+}
 }

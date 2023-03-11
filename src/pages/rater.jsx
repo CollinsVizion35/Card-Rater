@@ -1,4 +1,4 @@
-import React, { useRef, useEffect, useState, useContext } from "react";
+import React, { useRef, useEffect, useState, useContext, createRef } from "react";
 
 // import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 // import { Carousel } from 'react-responsive-carousel';
@@ -11,6 +11,8 @@ import {
   ButtonNext,
 } from "pure-react-carousel";
 import "pure-react-carousel/dist/react-carousel.es.css";
+// take screenshot
+import { useScreenshot, createFileName } from "use-react-screenshot";
 import { AiOutlineLeft, AiOutlineRight } from "react-icons/ai/index";
 import { MdPhotoCamera } from "react-icons/md/index";
 import defaultImg from "./imgs/default-icon.png";
@@ -46,6 +48,21 @@ function Rater() {
     document.title = "VCR - Create your Idea Footballing Rater";
   }, []);
 
+  const ref = createRef(null);
+  const [image, takeScreenShot] = useScreenshot({
+    type: "image/jpeg",
+    quality: 1.0
+  });
+
+  const download = (image, { name = "img", extension = "jpg" } = {}) => {
+    const a = document.createElement("a");
+    a.href = image;
+    a.download = createFileName(extension, name);
+    a.click();
+  };
+
+  const downloadScreenshot = () => takeScreenShot(ref.current).then(download);
+
   const {
     save2Ref,
     confirmedRef,
@@ -76,8 +93,8 @@ function Rater() {
     url,
     setUrl,
     uploader,
-    image,
-    setImage,
+    images,
+    setImages,
     handleImageChange,
 
     Nation,
@@ -160,6 +177,8 @@ function Rater() {
     setVolleys,
 
     handleBack2HomeBtn,
+    handleCreateNewLgBtn,
+    handleCreateNewSmBtn,
     handleBack2NationBtn,
     handleBack2NationTeamBtn,
     handleBack2TeamBtn,
@@ -260,7 +279,7 @@ function Rater() {
       async function fetchData() {
         const q = query(
           collection(db, "Card Rating"),
-          where(documentId(), "==", "oNoMvAKb3ljxnfznGeOu")
+          where(documentId(), "==", PassCode)
         );
 
         const querySnapshot = await getDocs(q);
@@ -274,10 +293,15 @@ function Rater() {
       }
       fetchData();
       infoRef.current.style.display = "none";
-      raterSmRef.current.style.height ="100vh";
-
+      // skillSetRef.current.style.display = "flex";
+      raterLgRef.current.style.display = "block";
+      raterSmRef.current.style.display = "block";
     }, 6000);
     localStorage.clear();
+    setTimeout(() => {
+      
+      raterLgRef.current.style.backgroundImage = "url(/imgs/futuFootball1.avif)"
+    }, 4000);
   }
 
   async function storeInformationToDB() {
@@ -376,7 +400,7 @@ function Rater() {
                         className="w-[17px] h-[17px] top-[23.2vh] sticky z-[99999999999]"
                       />
                       <img
-                        src={image}
+                        src={images}
                         alt="player"
                         className="w-[110px] h-[100px] bottom-[0vh] pl-[2em] static"
                       />
@@ -403,10 +427,12 @@ function Rater() {
                   <div className="sticky  pl-[50px] text-[18px] text-[#3E361D]">
                     {info.Physical}
                   </div>
-                  <div className="sticky text-[8px] font-extrabold left-[46%] p-1 rounded-[50%] text-[#3E361D] bg-[#D6C26C] w-max h-max">
+                  <div className="sticky text-[8px] font-extrabold left-[46%] p-1 ml-[40px] rounded-[50%] text-[#3E361D] bg-[#D6C26C] w-max h-max">
                     VCR
                   </div>
                 </div>
+                <button className=" w-max h-[4rem] bg-[#01112B] rounded-tl-[20px] rounded-br-[20px] mx-auto text-base border-[3px] border-[#34FEF8] text-[#34FEF8] mb-2 mt-20 p-3 pl-4 pt-0 absolute top-[50%] right-[25%] md:right-[40%] cursor-pointer z-[999999999999999999999999999]" onClick={handleCreateNewSmBtn}>Create New Card</button>
+
               </div>
             );
           })
@@ -414,9 +440,9 @@ function Rater() {
           <></>
         )}
 
-        <MdPhotoCamera className="text-4xl p-2 rounded-[50%] bg-inherit border-[2px] border-white text-white" onClick={() => capture()}/>
+        {/* <MdPhotoCamera className="text-4xl rounded-[50%] bg-inherit border-[2px] border-white text-white" onClick={downloadScreenshot}/> */}
 
-        <div ref={infoRef} className="class lg:w-[50vw]  flex flex-col pt-[55vh]  lg:pt-10">
+        <div ref={infoRef} className="class lg:w-[50vw]  flex flex-col pt-[2vh]  lg:pt-10">
           <div className="class w-[50vw] mx-auto py-3">
             <label className="mb-3 text-md text-[#34FEF8] font-bold uppercase">
               Player's NAME
@@ -12421,7 +12447,7 @@ function Rater() {
               handleEditBtn();
               //   handleContext();
             }}
-            className="w-[19.6875rem]  bg-gradient-to-br from-white via-red-300 to-red-500 border-none mx-auto rounded-lg py-2 text-white my-5"
+            className="w-[19.6875rem]  bg-gradient-to-br bg-[#34FEF8] border-none mx-auto rounded-lg py-2 text-[#01112B] my-5"
           >
             Save
           </button>
@@ -12455,20 +12481,20 @@ function Rater() {
           {/* confirmed alert */}
           <div
             ref={confirmedRef}
-            className="fixed hidden lg:left-[50%] lg:top-[25%] lg:w-[19.6875rem] lg:h-[10rem] bg-white rounded-lg py-2 text-white lg:my-5 flex justify-center items-center text-center flex-col"
+            className="fixed hidden lg:left-[50%] lg:top-[25%] lg:w-[19.6875rem] lg:h-[10rem] bg-[#01112B] rounded-lg py-2  lg:my-5 flex justify-center items-center text-center flex-col"
           >
-            <h3 className="text-2xl text-[#EF8E87]">
-              Result submitted successfully
+            <h3 className="text-2xl text-[#34FEF8]">
+              Ratings submitted successfully
             </h3>
           </div>
 
           {/* unconfirmed alert */}
           <div
             ref={unconfirmedRef}
-            className="fixed hidden lg:left-[50%] lg:top-[25%] lg:w-[19.6875rem] lg:h-[10rem] bg-white rounded-lg py-2 text-white lg:my-5 flex justify-center items-center text-center flex-col"
+            className="fixed hidden lg:left-[50%] lg:top-[25%] lg:w-[19.6875rem] lg:h-[10rem] bg-[#01112B] rounded-lg py-2 lg:my-5 flex justify-center items-center text-center flex-col"
           >
-            <h3 className="text-xl text-[#EF8E87] p-1">
-              Result submission not successful
+            <h3 className="text-xl text-[#34FEF8] p-1">
+              Ratings submission not successful
             </h3>
             <h5 className="text-[#EF8E87]">Fill up all empty credentials</h5>
           </div>
@@ -12484,8 +12510,8 @@ function Rater() {
         {usersInfo.length > 0 ? (
           usersInfo.map((info, index) => {
             return (
-              <div ref={raterLgRef} className="relative hidden lg:block lg:w-[50vw] lg:h-[100%]">
-                <div className="carder mr-10 relative lg:fixed top-1 mt-10">
+              <div ref={raterLgRef}  className="relative carderLg hidden lg:block lg:w-[50vw] lg:h-[100%]">
+                <div className="carder mr-10 relative lg:fixed top-1 mt-10 left-[30%]">
                   {/* <img src={CardImg} alt="card rater" /> */}
                   <div className="relative top-0">
                     <div className="absolute top-[2.7em] left-[2.9em] font-extrabold text-4xl text-[#3E361D]">
@@ -12541,7 +12567,7 @@ function Rater() {
                       className="w-[40px] h-[40px] absolute top-[15.5em] left-[6.5em]"
                     />
                     <img
-                      src={image}
+                      src={images}
                       alt="player"
                       className="w-[200px] h-[200px] absolute top-[6.7em] left-[11em]"
                     />
@@ -12571,11 +12597,13 @@ function Rater() {
                     </div>
                   </div>
                 </div>
+
+                <button className=" w-max h-[4rem] bg-[#01112B] rounded-tl-[20px] rounded-br-[20px] mx-auto text-base border-[3px] border-[#34FEF8] text-[#34FEF8] mb-2 mt-20 p-3 pl-4 pt-0 absolute right-[-70%] top-[40%] cursor-pointer z-[999999999999999999999999999]" onClick={handleCreateNewLgBtn}>Create New Card</button>
               </div>
             );
           })
         ) : (
-          <div ref={raterLgRef} className="relative hidden lg:block lg:w-[50vw] lg:h-[100%]">
+          <div className="relative hidden lg:block lg:w-[50vw] lg:h-[100%]">
             <div className="carder mr-10 relative lg:fixed top-1 mt-10">
               {/* <img src={CardImg} alt="card rater" /> */}
               <div className="relative top-0">

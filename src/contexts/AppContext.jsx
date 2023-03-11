@@ -70,7 +70,7 @@ export const AppContextPage = ({ children }) => {
   };
 
   // storing and getting image from local storage
-  const [image, setImage] = useState(null);
+  const [images, setImages] = useState(null);
 
   const handleImageChange = (e) => {
     const file = e.target.files[0];
@@ -78,8 +78,8 @@ export const AppContextPage = ({ children }) => {
     reader.readAsDataURL(file);
     reader.onload = () => {
       const base64Image = reader.result;
-      localStorage.setItem("image", base64Image);
-      setImage(base64Image);
+      localStorage.setItem("images", base64Image);
+      setImages(base64Image);
     };
   };
 
@@ -105,6 +105,16 @@ export const AppContextPage = ({ children }) => {
 
   const handleBack2HomeBtn = () => {
     navigate("/home");
+  };
+  const handleCreateNewLgBtn = () => {
+    window.location.reload(false); 
+    localStorage.clear();
+    sessionStorage.clear();
+  };
+  const handleCreateNewSmBtn = () => {
+    window.location.reload(false); 
+    localStorage.clear();
+    sessionStorage.clear();
   };
   const handleBack2NationBtn = () => {
     nationRef.current.style.display = "block";
@@ -214,6 +224,9 @@ export const AppContextPage = ({ children }) => {
   const handleSkillSetBtn = () => {
     imagesRef.current.style.display = "none";
     skillSetRef.current.style.display = "flex";
+    infoRef.current.style.display = "flex";
+    raterLgRef.current.style.display = "none";
+    raterSmRef.current.style.display = "none";
   };
 
   const audio = new Audio("./mixkit-soccer-ball-quick-kick-2108.wav");
@@ -297,8 +310,8 @@ export const AppContextPage = ({ children }) => {
           url,
           setUrl,
           uploader,
-          image,
-          setImage,
+          images,
+          setImages,
           handleImageChange,
 
           Nation,
@@ -381,6 +394,8 @@ export const AppContextPage = ({ children }) => {
           setVolleys,
 
           handleBack2HomeBtn,
+          handleCreateNewLgBtn,
+          handleCreateNewSmBtn,
           handleBack2NationBtn,
           handleBack2NationTeamBtn,
           handleBack2TeamBtn,
