@@ -1,4 +1,4 @@
-import React, { Suspense } from "react";
+import React, { Suspense, useEffect } from "react";
 import { Canvas } from "@react-three/fiber";
 import { Html, OrbitControls, PerspectiveCamera } from "@react-three/drei";
 import Floor from "./Floor";
@@ -9,6 +9,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { Player } from "./Player";
 import { Ball } from "./ball";
 import { Glitch } from "./glitch";
+import { MusicPass } from "./contexts/musicContext"
 
 function ManShow() {
 
@@ -47,18 +48,57 @@ function ManShow() {
 }
 
 function Home() {
+
+  useEffect(() => {
+    document.title = "VCR - Create your Idea Footballing Rater";
+  }, []);
+
+  
+  const {
+    golden,
+  
+            currentSongIndex,
+            setCurrentSongIndex,
+            nextSongIndex,
+            setNextSongIndex,
+            isPlaying,
+            setIsPlaying,
+            duration,
+            setDuration,
+            currentTime,
+            setCurrentTime,
+            percentage,
+            setPercentage,
+            volume,
+            setVolume,
+            repeat,
+            setRepeat,
+            shuffle,
+            setShuffle,
+            getCurrDuration,
+            audioEl,
+            // for goldenAge
+            playerAudio6Ref,
+            playerImage6Ref,
+            playerName6Ref,
+            playerArtist6Ref,
+  } = MusicPass();
+
   const navigate = useNavigate();
 
     
 
     const handleEditBtn = () => {
         navigate('/');
+        setIsPlaying(!isPlaying)
     }
     const handleEditBtn2 = () => {
         navigate('/');
+        setIsPlaying(!isPlaying)
     }
     const handleEditBtn3 = () => {
         navigate('/footballRater');
+        setIsPlaying(!isPlaying)
     }
   return (
     <div className="h-[100vh] cursor-zoom-in touch-pinch-zoom">

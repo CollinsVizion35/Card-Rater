@@ -42,6 +42,7 @@ import Nations from "./Nation";
 import TeamsNation from "./TeamsNation";
 import Teams from "./Teams";
 import ImageUpdate from "./ImageUpdate";
+import Player from "../music/player";
 
 function Rater() {
   useEffect(() => {
@@ -279,7 +280,7 @@ function Rater() {
       async function fetchData() {
         const q = query(
           collection(db, "Card Rating"),
-          where(documentId(), "==", PassCode)
+          where(documentId(), "==", "MyM0f6fLLPSRxxo2shmg")
         );
 
         const querySnapshot = await getDocs(q);
@@ -12615,6 +12616,8 @@ function Rater() {
           </div>
         )}
       </div>
+
+      <Player/>
     </>
   );
 }
