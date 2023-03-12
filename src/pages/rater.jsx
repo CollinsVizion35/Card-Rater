@@ -344,10 +344,11 @@ function Rater() {
         {usersInfo.length > 0 ? (
           usersInfo.map((info, index) => {
             return (
-              <div ref={raterSmRef} className="relative carder2 lg:hidden">
-                <div className="carder-sm fixed lg:hidden h-[50vh] w-[100vw]">
-                  <div className="sticky top-[10vh] pr-[90px] text-2xl text-[#3E361D]">
-                  {Math.ceil((parseInt(info.Acceleration) +
+              <div ref={raterSmRef} className="relative carder2 lg:hidden w-[100vw] h-[100vh]">
+                <div className="carder-sm fixed lg:hidden h-[50vh] flex w-[100vw] pl-auto">
+                <div className="relative w-[50%] h-full top-0 left-[50%] flex">
+                    <div className="absolute top-[3.2em] left-[-2.8em] font-extrabold text-xl text-[#3E361D]">
+                    {Math.ceil((parseInt(info.Acceleration) +
                         parseInt(info.Aggression) +
                         parseInt(info.Agility) +
                         parseInt(info.AttackingPosition) +
@@ -384,54 +385,51 @@ function Rater() {
                         parseInt(info.Vision) +
                         parseInt(info.Volleys)) /
                         36)}
-                  </div>
-                  <div className="sticky top-[15.5vh] pr-[90px]  text-[18px] text-[#3E361D]">
-                    {info.Position}
-                  </div>
-                  <div className="relative flex boy content-center justify-center ">
-                    <div className="absolute top-[-2.5em]">
-                      <img
-                        src={info.Nation}
-                        alt="country"
-                        className="w-[20px] h-[15px] top-[20.5vh] sticky z-[99999999999]"
-                      />
-                      <img
-                        src={info.Team}
-                        alt="club"
-                        className="w-[17px] h-[17px] top-[23.2vh] sticky z-[99999999999]"
-                      />
-                      <img
-                        src={images}
-                        alt="player"
-                        className="w-[110px] h-[100px] bottom-[0vh] pl-[2em] static"
-                      />
+                    </div>
+                    <div className="absolute top-[4.4em] left-[-3em]  text-xl text-[#3E361D]">
+                      {info.Position}
+                    </div>
+                    <img
+                      src={info.Nation}
+                      alt="country"
+                      className="w-[20px] h-[12px] absolute top-[7.35em] left-[-3.5em] z-[99999999999]"
+                    />
+                    <img
+                      src={info.Team}
+                      alt="club"
+                      className="w-[15px] h-[15px] absolute top-[8.35em] left-[-3.4em]"
+                    />
+                    <img
+                      src={images}
+                      alt="player"
+                      className="w-[100px] h-[100px] absolute top-[3.6em] left-[-1em]"
+                    />
+                    <div className="absolute top-[6.4em] left-[-2.8em] text-center  text-2xl text-[#3E361D]">
+                      {info.name}
+                    </div>
+                    <div className="absolute top-[7.63em] left-[-2.8em]  text-2xl text-[#3E361D]">
+                      {info.Pace}
+                    </div>
+                    <div className="absolute top-[8.45em] left-[-2.8em]  text-2xl text-[#3E361D]">
+                      {info.Shooting}
+                    </div>
+                    <div className="absolute top-[9.27em] left-[-2.8em]  text-2xl text-[#3E361D]">
+                      {info.Passing}
+                    </div>
+                    <div className="absolute top-[7.63em] left-[0.55em]  text-2xl text-[#3E361D]">
+                      {info.Dribbling}
+                    </div>
+                    <div className="absolute top-[8.45em] left-[0.55em]  text-2xl text-[#3E361D]">
+                      {info.Defending}
+                    </div>
+                    <div className="absolute top-[9.27em] left-[0.55em]  text-2xl text-[#3E361D]">
+                      {info.Physical}
+                    </div>
+                    <div className="absolute text-[0.6em] font-extrabold  top-[26.6em] left-[-1.2em]  p-1 rounded-[50%] text-[#3E361D] bg-[#D6C26C] w-max h-max">
+                      VCR
                     </div>
                   </div>
-                  <div className="sticky top-[27vh]  text-2xl text-[#3E361D]">
-                    {info.name}
                   </div>
-                  <div className="sticky top-[32vh] pr-[100px]  text-[18px] text-[#3E361D]">
-                    {info.Pace}
-                  </div>
-                  <div className="sticky top-[35.5vh] pr-[100px]  text-[18px] text-[#3E361D]">
-                    {info.Shooting}
-                  </div>
-                  <div className="sticky top-[39vh] pr-[100px]  text-[18px] text-[#3E361D]">
-                    {info.Passing}
-                  </div>
-                  <div className="sticky top-[32vh]  pl-[50px] text-[18px] text-[#3E361D]">
-                    {info.Dribbling}
-                  </div>
-                  <div className="sticky top-[35.5vh]  pl-[50px] text-[18px] text-[#3E361D]">
-                    {info.Defending}
-                  </div>
-                  <div className="sticky  pl-[50px] text-[18px] text-[#3E361D]">
-                    {info.Physical}
-                  </div>
-                  <div className="sticky text-[8px] font-extrabold left-[46%] p-1 ml-[40px] rounded-[50%] text-[#3E361D] bg-[#D6C26C] w-max h-max">
-                    VCR
-                  </div>
-                </div>
                 <button className=" w-max h-[4rem] bg-[#01112B] rounded-tl-[20px] rounded-br-[20px] mx-auto text-base border-[3px] border-[#34FEF8] text-[#34FEF8] mb-2 mt-20 p-3 pl-4 pt-0 absolute top-[50%] right-[25%] md:right-[40%] cursor-pointer z-[999999999999999999999999999]" onClick={handleCreateNewSmBtn}>Create New Card</button>
 
               </div>
@@ -12617,7 +12615,7 @@ function Rater() {
         )}
       </div>
 
-      <Player/>
+      {/* <Player/> */}
     </>
   );
 }
