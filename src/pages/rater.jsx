@@ -279,7 +279,7 @@ function Rater() {
       async function fetchData() {
         const q = query(
           collection(db, "Card Rating"),
-          where(documentId(), "==", "MyM0f6fLLPSRxxo2shmg")
+          where(documentId(), "==", PassCode)
         );
 
         const querySnapshot = await getDocs(q);
@@ -344,7 +344,7 @@ function Rater() {
           usersInfo.map((info, index) => {
             return (
               <div ref={raterSmRef} className="relative carder2 lg:hidden w-[100vw] h-[100vh]">
-                <div className="carder-sm fixed lg:hidden h-[50vh] flex w-[100vw] pl-auto">
+                <div className="carder-sm fixed lg:hidden h-[289px] flex w-[100vw] pl-auto">
                 <div className="relative w-[50%] h-full top-0 left-[50%] flex">
                     <div className="absolute top-[3.2em] left-[-2.8em] font-extrabold text-xl text-[#3E361D]">
                     {Math.ceil((parseInt(info.Acceleration) +
@@ -12614,7 +12614,7 @@ function Rater() {
         )}
       </div>
 
-      {/* <Player/> */}
+      <Player/>
     </>
   );
 }
