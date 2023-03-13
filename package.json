@@ -22,8 +22,7 @@
     "react-responsive-carousel": "^3.2.23",
     "react-router-dom": "^6.8.1",
     "three": "^0.149.0",
-    "three-stdlib": "^2.21.8",
-    "use-react-screenshot": "^3.0.0"
+    "three-stdlib": "^2.21.8"
   },
   "devDependencies": {
     "@types/react": "^18.0.27",

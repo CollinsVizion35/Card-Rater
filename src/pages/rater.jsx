@@ -12,7 +12,6 @@ import {
 } from "pure-react-carousel";
 import "pure-react-carousel/dist/react-carousel.es.css";
 // take screenshot
-import { useScreenshot, createFileName } from "use-react-screenshot";
 import { AiOutlineLeft, AiOutlineRight } from "react-icons/ai/index";
 import { MdPhotoCamera } from "react-icons/md/index";
 import defaultImg from "./imgs/default-icon.png";
@@ -49,20 +48,20 @@ function Rater() {
     document.title = "VCR - Create your Idea Footballing Rater";
   }, []);
 
-  const ref = createRef(null);
-  const [image, takeScreenShot] = useScreenshot({
-    type: "image/jpeg",
-    quality: 1.0
-  });
+  // const ref = createRef(null);
+  // const [image, takeScreenShot] = useScreenshot({
+  //   type: "image/jpeg",
+  //   quality: 1.0
+  // });
 
-  const download = (image, { name = "img", extension = "jpg" } = {}) => {
-    const a = document.createElement("a");
-    a.href = image;
-    a.download = createFileName(extension, name);
-    a.click();
-  };
+  // const download = (image, { name = "img", extension = "jpg" } = {}) => {
+  //   const a = document.createElement("a");
+  //   a.href = image;
+  //   a.download = createFileName(extension, name);
+  //   a.click();
+  // };
 
-  const downloadScreenshot = () => takeScreenShot(ref.current).then(download);
+  // const downloadScreenshot = () => takeScreenShot(ref.current).then(download);
 
   const {
     save2Ref,
