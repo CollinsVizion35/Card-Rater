@@ -48,6 +48,11 @@ function Start() {
   const handleEditBtn = () => {
     navigate("/home");
   };
+
+  const handleEditBtn2 = () => {
+    window.open("https://collinsvizionportfolio.netlify.app/");
+  };
+
   return (
     <div className="h-[100vh]">
       <Suspense fallback={null}>
@@ -71,7 +76,11 @@ function Start() {
             >
               Start
             </button>
-            <div className="text-[0.8em] mt-[20vh] animate__animated animate__fadeIn">©Vizion Ltd</div>
+            <div 
+              onClick={() => {
+                handleEditBtn2();
+              }}
+              className="text-[0.8em] mt-[20vh] animate__animated animate__fadeIn cursor-pointer">©Vizion Ltd</div>
           </Html>
         </Canvas>
       </Suspense>
