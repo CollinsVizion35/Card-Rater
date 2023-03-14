@@ -60,7 +60,7 @@ function Player() {
   }
 
   return (
-    <div className="absolute bottom-0 left-[55%]">
+    <div className="absolute bottom-2 lg:left-[55%] left-[3%]">
       <audio
         src={golden[currentSongIndex].audio}
         ref={playerAudio6Ref}
