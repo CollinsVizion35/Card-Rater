@@ -10,6 +10,7 @@ import { Player } from "./Player";
 import { Ball } from "./ball";
 import { Glitch } from "./glitch";
 import { MusicPass } from "./contexts/musicContext"
+import 'animate.css';
 
 function ManShow() {
 
@@ -121,7 +122,7 @@ function Home() {
           className="cursor-pointer"
         />
 
-        <Html className="text-white w-max absolute mt-[20vh] ml-[-15vh]">
+        <Html className="text-white w-max absolute mt-[20vh] ml-[-15vh] animate__animated animate__zoomIn animate__infinite	animate__slow">
           <div>
             Zoom in For More View ---
           </div>

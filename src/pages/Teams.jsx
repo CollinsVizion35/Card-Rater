@@ -11,6 +11,7 @@ import {
   ButtonNext,
 } from "pure-react-carousel";
 import "pure-react-carousel/dist/react-carousel.es.css";
+import 'animate.css';
 import { AiOutlineLeft, AiOutlineRight } from "react-icons/ai/index";
 import defaultImg from "./imgs/default-icon.png";
 
@@ -502,7 +503,7 @@ function Teams() {
             </CarouselProvider>
 
             <button
-              className=" w-max h-[4rem] bg-[#01112B] rounded-tl-[20px] rounded-br-[20px] mx-auto text-base border-[3px] border-[#34FEF8] text-[#34FEF8] mb-2 mt-20 p-3 pl-4 pt-0"
+              className=" w-max h-[4rem] bg-[#01112B] rounded-tl-[20px] rounded-br-[20px] mx-auto text-base border-[3px] border-[#34FEF8] text-[#34FEF8] mb-2 mt-20 p-3 pl-4 pt-0 animate__animated animate__tada"
               onClick={handleBack2NationTeamBtn}
             >
               Back
@@ -856,7 +857,7 @@ function Teams() {
             </CarouselProvider>
 
             <button
-              className=" w-max h-[4rem] bg-[#01112B] rounded-tl-[20px] rounded-br-[20px] mx-auto text-base border-[3px] border-[#34FEF8] text-[#34FEF8] mb-2 mt-20 p-3 pl-4 pt-0"
+              className=" w-max h-[4rem] bg-[#01112B] rounded-tl-[20px] rounded-br-[20px] mx-auto text-base border-[3px] border-[#34FEF8] text-[#34FEF8] mb-2 mt-20 p-3 pl-4 pt-0 animate__animated animate__tada"
               onClick={handleBack2NationTeamBtn}
             >
               Back
@@ -1212,7 +1213,7 @@ function Teams() {
             </CarouselProvider>
 
             <button
-              className=" w-max h-[4rem] bg-[#01112B] rounded-tl-[20px] rounded-br-[20px] mx-auto text-base border-[3px] border-[#34FEF8] text-[#34FEF8] mb-2 mt-20 p-3 pl-4 pt-0"
+              className=" w-max h-[4rem] bg-[#01112B] rounded-tl-[20px] rounded-br-[20px] mx-auto text-base border-[3px] border-[#34FEF8] text-[#34FEF8] mb-2 mt-20 p-3 pl-4 pt-0 animate__animated animate__tada"
               onClick={handleBack2NationTeamBtn}
             >
               Back
@@ -1567,7 +1568,7 @@ function Teams() {
             </CarouselProvider>
 
             <button
-              className=" w-max h-[4rem] bg-[#01112B] rounded-tl-[20px] rounded-br-[20px] mx-auto text-base border-[3px] border-[#34FEF8] text-[#34FEF8] mb-2 mt-20 p-3 pl-4 pt-0"
+              className=" w-max h-[4rem] bg-[#01112B] rounded-tl-[20px] rounded-br-[20px] mx-auto text-base border-[3px] border-[#34FEF8] text-[#34FEF8] mb-2 mt-20 p-3 pl-4 pt-0 animate__animated animate__tada"
               onClick={handleBack2NationTeamBtn}
             >
               Back
@@ -1919,7 +1920,7 @@ function Teams() {
             </CarouselProvider>
 
             <button
-              className=" w-max h-[4rem] bg-[#01112B] rounded-tl-[20px] rounded-br-[20px] mx-auto text-base border-[3px] border-[#34FEF8] text-[#34FEF8] mb-2 mt-20 p-3 pl-4 pt-0"
+              className=" w-max h-[4rem] bg-[#01112B] rounded-tl-[20px] rounded-br-[20px] mx-auto text-base border-[3px] border-[#34FEF8] text-[#34FEF8] mb-2 mt-20 p-3 pl-4 pt-0 animate__animated animate__tada"
               onClick={handleBack2NationTeamBtn}
             >
               Back
@@ -2146,7 +2147,7 @@ function Teams() {
             </CarouselProvider>
 
             <button
-              className=" w-max h-[4rem] bg-[#01112B] rounded-tl-[20px] rounded-br-[20px] mx-auto text-base border-[3px] border-[#34FEF8] text-[#34FEF8] mb-2 mt-20 p-3 pl-4 pt-0"
+              className=" w-max h-[4rem] bg-[#01112B] rounded-tl-[20px] rounded-br-[20px] mx-auto text-base border-[3px] border-[#34FEF8] text-[#34FEF8] mb-2 mt-20 p-3 pl-4 pt-0 animate__animated animate__tada"
               onClick={handleBack2NationTeamBtn}
             >
               Back

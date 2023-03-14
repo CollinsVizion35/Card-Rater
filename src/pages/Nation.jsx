@@ -13,6 +13,7 @@ import {
 import "pure-react-carousel/dist/react-carousel.es.css";
 import { AiOutlineLeft, AiOutlineRight } from "react-icons/ai/index";
 import defaultImg from "./imgs/default-icon.png";
+import 'animate.css';
 
 import { AppPass } from "../contexts/AppContext";
 import { Link, useNavigate } from "react-router-dom";
@@ -3147,7 +3148,7 @@ function Nations() {
       </CarouselProvider>
 
       <button
-        className=" w-max h-[4rem] bg-[#01112B] rounded-tl-[20px] rounded-br-[20px] mx-auto text-base border-[3px] border-[#34FEF8] text-[#34FEF8] mb-2 mt-20 p-3 pl-4 pt-0"
+        className=" w-max h-[4rem] bg-[#01112B] rounded-tl-[20px] rounded-br-[20px] mx-auto text-base border-[3px] border-[#34FEF8] text-[#34FEF8] mb-2 mt-20 p-3 pl-4 pt-0 animate__animated animate__tada"
         onClick={handleBack2HomeBtn}
       >
         Back
