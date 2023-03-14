@@ -90,11 +90,11 @@ function Home() {
     
 
     const handleEditBtn = () => {
-        navigate('/');
+        navigate('/comingsoon');
         setIsPlaying(!isPlaying)
     }
     const handleEditBtn2 = () => {
-        navigate('/');
+        navigate('/comingsoon');
         setIsPlaying(!isPlaying)
     }
     const handleEditBtn3 = () => {

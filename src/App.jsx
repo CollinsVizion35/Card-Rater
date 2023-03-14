@@ -9,6 +9,7 @@ import HomeButton2 from "./HomeButtons/HomeButton2";
 import Rater from "./pages/rater";
 import { MusicContextPage } from "./contexts/musicContext";
 import Player from "./music/player";
+import Notice from "./notice";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
               <Route path="/page2" element={<HomeButton2 />} />
               <Route path="/footballRater" element={<Rater />} />
               <Route path="/player" element={<Player />} />
+              <Route path="/comingsoon" element={<Notice />} />
             </Routes>
           </MusicContextPage>
         </AppContextPage>

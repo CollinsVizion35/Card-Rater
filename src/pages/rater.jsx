@@ -491,7 +491,7 @@ function Rater() {
           onClick={() => {
             playBallAudio();
           }}
-          
+
                     onChange={(e) => {
                       // selectedClass();
                       setPosition(e.target.value);
@@ -602,7 +602,7 @@ function Rater() {
           onClick={() => {
             playBallAudio();
           }}
-          
+
                     onChange={(e) => {
                       // selectedClass();
                       setAcceleration(e.target.value);
@@ -938,7 +938,7 @@ function Rater() {
           onClick={() => {
             playBallAudio();
           }}
-          
+
                     onChange={(e) => {
                       // selectedClass();
                       setAggression(e.target.value);
@@ -1274,7 +1274,7 @@ function Rater() {
           onClick={() => {
             playBallAudio();
           }}
-          
+
                     onChange={(e) => {
                       // selectedClass();
                       setAgility(e.target.value);
@@ -1610,7 +1610,7 @@ function Rater() {
           onClick={() => {
             playBallAudio();
           }}
-          
+
                     onChange={(e) => {
                       // selectedClass();
                       setAttackingPosition(e.target.value);
@@ -1946,7 +1946,7 @@ function Rater() {
           onClick={() => {
             playBallAudio();
           }}
-          
+
                     onChange={(e) => {
                       // selectedClass();
                       setAwareness(e.target.value);
@@ -2282,7 +2282,7 @@ function Rater() {
           onClick={() => {
             playBallAudio();
           }}
-          
+
                     onChange={(e) => {
                       // selectedClass();
                       setBalance(e.target.value);
@@ -2618,7 +2618,7 @@ function Rater() {
           onClick={() => {
             playBallAudio();
           }}
-          
+
                     onChange={(e) => {
                       // selectedClass();
                       setBallControl(e.target.value);
@@ -2954,7 +2954,7 @@ function Rater() {
           onClick={() => {
             playBallAudio();
           }}
-          
+
                     onChange={(e) => {
                       // selectedClass();
                       setComposure(e.target.value);
@@ -3290,7 +3290,7 @@ function Rater() {
           onClick={() => {
             playBallAudio();
           }}
-          
+
                     onChange={(e) => {
                       // selectedClass();
                       setCrossing(e.target.value);
@@ -3626,7 +3626,7 @@ function Rater() {
           onClick={() => {
             playBallAudio();
           }}
-          
+
                     onChange={(e) => {
                       // selectedClass();
                       setCurve(e.target.value);
@@ -3962,7 +3962,7 @@ function Rater() {
           onClick={() => {
             playBallAudio();
           }}
-          
+
                     onChange={(e) => {
                       // selectedClass();
                       setDefending(e.target.value);
@@ -4298,7 +4298,7 @@ function Rater() {
           onClick={() => {
             playBallAudio();
           }}
-          
+
                     onChange={(e) => {
                       // selectedClass();
                       setDribbling(e.target.value);
@@ -4634,7 +4634,7 @@ function Rater() {
           onClick={() => {
             playBallAudio();
           }}
-          
+
                     onChange={(e) => {
                       // selectedClass();
                       setFinishing(e.target.value);
@@ -4970,7 +4970,7 @@ function Rater() {
           onClick={() => {
             playBallAudio();
           }}
-          
+
                     onChange={(e) => {
                       // selectedClass();
                       setFreeKick(e.target.value);
@@ -5306,7 +5306,7 @@ function Rater() {
           onClick={() => {
             playBallAudio();
           }}
-          
+
                     onChange={(e) => {
                       // selectedClass();
                       setHeading(e.target.value);
@@ -5642,7 +5642,7 @@ function Rater() {
           onClick={() => {
             playBallAudio();
           }}
-          
+
                     onChange={(e) => {
                       // selectedClass();
                       setInterceptions(e.target.value);
@@ -5978,7 +5978,7 @@ function Rater() {
           onClick={() => {
             playBallAudio();
           }}
-          
+
                     onChange={(e) => {
                       // selectedClass();
                       setJumping(e.target.value);
@@ -6314,7 +6314,7 @@ function Rater() {
           onClick={() => {
             playBallAudio();
           }}
-          
+
                     onChange={(e) => {
                       // selectedClass();
                       setLongPassing(e.target.value);
@@ -6650,7 +6650,7 @@ function Rater() {
           onClick={() => {
             playBallAudio();
           }}
-          
+
                     onChange={(e) => {
                       // selectedClass();
                       setLongShot(e.target.value);
@@ -6986,7 +6986,7 @@ function Rater() {
           onClick={() => {
             playBallAudio();
           }}
-          
+
                     onChange={(e) => {
                       // selectedClass();
                       setMarking(e.target.value);
@@ -7322,7 +7322,7 @@ function Rater() {
           onClick={() => {
             playBallAudio();
           }}
-          
+
                     onChange={(e) => {
                       // selectedClass();
                       setPace(e.target.value);
@@ -7658,7 +7658,7 @@ function Rater() {
           onClick={() => {
             playBallAudio();
           }}
-          
+
                     onChange={(e) => {
                       // selectedClass();
                       setPassing(e.target.value);
@@ -7994,7 +7994,7 @@ function Rater() {
           onClick={() => {
             playBallAudio();
           }}
-          
+
                     onChange={(e) => {
                       // selectedClass();
                       setPenalties(e.target.value);
@@ -8330,7 +8330,7 @@ function Rater() {
           onClick={() => {
             playBallAudio();
           }}
-          
+
                     onChange={(e) => {
                       // selectedClass();
                       setPhysical(e.target.value);
@@ -8666,7 +8666,7 @@ function Rater() {
           onClick={() => {
             playBallAudio();
           }}
-          
+
                     onChange={(e) => {
                       // selectedClass();
                       setPositioning(e.target.value);
@@ -9002,7 +9002,7 @@ function Rater() {
           onClick={() => {
             playBallAudio();
           }}
-          
+
                     onChange={(e) => {
                       // selectedClass();
                       setReactions(e.target.value);
@@ -9338,7 +9338,7 @@ function Rater() {
           onClick={() => {
             playBallAudio();
           }}
-          
+
                     onChange={(e) => {
                       // selectedClass();
                       setShooting(e.target.value);
@@ -9674,7 +9674,7 @@ function Rater() {
           onClick={() => {
             playBallAudio();
           }}
-          
+
                     onChange={(e) => {
                       // selectedClass();
                       setShortPassing(e.target.value);
@@ -10010,7 +10010,7 @@ function Rater() {
           onClick={() => {
             playBallAudio();
           }}
-          
+
                     onChange={(e) => {
                       // selectedClass();
                       setShotPower(e.target.value);
@@ -10346,7 +10346,7 @@ function Rater() {
           onClick={() => {
             playBallAudio();
           }}
-          
+
                     onChange={(e) => {
                       // selectedClass();
                       setSlidingTackle(e.target.value);
@@ -10682,7 +10682,7 @@ function Rater() {
           onClick={() => {
             playBallAudio();
           }}
-          
+
                     onChange={(e) => {
                       // selectedClass();
                       setSprintSpeed(e.target.value);
@@ -11018,7 +11018,7 @@ function Rater() {
           onClick={() => {
             playBallAudio();
           }}
-          
+
                     onChange={(e) => {
                       // selectedClass();
                       setStamina(e.target.value);
@@ -11354,7 +11354,7 @@ function Rater() {
           onClick={() => {
             playBallAudio();
           }}
-          
+
                     onChange={(e) => {
                       // selectedClass();
                       setStandingTackle(e.target.value);
@@ -11690,7 +11690,7 @@ function Rater() {
           onClick={() => {
             playBallAudio();
           }}
-          
+
                     onChange={(e) => {
                       // selectedClass();
                       setStrength(e.target.value);
@@ -12026,7 +12026,7 @@ function Rater() {
           onClick={() => {
             playBallAudio();
           }}
-          
+
                     onChange={(e) => {
                       // selectedClass();
                       setVision(e.target.value);
@@ -12362,7 +12362,7 @@ function Rater() {
           onClick={() => {
             playBallAudio();
           }}
-          
+
                     onChange={(e) => {
                       // selectedClass();
                       setVolleys(e.target.value);
@@ -12723,7 +12723,7 @@ function Rater() {
           {/* confirmed alert */}
           <div
             ref={confirmedRef}
-            className="fixed hidden lg:left-[50%] lg:top-[25%] lg:w-[19.6875rem] lg:h-[10rem] bg-[#01112B] rounded-lg py-2  lg:my-5 flex justify-center items-center text-center flex-col"
+            className="absolute lg:left-[10%] lg:top-[40%] hidden top-[40%] lg:w-[19.6875rem] lg:h-[10rem] bg-[#01112B] rounded-lg py-2  lg:my-5 flex justify-center items-center text-center flex-col z-[9999999999999999999999]"
           >
             <h3 className="text-2xl text-[#34FEF8]">
               Ratings submitted successfully
@@ -12733,7 +12733,7 @@ function Rater() {
           {/* unconfirmed alert */}
           <div
             ref={unconfirmedRef}
-            className="fixed hidden lg:left-[50%] lg:top-[25%] lg:w-[19.6875rem] lg:h-[10rem] bg-[#01112B] rounded-lg py-2 lg:my-5 flex justify-center items-center text-center flex-col"
+            className="absolute lg:left-[10%] lg:top-[40%] hidden top-[40%] lg:w-[19.6875rem] lg:h-[10rem] bg-[#01112B] rounded-lg py-2 lg:my-5 flex justify-center items-center text-center flex-col z-[9999999999999999999999]"
           >
             <h3 className="text-xl text-[#34FEF8] p-1">
               Ratings submission not successful
