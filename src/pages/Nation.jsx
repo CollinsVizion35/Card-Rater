@@ -257,7 +257,7 @@ function Nations() {
                   setNation(e.target.src);
                 }}
                 className="h-[200px] w-[300px] cursor-pointer"
-                src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Flag_of_Andorra.svg/480px-Flag_of_Andorra.svg.png"
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Flag_of_Angola.svg/480px-Flag_of_Angola.svg.png"
                 alt="Angola"
               />
               <p className="legend text-3xl pt-6 cursor-default">Angola</p>
