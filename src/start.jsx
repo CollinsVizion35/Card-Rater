@@ -43,10 +43,44 @@ function Start() {
   useEffect(() => {
     document.title = "VCR";
   }, []);
+
+
+  const {
+    golden,
+  
+            currentSongIndex,
+            setCurrentSongIndex,
+            nextSongIndex,
+            setNextSongIndex,
+            isPlaying,
+            setIsPlaying,
+            duration,
+            setDuration,
+            currentTime,
+            setCurrentTime,
+            percentage,
+            setPercentage,
+            volume,
+            setVolume,
+            repeat,
+            setRepeat,
+            shuffle,
+            setShuffle,
+            getCurrDuration,
+            audioEl,
+            // for goldenAge
+            playerAudio6Ref,
+            playerImage6Ref,
+            playerName6Ref,
+            playerArtist6Ref,
+  } = MusicPass();
+
+
   const navigate = useNavigate();
 
   const handleEditBtn = () => {
     navigate("/footballRater");
+    setIsPlaying(!isPlaying)
   };
 
   const handleEditBtn2 = () => {
