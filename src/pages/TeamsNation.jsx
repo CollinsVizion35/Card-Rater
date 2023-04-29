@@ -197,7 +197,7 @@ function TeamsNation() {
                       handleEditBtnBund();
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
-                    src="https://seekflag.com/app/uploads/2021/11/Flag-of-Germany-01-1.png"
+                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Flag_of_Germany.svg/480px-Flag_of_Germany.svg.png"
                     alt="Bundesliga"
                   />
                   <p className="legend text-3xl pt-6 cursor-default">
@@ -212,7 +212,7 @@ function TeamsNation() {
                       handleEditBtnLaLiga();
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
-                    src="https://seekflag.com/app/uploads/2021/12/Flag-of-Spain-01-1.png"
+                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Bandera_de_Espa%C3%B1a.svg/480px-Bandera_de_Espa%C3%B1a.svg.png"
                     alt="La Liga"
                   />
                   <p className="legend text-3xl pt-6 cursor-default">La Liga</p>
@@ -225,7 +225,7 @@ function TeamsNation() {
                       handleEditBtnLig1();
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
-                    src="https://seekflag.com/app/uploads/2021/11/Flag-of-France-01-1.png"
+                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Flag_of_France_%281794%E2%80%931815%2C_1830%E2%80%931974%2C_2020%E2%80%93present%29.svg/480px-Flag_of_France_%281794%E2%80%931815%2C_1830%E2%80%931974%2C_2020%E2%80%93present%29.svg.png"
                     alt="Ligue 1"
                   />
                   <p className="legend text-3xl pt-6 cursor-default">Ligue 1</p>
@@ -238,7 +238,7 @@ function TeamsNation() {
                       handleEditBtnEpl();
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
-                    src="https://seekflag.com/app/uploads/2022/01/England-01-1.png"
+                    src="https://upload.wikimedia.org/wikipedia/en/thumb/b/be/Flag_of_England.svg/480px-Flag_of_England.svg.png"
                     alt="Premier league"
                   />
                   <p className="legend text-3xl pt-6 cursor-default">
@@ -253,7 +253,7 @@ function TeamsNation() {
                       handleEditBtnSerA();
                     }}
                     className="h-[200px] w-[300px] cursor-pointer"
-                    src="https://seekflag.com/app/uploads/2021/12/Flag-of-Italy-01-1.png"
+                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/Flag_of_Italy.svg/480px-Flag_of_Italy.svg.png"
                     alt="Serie A"
                   />
                   <p className="legend text-3xl pt-6 cursor-default">Serie A</p>

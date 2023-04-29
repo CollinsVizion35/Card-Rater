@@ -18,10 +18,10 @@ function App() {
         <AppContextPage>
           <MusicContextPage>
             <Routes>
-              {/* <Route path="/" element={<Start />} /> */}
+              <Route path="/" element={<Start />} />
               <Route path="/home" element={<Home />} />
               <Route path="/page2" element={<HomeButton2 />} />
-              <Route path="/" element={<Rater />} />
+              <Route path="/footballRater" element={<Rater />} />
               <Route path="/player" element={<Player />} />
               <Route path="/comingsoon" element={<Notice />} />
             </Routes>

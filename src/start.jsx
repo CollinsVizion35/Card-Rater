@@ -46,7 +46,7 @@ function Start() {
   const navigate = useNavigate();
 
   const handleEditBtn = () => {
-    navigate("/home");
+    navigate("/footballRater");
   };
 
   const handleEditBtn2 = () => {

@@ -104,7 +104,7 @@ export const AppContextPage = ({ children }) => {
   // All functions
 
   const handleBack2HomeBtn = () => {
-    navigate("/home");
+    navigate("/");
   };
   const handleCreateNewLgBtn = () => {
     window.location.reload(false); 

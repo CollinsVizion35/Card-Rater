@@ -1900,7 +1900,7 @@ function Nations() {
                   setNation(e.target.src);
                 }}
                 className="h-[200px] w-[300px] cursor-pointer"
-                src="https://seekflag.com/app/uploads/2021/12/Montenegro-01-1.png"
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Flag_of_Montenegro.svg/480px-Flag_of_Montenegro.svg.png"
                 alt="Montenegro"
               />
               <p className="legend text-3xl pt-6 cursor-default">
@@ -1916,7 +1916,7 @@ function Nations() {
                   setNation(e.target.src);
                 }}
                 className="h-[200px] w-[300px] cursor-pointer"
-                src="https://seekflag.com/app/uploads/2021/12/Morocco-01-1.png"
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Flag_of_Morocco.svg/480px-Flag_of_Morocco.svg.png"
                 alt="Morocco"
               />
               <p className="legend text-3xl pt-6 cursor-default">Morocco</p>
@@ -1930,7 +1930,7 @@ function Nations() {
                   setNation(e.target.src);
                 }}
                 className="h-[200px] w-[300px] cursor-pointer"
-                src="https://seekflag.com/app/uploads/2021/12/Mozambique-Mozambique-01-1.png"
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Flag_of_Mozambique.svg/480px-Flag_of_Mozambique.svg.png"
                 alt="Mozambique"
               />
               <p className="legend text-3xl pt-6 cursor-default">
@@ -1946,11 +1946,11 @@ function Nations() {
                   setNation(e.target.src);
                 }}
                 className="h-[200px] w-[300px] cursor-pointer"
-                src="https://seekflag.com/app/uploads/2021/12/Myanmar-01-1.png"
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Flag_of_Myanmar.svg/480px-Flag_of_Myanmar.svg.png"
                 alt="Myanmar "
               />
               <p className="legend text-3xl pt-6 cursor-default">
-                Myanmar{" "}
+                Myanmar
               </p>
             </div>
           </Slide>
@@ -1962,7 +1962,7 @@ function Nations() {
                   setNation(e.target.src);
                 }}
                 className="h-[200px] w-[300px] cursor-pointer"
-                src="https://seekflag.com/app/uploads/2021/12/Namibia-01-1.png"
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Flag_of_Namibia.svg/480px-Flag_of_Namibia.svg.png"
                 alt="Namibia"
               />
               <p className="legend text-3xl pt-6 cursor-default">Namibia</p>
@@ -1976,7 +1976,7 @@ function Nations() {
                   setNation(e.target.src);
                 }}
                 className="h-[200px] w-[300px] cursor-pointer"
-                src="https://seekflag.com/app/uploads/2021/12/nepal-01-1.png"
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Emblem_of_Nepal.svg/480px-Emblem_of_Nepal.svg.png"
                 alt="Nepal"
               />
               <p className="legend text-3xl pt-6 cursor-default">Nepal</p>
@@ -1990,7 +1990,7 @@ function Nations() {
                   setNation(e.target.src);
                 }}
                 className="h-[200px] w-[300px] cursor-pointer"
-                src="https://seekflag.com/app/uploads/2021/12/Netherlands-01-1.png"
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Flag_of_the_Netherlands.svg/480px-Flag_of_the_Netherlands.svg.png"
                 alt="Netherlands"
               />
               <p className="legend text-3xl pt-6 cursor-default">
@@ -2006,7 +2006,7 @@ function Nations() {
                   setNation(e.target.src);
                 }}
                 className="h-[200px] w-[300px] cursor-pointer"
-                src="https://seekflag.com/app/uploads/2021/12/New-Zealand-01-1.png"
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Flag_of_New_Zealand.svg/480px-Flag_of_New_Zealand.svg.png"
                 alt="New Zealand"
               />
               <p className="legend text-3xl pt-6 cursor-default">
@@ -2022,7 +2022,7 @@ function Nations() {
                   setNation(e.target.src);
                 }}
                 className="h-[200px] w-[300px] cursor-pointer"
-                src="https://seekflag.com/app/uploads/2021/12/nauru-01-1.png"
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Flag_of_Nauru.svg/480px-Flag_of_Nauru.svg.png"
                 alt="Nauru"
               />
               <p className="legend text-3xl pt-6 cursor-default">Nauru</p>
@@ -2036,7 +2036,7 @@ function Nations() {
                   setNation(e.target.src);
                 }}
                 className="h-[200px] w-[300px] cursor-pointer"
-                src="https://seekflag.com/app/uploads/2021/12/Nicaragua-01-1.png"
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Flag_of_Nicaragua.svg/480px-Flag_of_Nicaragua.svg.png"
                 alt="Nicaragua"
               />
               <p className="legend text-3xl pt-6 cursor-default">
@@ -2052,7 +2052,7 @@ function Nations() {
                   setNation(e.target.src);
                 }}
                 className="h-[200px] w-[300px] cursor-pointer"
-                src="https://seekflag.com/app/uploads/2021/12/Niger-01-1.png"
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Flag_of_Niger.svg/480px-Flag_of_Niger.svg.png"
                 alt="Niger"
               />
               <p className="legend text-3xl pt-6 cursor-default">Niger</p>
@@ -2066,7 +2066,7 @@ function Nations() {
                   setNation(e.target.src);
                 }}
                 className="h-[200px] w-[300px] cursor-pointer"
-                src="https://seekflag.com/app/uploads/2021/12/Nigeria-01-1.png"
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Flag_of_Nigeria.svg/480px-Flag_of_Nigeria.svg.png"
                 alt="Nigeria"
               />
               <p className="legend text-3xl pt-6 cursor-default">Nigeria</p>
@@ -2080,7 +2080,7 @@ function Nations() {
                   setNation(e.target.src);
                 }}
                 className="h-[200px] w-[300px] cursor-pointer"
-                src="https://seekflag.com/app/uploads/2021/12/north-korea-01-1.png"
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Flag_of_North_Korea.svg/480px-Flag_of_North_Korea.svg.png"
                 alt="North Korea"
               />
               <p className="legend text-3xl pt-6 cursor-default">
@@ -2096,7 +2096,7 @@ function Nations() {
                   setNation(e.target.src);
                 }}
                 className="h-[200px] w-[300px] cursor-pointer"
-                src="https://seekflag.com/app/uploads/2021/12/macedonia-01-1.png"
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Flag_of_North_Macedonia.svg/480px-Flag_of_North_Macedonia.svg.png"
                 alt="North Macedonia"
               />
               <p className="legend text-3xl pt-6 cursor-default">
@@ -2112,7 +2112,7 @@ function Nations() {
                   setNation(e.target.src);
                 }}
                 className="h-[200px] w-[300px] cursor-pointer"
-                src="https://seekflag.com/app/uploads/2021/12/Norway-01-1.png"
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Flag_of_Norway.svg/480px-Flag_of_Norway.svg.png"
                 alt="Norway"
               />
               <p className="legend text-3xl pt-6 cursor-default">Norway</p>
@@ -2126,7 +2126,7 @@ function Nations() {
                   setNation(e.target.src);
                 }}
                 className="h-[200px] w-[300px] cursor-pointer"
-                src="https://seekflag.com/app/uploads/2021/12/Oman-01-1.png"
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Flag_of_Oman.svg/480px-Flag_of_Oman.svg.png"
                 alt="Oman"
               />
               <p className="legend text-3xl pt-6 cursor-default">Oman</p>
@@ -2140,7 +2140,7 @@ function Nations() {
                   setNation(e.target.src);
                 }}
                 className="h-[200px] w-[300px] cursor-pointer"
-                src="https://seekflag.com/app/uploads/2021/12/Flag-of-Pakistan-01-1.png"
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Flag_of_Pakistan.svg/480px-Flag_of_Pakistan.svg.png"
                 alt="Pakistan"
               />
               <p className="legend text-3xl pt-6 cursor-default">
@@ -2156,7 +2156,7 @@ function Nations() {
                   setNation(e.target.src);
                 }}
                 className="h-[200px] w-[300px] cursor-pointer"
-                src="https://seekflag.com/app/uploads/2021/12/Palau-01-1.png"
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Flag_of_Palau.svg/480px-Flag_of_Palau.svg.png"
                 alt="Palau"
               />
               <p className="legend text-3xl pt-6 cursor-default">Palau</p>
@@ -2170,7 +2170,7 @@ function Nations() {
                   setNation(e.target.src);
                 }}
                 className="h-[200px] w-[300px] cursor-pointer"
-                src="https://seekflag.com/app/uploads/2021/12/Palestine-01-1.png"
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Flag_of_Palestine.svg/480px-Flag_of_Palestine.svg.png"
                 alt="Palestine"
               />
               <p className="legend text-3xl pt-6 cursor-default">
@@ -2186,7 +2186,7 @@ function Nations() {
                   setNation(e.target.src);
                 }}
                 className="h-[200px] w-[300px] cursor-pointer"
-                src="https://seekflag.com/app/uploads/2021/12/Panama-01-1.png"
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Flag_of_Panama.svg/480px-Flag_of_Panama.svg.png"
                 alt="Panama"
               />
               <p className="legend text-3xl pt-6 cursor-default">Panama</p>
@@ -2200,7 +2200,7 @@ function Nations() {
                   setNation(e.target.src);
                 }}
                 className="h-[200px] w-[300px] cursor-pointer"
-                src="https://seekflag.com/app/uploads/2021/12/papua-new-guinea-01-1.png"
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Flag_of_Papua_New_Guinea.svg/480px-Flag_of_Papua_New_Guinea.svg.png"
                 alt="Papua New Guinea"
               />
               <p className="legend text-3xl pt-6 cursor-default">
@@ -2216,7 +2216,7 @@ function Nations() {
                   setNation(e.target.src);
                 }}
                 className="h-[200px] w-[300px] cursor-pointer"
-                src="https://seekflag.com/app/uploads/2021/12/paraguay-01-1.png"
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/Flag_of_Paraguay.svg/480px-Flag_of_Paraguay.svg.png"
                 alt="Paraguay"
               />
               <p className="legend text-3xl pt-6 cursor-default">
@@ -2232,7 +2232,7 @@ function Nations() {
                   setNation(e.target.src);
                 }}
                 className="h-[200px] w-[300px] cursor-pointer"
-                src="https://seekflag.com/app/uploads/2021/12/peru-01-3.png"
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Flag_of_Peru_%28state%29.svg/480px-Flag_of_Peru_%28state%29.svg.png"
                 alt="Peru"
               />
               <p className="legend text-3xl pt-6 cursor-default">Peru</p>
@@ -2246,7 +2246,7 @@ function Nations() {
                   setNation(e.target.src);
                 }}
                 className="h-[200px] w-[300px] cursor-pointer"
-                src="https://seekflag.com/app/uploads/2021/12/philippines-01-1.png"
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Flag_of_the_Philippines.svg/480px-Flag_of_the_Philippines.svg.png"
                 alt="Philippines"
               />
               <p className="legend text-3xl pt-6 cursor-default">
@@ -2262,7 +2262,7 @@ function Nations() {
                   setNation(e.target.src);
                 }}
                 className="h-[200px] w-[300px] cursor-pointer"
-                src="https://seekflag.com/app/uploads/2021/12/Poland-01-2.png"
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Flag_of_Poland.svg/480px-Flag_of_Poland.svg.png"
                 alt="Poland"
               />
               <p className="legend text-3xl pt-6 cursor-default">Poland</p>
@@ -2276,7 +2276,7 @@ function Nations() {
                   setNation(e.target.src);
                 }}
                 className="h-[200px] w-[300px] cursor-pointer"
-                src="https://seekflag.com/app/uploads/2021/12/portugal-01-1.png"
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Flag_of_Portugal.svg/480px-Flag_of_Portugal.svg.png"
                 alt="Portugal"
               />
               <p className="legend text-3xl pt-6 cursor-default">
@@ -2292,7 +2292,7 @@ function Nations() {
                   setNation(e.target.src);
                 }}
                 className="h-[200px] w-[300px] cursor-pointer"
-                src="https://seekflag.com/app/uploads/2021/12/qatar-01-2.png"
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/Flag_of_Qatar.svg/480px-Flag_of_Qatar.svg.png"
                 alt="Qatar"
               />
               <p className="legend text-3xl pt-6 cursor-default">Qatar</p>
@@ -2306,7 +2306,7 @@ function Nations() {
                   setNation(e.target.src);
                 }}
                 className="h-[200px] w-[300px] cursor-pointer"
-                src="https://seekflag.com/app/uploads/2021/12/romania-01-2.png"
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Flag_of_Romania.svg/480px-Flag_of_Romania.svg.png"
                 alt="Romania"
               />
               <p className="legend text-3xl pt-6 cursor-default">Romania</p>
@@ -2320,7 +2320,7 @@ function Nations() {
                   setNation(e.target.src);
                 }}
                 className="h-[200px] w-[300px] cursor-pointer"
-                src="https://seekflag.com/app/uploads/2021/12/Russia-01-1.png"
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Flag_of_Russia.svg/480px-Flag_of_Russia.svg.png"
                 alt="Russia"
               />
               <p className="legend text-3xl pt-6 cursor-default">Russia</p>
@@ -2334,7 +2334,7 @@ function Nations() {
                   setNation(e.target.src);
                 }}
                 className="h-[200px] w-[300px] cursor-pointer"
-                src="https://seekflag.com/app/uploads/2021/12/Rwanda-01-1.png"
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Flag_of_Rwanda.svg/480px-Flag_of_Rwanda.svg.png"
                 alt="Rwanda"
               />
               <p className="legend text-3xl pt-6 cursor-default">Rwanda</p>
@@ -2348,7 +2348,7 @@ function Nations() {
                   setNation(e.target.src);
                 }}
                 className="h-[200px] w-[300px] cursor-pointer"
-                src="https://seekflag.com/app/uploads/2021/12/Saint-Kitts-and-Nevis-01-1.png"
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Flag_of_Saint_Kitts_and_Nevis.svg/480px-Flag_of_Saint_Kitts_and_Nevis.svg.png"
                 alt="Saint Kitts and Nevis"
               />
               <p className="legend text-3xl pt-6 cursor-default">
@@ -2364,7 +2364,7 @@ function Nations() {
                   setNation(e.target.src);
                 }}
                 className="h-[200px] w-[300px] cursor-pointer"
-                src="https://seekflag.com/app/uploads/2021/12/Saint-Lucia-01-1.png"
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Flag_of_Saint_Lucia.svg/480px-Flag_of_Saint_Lucia.svg.png"
                 alt="Saint Lucia"
               />
               <p className="legend text-3xl pt-6 cursor-default">
@@ -2380,7 +2380,7 @@ function Nations() {
                   setNation(e.target.src);
                 }}
                 className="h-[200px] w-[300px] cursor-pointer"
-                src="https://seekflag.com/app/uploads/2021/12/Saint-Vincent-01-2.png"
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Flag_of_Saint_Vincent_and_the_Grenadines.svg/480px-Flag_of_Saint_Vincent_and_the_Grenadines.svg.png"
                 alt="Saint Vincent and the Grenadines"
               />
               <p className="legend text-3xl pt-6 cursor-default">
@@ -2396,7 +2396,7 @@ function Nations() {
                   setNation(e.target.src);
                 }}
                 className="h-[200px] w-[300px] cursor-pointer"
-                src="https://seekflag.com/app/uploads/2021/12/Samoa-01-1.png"
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Flag_of_Samoa.svg/480px-Flag_of_Samoa.svg.png"
                 alt="Samoa"
               />
               <p className="legend text-3xl pt-6 cursor-default">Samoa</p>
@@ -2410,7 +2410,7 @@ function Nations() {
                   setNation(e.target.src);
                 }}
                 className="h-[200px] w-[300px] cursor-pointer"
-                src="https://seekflag.com/app/uploads/2021/12/San-Marino-01-1.png"
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Flag_of_San_Marino.svg/480px-Flag_of_San_Marino.svg.png"
                 alt="San Marino"
               />
               <p className="legend text-3xl pt-6 cursor-default">
@@ -2426,7 +2426,7 @@ function Nations() {
                   setNation(e.target.src);
                 }}
                 className="h-[200px] w-[300px] cursor-pointer"
-                src="https://seekflag.com/app/uploads/2021/12/Sao-Tome-01-1.png"
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Flag_of_S%C3%A3o_Tom%C3%A9_and_Pr%C3%ADncipe.svg/480px-Flag_of_S%C3%A3o_Tom%C3%A9_and_Pr%C3%ADncipe.svg.png"
                 alt="São Tomé and Principe"
               />
               <p className="legend text-3xl pt-6 cursor-default">
@@ -2442,7 +2442,7 @@ function Nations() {
                   setNation(e.target.src);
                 }}
                 className="h-[200px] w-[300px] cursor-pointer"
-                src="https://seekflag.com/app/uploads/2021/12/Saudi-Arabia-01-1.png"
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Flag_of_Saudi_Arabia.svg/480px-Flag_of_Saudi_Arabia.svg.png"
                 alt="Saudi Arabia"
               />
               <p className="legend text-3xl pt-6 cursor-default">
@@ -2458,7 +2458,7 @@ function Nations() {
                   setNation(e.target.src);
                 }}
                 className="h-[200px] w-[300px] cursor-pointer"
-                src="https://seekflag.com/app/uploads/2022/01/Scotland-01-1.png"
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Flag_of_Scotland.svg/480px-Flag_of_Scotland.svg.png"
                 alt="Scotland"
               />
               <p className="legend text-3xl pt-6 cursor-default">
@@ -2474,7 +2474,7 @@ function Nations() {
                   setNation(e.target.src);
                 }}
                 className="h-[200px] w-[300px] cursor-pointer"
-                src="https://seekflag.com/app/uploads/2021/12/Senegal-01-1.png"
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Flag_of_Senegal.svg/480px-Flag_of_Senegal.svg.png"
                 alt="Senegal"
               />
               <p className="legend text-3xl pt-6 cursor-default">Senegal</p>
@@ -2488,7 +2488,7 @@ function Nations() {
                   setNation(e.target.src);
                 }}
                 className="h-[200px] w-[300px] cursor-pointer"
-                src="https://seekflag.com/app/uploads/2021/12/Serbia-01-1.png"
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Flag_of_Serbia.svg/480px-Flag_of_Serbia.svg.png"
                 alt="Serbia"
               />
               <p className="legend text-3xl pt-6 cursor-default">Serbia</p>
@@ -2502,7 +2502,7 @@ function Nations() {
                   setNation(e.target.src);
                 }}
                 className="h-[200px] w-[300px] cursor-pointer"
-                src="https://seekflag.com/app/uploads/2021/12/Seychelles-01-4.png"
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Flag_of_Seychelles.svg/480px-Flag_of_Seychelles.svg.png"
                 alt="Seychelles"
               />
               <p className="legend text-3xl pt-6 cursor-default">
@@ -2518,7 +2518,7 @@ function Nations() {
                   setNation(e.target.src);
                 }}
                 className="h-[200px] w-[300px] cursor-pointer"
-                src="https://seekflag.com/app/uploads/2021/12/Sierra-Leone-01-1.png"
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Flag_of_Sierra_Leone.svg/480px-Flag_of_Sierra_Leone.svg.png"
                 alt="Sierra Leone"
               />
               <p className="legend text-3xl pt-6 cursor-default">
@@ -2534,7 +2534,7 @@ function Nations() {
                   setNation(e.target.src);
                 }}
                 className="h-[200px] w-[300px] cursor-pointer"
-                src="https://seekflag.com/app/uploads/2021/12/Singapore-01-1.png"
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Flag_of_Singapore.svg/480px-Flag_of_Singapore.svg.png"
                 alt="Singapore"
               />
               <p className="legend text-3xl pt-6 cursor-default">
@@ -2550,7 +2550,7 @@ function Nations() {
                   setNation(e.target.src);
                 }}
                 className="h-[200px] w-[300px] cursor-pointer"
-                src="https://seekflag.com/app/uploads/2021/12/fSlovakia-01-1.png"
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Flag_of_Slovakia.svg/480px-Flag_of_Slovakia.svg.png"
                 alt="Slovakia"
               />
               <p className="legend text-3xl pt-6 cursor-default">
@@ -2566,7 +2566,7 @@ function Nations() {
                   setNation(e.target.src);
                 }}
                 className="h-[200px] w-[300px] cursor-pointer"
-                src="https://seekflag.com/app/uploads/2021/12/Slovenia-01-1.png"
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Flag_of_Slovenia.svg/480px-Flag_of_Slovenia.svg.png"
                 alt="Slovenia"
               />
               <p className="legend text-3xl pt-6 cursor-default">
@@ -2582,7 +2582,7 @@ function Nations() {
                   setNation(e.target.src);
                 }}
                 className="h-[200px] w-[300px] cursor-pointer"
-                src="https://seekflag.com/app/uploads/2021/12/Solomon-Islands-01-1.png"
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Flag_of_the_Solomon_Islands.svg/480px-Flag_of_the_Solomon_Islands.svg.png"
                 alt="Solomon Islands"
               />
               <p className="legend text-3xl pt-6 cursor-default">
@@ -2598,7 +2598,7 @@ function Nations() {
                   setNation(e.target.src);
                 }}
                 className="h-[200px] w-[300px] cursor-pointer"
-                src="https://seekflag.com/app/uploads/2021/12/Somalia-01-1.png"
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Flag_of_Somalia.svg/480px-Flag_of_Somalia.svg.png"
                 alt="Somalia"
               />
               <p className="legend text-3xl pt-6 cursor-default">Somalia</p>
@@ -2612,7 +2612,7 @@ function Nations() {
                   setNation(e.target.src);
                 }}
                 className="h-[200px] w-[300px] cursor-pointer"
-                src="https://seekflag.com/app/uploads/2021/12/South-Africa-01-1.png"
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Flag_of_South_Africa.svg/480px-Flag_of_South_Africa.svg.png"
                 alt="South Africa"
               />
               <p className="legend text-3xl pt-6 cursor-default">
@@ -2628,7 +2628,7 @@ function Nations() {
                   setNation(e.target.src);
                 }}
                 className="h-[200px] w-[300px] cursor-pointer"
-                src="https://seekflag.com/app/uploads/2021/12/South-Korea-01-1.png"
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Flag_of_South_Korea.svg/480px-Flag_of_South_Korea.svg.png"
                 alt="South Korea"
               />
               <p className="legend text-3xl pt-6 cursor-default">
@@ -2644,7 +2644,7 @@ function Nations() {
                   setNation(e.target.src);
                 }}
                 className="h-[200px] w-[300px] cursor-pointer"
-                src="https://seekflag.com/app/uploads/2021/12/South-Sudan-01-1.png"
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Flag_of_South_Sudan.svg/480px-Flag_of_South_Sudan.svg.png"
                 alt="South Sudan"
               />
               <p className="legend text-3xl pt-6 cursor-default">
@@ -2660,7 +2660,7 @@ function Nations() {
                   setNation(e.target.src);
                 }}
                 className="h-[200px] w-[300px] cursor-pointer"
-                src="https://seekflag.com/app/uploads/2021/12/Flag-of-Spain-01-1.png"
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Bandera_de_Espa%C3%B1a.svg/480px-Bandera_de_Espa%C3%B1a.svg.png"
                 alt="Spain"
               />
               <p className="legend text-3xl pt-6 cursor-default">Spain</p>
@@ -2674,7 +2674,7 @@ function Nations() {
                   setNation(e.target.src);
                 }}
                 className="h-[200px] w-[300px] cursor-pointer"
-                src="https://seekflag.com/app/uploads/2021/12/Sri-Lankan-01-1.png"
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Flag_of_Sri_Lanka.svg/480px-Flag_of_Sri_Lanka.svg.png"
                 alt="Sri Lanka"
               />
               <p className="legend text-3xl pt-6 cursor-default">
@@ -2690,7 +2690,7 @@ function Nations() {
                   setNation(e.target.src);
                 }}
                 className="h-[200px] w-[300px] cursor-pointer"
-                src="https://seekflag.com/app/uploads/2021/12/Sudan-01-2.png"
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/Flag_of_Sudan.svg/480px-Flag_of_Sudan.svg.png"
                 alt="Sudan"
               />
               <p className="legend text-3xl pt-6 cursor-default">Sudan</p>
@@ -2704,7 +2704,7 @@ function Nations() {
                   setNation(e.target.src);
                 }}
                 className="h-[200px] w-[300px] cursor-pointer"
-                src="https://seekflag.com/app/uploads/2021/12/Suriname-01-6.png"
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Flag_of_Suriname.svg/480px-Flag_of_Suriname.svg.png"
                 alt="Suriname"
               />
               <p className="legend text-3xl pt-6 cursor-default">
@@ -2720,7 +2720,7 @@ function Nations() {
                   setNation(e.target.src);
                 }}
                 className="h-[200px] w-[300px] cursor-pointer"
-                src="https://seekflag.com/app/uploads/2021/12/Swedish-01-2.png"
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Flag_of_Sweden.svg/480px-Flag_of_Sweden.svg.png"
                 alt="Sweden"
               />
               <p className="legend text-3xl pt-6 cursor-default">Sweden</p>
@@ -2734,7 +2734,7 @@ function Nations() {
                   setNation(e.target.src);
                 }}
                 className="h-[200px] w-[300px] cursor-pointer"
-                src="https://seekflag.com/app/uploads/2021/12/Swaziland-01-1.png"
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Flag_of_Switzerland.svg/480px-Flag_of_Switzerland.svg.png"
                 alt="Switzerland"
               />
               <p className="legend text-3xl pt-6 cursor-default">
@@ -2750,7 +2750,7 @@ function Nations() {
                   setNation(e.target.src);
                 }}
                 className="h-[200px] w-[300px] cursor-pointer"
-                src="https://seekflag.com/app/uploads/2021/12/Syria-01-1.png"
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Flag_of_Syria.svg/480px-Flag_of_Syria.svg.png"
                 alt="Syria"
               />
               <p className="legend text-3xl pt-6 cursor-default">Syria</p>
@@ -2764,7 +2764,7 @@ function Nations() {
                   setNation(e.target.src);
                 }}
                 className="h-[200px] w-[300px] cursor-pointer"
-                src="https://seekflag.com/app/uploads/2021/12/Tajikistan-01-1.png"
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Flag_of_Tajikistan.svg/480px-Flag_of_Tajikistan.svg.png"
                 alt="Tajikistan"
               />
               <p className="legend text-3xl pt-6 cursor-default">
@@ -2780,7 +2780,7 @@ function Nations() {
                   setNation(e.target.src);
                 }}
                 className="h-[200px] w-[300px] cursor-pointer"
-                src="https://seekflag.com/app/uploads/2021/12/Tanzania-01-1.png"
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Flag_of_Tanzania.svg/480px-Flag_of_Tanzania.svg.png"
                 alt="Tanzania"
               />
               <p className="legend text-3xl pt-6 cursor-default">
@@ -2796,7 +2796,7 @@ function Nations() {
                   setNation(e.target.src);
                 }}
                 className="h-[200px] w-[300px] cursor-pointer"
-                src="https://seekflag.com/app/uploads/2021/12/thailand-01-1.png"
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Flag_of_Thailand.svg/480px-Flag_of_Thailand.svg.png"
                 alt="Thailand"
               />
               <p className="legend text-3xl pt-6 cursor-default">
@@ -2812,7 +2812,7 @@ function Nations() {
                   setNation(e.target.src);
                 }}
                 className="h-[200px] w-[300px] cursor-pointer"
-                src="https://seekflag.com/app/uploads/2021/12/Timor-Leste-01-1.png"
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Flag_of_East_Timor.svg/480px-Flag_of_East_Timor.svg.png"
                 alt="Timor-Leste"
               />
               <p className="legend text-3xl pt-6 cursor-default">
@@ -2828,7 +2828,7 @@ function Nations() {
                   setNation(e.target.src);
                 }}
                 className="h-[200px] w-[300px] cursor-pointer"
-                src="https://seekflag.com/app/uploads/2021/12/Togo-01-1.png"
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Flag_of_Togo.svg/480px-Flag_of_Togo.svg.png"
                 alt="Togo"
               />
               <p className="legend text-3xl pt-6 cursor-default">Togo</p>
@@ -2842,7 +2842,7 @@ function Nations() {
                   setNation(e.target.src);
                 }}
                 className="h-[200px] w-[300px] cursor-pointer"
-                src="https://seekflag.com/app/uploads/2021/12/Tonga-01-1.png"
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Flag_of_Tonga.svg/480px-Flag_of_Tonga.svg.png"
                 alt="Tonga"
               />
               <p className="legend text-3xl pt-6 cursor-default">Tonga</p>
@@ -2856,7 +2856,7 @@ function Nations() {
                   setNation(e.target.src);
                 }}
                 className="h-[200px] w-[300px] cursor-pointer"
-                src="https://seekflag.com/app/uploads/2021/12/Trinidad-01-1.png"
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Flag_of_Trinidad_and_Tobago.svg/480px-Flag_of_Trinidad_and_Tobago.svg.png"
                 alt="Trinidad and Tobago"
               />
               <p className="legend text-3xl pt-6 cursor-default">
@@ -2872,7 +2872,7 @@ function Nations() {
                   setNation(e.target.src);
                 }}
                 className="h-[200px] w-[300px] cursor-pointer"
-                src="https://seekflag.com/app/uploads/2021/12/Tunisia-01-1.png"
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Flag_of_Tunisia.svg/480px-Flag_of_Tunisia.svg.png"
                 alt="Tunisia"
               />
               <p className="legend text-3xl pt-6 cursor-default">Tunisia</p>
@@ -2886,7 +2886,7 @@ function Nations() {
                   setNation(e.target.src);
                 }}
                 className="h-[200px] w-[300px] cursor-pointer"
-                src="https://seekflag.com/app/uploads/2021/12/Turkey-01-4.png"
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Flag_of_Turkey.svg/480px-Flag_of_Turkey.svg.png"
                 alt="Turkey"
               />
               <p className="legend text-3xl pt-6 cursor-default">Turkey</p>
@@ -2900,7 +2900,7 @@ function Nations() {
                   setNation(e.target.src);
                 }}
                 className="h-[200px] w-[300px] cursor-pointer"
-                src="https://seekflag.com/app/uploads/2021/12/Turkmenistan-01-1.png"
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Flag_of_Turkmenistan.svg/480px-Flag_of_Turkmenistan.svg.png"
                 alt="Turkmenistan"
               />
               <p className="legend text-3xl pt-6 cursor-default">
@@ -2916,7 +2916,7 @@ function Nations() {
                   setNation(e.target.src);
                 }}
                 className="h-[200px] w-[300px] cursor-pointer"
-                src="https://seekflag.com/app/uploads/2021/12/Tuvalu-01-3.png"
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Flag_of_Tuvalu.svg/480px-Flag_of_Tuvalu.svg.png"
                 alt="Tuvalu"
               />
               <p className="legend text-3xl pt-6 cursor-default">Tuvalu</p>
@@ -2930,7 +2930,7 @@ function Nations() {
                   setNation(e.target.src);
                 }}
                 className="h-[200px] w-[300px] cursor-pointer"
-                src="https://seekflag.com/app/uploads/2021/12/Uganda-01-1.png"
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Flag_of_Uganda.svg/480px-Flag_of_Uganda.svg.png"
                 alt="Uganda"
               />
               <p className="legend text-3xl pt-6 cursor-default">Uganda</p>
@@ -2944,7 +2944,7 @@ function Nations() {
                   setNation(e.target.src);
                 }}
                 className="h-[200px] w-[300px] cursor-pointer"
-                src="https://seekflag.com/app/uploads/2021/12/Ukraine-01-1.png"
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Flag_of_Ukraine.svg/480px-Flag_of_Ukraine.svg.png"
                 alt="Ukraine"
               />
               <p className="legend text-3xl pt-6 cursor-default">Ukraine</p>
@@ -2958,7 +2958,7 @@ function Nations() {
                   setNation(e.target.src);
                 }}
                 className="h-[200px] w-[300px] cursor-pointer"
-                src="https://seekflag.com/app/uploads/2021/12/United-Arab-Emirates-01-1.png"
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Flag_of_the_United_Arab_Emirates.svg/480px-Flag_of_the_United_Arab_Emirates.svg.png"
                 alt="United Arab Emirates"
               />
               <p className="legend text-3xl pt-6 cursor-default">
@@ -2974,7 +2974,7 @@ function Nations() {
                   setNation(e.target.src);
                 }}
                 className="h-[200px] w-[300px] cursor-pointer"
-                src="https://seekflag.com/app/uploads/2021/12/America-01-1.png"
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Flag_of_the_United_States.svg/480px-Flag_of_the_United_States.svg.png"
                 alt="United States of America"
               />
               <p className="legend text-3xl pt-6 cursor-default">
@@ -2990,7 +2990,7 @@ function Nations() {
                   setNation(e.target.src);
                 }}
                 className="h-[200px] w-[300px] cursor-pointer"
-                src="https://seekflag.com/app/uploads/2021/12/Uruguay-01-1.png"
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Flag_of_Uruguay.svg/480px-Flag_of_Uruguay.svg.png"
                 alt="Uruguay"
               />
               <p className="legend text-3xl pt-6 cursor-default">Uruguay</p>
@@ -3004,7 +3004,7 @@ function Nations() {
                   setNation(e.target.src);
                 }}
                 className="h-[200px] w-[300px] cursor-pointer"
-                src="https://seekflag.com/app/uploads/2021/12/Uzbekistan-01-1.png"
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Flag_of_Uzbekistan.svg/480px-Flag_of_Uzbekistan.svg.png"
                 alt="Uzbekistan"
               />
               <p className="legend text-3xl pt-6 cursor-default">
@@ -3020,7 +3020,7 @@ function Nations() {
                   setNation(e.target.src);
                 }}
                 className="h-[200px] w-[300px] cursor-pointer"
-                src="https://seekflag.com/app/uploads/2021/12/Vanuatu-01-1.png"
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Flag_of_Vanuatu.svg/480px-Flag_of_Vanuatu.svg.png"
                 alt="Vanuatu"
               />
               <p className="legend text-3xl pt-6 cursor-default">Vanuatu</p>
@@ -3034,10 +3034,10 @@ function Nations() {
                   setNation(e.target.src);
                 }}
                 className="h-[200px] w-[300px] cursor-pointer"
-                src="https://seekflag.com/app/uploads/2021/12/Vatican-01-1.png"
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Flag_of_the_Vatican_City.svg/480px-Flag_of_the_Vatican_City.svg.png"
                 alt="Vatican"
               />
-              <p className="legend text-3xl pt-6 cursor-default">Vatican</p>
+              <p className="legend text-3xl pt-6 cursor-default">Vatican City</p>
             </div>
           </Slide>
           <Slide index={191}>
@@ -3048,7 +3048,7 @@ function Nations() {
                   setNation(e.target.src);
                 }}
                 className="h-[200px] w-[300px] cursor-pointer"
-                src="https://seekflag.com/app/uploads/2021/12/Venezuela-01-1.png"
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/Flag_of_Venezuela.svg/480px-Flag_of_Venezuela.svg.png"
                 alt="Venezuela"
               />
               <p className="legend text-3xl pt-6 cursor-default">
@@ -3064,7 +3064,7 @@ function Nations() {
                   setNation(e.target.src);
                 }}
                 className="h-[200px] w-[300px] cursor-pointer"
-                src="https://seekflag.com/app/uploads/2021/12/Vietnam-01-1.png"
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Flag_of_Vietnam.svg/480px-Flag_of_Vietnam.svg.png"
                 alt="Vietnam"
               />
               <p className="legend text-3xl pt-6 cursor-default">Vietnam</p>
@@ -3078,7 +3078,7 @@ function Nations() {
                   setNation(e.target.src);
                 }}
                 className="h-[200px] w-[300px] cursor-pointer"
-                src="https://seekflag.com/app/uploads/2022/01/Welsh-01-1.png"
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/Flag_of_Wales.svg/480px-Flag_of_Wales.svg.png"
                 alt="Wales"
               />
               <p className="legend text-3xl pt-6 cursor-default">Wales</p>
@@ -3092,7 +3092,7 @@ function Nations() {
                   setNation(e.target.src);
                 }}
                 className="h-[200px] w-[300px] cursor-pointer"
-                src="https://seekflag.com/app/uploads/2021/12/Yemen-01-1.png"
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Flag_of_Yemen.svg/480px-Flag_of_Yemen.svg.png"
                 alt="Yemen"
               />
               <p className="legend text-3xl pt-6 cursor-default">Yemen</p>
@@ -3106,7 +3106,7 @@ function Nations() {
                   setNation(e.target.src);
                 }}
                 className="h-[200px] w-[300px] cursor-pointer"
-                src="https://seekflag.com/app/uploads/2021/12/zambia-01-1.png"
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/Flag_of_Zambia.svg/480px-Flag_of_Zambia.svg.png"
                 alt="Zambia"
               />
               <p className="legend text-3xl pt-6 cursor-default">Zambia</p>
@@ -3120,7 +3120,7 @@ function Nations() {
                   setNation(e.target.src);
                 }}
                 className="h-[200px] w-[300px] cursor-pointer"
-                src="https://seekflag.com/app/uploads/2021/12/Zimbabwe-01.png"
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Flag_of_Zimbabwe.svg/480px-Flag_of_Zimbabwe.svg.png"
                 alt="Zimbabwe	"
               />
               <p className="legend text-3xl pt-6 cursor-default">
