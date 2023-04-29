@@ -5,6 +5,7 @@ import Floor from "./Floor";
 import { Link, useNavigate } from "react-router-dom";
 import { Glitch } from "./glitch";
 import 'animate.css';
+import { MusicPass } from "./contexts/musicContext"
 
 function ManShow() {
   return (
