@@ -252,11 +252,11 @@ function Rater() {
 
   const [photoURL, setPhotoURL] = useState(defaultImg);
 
-  useEffect(() => {
-    console.log(data);
-  }, [data]);
+  // useEffect(() => {
+  //   // console.log(data);
+  // }, [data]);
 
-  console.log(data);
+  // console.log(data);
 
   async function handleEditBtn2(e) {
     save2Ref.current.style.display = "flex";
